@@ -1,10 +1,30 @@
-# R2 - content fixed + AGGRESSIVE style evasion (R1 + anti-tell coaching)
+# R1 - light style coaching (content fixed)
 
-R1 content control PLUS explicit instructions to remove the 'LLM tells' found in step 3-B:
-be fragmentary, avoid textbook definitions, allow imperfect grammar, use personal/specific
-examples, shorter, less hedging. Designed a priori (do NOT tune on the frozen classifier).
-=> R1 -> R2 isolates the PURE style effect.
+This file documents the actual R1 prompt implemented in `src/generation/generate.py`.
 
-Per-item keywords: {KEYWORDS}
-Question context: {QUESTION_CONTEXT}
-Slides: {SLIDES}
+## Purpose
+
+R1 keeps the content fixed through the paired human response's keywords, but adds light style coaching intended to move the answer closer to the writing style of undergraduate discussion responses.
+
+## Fixed across all rounds
+
+* Persona: `a data science undergraduate writing an in-class discussion answer`
+* Content: the paired human answer's `keywords`
+* Output format: answer text only
+* Slides: not used
+* Semantic embeddings: not used
+
+## Style instruction
+
+```text
+Write like an undergraduate quickly noting a thought:
+keep it fairly short,
+use first person,
+plain everyday words,
+don't over-explain,
+don't sound like a textbook.
+```
+
+## Interpretation
+
+R1 is intended to reduce obvious GPT-style formality while preserving the same content constraints as R0.
