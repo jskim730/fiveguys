@@ -44,7 +44,7 @@ reason_for_quality, confidence`
 
 ```
 [1] 전처리          raw xlsx ──(고정 프롬프트, Claude)──▶ Q*_corrected.json   (완료)
-[2] R0~R2 생성      키워드(내용고정) + 말투지시만 변화 ──(gpt-5-mini·ELICE)──▶ R0/R1/R2.json (각 1:1, 403개)
+[2] R0~R2 생성      키워드(내용고정) + 말투지시만 변화 ──(gpt-5-mini·ELICE)──▶ R0/R1/R2.json (각 1:1, 421개)
                    R0=naive · R1=가벼운 코칭 · R2=공격적 회피   (슬라이드·임베딩 미사용)
 [3] R0 분석        질문별 Classifier(LogReg+GBM) AUC on STYLE7 (+길이 baseline·bootstrap CI·permutation)
                    독립 판정자 STYLO 교차 / 음성통제(인간-인간·라벨셔플 AUC≈0.5)
