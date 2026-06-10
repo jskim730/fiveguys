@@ -99,15 +99,3 @@ pip install -r requirements.txt
 실행 순서(예정): `generation(R0~R2) → features(style7/stylo) → classify(R0) → evaluation(step5) → outlier(LOF) → 그림`
 
 ---
-
-## 5. 현재 상태 / 남은 결정
-
-- ✅ **생성 API**: ELICE `gpt-5-mini` 연결 완료 (`config/secrets.yaml`, git 제외)
-- ✅ **GPU 불필요**: 내용분석·임베딩 제외 → 전 과정 CPU
-- ✅ **슬라이드**: 생성에 미사용(키워드가 내용 제공). 추출 텍스트는 참고용 보관.
-- ✅ **분석 main text**: `english_text` 확정
-- ❔ **매칭 인간 N**: 403(non-low, 권장) vs 510(저품질 포함). 플랜의 "426"은 이전 버전 수치. (`human_set`)
-- ❔ **생성 프롬프트**: 키워드만 vs 질문 framing 약간 추가
-- ⚠️ **표본**: 질문당 ~80개(인간≈45 + LLM 1:1) → bootstrap CI 넓음(인지하고 진행)
-- ℹ️ **ESL 교란**: Limitation & Future Work로 처리(최종안 5-f) — 별도 생성 라운드 불필요
-```
