@@ -1,10 +1,10 @@
-# R1 - light style coaching (content fixed)
+# R2 - aggressive style coaching (content fixed)
 
-This file documents the actual R1 prompt implemented in `src/generation/generate.py`.
+This file documents the actual R2 prompt implemented in `src/generation/generate.py`.
 
 ## Purpose
 
-R1 keeps the content fixed through the paired human response's keywords, but adds light style coaching intended to move the answer closer to the writing style of undergraduate discussion responses.
+R2 keeps content fixed but aggressively coaches the writing style toward short, informal student-like responses.
 
 ## Fixed across all rounds
 
@@ -17,14 +17,22 @@ R1 keeps the content fixed through the paired human response's keywords, but add
 ## Style instruction
 
 ```text
-Write like an undergraduate quickly noting a thought:
-keep it fairly short,
+Write like a real student answering quickly in class:
+very short,
+1-3 sentences,
+around 40 words,
 use first person,
-plain everyday words,
-don't over-explain,
-don't sound like a textbook.
+plain vocabulary,
+few commas,
+"I think" / "maybe" allowed,
+sentence fragments are okay,
+don't define concepts,
+don't sound polished,
+give one small personal example if natural.
 ```
 
 ## Interpretation
 
-R1 is intended to reduce obvious GPT-style formality while preserving the same content constraints as R0.
+R2 is designed to aggressively suppress common surface-level LLM cues such as verbosity, polished explanations, textbook-style definitions, and impersonal tone.
+
+Because the keywords remain fixed, differences between R0, R1, and R2 are intended to reflect style coaching rather than content changes.
