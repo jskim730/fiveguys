@@ -18,7 +18,7 @@
 ![데이터 개요](figures/fig6_data_overview.png)
 
 - 5 topics · 9 questions · 542 응답(분석 단위). 영어/한국어/혼합 혼재, 품질 high/medium/low 플래그(삭제 X).
-- **분석 main 셋 = 영어 원문 421개** (`en_with_text`). 한국어/혼합 응답의 `english_text`는 *기계번역본*이라 **번역 혼입을 제거**하고 학생이 직접 쓴 영어만 사용(거친 ESL=인간 신호는 유지). → STYLO가 "Claude 번역 vs GPT 생성"을 인간/LLM으로 착각하는 혼동을 차단.
+- **분석 main set = 영어 원문 421개** (`en_with_text`). 한국어/혼합 응답의 `english_text`는 *기계번역본*이라 **번역 혼입을 제거**하고 학생이 직접 쓴 영어만 사용(거친 ESL=인간 신호는 유지). → STYLO가 "Claude 번역 vs GPT 생성"을 인간/LLM으로 착각하는 혼동을 차단.
 
 ---
 
