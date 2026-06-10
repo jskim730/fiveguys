@@ -261,6 +261,33 @@ artifact either.
   \label{fig:robust}
 \end{figure}
 
+\subsection{Ablation studies}\label{sec:ablation}
+We decompose the result along three axes (Fig.~\ref{fig:ablation}).
+\textbf{(a) Where the signature lives.} Restricting STYLO to single components, the held-out
+R2 AUC is carried almost entirely by \emph{function words} ($0.77$, vs.\ $0.78$ for full STYLO
+and $0.76$ for char-3grams), while \emph{punctuation alone collapses to $0.36$}. The
+irreducible signal is the classic function-word fingerprint, not punctuation (coached away
+like STYLE7); function-words-only nearly matching full STYLO also rules out character-$n$-gram
+content leakage.
+\textbf{(b) Which surface tell.} Length (\texttt{n\_words}) alone perfectly separates naive R0
+(AUC $1.00$), yet STYLE7 without length still reaches $0.99$---length dominates but is not the
+sole tell; lexical diversity, first-person and hedging point the human way.
+\textbf{(c) Which coaching instruction.} No \emph{single} instruction meaningfully lowers
+detectability (best ``short'' $\Delta\!=\!-0.11$; ``first-person'' alone $\approx\!0$); only the
+\emph{combination} (R2) collapses STYLE7 ($\Delta\!=\!-0.92$). Surface evasion is thus
+super-additive---tells must be coached jointly---and STYLO stays $\geq 0.97$ under every single
+condition.
+
+\begin{figure*}[t]
+  \centering
+  \begin{subfigure}{0.32\textwidth}\includegraphics[width=\textwidth]{fig9_ablation_stylo.png}\caption{STYLO components}\end{subfigure}\hfill
+  \begin{subfigure}{0.32\textwidth}\includegraphics[width=\textwidth]{fig10_ablation_style7.png}\caption{STYLE7 features}\end{subfigure}\hfill
+  \begin{subfigure}{0.32\textwidth}\includegraphics[width=\textwidth]{fig11_ablation_coaching.png}\caption{Coaching conditions}\end{subfigure}
+  \caption{Ablations: (a) the signature is function-word usage; (b) length dominates the
+  surface tell; (c) no single coaching instruction suffices---evasion is synergistic.}
+  \label{fig:ablation}
+\end{figure*}
+
 % =====================================================================
 \section{Discussion and Conclusion}
 % =====================================================================
