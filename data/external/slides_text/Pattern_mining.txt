@@ -1,0 +1,2341 @@
+COSE471: Data Science
+Pattern Mining
+Department of Computer Science and Engineering
+Korea University
+Susik Yoon
+March 20, 2026
+DAIS lab at Korea University
+Course Schedule
+2
+Week Day Content HW/Project Note
+1 Mar 06 Introduction
+2 Mar 13 Data
+3 Mar 20 Pattern mining
+4 Mar 27 Tutorial 1 Latex, Preprocessing/Pattern mining
+5 Apr 03 Clustering
+6 Apr 10 Outlier Detection & Invited Talk An invited talk from Meta
+7 Apr 17 Tutorial 2 Clustering, Outlier detection
+8 Apr 24 Classification
+9 May 01 Classification
+10 May 08 Tutorial 3 Classification, Feature engineering 
+11 May 15 Mid-term exam Offline, Closed-book, No electronic devices
+12 May 22 Review & Project Notice
+13 May 29 Project discussion
+14 Jun 05 Project discussion
+15 Jun 12 Final presentation
+16 Jun 19 Wrap-up and Final report
+HW1 
+HW2
+Project
+DAIS lab at Korea University
+RECAP
+❑ Diversity of data
+▪ Data structure, type, state
+❑ Understanding data
+▪ Data sets, objects, attributes, matrix
+▪ Data statistics
+▪ Data visualization 
+▪ Data similarity
+❑ Preprocessing data
+▪ Data quality measures
+▪ Data cleaning
+▪ Data integration
+▪ Data transformation 
+3
+
+DAIS lab at Korea University
+RECAP
+4
+
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+▪ Pattern discovery
+▪ Frequent itemsets
+▪ Association rule
+▪ Closed and maximal patterns
+❑ Pattern mining methodologies
+❑ Pattern mining evaluation
+5
+
+DAIS lab at Korea University
+Pattern Mining > Pattern Discovery 
+❑ Pattern
+▪ A set of items, subsequences, or substructures that occur frequently together in a data set
+▪ Patterns represent intrinsic and important properties of data sets
+6
+Frequent itemsets Frequent sequences Frequent structures
+Money
+Third-party fraud
+Cheater
+Product
+Seller Buyer
+Product Money
+Communication
+Communication
+
+DAIS lab at Korea University
+Pattern Mining > Pattern Discovery 
+❑ Pattern discovery
+▪ Uncovering patterns from massive data sets
+▪ It can answer questions such as:
+• What products were often purchased together?
+• What are the subsequent purchases after buying an iPad?
+• What are the frequent communication patterns in social network services?
+❑ Foundation for many essential data science tasks
+▪ Association, correlation, and causality analysis
+▪ Discriminative pattern-based classification
+▪ Pattern-based subspace clustering
+7
+DAIS lab at Korea University
+Pattern Mining > Pattern Discovery 
+❑ Broad applications
+▪ Market basket analysis, cross-marketing, catalog design, sale campaign analysis, Web log 
+analysis, biological sequence analysis
+▪ Many types of data: transactions, graph, spatiotemporal, time-series, and stream data
+8
+
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+❑ Transactional Database (TDB)
+▪ Each transaction is associated with an identifier, called a TID
+▪ May also have counts associated with each item sold
+9
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+10
+❑ Itemsets X: a set of items
+▪ k-itemset: an itemset containing k items
+• 𝑋 = 𝑥1, 𝑥2, ⋯, 𝑥𝑘
+• e.g., X= {Beer} is a 1-itemset and X = {Beer, Nuts, Diaper} is a 3-itemset
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+11
+❑ Support s(X) of an itemset X
+▪ Absolute support → count
+• The occurrences of an itemset in all transactions
+• e.g., s({Beer}) = 3, s({Diaper}) = 4, s({Beer, Eggs}) = 1
+‒ Can be also written as {Beer}:3 for simplicity
+▪ Relative support → ratio
+• The fraction of transactions that contain X
+• i.e., the probability that a transaction contains X
+• e.g., s({Beer}) = 3/5 = 60%, s({Diaper}) = 4/5 = 80%, s({Beer, Eggs}) = 1/5 = 20%
+‒ Can be also written as {Beer}:60% or {Beer}:0.6
+▪ They can be used interchangeably 
+• e.g., given 10 transactions, the absolute support for an itemset is 3 → the relative support 30% = 0.3
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+❑ Frequent itemsets
+▪ An itemset X is frequent if s(X) is no less than a minsup (minimum support threshold) 
+• i.e., s(X) ≥ minsup
+▪ e.g., given 5 transactions and a minsup = 50% (= 5*0.5 = 2.5)
+• Frequent 1-itemsets
+‒ e.g., Beer: 3/5 (= 60%)
+‒ What about Milk?
+• Frequent 2-itemsets
+‒ e.g., {Beer, Diaper}: 3/5 (= 60%)
+‒ What about {Beer, Nuts}?
+• Frequent 3-itemsets
+‒ Is there any?
+12
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+❑ Example: find ALL the frequent k-itemsets
+13
+TID Items bought together
+1 Beer, Diaper
+2 Beer, Coffee
+3 Beer, Diaper, Eggs
+4 Eggs
+5 Coffee, Diaper, Eggs
+Minsup = 40%
+DAIS lab at Korea University
+Pattern Mining > Frequent Itemsets
+❑ Example: find ALL the frequent k-itemsets
+14
+TID Items bought together
+1 Beer, Diaper
+2 Beer, Coffee
+3 Beer, Diaper, Eggs
+4 Eggs
+5 Coffee, Diaper, Eggs
+Minsup = 40%
+Frequent 1-itemsets: 
+ {Beer}: 3/5 (= 60%); {Diaper}: 3/5 (= 60%); {Eggs}: 3/5 (= 60%); {Coffee}: 2/5 (=40%)
+Frequent 2-itemsets: 
+ {Beer, Diaper}: 2/5 (= 40%), {Beer, Coffee}: 1/5 (= 20%), {Beer, Eggs}: 1/5 (= 20%), {Diaper, Coffee}: 1/5 (= 20%), {Diaper, Eggs}: 2/5 (= 40%), {Coffee, Eggs}: 1/5 (= 20%)
+Frequent 3-itemsets: 
+{Beer, Diaper, Coffee}: 0/5 (= 0%), {Beer, Diaper, Eggs}: 1/5 (= 20%), {Beer, Coffee, Eggs}: 0/5 (= 0%), {Diaper, Coffee, Eggs}: 1/5 (= 20%), 
+Are they a complete set of frequent patterns? Are they interesting?
+DAIS lab at Korea University
+Pattern Mining > Association Rule
+❑ Association rule is more telling than just frequent itemsets
+▪ e.g., for the frequent 2-itemset {Diaper, Beer}, we may expect
+• Buying diapers may likely lead to buying beers
+• Buying beers may likely lead to buying diapers
+15
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+Frequent k-itemsets given a minsup = 50%
+Beer: 3/5 (= 60%); Nuts: 3/5 (= 60%); 
+Diaper: 4/5 (= 80%); Eggs: 3/5 (= 60%);
+{Beer, Diaper}: 3/5 (= 60%)
+Which one is more appealing?
+Minsup = 50%
+DAIS lab at Korea University
+Pattern Mining > Association Rule
+❑ Association rule
+▪ Given itemsets X and Y, X → Y
+• i.e., if X, then Y: when X occurs, then Y will as well
+▪ How to measure its strength?
+• Beer → Diaper?
+• Diaper → Beer? 
+16
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Association Rule
+❑ Association rule
+▪ Given itemsets X and Y, X → Y
+• i.e., if X, then Y: when X occurs, then Y will as well
+▪ How to measure its strength?
+• Beer → Diaper?
+• Diaper → Beer? 
+17
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+Beer Diaper{Beer, 
+Diaper} 
+Transactions 
+containing Beer
+Transactions 
+containing Diaper
+DAIS lab at Korea University
+Pattern Mining > Association Rule
+❑ Association rule
+▪ Given itemsets X and Y, X → Y
+• i.e., if X, then Y: when X occurs, then Y will as well
+❑ The strength of an association rule
+▪ Support of X∪Y (i.e., s(X∪Y))
+• e.g., s({Diaper, Beer}) = 3/5 = 60%
+▪ Confidence of X→Y (i.e., c(X→Y))
+• The conditional probability that a transaction containing X also contains Y
+‒ c(X→Y) =s(X⋃Y)
+s(X)
+• e.g., the confidence of a rule Diaper → Beer?
+‒ c(Diaper→Beer) = s({Diaper, Beer})
+s({Diaper}) =
+3
+4 = 0.75
+• e.g., the confidence of a rule Beer → Diaper?
+‒ c(Beer →Diaper) = s({Diaper, Beer})
+s({Beer}) =
+3
+3 = 1.0
+18
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Association Rule
+❑ RECAP: frequent itemsets and association rule
+▪ An itemset X is frequent if s(X) is no less than minsup (minimum support) 
+• i.e., s(X) ≥ minsup
+▪ An association rule X→Y is confident if c(X→Y) is no less than minconf (minimum confidence)
+• i.e., c(X→Y) ≥ minconf
+▪ e.g., given a minsup = 50% and minconf = 80%
+• Frequent itemsets
+‒ Beer: 3/5 (= 60%); Nuts: 3/5 (= 60%); Diaper: 4/5 (= 80%); 
+ Eggs: 3/5 (= 60%), {Beer, Diaper}: 3/5 (= 60%)
+• Confident (strong) association rules
+‒ Beer → Diaper: c(Beer→Diaper) = 1 (= 100%)
+‒ Diaper → Beer: c(Diaper→Beer) = 0.75 (= 75%) 
+❑ Mining frequent itemsets and association rules are very close problems
+▪ Can we think of scalable methods for large datasets?
+▪ Can we think of minimum but still sufficient information for identifying them? 
+19
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Motivation
+▪ How can we compress patterns (frequent itemsets) without losing their support information?
+20
+Extremely
+Compressed
+Frequent 
+Itemsets
+Compressed
+Frequent 
+Itemsets
+Frequent 
+Itemsets
+All Itemsets
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Issue: a long pattern contains a combinatorial number of sub-patterns
+▪ Given minsup=1, find all frequent itemsets
+• 1-itemsets:
+• 2-itemsets:
+   …,
+• 50-itemsets:
+   …,
+• 99-itemsets:
+• 100-itemset:
+21
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Issue: a long pattern contains a combinatorial number of sub-patterns
+▪ Given minsup=1, frequent itemsets and their supports (i.e., s(X) = n → X:n)
+• 1-itemsets:  {a1}:2, {a2}:2, …, {a50}:2, {a51}:1, …, {a100}:1, 
+• 2-itemsets: {a1, a2}:2, …, {a1, a50}:2, {a1, a51}:1 …, {a99, a100}:1, 
+   …, 
+• 50-itemsets: {a1, a2,…,a49, a50}:2, …, {a51, a52,…,a99, a100}:1
+   …, 
+• 99-itemsets: {a1, a2, …, a99}:1, …, {a2, a3, …, a100}:1
+• 100-itemset: {a1, a2, …, a100}:1
+22
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Issue: a long pattern contains a combinatorial number of sub-patterns
+▪ Given minsup=1, frequent itemsets and their supports (i.e., s(X) = n → X:n)
+• 1-itemsets:  {a1}:2, {a2}:2, …, {a50}:2, {a51}:1, …, {a100}:1, 
+• 2-itemsets: {a1, a2}:2, …, {a1, a50}:2, {a1, a51}:1 …, {a99, a100}:1, 
+   …, 
+• 50-itemsets: {a1, a2,…,a49, a50}:2, …, {a51, a52,…,a99, a100}:1
+   …, 
+• 99-itemsets: {a1, a2, …, a99}:1, …, {a2, a3, …, a100}:1
+• 100-itemset: {a1, a2, …, a100}:1
+▪ Do we have to store all the frequent itemsets and their supports?
+23
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+100
+1 + 100
+2 + 100
+3
+⋯ + 100
+99 + 100
+100
+= 2100 − 1
+= 1.26 × 1030 (nonillion) 
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Issue: a long pattern contains a combinatorial number of sub-patterns
+▪ Given minsup=1, frequent itemsets and their supports (i.e., s(X) = n → X:n)
+• 1-itemsets:  {a1}:2, {a2}:2, …, {a50}:2, {a51}:1, …, {a100}:1, 
+• 2-itemsets: {a1, a2}:2, …, {a1, a50}:2, {a1, a51}:1 …, {a99, a100}:1, 
+   …, 
+• 50-itemsets: {a1, a2,…,a49, a50}:2, …, {a51, a52,…,a99, a100}:1
+   …, 
+• 99-itemsets: {a1, a2, …, a99}:1, …, {a2, a3, …, a100}:1
+• 100-itemset: {a1, a2, …, a100}:1
+▪ Are they sufficient to restore (i.e., derive) all the frequent itemsets?
+24
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Expressing patterns in compressed forms
+▪ Closed patterns
+• A frequent pattern (itemset) X is closed if X is frequent (i.e., s(X) ≥ minsup), and there 
+exists no super-itemset with the same support (i.e., for all Y⊃X, s(Y) ≠ s(X) or s(Y) < s(X))
+‒ e.g., if minsup = 1, closed patterns will be “{a1, …, a50}: 2” and “{a1, …, a100}: 1” 
+• Closed patterns are lossless compression of frequent patterns 
+‒ Reduce the number of patterns without losing support information
+‒ i.e., it is possible to exactly know the support of any frequent patterns in the closed patterns
+‒ e.g., {a2, …, a49}: 2, {a5, a99}: 1, …
+25
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+{a1, a2,…, a99, a100}:1
+{a1, a2,…,a49, a50}:2
+Frequent itemsets (minsup=1)
+Closed 
+Patterns
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Expressing patterns in compressed forms
+▪ Maximal patterns
+• A frequent pattern (itemset) X is maximal if X is frequent (i.e., s(X) ≥ minsup), and there 
+exists no frequent super-itemset Y⊃X (i.e, for all Y⊃X, s(Y) < minsup)
+‒ e.g., if minsup = 1, maximal patterns will be “{a1, …, a100}: 1” 
+‒ What about  “{a1, …, a50}: 2”? There exists a frequent super-itemset  “{a1, …, a100} ⊃ {a1, …, a50}”  
+• Maximal patterns are lossy compression of frequent patterns
+‒ Reduce the number of patterns but lose support information
+‒ i.e., we do not exactly know the support of any frequent patterns in the maximal patterns
+‒ e.g., We know that {a1, …, a40} is frequent, but do not know its support (which is 2)
+26
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+Frequent itemsets (minsup=1)
+Maximal
+Pattern{a1, a2,…, a99, a100}:1
+{a1, a2,…,a49, a50}:2
+DAIS lab at Korea University
+Pattern Mining > Closed and Maximal Patterns
+❑ Finding closed-patterns is more desirable than maximal-patterns
+▪ We can compress patterns without losing support information
+27
+Maximal
+Frequent 
+Itemsets
+Closed
+Frequent 
+Itemsets
+Frequent 
+Itemsets
+All Itemsets
+Lossless 
+compression
+Lossy
+compression
+DAIS lab at Korea University
+Frequent, Closed, Maximal Patterns (Itemsets)
+❑ k-itemset X
+▪ An itemset including k items
+▪ k can be from one to the number of unique items
+❑ Frequent itemsets FX
+▪ k-itemsets whose supports are no less than the minsup threshold
+▪ s(X) ≥ minsup
+❑ Closed frequent itemsets CX
+▪ Frequent itemsets with no super-itemset of the same support
+▪ s(CX) ≥ minsup & for all Y⊃CX, s(Y) ≠ s(CX)
+▪ Adding any other item to a closed frequent itemset changes its support
+❑ Maximal frequent itemsets MX
+▪ Frequent itemsets with no frequent super-itemset
+▪ s(MX) ≥ minsup & for all Y⊃MX, s(Y) < minsup
+▪ Adding any other item to a maximal frequent itemset makes it infrequent
+All itemsets
+{Beer}:3, {Diaper}:3, {Eggs}:3, {Coffee}:2,
+{Beer, Diaper}:2, {Beer, Coffee}:1, {Beer, Eggs}:1, 
+{Diaper, Coffee}:1, {Diaper, Eggs}:2, {Coffee, Eggs}:1,
+ {Beer, Diaper, Coffee}:0, {Beer, Diaper, Eggs}:1, 
+{Beer, Coffee, Eggs}:0, {Diaper, Coffee, Eggs}:1
+{Beer, Diaper, Eggs, Coffee}:0
+Frequent itemsets
+{Beer}:3, {Diaper}:3, {Eggs}:3, {Coffee}:2,
+{Beer, Diaper}:2, {Beer, Coffee}:1, {Beer, Eggs}:1, 
+{Diaper, Coffee}:1, {Diaper, Eggs}:2, {Coffee, Eggs}:1,
+{Beer, Diaper, Eggs}:1, {Diaper, Coffee, Eggs}:1
+Closed frequent itemsets
+{Beer}:3, {Diaper}:3, {Eggs}:3, {Coffee}:2,
+{Beer, Diaper}:2, {Beer, Coffee}:1, {Diaper, Eggs}:2 
+{Beer, Diaper, Eggs}:1, {Diaper, Coffee, Eggs}:1 
+Maximal frequent itemsets
+{Beer, Coffee}:1,
+{Beer, Diaper, Eggs}:1, {Diaper, Coffee, Eggs}:1 
+TID Items bought together
+1 Beer, Diaper
+2 Beer, Coffee
+3 Beer, Diaper, Eggs
+4 Eggs
+5 Coffee, Diaper, Eggs
+Minsup = 1
+28
+DAIS lab at Korea University
+Frequent, Closed, Maximal Patterns (Itemsets)
+B:3 D:3 E:3 C:2
+BD:2 BE:1 BC:1 DE:2 DC:1 EC:1
+BDE:1 BDC:0 BEC:0 DEC:1
+BDEC:0
+{  }
+TID Items bought together
+1 Beer, Diaper
+2 Beer, Coffee
+3 Beer, Diaper, Eggs
+4 Eggs
+5 Coffee, Diaper, Eggs
+Minsup = 1
+Closed frequent itemset
+Maximal frequent itemset
+Frequent itemset
+Infrequent itemsets
+29
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+❑ Pattern mining methodologies
+▪ Association rule discovery
+▪ Apriori
+▪ FP-Growth
+▪ Rule generation
+❑ Pattern mining evaluation
+xxx 30
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Discovery
+❑ Given a set of transactions, we want to find all rules X → Y where 
+▪ Support s(X∪Y) ≥ minsup threshold
+▪ Confidence c(X→Y) = s(X∪Y)/s(X) ≥ minconf threshold
+❑ Example
+▪ Association rule: Beer → Diaper ?
+31
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+c(Beer →Diaper) = s({Diaper, Beer})
+s({Beer}) =
+3
+3 = 100%
+minsup = 50% and minconf = 80%
+TDB
+=
+3
+5 = 60% 
+How to find ALL confident rules?
+We can say that Beer → Diaper is a confident rule
+=
+3
+5 = 60% 
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Discovery
+❑ Brute-force approach 1
+▪ Procedure
+• Step 1: From the unique items, list all possible association rules
+• Step 2: Compute the support and confidence for each rule
+• Step 3: Prune rules with the minsup and minconf thresholds
+▪ Issue: computationally prohibitive!
+• Given d unique items, the number of rules
+32
+𝑅 = ෍
+𝑘=1
+𝑑−1
+𝑑
+𝑘 × ෍
+𝑗=1
+𝑑−𝑘
+𝑑 − 𝑘
+𝑗 = 3𝑑 − 2𝑑+1 + 1
+For d = 6 items,  R = 602 possible rules
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Discovery
+❑ Brute-force approach 2
+▪ Procedure
+• Step 1: Find frequent itemsets (minsup)
+‒ From the unique items, generate all possible itemsets 
+‒ Compute the support and prune by the minsup threshold
+• Step 2: Find association rules (minconf)
+‒ From the frequent itemsets, generate all possible association rules
+‒ Compute the confidence and prune by the minconf threshold
+▪ Issue: step 1 is still computationally expensive!
+• Given d unique items, 
+‒ The number of transactions: N
+‒ The number of items in transactions: W
+‒ The number of itemsets: M = 2d
+• The computational complexity ~ O(NWM)
+‒ For each of N transactions with W items, check against M itemsets
+33
+null
+AB AC AD AE BC BD BE CD CE DE
+A B C D E
+ABC ABD ABE ACD ACE ADE BCD BCE BDE CDE
+ABCD ABCE ABDE ACDE BCDE
+ABCDE
+TID Items bought together
+1 A, B, C
+2 A, C, D
+3 A, C, E
+4 B, E
+5 B, D, C, E
+N
+W ≤ d
+M
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Discovery
+❑ Strategies for finding frequent itemsets
+▪ Reduce the number of transactions (N)
+• Reduce the size of N as the size of itemset increases
+• e.g., Partitioning, vertical-data format (i.e., item → TIDs)
+▪ Reduce the number of candidates (M)
+• Use pruning techniques to reduce M
+• e.g., Apriori
+▪ Reduce the number of comparisons (N x M)
+• Use efficient data structures (e.g., hash tables) to store the 
+candidates or transactions
+• No need to match every candidate against every transaction
+• e.g., Dynamic hashing and pruning, FP-growth
+34
+null
+AB AC AD AE BC BD BE CD CE DE
+A B C D E
+ABC ABD ABE ACD ACE ADE BCD BCE BDE CDE
+ABCD ABCE ABDE ACDE BCDE
+ABCDE
+TID Items bought together
+1 A, B, C
+2 A, C, D
+3 A, C, E
+4 B, E
+5 B, D, C, E
+N
+M
+N x M
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+❑ Pattern mining methodologies
+▪ Association rule discovery
+▪ Apriori
+▪ FP-Growth
+▪ Rule generation
+❑ Pattern mining evaluation
+xxx 35
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Revisiting the extreme cases
+▪ Suppose that we have minsup = 2
+▪ We have a closed and maximal frequent itemset: {a1, …, a50}:2
+▪ What are the supports of {a1}, {a2}, …, {a50}, {a1, a2}, …, {a1, …, a49}, …?
+▪ Can we guarantee that all subsets of {a1, …, a50} are frequent?
+▪ Can we guarantee that these are all frequent itemsets?
+36
+TID Items bought together
+1 a1, a2,…,a49, a50
+2 a1, a2,…, a99, a100
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Observation
+▪ All items in an itemset X should be in its superset Y
+• e.g., every transaction containing Y = {Beer, Diaper, Nuts} also contains X = {Beer, Diaper} 
+▪ The support of an itemset X is larger than or equal to the support of its superset Y 
+• i.e., ∀𝑿, 𝒀: 𝑿 ⊆ 𝒀 , 𝒔(𝑿) ≥ 𝒔(𝒀) a.k.a. anti-monotone property of support
+37
+Beer, Diaper, Nuts
+Beer, Diaper
+Beer
+Sets of transactions containing item(s)
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Coffee, Diaper
+3 Beer, Diaper, Eggs
+4 Nuts, Eggs, Milk
+5 Nuts, Coffee, Diaper, Eggs, Milk
+TID: 1
+TID: 2
+TID: 3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Observation
+▪ All items in an itemset X should be in its superset Y
+• e.g., every transaction containing Y = {Beer, Diaper, Nuts} also contains X = {Beer, Diaper} 
+▪ The support of an itemset X is larger than or equal to the support of its superset Y 
+• i.e., ∀𝑿, 𝒀: 𝑿 ⊆ 𝒀 , 𝒔(𝑿) ≥ 𝒔(𝒀) a.k.a. anti-monotone property of support
+❑ The downward closure (a.k.a. “Apriori”) property of frequent patterns
+▪ Apriori: a Latin phrase that means "from what is earlier"
+▪ If an itemset Y is frequent, then all of its subsets X must also be frequent
+• i.e., ∀𝑋, 𝑌: 𝑋 ⊆ 𝑌 , 𝑠(𝑌) ≥ minsup → 𝑠(𝑋) ≥ minsup
+▪ In other words, if an itemset X is not frequent, any superset Y of it can not be frequent
+• i.e., ∀𝑋, 𝑌: 𝑋 ⊆ 𝑌 , 𝑠 𝑋 < minsup → 𝑠 𝑌 < minsup
+38
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Example usage of the apriori property of frequent patterns
+▪ If an itemset {A, B} is infrequent, should we check all of its super-itemsets?
+39
+null
+AB AC AD AE BC BD BE CD CE DE
+A B C D E
+ABC ABD ABE ACD ACE ADE BCD BCE BDE CDE
+ABCD ABCE ABDE ACDE BCDE
+ABCDE
+Infrequent
+Pruned
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+40
+❑ The Apriori algorithm
+▪ Basic idea
+• From k=1, incrementally generate candidate itemsets and find frequent itemsets by scanning TDB
+‒ i.e., if k-itemset is frequent, (k+1)-itemset can be frequent
+▪ Overall procedure for finding frequent itemsets
+Ck: Candidate itemset of size k
+Fk : Frequent itemset of size k
+k := 1;
+Fk := {frequent items};   // Frequent 1-itemset
+While (Fk != ) do {  // When Fk is non-empty
+    Ck+1 := candidates generated from Fk;  // candidate generation
+    Derive Fk+1 by counting candidates in Ck+1 in TDB and compare with minsup;
+    k := k + 1
+   }
+return k Fk    // Return Fk generated at each level
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Pseudo-code of Apriori for finding frequent itemsets
+41
+
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+42
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+minsup = 40% → 2TDB❑ Case study
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+43
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1
+minsup = 40% → 2TDB❑ Case study
+Candidate 
+1-itemsets
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+44
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1
+minsup = 40% → 2TDB❑ Case study
+Frequent 
+1-itemsets
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+45
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2
+minsup = 40% → 2TDB❑ Case study
+⨝
+Join
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+46
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+minsup = 40% → 2TDB❑ Case study
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+47
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+⨝
+Join
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+48
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+Should we count 
+all of them?
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+49
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+Should we count 
+all of them?No!
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+50
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset Sup
+{Beer, Nuts, Diaper} 2
+{Nuts, Diaper, Milk} 2
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 F3C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+51
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset Sup
+{Beer, Nuts, Diaper} 2
+{Nuts, Diaper, Milk} 2
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 F3C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+Itemset Sup
+{Beer, Nuts, Diaper, Milk}
+⨝ Join
+C4
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+52
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset Sup
+{Beer, Nuts, Diaper} 2
+{Nuts, Diaper, Milk} 2
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 F3C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+⨝ Join
+Is {Beer, Nuts, Milk} frequent?
+Is {Beer, Diaper, Milk} frequent?
+Itemset
+{Beer, Nuts, Diaper, Milk}
+C4
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+53
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset Sup
+{Beer, Nuts, Diaper} 2
+{Nuts, Diaper, Milk} 2
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 F3C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+If we consider every possible itemsets → 26-1 = 63 scans 
+With Apriori → 6 + 6 + 2 = 14 scans
+Itemset
+{Beer, Nuts, Diaper, Milk}
+C4
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+54
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{Beer} 3
+{Nuts} 4
+{Diaper} 4
+{Coffee} 1
+{Eggs} 1
+{Milk} 3
+Itemset
+{Beer, Nuts}
+{Beer, Diaper}
+{Beer, Milk}
+{Nuts, Diaper}
+{Nuts, Milk}
+{Diaper, Milk}
+Itemset Sup
+{Beer, Nuts, Diaper} 2
+{Nuts, Diaper, Milk} 2
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 F3C2
+Itemset Sup
+{Beer, Nuts} 2
+{Beer, Diaper} 3
+{Beer, Milk} 1
+{Nuts, Diaper} 3
+{Nuts, Milk} 3
+{Diaper, Milk} 2
+F2
+Itemset
+{Beer, Nuts, Diaper}
+{Beer, Nuts, Milk}
+{Beer, Diaper, Milk}
+{Nuts, Diaper, Milk}
+C3
+minsup = 40% → 2TDB❑ Case study
+Itemset
+{Beer, Nuts, Diaper, Milk}
+C4
+We have found 11 frequent itemsets
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+55
+TID Items bought together
+1 Beer, Coffee, Nuts, Diaper, Milk
+2 Beer, Coffee, Diaper
+3 Beer, Nuts, Diaper, Eggs
+4 Nuts, Diaper, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{B} 4
+{N} 4
+{D} 5
+{C} 2
+{E} 1
+{M} 3
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2 F2
+minsup = 60% → 3TDB
+❑ Quiz: how many frequent k-itemsets (k>1) are there?
+Itemset SupItemset
+C3 F3
+Itemset SupItemset
+C4 F4
+Itemset SupItemset
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Apriori: a breadth-first search algorithm
+▪ For each k, derive candidate (k+1)-itemsets
+▪ Find the frequent (k+1)-itemsets from the TDB
+56
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Apriori
+❑ Apriori: a breadth-first search algorithm
+▪ For each k, derive candidate (k+1)-itemsets
+▪ Find the frequent (k+1)-itemsets from the TDB
+57
+❑ Questions
+▪ Should we always scan the entire TDB to 
+check if an itemset is frequent?
+▪ Can we develop a depth-first search algorithm?
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+❑ Pattern mining methodologies
+▪ Association rule discovery
+▪ Apriori
+▪ FP-Growth
+▪ Rule generation
+❑ Pattern mining evaluation
+xxx 58
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Motivation
+▪ In TDB, let X be a frequent itemset, TDB’ be the set of transactions that contain X
+▪ If a new item y is a frequent item in TDB’, then {y}∪X must be a frequent itemset
+▪ Example
+59
+TID Items bought together
+1 Beer, Nuts, Diaper
+2 Beer, Diaper, Coffee
+3 Nuts, Diaper, Eggs, Milk
+4 Nuts, Milk
+5 Beer, Nuts, Diaper, Milk
+minsup = 40% → 2
+TDB
+TID Items bought together
+1 Beer, Nuts, Diaper
+3 Nuts, Diaper, Eggs, Milk
+5 Beer, Nuts, Diaper, Milk
+y = {Beer}:2 if frequent in TDB’
+{y}∪X = {Beer, Nuts, Diaper}:2 is also frequent in TDB
+X = {Nuts, Diaper}:3 is a frequent itemset
+TDB’: a subset of TDB
+containing X = {Nuts, Diaper}:
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Motivation
+▪ In TDB, let X be a frequent itemset, TDB’ be the set of transactions that contain X
+▪ If a new item y is a frequent item in TDB’, then {y}∪X must be a frequent itemset
+❑ FP-Growth (frequent pattern growth)
+▪ Main idea
+• A compact data structure FP-tree is constructed to store information for finding frequent patterns
+• Recursively find frequent itemsets from FP-tree
+▪ Advantages
+• No candidate itemsets generation is required (unlike Apriori)
+• Scan TDB only twice!
+60
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ The FP-Growth algorithm for finding frequent patterns
+▪ Input: a transactional database TDB, minsup
+▪ Procedures
+1. Find frequent 1-itemsets (1st TDB scan)
+‒ e.g., minsup = 60% (=3) → f:4, c:4, a:3, b:3, m:3, p:3
+61
+TID Items bought together
+1 f, a, c, d, g, i, m, p
+2 a, b, c, f, l, m, o
+3 b, f, h, j, o, w
+4 b, c, k, s, p
+5 a, f, c, e, l, p, m, n
+minsup = 60% → 3
+TDB
+Support of 1-itemsets
+f:4, c:4, a:3, b:3, m:3, p:3, l:2, o:2, d:1, e:1, g:1, h:1, i:1, k:1, n:1, s:1, w:1
+Frequent 1-itemsets
+f:4, c:4, a:3, b:3, m:3, p:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ The FP-Growth algorithm for finding frequent patterns
+▪ Input: a transactional database TDB, minsup
+▪ Procedures
+1. Find frequent 1-itemsets (1st TDB scan)
+‒ e.g., minsup = 60% (=3) → f:4, c:4, a:3, b:3, m:3, p:3
+2. Build f-lists
+‒ For each transactions, sort the frequent items by frequency to get a f-list
+‒ e.g., {f, a, c, d, g, i, m, p} → f, c, a, m, p
+62
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ The FP-Growth algorithm for finding frequent patterns
+▪ Input: a transactional database TDB, minsup
+▪ Procedures
+1. Find frequent 1-itemsets (1st TDB scan)
+2. Build f-lists
+3. Construct FP-tree (2nd TDB scan)
+4. Find frequent itemsets with FP-tree
+63
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+{ }
+f:4 c:1
+b:1
+p:1
+b:1c:3
+a:3
+b:1m:2
+p:2 m:1
+Frequent itemset
+f:4 None
+c:4 {f, c}:3
+a:3 {f, a}:3, {f, c}:3, {f, c, a}:3
+b:3 None
+m:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3, {f, c, a, m}:3
+p:3 {c, p}: 3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+64
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+Header TableTDB with f-list (minsup=3)
+FP-Tree
+{ }
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+65
+c:1
+a:1
+m:1
+p:1
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+Header TableTDB with f-list (minsup=3)
+FP-Tree
+f:1
+{ }
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+new
+new
+new
+new
+new
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+66
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+b:1
+m:1
+c:2
+a:2
+m:1
+p:1
+Header Table
+f:2
+{ }
+FP-Tree
+TDB with f-list (minsup=3)
++1
++1
++1
+new
+new
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+67
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+Header Table
+b:1
+m:1
+f:3
+c:2
+a:2
+m:1
+p:1
+b:1
+{ }
+FP-Tree
+TDB with f-list (minsup=3)
+new
++1
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+68
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+Header Table
+b:1
+m:1
+c:2
+a:2
+m:1
+p:1
+c:1
+b:1 b:1
+p:1
+f:3
+{ }
+FP-Tree
+TDB with f-list (minsup=3)
+new
+new
+new
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+Item Support Head
+f 4
+c 4
+a 3
+b 3
+m 3
+p 3
+69
+TID Items bought together f-list
+1 f, a, c, d, g, i, m, p f, c, a, m, p
+2 a, b, c, f, l, m, o f, c, a, b, m
+3 b, f, h, j, o, w f, b
+4 b, c, k, s, p c, b, p
+5 a, f, c, e, l, p, m, n f, c, a, m, p
+Header Table
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+FP-Tree
+TDB with f-list (minsup=3)
++1
++1
++1
++1
++1
+❑ FP-Growth Step 3: construct FP-Tree
+▪ Combine f-lists, with shared sub-branches merged, counts accumulated
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ FP-Growth Step 4: find frequent itemsets with FP-Tree
+▪ 4.1 Form conditional pattern bases: pattern_base | α
+▪ 4.2 Construct conditional FP-trees: FP-tree |  α
+▪ 4.3 Recursively find frequent itemsets from the conditional FP-trees
+70
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+Full FP-Tree
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ FP-Growth Step 4.1: form conditional pattern bases: pattern_base | α
+▪ A partition of frequent patterns
+• A sub TDB which consists of the set of prefix paths in the FP-tree 
+    with a frequent itemset α as a co-occurring suffix pattern
+▪ e.g., α = {m}
+• conditional pattern bases | {m} = {f,c,a}:2, {f,c,a,b}:1
+‒ i.e., {f, c, a}: support = 2 and {f, c, a, b}: support = 1
+71
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+Full FP-Tree
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ FP-Growth Step 4.2: construct conditional FP-trees: FP-tree |  α
+▪ A small FP-tree on the conditional pattern base pattern_base | α
+▪ e.g., α = {m}
+• Conditional pattern bases | {m} = {f, c, a}:2, {f, c, a, b}:1
+• Conditional FP-tree | {m} = f:3 – c:3 – a:3
+‒ A conditional FP-tree with the given minsup =  3
+‒ b:1 < minsup = 3 is not included in the conditional FP-tree
+72
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+{ }
+c:3
+a:3
+f:3
+Full FP-Tree
+Conditional 
+FP-tree | {m}
+m:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ FP-Growth Step 4.3: recursively find frequent k-itemsets (k>1)
+▪ Recursively construct conditional FP-tree | α and find frequent itemsets
+▪ e.g., α = {m}
+→ Conditional pattern bases | {m} = {f, c, a}:2, {f, c, a, b}:1
+→ Conditional FP-tree | {m} = f:3 – c:3 – a:3 
+→ Frequent 2-itemset: {a, m}, {c, m}, {f, m}
+→  Conditional pattern bases | {a, m} = {f, c}: 3
+→  Conditional FP-tree | {a, m} = f:3 – c:3
+ → Frequent 3-itemset: {c, a, m}, {f, a, m}
+  → Conditional pattern bases | {c, a, m} = {f}:3
+  → Conditional FP-tree | {c, a, m} = f:3
+  → Frequent 4-itemset: {f, c, a, m}
+→ Conditional pattern bases | {c, m} = {f}:3
+ → Conditional FP-tree | {c, m} = f:3
+ → Frequent 3-itemset: {f, c, m} 
+73
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+{ }
+c:3
+a:3
+f:3
+Full FP-Tree
+Conditional 
+FP-tree | {m}
+m:3
+{a, m}:3 
+{c, m}:3 
+{f, m}:3
+{c, a, m}:3
+{f, a, m}:3
+{f, c, m}:3
+{f, c, a, m}:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+74
+Full 
+FP-Tree
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4
+a:3
+b:3
+m:3
+p:3
+▪ Frequent k-itemsets
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {p}
+75
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4
+a:3
+b:3
+m:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree { }
+c:3
+Conditional 
+FP-tree 
+of {p}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4 Frequent 
+itemsets
+{c, p}:3 
+▪ Frequent k-itemsets
+(minsup=3) p:3
+Conditional 
+pattern base of {p}
+{f, c, a, m}:2
+{c, b}:1
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {m}
+76
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4
+a:3
+b:3
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree
+{ }
+c:3
+a:3
+f:3
+m:3
+Conditional 
+FP-tree 
+of {m}
+Conditional 
+FP-tree 
+of {a, m}
+{ }
+f:3
+Conditional
+ FP-tree
+ of {c, a, m}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4 Frequent 
+itemsets
+{a, m}:3 
+{c, m}:3 
+{f, m}:3
+Frequent 
+itemsets
+{c, a, m}:3
+{f, a, m}:3
+Frequent 
+itemsets
+{f, c, a, m}:3
+▪ Frequent k-itemsets
+Conditional 
+FP-tree 
+of {c, m}
+{ }
+f:3
+Frequent 
+itemsets
+{f, c, m}:3
+{ }
+c:3
+f:3
+(minsup=3)
+(minsup=3)
+(minsup=3)
+(minsup=3)
+am:3
+cm:3
+cam:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {b}
+77
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4
+a:3
+b:3 {f, c, a}:1, {f}:1, {c}:1 None None
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree { }Conditional 
+FP-tree 
+of {b}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+▪ Frequent k-itemsets
+None
+(minsup=3)
+b:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {a}
+78
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4
+a:3 {f, c}:3 f:3 – c:3 {f, a}:3, {c, a}:3, {f, c, a}:3
+b:3 {f, c, a}:1, {f}:1, {c}:1 None None
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree Conditional 
+FP-tree 
+of {a}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+▪ Frequent k-itemsets
+(minsup=3)
+{ }
+c:3
+f:3
+Frequent 
+itemsets
+{c, a}:3 
+{f, a}:3 
+Conditional 
+FP-tree 
+of {c, a}
+Frequent 
+itemsets
+{f, c, a}:3
+{ }
+f:3
+(minsup=3)
+a:3
+ca:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {c}
+79
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4
+c:4 {f}:3 f:3 {f, c}:3
+a:3 {f, c}:3 f:3 – c:3 {f, a}:3, {c, a}:3, {f, c, a}:3
+b:3 {f, c, a}:1, {f}:1, {c}:1 None None
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree Conditional 
+FP-tree 
+of {c}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+▪ Frequent k-itemsets
+(minsup=3)
+{ }
+f:3
+Frequent 
+itemsets
+{f, c}:3 
+c:3
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+▪ Example for the pattern base α = {f}
+80
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4 None None None
+c:4 {f}:3 f:3 {f, c}:3
+a:3 {f, c}:3 f:3 – c:3 {f, a}:3, {c, a}:3, {f, c, a}:3
+b:3 {f, c, a}:1, {f}:1, {c}:1 None None
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+Full 
+FP-Tree Conditional 
+FP-tree
+of {f}
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+▪ Frequent k-itemsets
+(minsup=3)
+{ }
+None
+f:4
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Example of FP-Growth Step 4
+▪ For each frequent 1-itemset, grow each itemset while recursively building its conditional FP-trees
+81
+1-itemset Conditional pattern bases Conditional FP-tree Frequent k-itemsets (k>1)
+f:4 None None None
+c:4 {f}:3 f:3 {f, c}:3
+a:3 {f, c}:3 f:3 – c:3 {f, a}:3, {c, a}:3, {f, c, a}:3
+b:3 {f, c, a}:1, {f}:1, {c}:1 None None
+m:3 {f, c, a}:2, {f, c, a, b}:1 f:3 – c:3 – a:3 {f, m}:3, {c, m}:3, {a, m}: 3,
+{f, c, m}:3, {f, a, m};3, {c, a, m}:3,{f, c, a, m}:3
+p:3 {f, c, a, m}:2, {c, b}:1 c:3 {c, p}: 3
+▪ Final frequent k-itemsets
+Full 
+FP-Tree
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+12 frequent itemsets
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Recap of FP-Growth
+▪ Find frequent 1-itemsets (1st scan) 
+▪ Construct a customized data structure, FP-tree (2nd scan)
+▪ For each frequent 1-itemset, 
+• Partition the TDB based on them (i.e., conditional pattern base)
+• Recursively exploit FP-tree (i.e., conditional FP-tree) to grow frequent patterns from each partition
+• Stop conditions
+‒ The resulting FP-tree is empty (e.g., FP-tree | {f}))
+ → No further pattern base exists
+‒ The resulting FP-tree contains only one path (e.g., FP-tree | {m})
+→ All the combinations of its sub-paths become frequent patterns
+82
+{ }
+f:4
+{ }
+c:3
+a:3
+f:3
+m:3
+b:1
+m:1
+{ }
+c:3
+a:3
+m:2
+p:2
+c:1
+b:1 b:1
+p:1
+f:4
+Conditional 
+FP-tree | {f}
+Conditional 
+FP-tree | {m}Full FP-tree
+DAIS lab at Korea University
+Pattern Mining > Methodologies > FP-Growth 
+❑ Pseudo-code of FP-Growth
+▪ Note that the support thresholding on the f-list is omitted here
+83
+All items
+minsup (tree, base item, minsup)
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+❑ Pattern mining methodologies
+▪ Association rule discovery
+▪ Apriori
+▪ FP-Growth
+▪ Rule generation
+❑ Pattern mining evaluation
+xxx 84
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Generation
+❑ Given a frequent itemset X, 
+▪ Possible association rules
+• All non-empty subsets Y ⊂ X such that X-Y → Y satisfies the minimum confidence threshold
+• If |X| = k, then there are 2k – 2 candidate association rules (except for X →  and  → X)
+▪ Example
+• If X = {A,B,C,D} is a frequent itemset, candidate rules can be:
+85
+BCD→A ACD→B ABD→C ABC→D
+CD→AB BD→AC BC→AD AD→BC AC→BD AB→CD
+D→ABC C→ABD B→ACD A→BCD
+{  }
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Generation
+86
+❑ How to efficiently generate rules from frequent itemsets?
+▪ Unlike support, confidence does not have an anti-monotone property
+▪ Example X = {A, B, D} ⊆ Y = {A, B, C, D}
+• Support
+‒ s({A, B, D}) ≥ s({A, B, C, D})
+• Confidence 
+‒ Frequent 4-itemset {A, B, C, D}: c(ABC → D) = s({A,B,C,D})/s({A,B,C} 
+‒ Frequent 3-itemset {A, B, D}: c(AB → D) = s({A,B,D})/s({A,B} 
+‒ c(ABC → D) ?? c(AB → D)
+DAIS lab at Korea University
+Pattern Mining > Methodologies > Rule Generation
+87
+❑ How to efficiently generate rules from frequent itemsets?
+▪ Confidence does not have an anti-monotone property
+• e.g., c(ABC → D) can be larger or smaller than c(AB → D)
+▪ Confidence of rules generated from the same itemset has an anti-monotone property
+• Confidence is anti-monotone w.r.t. the number of items on the right-hand-side of the rule
+• e.g., X = {A,B,C,D}: c(BCD → A) ≥ c(CD → AB) ≥ c(D → ABC)
+BCD→A ACD→B ABD→C ABC→D
+CD→AB BD→AC BC→AD AD→BC AC→BD AB→CD
+D→ABC C→ABD B→ACD A→BCD
+{  }
+Not confident
+Pruned
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of pattern mining
+❑ Pattern mining methodologies
+❑ Pattern mining evaluation
+▪ Motivation
+▪ Lift
+xxx 88
+DAIS lab at Korea University
+Pattern Mining > Evaluation > Motivation
+❑ Are support and confidence sufficient? 
+▪ Example
+• TDB with minsup = 30% and minconf = 60%
+‒ Total 10,000 transactions
+‒ 6,000 transactions include “game”
+‒ 7,500 transactions include “video”
+‒ 4,000 transactions include both “game” and “video”
+• A strong rule discovered: {“game”} → {“video”} 
+‒ Support = 4,000/10,000 = 40% > minsup
+‒ Confidence = 4,000/6,000 = 66% > minconf
+• Is it interesting?
+‒ It can be misleading because the probability of purchasing “video” is 7,500/10,000 = 75% > 66%
+89
+DAIS lab at Korea University
+Pattern Mining > Evaluation > Lift
+❑ Correlation measure: Lift
+▪ The degree to which the occurrence of one “lifts” the occurrence of the other
+• 𝑃 𝐴 ∪ 𝐵 = 𝑃 𝐴 × 𝑃 𝐵  → Lift = 1: A and B are independent
+• 𝑃 𝐴 ∪ 𝐵 > 𝑃 𝐴 × 𝑃 𝐵  → Lift > 1: A and B are positively correlated
+• 𝑃 𝐴 ∪ 𝐵 < 𝑃 𝐴 × 𝑃 𝐵  → Lift < 1: A and B are negatively correlated
+▪ Example
+• Lift(game, video) = 0.4/(0.6 x 0.75) = 0.89 < 1
+• The sale of game is said to increase the likelihood of the sale of video by a factor of lift = 0.89
+‒ Negatively correlated → the sale of game does not help the sale of video 
+▪ It is more informative if we have the lift score in addition to the support and confidence
+‒ “A → B” [support, confidence, lift]
+90
+𝑙𝑖𝑓𝑡 𝐴, 𝐵 = 𝑐 𝐴 → 𝐵
+𝑠 𝐵 = 𝑠 𝐴 ∪ 𝐵
+𝑠 𝐴 × 𝑠 𝐵 = 𝑃 𝐴 ∪ 𝐵
+𝑃 𝐴 × 𝑃 𝐵
+DAIS lab at Korea University
+Tutorial References
+❑ Examples
+▪ Association rule mining example (FP-growth) 
+▪ Association rule mining example (Apriori)
+▪ Market-basket analysis example (Apriori)
+❑ Library
+▪ Mlxtend library – FP-Growth
+▪ Mlxtend library – Apriori
+❑ Implementations
+▪ FP-growth implementation
+▪ Apriori implementation
+91
+DAIS lab at Korea University
+Next: Tutorial 1
+❑ How to write a paper with Latex
+▪ http://www.overleaf.com
+xxx 92
+❑ Preprocessing with agents
+▪ http://colab.google.com
+▪ AutoDCWorkflow: LLM-based Data Cleaning 
+Workflow Auto-Generation and Benchmark 
+(EMNLP ’25)
+
+DAIS lab at Korea University
+[Answer] Pattern Mining > Methodologies > Apriori
+93
+TID Items bought together
+1 Beer, Coffee, Nuts, Diaper, Milk
+2 Beer, Coffee, Diaper
+3 Beer, Nuts, Diaper, Eggs
+4 Nuts, Diaper, Milk
+5 Beer, Nuts, Diaper, Milk
+Itemset Sup
+{B} 4
+{N} 4
+{D} 5
+{C} 2
+{E} 1
+{M} 3
+Itemset
+{Beer}
+{Nuts}
+{Diaper}
+{Coffee}
+{Eggs}
+{Milk}
+C1 F1 C2 F2
+minsup = 60% → 3TDB
+❑ Quiz: how many frequent k-itemsets (k>1) are there? Answer: 7 
+Itemset Sup
+B,N 3
+B,D 4
+B,M 2
+N,D 4
+N,M 3
+D,M 3
+Itemset
+B,N
+B,D
+B,M
+N,D
+N,M
+D,M
+C3 F3
+Itemset Sup
+B,N,D 3
+N,D,M 3
+Itemset
+B,N,D
+B,N,M
+N,D,M
+B,D,M
+C4 F4
+Itemset SupItemset
+B,N,D,M
+DAIS lab at Korea University
+Cookie Slides - Frequent Pattern in Practice
+❑ Keyword recommendation at Naver Line Japan App (prototype)
+▪ Effective search keyword suggestion leads to more consumption of relevant content
+94Source: https://deview.kr/2021/sessions/509
+Rolling search keywords suggestion
+Dog
+BTS Coldplay
+Twice New Single
+… 
+DAIS lab at Korea University
+Cookie Slides - Frequent Pattern in Practice
+95
+Source: https://deview.kr/2021/sessions/509
+Coldplay
+Collabo
+Coldplay Collabo
+Coldplay
+Content (e.g., news articles)
+❑ Keyword recommendation at Naver Line Japan App (prototype)
+▪ Not enough user query logs? → content-based keyword pattern extraction
+DAIS lab at Korea University
+Cookie Slides - Frequent Pattern in Practice
+❑ Keyword recommendation at Naver Line Japan App (prototype)
+▪ Extension 1: considering time-aware support
+96
+8 weeks
+1 week
+Temporally decaying weighted support
+More likely to be found in multiple periods,
+More frequently found in each period,
+More recently found,
+→ Higher support score
+Publish date 
+of content
+Source: https://deview.kr/2021/sessions/509
+DAIS lab at Korea University
+Cookie Slides - Frequent Pattern in Practice
+❑ Keyword recommendation at Naver Line Japan App (prototype)
+▪ Extension 2: considering window size of patterns constraint
+97
+Content title
+English Single Music Video 2nd Teaser Out!
+Not considered
+Example
+patterns
+Window size = 7 (e.g., 7 keywords)
+Out
+Out
+Japan
+JeongYeon
+NaYeon
+Japan, Debut
+Younger age
+Japan
+MoMo
+Tzuyu
+WarnerMusicJapan, Japan
+Window size = 4 (e.g., 4 keywords)
+Source: https://deview.kr/2021/sessions/509
+DAIS lab at Korea University
+Cookie Slides - Frequent Pattern in Practice
+❑ Keyword recommendation at Naver Line Japan App (prototype)
+▪ Application to personalized keyword recommendation
+98
+User-aware
+seed keywords
+Frequent pattern-based 
+expanded keyword suggestion
+band
+new drama
+mini-album
+fashion
+joy
+joy
+play count
+japanese member
+video
+momo out
+news out
+twice makeup
+User embedding
+Recently viewed
+ content embedding
+Seed Expanded
+Source: https://deview.kr/2021/sessions/509

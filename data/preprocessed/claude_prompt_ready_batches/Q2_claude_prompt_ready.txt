@@ -1,0 +1,601 @@
+You are a careful and conservative data preprocessing assistant for a student response dataset.
+
+Your task is to preprocess raw student responses from:
+26S_COSE471_Discussion_Datasets.xlsx.
+
+The dataset contains student responses to Q1–Q9.
+Q1 and Q2 were collected before the data science course.
+Q3–Q9 were collected after class discussions during the course.
+
+Research context:
+This project investigates whether students’ pre-course expectations are semantically reflected in their post-course learning responses.
+However, student IDs are not consistent across Q1–Q9, so the analysis will be conducted at the group-level semantic distribution, not at the individual-student transition level.
+
+Question context:
+- Q1–Q2: why students enrolled in the course and where they want to apply what they learn.
+- Q3–Q9: students’ learning, interpretation, questions, and reflections after class discussions.
+
+Data issues:
+- Responses may be in English, Korean, or mixed English/Korean.
+- Some responses contain typos, awkward grammar, fragmented wording, or unclear meaning.
+- Some responses may be missing, copied, very short, or low-information.
+
+Main task:
+For every raw student response, create one unified master preprocessing JSON object.
+
+Do not create separate dataset versions.
+Do not create separate arrays for multilingual and English-translated versions.
+Return only one unified JSON array.
+
+This master dataset will later be split into separate analysis datasets by selecting different text columns:
+- cleaned_text will later be used as the main text for multilingual analysis.
+- english_text will later be used as the main text for English-based analysis.
+
+IMPORTANT conceptual rule:
+Both cleaned_text and english_text must be derived directly from raw_response.
+
+- cleaned_text is a minimally cleaned version of raw_response that preserves the original language.
+- english_text is an English rendering of the original meaning of raw_response.
+- english_text may refer to cleaned_text for readability, but it must not inherit any meaning that is not clearly present in raw_response.
+- Do not treat cleaned_text as the sole source for english_text.
+- If cleaned_text accidentally changes or clarifies something too much, english_text must still follow raw_response, not cleaned_text.
+
+Critical rules:
+- Do not add new meaning.
+- Do not infer beyond the text.
+- Do not over-interpret.
+- Do not make unclear responses sound clear.
+- Do not make the response more detailed, academic, or polished than it originally is.
+- Preserve the student's original intention as much as possible.
+- If the meaning is unclear, write "unclear" instead of guessing.
+- If the response is missing, write "missing".
+- Keep uncertainty visible.
+- Do not remove low-quality responses; flag them instead.
+
+VERY IMPORTANT RAW TEXT RULE:
+- raw_text must be copied exactly from the input raw_response.
+- Do not translate raw_text.
+- Do not summarize raw_text.
+- Do not clean raw_text.
+- Do not add labels such as "(Korean)", "(English)", "(translated)", "(summary)", or any other artificial label to raw_text.
+- Do not replace raw_text with your interpretation.
+- Do not replace raw_text with an English summary.
+- If the input response is Korean, raw_text must remain Korean.
+- If the input response is English, raw_text must remain English.
+- If the input response is mixed Korean/English, raw_text must remain mixed.
+- The raw_text field must be character-for-character identical to raw_response, except for unavoidable JSON escaping.
+
+Input format:
+Each response will be provided in the following format:
+
+[
+  {
+    "original_no": 1,
+    "question": "Q1",
+    "raw_response": "..."
+  },
+  {
+    "original_no": 2,
+    "question": "Q1",
+    "raw_response": "..."
+  }
+]
+
+Use raw_response as the exact and only source for raw_text.
+
+For each raw response, output one JSON object with the following fields:
+
+1. id
+- Unique ID in the format "Q[number]_[three-digit index]".
+- Example: "Q2_014".
+- The three-digit index must match original_no padded to three digits.
+
+2. original_no
+- Original row number or response number from the input.
+
+3. question
+- One of: "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9".
+
+4. stage
+- Use this mapping:
+  - Q1, Q2 → "pre"
+  - Q3, Q4 → "discussion_1"
+  - Q5, Q6 → "discussion_2"
+  - Q7, Q8 → "discussion_3"
+  - Q9 → "discussion_4"
+
+5. raw_text
+- Copy raw_response exactly as given.
+- Do not edit this field in any way.
+
+6. language
+- Classify the raw response as:
+  - "ko" if mostly Korean
+  - "en" if mostly English
+  - "mixed" if Korean and English are both meaningfully present
+  - "unknown" if empty, noisy, symbolic, or language-indeterminate
+
+7. cleaned_text
+- Create cleaned_text directly from raw_response.
+- This field is a minimally cleaned version of raw_response.
+- Preserve the original language of raw_response as much as possible.
+- Fix only obvious typos, spacing, grammar, punctuation, and line breaks.
+- Do not add examples, explanations, or concepts.
+- Do not change the student's meaning.
+- Do not make the response more specific than the original.
+- If raw_response is Korean, keep cleaned_text in Korean.
+- If raw_response is English, keep cleaned_text in English.
+- If raw_response is mixed Korean/English, preserve the mixed structure unless a very small clarification is necessary for readability.
+- If multiple interpretations are possible, choose the most conservative interpretation and lower confidence.
+- If the meaning is unclear, write "unclear".
+- If the response is missing, write "missing".
+
+8. english_text
+- Create english_text directly from the original meaning of raw_response.
+- This field must be in English.
+- This field is a translation, not a summary.
+- Preserve the original perspective and pronouns as much as possible.
+- If the student writes in first person, keep first person in english_text.
+- Do not change first-person statements into third-person statements.
+- If raw_response says "I want to...", english_text should also say "I want to...", not "The student wants to...".
+- If raw_response is Korean without an explicit subject, use the most natural English form while preserving the student's perspective. In most cases, use first person.
+- If raw_response is Korean, translate its meaning into English.
+- If raw_response is English, lightly clean it in English without changing meaning.
+- If raw_response is mixed Korean/English, produce one coherent English version.
+- You may refer to cleaned_text only for readability, but english_text must not include any meaning that is not clearly present in raw_response.
+- Do not add meaning.
+- Do not infer missing details.
+- Do not make vague statements more specific than the original.
+- Do not make unclear responses sound clear.
+- Preserve uncertainty.
+- If the meaning is unclear, write "unclear".
+- If raw_response is missing, write "missing".
+
+9. one_sentence_summary
+- Write one concise English sentence.
+- This field is a summary for analysis, not a direct translation.
+- It is okay to use third-person phrasing such as "The student..." in this field.
+- The summary must only reflect what is present in raw_response.
+- The summary may refer to english_text, but it must not add any meaning beyond raw_response.
+- If the response is clear but short, keep the summary short.
+- If the response is vague, keep the summary vague.
+- If unclear, write "The response is unclear."
+- If missing, write "The response is missing."
+
+10. keywords
+- Provide 1 to 3 English keywords.
+- Never provide more than 3 keywords.
+- Keywords should be useful for clustering, topic modeling, and similarity analysis.
+- Do not include unsupported keywords.
+- Prefer consistent wording across similar responses.
+- If unclear, use ["unclear"].
+- If missing, use ["missing"].
+
+11. themes
+- Provide 1 to 3 broader English theme labels.
+- Never provide more than 3 themes.
+- Themes should be broader than keywords.
+- Use only themes supported by raw_response.
+- Prefer consistent wording across similar responses.
+
+Allowed common themes:
+- "course motivation"
+- "career preparation"
+- "major relevance"
+- "AI and machine learning"
+- "data science curiosity"
+- "data mining"
+- "project-based learning"
+- "real-world application"
+- "daily life application"
+- "problem solving"
+- "recommendation systems"
+- "pattern discovery"
+- "data preprocessing"
+- "data visualization"
+- "classification"
+- "clustering"
+- "prediction"
+- "personal reflection"
+- "social analysis"
+- "unclear"
+- "missing"
+
+You may create another concise theme only if none of the above fits, but do not over-specify.
+
+12. quality
+- Classify the response as:
+  - "high"
+  - "medium"
+  - "low"
+
+Quality criteria:
+- "high": Clear, meaningful, and sufficiently informative for semantic analysis.
+- "medium": Understandable but short, general, partially vague, or mildly fragmented.
+- "low": Missing, unclear, extremely short, low-information, copied without meaningful content, or too noisy to analyze reliably.
+
+13. reason_for_quality
+- Give one short standardized reason.
+- Use exactly one of the following whenever possible:
+  - "Clear and specific response."
+  - "Clear but somewhat general."
+  - "Understandable but short."
+  - "Understandable but partially vague."
+  - "Partially unclear due to fragmented wording."
+  - "Low-information response."
+  - "Meaning is unclear."
+  - "Missing response."
+
+Missing response rule:
+Use "Missing response." when the response is empty, blank, says there is no separate answer, says it continues from another question without adding new Q-specific content, or contains only placeholders.
+
+Low-information rule:
+Use "Low-information response." when the response contains a few words but does not provide enough meaning for semantic analysis.
+
+Unclear response rule:
+Use "Meaning is unclear." when the response contains text but its meaning cannot be determined without guessing.
+
+14. confidence
+- A number from 0 to 1.
+- This means your confidence that cleaned_text, english_text, one_sentence_summary, keywords, and themes correctly preserve the original meaning of raw_response.
+- It is not the student's confidence.
+- It is not whether the student's statement is true.
+- It is the reliability of this preprocessing output.
+
+Important confidence rule:
+- If the response is clearly missing and you are confident it is missing, confidence should be high, such as 0.90 to 1.00.
+- If the response is unclear because the meaning is ambiguous, confidence should be low.
+- If the response is short but still clear, confidence can be medium-high.
+- If the response is fragmented or has multiple possible meanings, lower the confidence.
+- If any part of the response required conservative interpretation, lower the confidence.
+
+Suggested scale:
+- 0.90–1.00: very clear and reliable preprocessing
+- 0.70–0.89: mostly clear
+- 0.50–0.69: partially clear but ambiguous
+- 0.20–0.49: mostly unclear or very low information
+- 0.00–0.19: unusable or impossible to interpret
+
+Final self-check before output:
+Before returning the JSON, verify the following:
+1. raw_text is exactly identical to the input raw_response.
+2. No raw_text starts with artificial labels such as "(Korean)", "(English)", "(translated)", or "(summary)" unless those exact words appeared in raw_response.
+3. cleaned_text is derived directly from raw_response.
+4. english_text is derived directly from the original meaning of raw_response, not only from cleaned_text.
+5. Every object contains all required fields.
+6. keywords has 1 to 3 items.
+7. themes has 1 to 3 items.
+8. quality is only "high", "medium", or "low".
+9. language is only "ko", "en", "mixed", or "unknown".
+10. stage follows the Q1–Q9 mapping exactly.
+11. The output is one unified JSON array, not separate version arrays.
+12. The output is valid JSON.
+13. There are no explanations outside the JSON.
+
+Output requirements:
+- Return only one valid unified JSON array.
+- Do not create separate arrays.
+- Do not create separate dataset versions.
+- Do not include markdown.
+- Do not include commentary.
+- Do not include explanations outside the JSON.
+- Do not use trailing commas.
+- Every object must contain all fields.
+- Use double quotes for all JSON strings.
+- Keep the order of fields exactly as specified.
+
+Example input:
+[
+  {
+    "original_no": 14,
+    "question": "Q2",
+    "raw_response": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대."
+  }
+]
+
+Example output:
+[
+  {
+    "id": "Q2_014",
+    "original_no": 14,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 통해 개인적인 교통수단 문제를 해결할 수 있을 것으로 기대한다.",
+    "english_text": "I expect that data mining can help solve personal transportation problems.",
+    "one_sentence_summary": "The student wants to apply data mining to personal transportation problems.",
+    "keywords": ["data mining", "transportation", "problem solving"],
+    "themes": ["real-world application", "problem solving"],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.93
+  }
+]
+
+Batch processing instruction:
+The dataset will be processed question by question or in small batches.
+
+For each run, only preprocess the responses included in the current input batch.
+Do not assume that responses from other questions are included.
+Do not generate responses for missing question numbers unless they are explicitly provided in the current input.
+Do not continue to the next question automatically.
+Do not merge this batch with previous or future batches.
+
+The input batch will usually contain responses from a single question, such as Q1 only, Q2 only, or Q3 only.
+All output objects must use the question value provided in each input item.
+Return only the JSON array for the current input batch.
+
+Now preprocess the following Q2 input batch using all rules above.
+
+This batch contains exactly 52 responses.
+Your output must contain exactly 52 JSON objects.
+
+Do not omit any input response.
+Do not combine multiple responses into one object.
+Do not create extra objects.
+The first output object must be Q2_001.
+The last output object must be Q2_052.
+
+[
+  {
+    "original_no": 1,
+    "question": "Q2",
+    "raw_response": "Twitter(X)의 '트친소' 해시태그 데이터를 마이닝해 새로운 포스트 작성자와 사용자 간의 호환성(compatibility)을 분석하는 아이디어. Customer: primarily myself."
+  },
+  {
+    "original_no": 2,
+    "question": "Q2",
+    "raw_response": "미디어(뉴스)에 숨겨진 정보, 정치적 편향 문제. 게임/TV 미출시 업데이트 정보. 데이터 마이닝을 통해 관심 분야 정보를 찾고 싶음."
+  },
+  {
+    "original_no": 3,
+    "question": "Q2",
+    "raw_response": "게임 추천 시스템 - 자세한 정보 없이도 적합한 게임을 추천해주는 시스템. 게임이 많아서 찾기 어렵고, 게임 데이터를 통해 데이터마이닝 개념을 활용하고 싶음."
+  },
+  {
+    "original_no": 4,
+    "question": "Q2",
+    "raw_response": "(Q1 이어지는 내용으로 Q2 별도 기재 없음)"
+  },
+  {
+    "original_no": 5,
+    "question": "Q2",
+    "raw_response": "인생 문제... 수면 문제. 나쁜 라이프스타일로 인해 수면이 불규칙함. 수면 패턴 분석을 통해 수면 질 향상 가능. 오늘 데이터마이닝 공부로 이 문제에 대해 다뤄보고 싶음."
+  },
+  {
+    "original_no": 6,
+    "question": "Q2",
+    "raw_response": "Pattern mining을 통해 Data 분석 - DS가 어떻게 활용되는지 궁금. 여러 데이터로 패턴 찾기, 데이터 분야에서 활용되는 사고를 넓히고 싶음."
+  },
+  {
+    "original_no": 7,
+    "question": "Q2",
+    "raw_response": "카카오맵 업데이트 없이 대중교통 이용 어려움. 실시간 정보 부족으로 불편함. 10배정도 앞당겨서 출발해야 하는 불편함. 데이터마이닝을 통해 대중교통 정보를 개선하면 더 편리할 것."
+  },
+  {
+    "original_no": 8,
+    "question": "Q2",
+    "raw_response": "One problem in my daily life is time management. I get distracted (screen time, YouTube, games, history). This class will help me be able to use daily data patterns and knowledge to help me focus better when it is harder."
+  },
+  {
+    "original_no": 9,
+    "question": "Q2",
+    "raw_response": "Using raw data to usable data. For example, making a simple yet informative presentation from raw data. Could organize life more by categorizing monthly expenses. Track where money have gone to."
+  },
+  {
+    "original_no": 10,
+    "question": "Q2",
+    "raw_response": "Trying to stay on track of my monthly budget. Been 2 years living in Korea University but still overspend. Hope this class helps me manage and recognize data patterns in life."
+  },
+  {
+    "original_no": 11,
+    "question": "Q2",
+    "raw_response": "데이터 분류와 마이닝 방법들이 실제 어떤 시스템에서 어떻게 활용되는지 알고 싶음. 데이터 특징 추출이 어떤 식으로 이루어지는지 이해하고 싶음."
+  },
+  {
+    "original_no": 12,
+    "question": "Q2",
+    "raw_response": "데이터마이닝을 통한 분류, 클러스터링으로 다양한 문제 해결 시도. 실시간 교통 정보 제공이나 개인화된 경험 제공에 데이터마이닝 활용 가능."
+  },
+  {
+    "original_no": 13,
+    "question": "Q2",
+    "raw_response": "수업의 경우 여러 결과와 반응도가 많고 데이터를 변환하기 어려운 경우 있음. 제대로 다루게 되면 더 많은 사례에 활용 가능."
+  },
+  {
+    "original_no": 14,
+    "question": "Q2",
+    "raw_response": "I have a problem of choosing clothes/shoes to buy. By taking this course, it will help me make better decisions by collecting and analyzing data to see the most bought shoes. Concept of data mining will help choose the best one."
+  },
+  {
+    "original_no": 15,
+    "question": "Q2",
+    "raw_response": "친구의 작업물에 저작권법 관련 패턴을 찾고 싶음. 데이터마이닝 방법으로 텍스트 패턴에 접근하여 법적인 문제를 해결할 수 있을 것."
+  },
+  {
+    "original_no": 16,
+    "question": "Q2",
+    "raw_response": "수많은 데이터를 한 번에 볼 방법이 없어 어려움. 데이터마이닝을 통해 보기 힘든 정보를 이해하고 한 번에 정리할 수 있는 방법을 찾고 싶음."
+  },
+  {
+    "original_no": 17,
+    "question": "Q2",
+    "raw_response": "An AI model trained with date and specific parameters for a project. E.g. An AI model that collects BMI data and suggests eating habits and exercise based on weight and emotion. Data mining can shorten the research process by half."
+  },
+  {
+    "original_no": 18,
+    "question": "Q2",
+    "raw_response": "When people ask me 'what is data science?' I cannot answer. By taking this class and based on the concepts learned, I hope I can answer confidently. I can get out of my own anxiety."
+  },
+  {
+    "original_no": 19,
+    "question": "Q2",
+    "raw_response": "Image detection is related to the course concepts. For classification and detection of images, we need high-level pattern matching, data clustering. Real life: cameras on vehicles, CCTVs, autonomous driving (Tesla). Will learn basic concepts and apply to team project."
+  },
+  {
+    "original_no": 20,
+    "question": "Q2",
+    "raw_response": "One problem is managing my sleep pattern. By collecting data on sleeping hours, screen time, and daily condition, I can find my sleep quality and build healthier habits."
+  },
+  {
+    "original_no": 21,
+    "question": "Q2",
+    "raw_response": "Analyze my financial spending habits by looking at my purchases pattern. May optimize for more discounts or reduce overall spending."
+  },
+  {
+    "original_no": 22,
+    "question": "Q2",
+    "raw_response": "Game hack detection - detecting cheating in games through data mining by detecting abnormal behavior patterns."
+  },
+  {
+    "original_no": 23,
+    "question": "Q2",
+    "raw_response": "데이터마이닝을 통해 개인적인 교통 수단 문제들을 해결할 수 있을 것으로 기대."
+  },
+  {
+    "original_no": 24,
+    "question": "Q2",
+    "raw_response": "Edge cases in data, inconsistencies. Also: girlfriend lives near Hanyang and I live at Banwon - many ways to travel from A to B but the best route differs every time. Want to find the consistently best route."
+  },
+  {
+    "original_no": 25,
+    "question": "Q2",
+    "raw_response": "I have many thought processes before I do something. Thoughts are overlapped and cluttered. Maybe I could learn how to process thoughts, know what's redundant, and understand what's important."
+  },
+  {
+    "original_no": 26,
+    "question": "Q2",
+    "raw_response": "Interesting to analyze reader behavior/patterns. Trying to explain why and how it relates to the world or psychology of a particular kind. Like a sociological/psychological analysis study."
+  },
+  {
+    "original_no": 27,
+    "question": "Q2",
+    "raw_response": "I'm riding subway daily to KU. The subway door closes too early even though there are lots of people to board. If opening door time would be flexibly determined based on data, it would improve subway experience."
+  },
+  {
+    "original_no": 28,
+    "question": "Q2",
+    "raw_response": "공부해야 할 것이 너무 많고 일정이 맞지 않는 경우가 많음. 이 수업을 통해 기계가 패턴을 찾아내서 시간 조율이나 정보 정리를 도와주면 좋겠음."
+  },
+  {
+    "original_no": 29,
+    "question": "Q2",
+    "raw_response": "I do part-time jobs at a convenience store. Customers really buy similar groups of stuff most of the time, which can be categorized by gender, age, Korean/foreigners. That's why Data Science/Data Clustering is interesting."
+  },
+  {
+    "original_no": 30,
+    "question": "Q2",
+    "raw_response": "This course may help me choose further study field, in terms of company or university/professor. Through classifying and considering all options available, a better choice can be made."
+  },
+  {
+    "original_no": 31,
+    "question": "Q2",
+    "raw_response": "I don't read maps very well. When at a shopping mall, instead of looking at store names, I read store numbers in order. Related to data arrangements in information boards where stores can be sorted by category/services alphabetically."
+  },
+  {
+    "original_no": 32,
+    "question": "Q2",
+    "raw_response": "I have problems organizing my belongings in my small house. Need to categorize things I need, throw away seasonal items. The concept of data mining, outlier and detection can be used to solve my problem."
+  },
+  {
+    "original_no": 33,
+    "question": "Q2",
+    "raw_response": "The lack of organization in my Google Cloud storage - massive number of files scattered without clear structure. Want to apply clustering and classification to automatically group similar documents and categorize unsorted files."
+  },
+  {
+    "original_no": 34,
+    "question": "Q2",
+    "raw_response": "As a citizen in Gyeonggi province who commutes by public transportation, standing for over an hour is routine. Want to make a new algorithm that provides the best way to sit in train cars using mobile signal density data, adding a 'sitting first' option for route planning."
+  },
+  {
+    "original_no": 35,
+    "question": "Q2",
+    "raw_response": "Optimizing my nutrition plan by analyzing data on calorie intake, body weight, and exercise performance."
+  },
+  {
+    "original_no": 36,
+    "question": "Q2",
+    "raw_response": "한국어: 글로벌 지표를 공부하며 전문화된 분야에서의 가이드라인을 얻고 싶음."
+  },
+  {
+    "original_no": 37,
+    "question": "Q2",
+    "raw_response": "(Q2 미기재)"
+  },
+  {
+    "original_no": 38,
+    "question": "Q2",
+    "raw_response": "Pattern mining, classification, clustering, outlier detection에 대해 배우고, 사람들의 명상 특성을 데이터로 찾아 clustering으로 패턴을 찾아낼 수 있을 것이라 기대."
+  },
+  {
+    "original_no": 39,
+    "question": "Q2",
+    "raw_response": "I've always struggled with scheduling and following plans. Can't organize well. Hope this course teaches me how to schedule my daily schedule through Data Mining."
+  },
+  {
+    "original_no": 40,
+    "question": "Q2",
+    "raw_response": "Feature extraction that determines excess returns over the benchmark (factor selection). In other words, avoiding data overfitting (in DL, overfitting)."
+  },
+  {
+    "original_no": 41,
+    "question": "Q2",
+    "raw_response": "I'm using a company app for shipping and they recommend tools based on my data using clustering in complex ways. I could understand by attending this course how it works."
+  },
+  {
+    "original_no": 42,
+    "question": "Q2",
+    "raw_response": "I bought an air purifier and I'm curious if I should keep it on 24 hours. The performance and needs would need to match balance with costs. Need data for evaluating and finding an efficient managing way."
+  },
+  {
+    "original_no": 43,
+    "question": "Q2",
+    "raw_response": "Researching web novel popularity. Could extract certain traits, filter out irrelevant items, and distinguish safe-to-go needs. Use this class to support my research and predict the hit rate of web novels."
+  },
+  {
+    "original_no": 44,
+    "question": "Q2",
+    "raw_response": "I tend to get distracted while studying and use my phone a lot. Would be great if I could build something that detects when I am not focused and reminds me to concentrate on my task."
+  },
+  {
+    "original_no": 45,
+    "question": "Q2",
+    "raw_response": "I studied cybersecurity and solved hundreds of CTF wargames from Dreamhack. Each paper has basic security theory and problem solving strategy. Some have common features. May I extract or cluster my papers so that I can search my archive efficiently?"
+  },
+  {
+    "original_no": 46,
+    "question": "Q2",
+    "raw_response": "I know data science is all about finding interesting patterns. My first 2 years in Korea, my grades were always going lower. But suddenly last semester I got the highest grade. Was it anomalous? Hope I can get a good grade so my grades data will keep increasing."
+  },
+  {
+    "original_no": 47,
+    "question": "Q2",
+    "raw_response": "All my friends have different food preferences and allergies which can act as data to decide a restaurant everyone agrees on. Categorizing by dietary restrictions, cuisine preferences, post-restaurant ratings - a recommendation system could suggest suitable restaurants."
+  },
+  {
+    "original_no": 48,
+    "question": "Q2",
+    "raw_response": "I'm interested in learning other languages. Since I am a lazy man, I wanted to learn a new language faster and easier. Want to gather many datasets of several methods of learning language to discover the most effective method using MRI pictures, brain waves, behavior, etc."
+  },
+  {
+    "original_no": 49,
+    "question": "Q2",
+    "raw_response": "As a PL enthusiast, I want to devise some role/function language that has some engineers who write clean code for specific language. Want to answer: which tool should I use?"
+  },
+  {
+    "original_no": 50,
+    "question": "Q2",
+    "raw_response": "여러 알고리즘을 어느 상황에 써야 하는지 고민하는 문제. 프로젝트로 모든 주요 알고리즘을 실습해보고 실생활 유용한 문제를 정의하고 해결책을 제시해보고 싶음."
+  },
+  {
+    "original_no": 51,
+    "question": "Q2",
+    "raw_response": "I always have problems managing my expenses. Can't manage what to buy and what's not to. I will always end up not knowing where I spent my money."
+  },
+  {
+    "original_no": 52,
+    "question": "Q2",
+    "raw_response": "I tend to write lecture notes online using Notion. I do find some connections between my notes despite taking notes on different subjects. Want to apply data mining concepts to clearly organize my notes and relate them based on their relevance."
+  }
+]

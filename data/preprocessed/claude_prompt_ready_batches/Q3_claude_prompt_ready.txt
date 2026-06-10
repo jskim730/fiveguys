@@ -1,0 +1,671 @@
+You are a careful and conservative data preprocessing assistant for a student response dataset.
+
+Your task is to preprocess raw student responses from:
+26S_COSE471_Discussion_Datasets.xlsx.
+
+The dataset contains student responses to Q1–Q9.
+Q1 and Q2 were collected before the data science course.
+Q3–Q9 were collected after class discussions during the course.
+
+Research context:
+This project investigates whether students’ pre-course expectations are semantically reflected in their post-course learning responses.
+However, student IDs are not consistent across Q1–Q9, so the analysis will be conducted at the group-level semantic distribution, not at the individual-student transition level.
+
+Question context:
+- Q1–Q2: why students enrolled in the course and where they want to apply what they learn.
+- Q3–Q9: students’ learning, interpretation, questions, and reflections after class discussions.
+
+Data issues:
+- Responses may be in English, Korean, or mixed English/Korean.
+- Some responses contain typos, awkward grammar, fragmented wording, or unclear meaning.
+- Some responses may be missing, copied, very short, or low-information.
+
+Main task:
+For every raw student response, create one unified master preprocessing JSON object.
+
+Do not create separate dataset versions.
+Do not create separate arrays for multilingual and English-translated versions.
+Return only one unified JSON array.
+
+This master dataset will later be split into separate analysis datasets by selecting different text columns:
+- cleaned_text will later be used as the main text for multilingual analysis.
+- english_text will later be used as the main text for English-based analysis.
+
+IMPORTANT conceptual rule:
+Both cleaned_text and english_text must be derived directly from raw_response.
+
+- cleaned_text is a minimally cleaned version of raw_response that preserves the original language.
+- english_text is an English rendering of the original meaning of raw_response.
+- english_text may refer to cleaned_text for readability, but it must not inherit any meaning that is not clearly present in raw_response.
+- Do not treat cleaned_text as the sole source for english_text.
+- If cleaned_text accidentally changes or clarifies something too much, english_text must still follow raw_response, not cleaned_text.
+
+Critical rules:
+- Do not add new meaning.
+- Do not infer beyond the text.
+- Do not over-interpret.
+- Do not make unclear responses sound clear.
+- Do not make the response more detailed, academic, or polished than it originally is.
+- Preserve the student's original intention as much as possible.
+- If the meaning is unclear, write "unclear" instead of guessing.
+- If the response is missing, write "missing".
+- Keep uncertainty visible.
+- Do not remove low-quality responses; flag them instead.
+
+VERY IMPORTANT RAW TEXT RULE:
+- raw_text must be copied exactly from the input raw_response.
+- Do not translate raw_text.
+- Do not summarize raw_text.
+- Do not clean raw_text.
+- Do not add labels such as "(Korean)", "(English)", "(translated)", "(summary)", or any other artificial label to raw_text.
+- Do not replace raw_text with your interpretation.
+- Do not replace raw_text with an English summary.
+- If the input response is Korean, raw_text must remain Korean.
+- If the input response is English, raw_text must remain English.
+- If the input response is mixed Korean/English, raw_text must remain mixed.
+- The raw_text field must be character-for-character identical to raw_response, except for unavoidable JSON escaping.
+
+Input format:
+Each response will be provided in the following format:
+
+[
+  {
+    "original_no": 1,
+    "question": "Q1",
+    "raw_response": "..."
+  },
+  {
+    "original_no": 2,
+    "question": "Q1",
+    "raw_response": "..."
+  }
+]
+
+Use raw_response as the exact and only source for raw_text.
+
+For each raw response, output one JSON object with the following fields:
+
+1. id
+- Unique ID in the format "Q[number]_[three-digit index]".
+- Example: "Q2_014".
+- The three-digit index must match original_no padded to three digits.
+
+2. original_no
+- Original row number or response number from the input.
+
+3. question
+- One of: "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9".
+
+4. stage
+- Use this mapping:
+  - Q1, Q2 → "pre"
+  - Q3, Q4 → "discussion_1"
+  - Q5, Q6 → "discussion_2"
+  - Q7, Q8 → "discussion_3"
+  - Q9 → "discussion_4"
+
+5. raw_text
+- Copy raw_response exactly as given.
+- Do not edit this field in any way.
+
+6. language
+- Classify the raw response as:
+  - "ko" if mostly Korean
+  - "en" if mostly English
+  - "mixed" if Korean and English are both meaningfully present
+  - "unknown" if empty, noisy, symbolic, or language-indeterminate
+
+7. cleaned_text
+- Create cleaned_text directly from raw_response.
+- This field is a minimally cleaned version of raw_response.
+- Preserve the original language of raw_response as much as possible.
+- Fix only obvious typos, spacing, grammar, punctuation, and line breaks.
+- Do not add examples, explanations, or concepts.
+- Do not change the student's meaning.
+- Do not make the response more specific than the original.
+- If raw_response is Korean, keep cleaned_text in Korean.
+- If raw_response is English, keep cleaned_text in English.
+- If raw_response is mixed Korean/English, preserve the mixed structure unless a very small clarification is necessary for readability.
+- If multiple interpretations are possible, choose the most conservative interpretation and lower confidence.
+- If the meaning is unclear, write "unclear".
+- If the response is missing, write "missing".
+
+8. english_text
+- Create english_text directly from the original meaning of raw_response.
+- This field must be in English.
+- This field is a translation, not a summary.
+- Preserve the original perspective and pronouns as much as possible.
+- If the student writes in first person, keep first person in english_text.
+- Do not change first-person statements into third-person statements.
+- If raw_response says "I want to...", english_text should also say "I want to...", not "The student wants to...".
+- If raw_response is Korean without an explicit subject, use the most natural English form while preserving the student's perspective. In most cases, use first person.
+- If raw_response is Korean, translate its meaning into English.
+- If raw_response is English, lightly clean it in English without changing meaning.
+- If raw_response is mixed Korean/English, produce one coherent English version.
+- You may refer to cleaned_text only for readability, but english_text must not include any meaning that is not clearly present in raw_response.
+- Do not add meaning.
+- Do not infer missing details.
+- Do not make vague statements more specific than the original.
+- Do not make unclear responses sound clear.
+- Preserve uncertainty.
+- If the meaning is unclear, write "unclear".
+- If raw_response is missing, write "missing".
+
+9. one_sentence_summary
+- Write one concise English sentence.
+- This field is a summary for analysis, not a direct translation.
+- It is okay to use third-person phrasing such as "The student..." in this field.
+- The summary must only reflect what is present in raw_response.
+- The summary may refer to english_text, but it must not add any meaning beyond raw_response.
+- If the response is clear but short, keep the summary short.
+- If the response is vague, keep the summary vague.
+- If unclear, write "The response is unclear."
+- If missing, write "The response is missing."
+
+10. keywords
+- Provide 1 to 3 English keywords.
+- Never provide more than 3 keywords.
+- Keywords should be useful for clustering, topic modeling, and similarity analysis.
+- Do not include unsupported keywords.
+- Prefer consistent wording across similar responses.
+- If unclear, use ["unclear"].
+- If missing, use ["missing"].
+
+11. themes
+- Provide 1 to 3 broader English theme labels.
+- Never provide more than 3 themes.
+- Themes should be broader than keywords.
+- Use only themes supported by raw_response.
+- Prefer consistent wording across similar responses.
+
+Allowed common themes:
+- "course motivation"
+- "career preparation"
+- "major relevance"
+- "AI and machine learning"
+- "data science curiosity"
+- "data mining"
+- "project-based learning"
+- "real-world application"
+- "daily life application"
+- "problem solving"
+- "recommendation systems"
+- "pattern discovery"
+- "data preprocessing"
+- "data visualization"
+- "classification"
+- "clustering"
+- "prediction"
+- "personal reflection"
+- "social analysis"
+- "unclear"
+- "missing"
+
+You may create another concise theme only if none of the above fits, but do not over-specify.
+
+12. quality
+- Classify the response as:
+  - "high"
+  - "medium"
+  - "low"
+
+Quality criteria:
+- "high": Clear, meaningful, and sufficiently informative for semantic analysis.
+- "medium": Understandable but short, general, partially vague, or mildly fragmented.
+- "low": Missing, unclear, extremely short, low-information, copied without meaningful content, or too noisy to analyze reliably.
+
+13. reason_for_quality
+- Give one short standardized reason.
+- Use exactly one of the following whenever possible:
+  - "Clear and specific response."
+  - "Clear but somewhat general."
+  - "Understandable but short."
+  - "Understandable but partially vague."
+  - "Partially unclear due to fragmented wording."
+  - "Low-information response."
+  - "Meaning is unclear."
+  - "Missing response."
+
+Missing response rule:
+Use "Missing response." when the response is empty, blank, says there is no separate answer, says it continues from another question without adding new Q-specific content, or contains only placeholders.
+
+Low-information rule:
+Use "Low-information response." when the response contains a few words but does not provide enough meaning for semantic analysis.
+
+Unclear response rule:
+Use "Meaning is unclear." when the response contains text but its meaning cannot be determined without guessing.
+
+14. confidence
+- A number from 0 to 1.
+- This means your confidence that cleaned_text, english_text, one_sentence_summary, keywords, and themes correctly preserve the original meaning of raw_response.
+- It is not the student's confidence.
+- It is not whether the student's statement is true.
+- It is the reliability of this preprocessing output.
+
+Important confidence rule:
+- If the response is clearly missing and you are confident it is missing, confidence should be high, such as 0.90 to 1.00.
+- If the response is unclear because the meaning is ambiguous, confidence should be low.
+- If the response is short but still clear, confidence can be medium-high.
+- If the response is fragmented or has multiple possible meanings, lower the confidence.
+- If any part of the response required conservative interpretation, lower the confidence.
+
+Suggested scale:
+- 0.90–1.00: very clear and reliable preprocessing
+- 0.70–0.89: mostly clear
+- 0.50–0.69: partially clear but ambiguous
+- 0.20–0.49: mostly unclear or very low information
+- 0.00–0.19: unusable or impossible to interpret
+
+Final self-check before output:
+Before returning the JSON, verify the following:
+1. raw_text is exactly identical to the input raw_response.
+2. No raw_text starts with artificial labels such as "(Korean)", "(English)", "(translated)", or "(summary)" unless those exact words appeared in raw_response.
+3. cleaned_text is derived directly from raw_response.
+4. english_text is derived directly from the original meaning of raw_response, not only from cleaned_text.
+5. Every object contains all required fields.
+6. keywords has 1 to 3 items.
+7. themes has 1 to 3 items.
+8. quality is only "high", "medium", or "low".
+9. language is only "ko", "en", "mixed", or "unknown".
+10. stage follows the Q1–Q9 mapping exactly.
+11. The output is one unified JSON array, not separate version arrays.
+12. The output is valid JSON.
+13. There are no explanations outside the JSON.
+
+Output requirements:
+- Return only one valid unified JSON array.
+- Do not create separate arrays.
+- Do not create separate dataset versions.
+- Do not include markdown.
+- Do not include commentary.
+- Do not include explanations outside the JSON.
+- Do not use trailing commas.
+- Every object must contain all fields.
+- Use double quotes for all JSON strings.
+- Keep the order of fields exactly as specified.
+
+Example input:
+[
+  {
+    "original_no": 14,
+    "question": "Q2",
+    "raw_response": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대."
+  }
+]
+
+Example output:
+[
+  {
+    "id": "Q2_014",
+    "original_no": 14,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 통해 개인적인 교통수단 문제를 해결할 수 있을 것으로 기대한다.",
+    "english_text": "I expect that data mining can help solve personal transportation problems.",
+    "one_sentence_summary": "The student wants to apply data mining to personal transportation problems.",
+    "keywords": ["data mining", "transportation", "problem solving"],
+    "themes": ["real-world application", "problem solving"],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.93
+  }
+]
+
+Batch processing instruction:
+The dataset will be processed question by question or in small batches.
+
+For each run, only preprocess the responses included in the current input batch.
+Do not assume that responses from other questions are included.
+Do not generate responses for missing question numbers unless they are explicitly provided in the current input.
+Do not continue to the next question automatically.
+Do not merge this batch with previous or future batches.
+
+The input batch will usually contain responses from a single question, such as Q1 only, Q2 only, or Q3 only.
+All output objects must use the question value provided in each input item.
+Return only the JSON array for the current input batch.
+
+Now preprocess the following Q3 input batch using all rules above.
+
+This batch contains exactly 66 responses.
+Your output must contain exactly 66 JSON objects.
+
+Do not omit any input response.
+Do not combine multiple responses into one object.
+Do not create extra objects.
+The first output object must be Q3_001.
+The last output object must be Q3_066.
+
+[
+  {
+    "original_no": 1,
+    "question": "Q3",
+    "raw_response": "The most interesting part I learned today was MCAR/MAR/MNAR. Its concept in broadly missing values chapter. Its base three concepts were a crucial part of my understanding. I had performed a public analysis at several layers of the platform and steps clearly from the start throughout the research process."
+  },
+  {
+    "original_no": 2,
+    "question": "Q3",
+    "raw_response": "The variance method to reduce the dimension of data was interesting. I'm not used to nonlinear reduction methods, but there are still some to try to minimize the difference with minimum variables. I had to study these mathematically."
+  },
+  {
+    "original_no": 3,
+    "question": "Q3",
+    "raw_response": "Dimensionality reduction. Because I took the course about regression and multidimensional data, so I'm familiar with dimensionality reduction using linear method but unfamiliar with using non-linear method. Through today's class I learned about dimensionality reduction. In reason it is the most interesting thing."
+  },
+  {
+    "original_no": 4,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about KL divergence, visualization, similarity measures. Found it interesting how different visualization methods can reveal patterns in data. Discussed AI agent capabilities for data analysis."
+  },
+  {
+    "original_no": 5,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about MCAR, MAR, MNAR concepts and how they affect data analysis. Found it interesting that different types of missing data require different handling approaches."
+  },
+  {
+    "original_no": 6,
+    "question": "Q3",
+    "raw_response": "The preprocessing step was the most interesting thing I learned. I love how it tells a story about how data was collected and uncovering patterns. That is more like detective work than data processing. This is why the preprocessing was the most interesting thing during the class."
+  },
+  {
+    "original_no": 7,
+    "question": "Q3",
+    "raw_response": "(Mixed Korean/English) Found visualization and independence analysis interesting. Learned about how to use different plots and charts to understand data distributions and relationships between variables."
+  },
+  {
+    "original_no": 8,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is PCA. I found PCA moves the dimensionality, and it can be done by general case and unprincipled capturing of the data. It also expands to visualize at a specific format. It was interesting."
+  },
+  {
+    "original_no": 9,
+    "question": "Q3",
+    "raw_response": "Sources of potential problems: Errors and noise, Incompleteness, segments, missing entity, duplicate, fictitious, conflicto. Lack of semantics, unlabeled, bad quality, data integration and attributes. When we look at data paths, our integration and environment is the data source."
+  },
+  {
+    "original_no": 10,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about different data types and preprocessing methods. Found it interesting how different visualization techniques can help understand data better."
+  },
+  {
+    "original_no": 11,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about LLM and how AI processes data. Found it interesting that AI can assist in data visualization and analysis, but it requires proper understanding of the underlying data."
+  },
+  {
+    "original_no": 12,
+    "question": "Q3",
+    "raw_response": "(Korean) Data preprocessing and visualization were the most interesting topics. Understanding how to clean and prepare data is fundamental for any analysis."
+  },
+  {
+    "original_no": 13,
+    "question": "Q3",
+    "raw_response": "Data cleaning is the most interesting part because it's the step that requires judgment, not just technique. You have to decide why the data is messy before you can fix it. Every dirty dataset tells a story about how it was collected and uncovering that is more like detective work than data processing."
+  },
+  {
+    "original_no": 14,
+    "question": "Q3",
+    "raw_response": "What I found interesting is that the importance of data can be measured by different aspects. For example, effects like missing values, duplicated types like noise, sampling approaches - all of these are different measures that represent different dimensions of the data quality."
+  },
+  {
+    "original_no": 15,
+    "question": "Q3",
+    "raw_response": "Today I learned that I learned today is that we can extract data in different subjects, but some data can be complex for a short description. The data is related with so many concepts. We need to check if the data meets requirements after preprocessing."
+  },
+  {
+    "original_no": 16,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data types and how different representations of data affect analysis. Found it interesting that preprocessing choices can significantly impact results."
+  },
+  {
+    "original_no": 17,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today? I think the most interesting thing is visualization. It was interesting and it helps us to understand data better. There are various types of visualization tools that we can use to analyze data."
+  },
+  {
+    "original_no": 18,
+    "question": "Q3",
+    "raw_response": "Before this, I only learned the importance behind it, and its preprocessing. But very I thought it was more like a routine I had to do. But I was surprised that there was a lot of method to it. I learn more about MCAR, and MNAR and if there was a pattern to it. I found it very interesting, I learnt today."
+  },
+  {
+    "original_no": 19,
+    "question": "Q3",
+    "raw_response": "(Korean/English) Learned about different methods of handling missing data. The concept of using statistical methods to handle missing values was the most interesting part of today's lecture."
+  },
+  {
+    "original_no": 20,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is about data preprocessing. It's important to understand why data cleaning and preprocessing matter before analysis. The concept of data quality dimensions was enlightening."
+  },
+  {
+    "original_no": 21,
+    "question": "Q3",
+    "raw_response": "What I found most interesting today was that the different concepts of data can be measured. The different dimensions like completeness, accuracy, for instance, like man and woman, king and queen, make the same distance with each other. I never thought of it that way because I never thought of it."
+  },
+  {
+    "original_no": 22,
+    "question": "Q3",
+    "raw_response": "I found it was a very kind helpful process and I've learned various topics in today's lecture. The most useful was data preprocessing. It helped me organize and I want to better understand the subject of AI and data science. It also made me understand more about data."
+  },
+  {
+    "original_no": 23,
+    "question": "Q3",
+    "raw_response": "I think the most interesting thing that I learned today is that easy type of data and for different approaches, reasons and the data before. I saw familiar concepts like before, with the update and transformation of data types in today's class and I think it is very useful for studying."
+  },
+  {
+    "original_no": 24,
+    "question": "Q3",
+    "raw_response": "I got to know about how to handle with data, there is so much. Categories and a lot of examples to understand. Even more, I would learn more from it. Knowledge is consuming. It in my area, it is good to know in short time. It will need to learn to have that ability."
+  },
+  {
+    "original_no": 25,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is about data preprocessing and why it is important step for the next data analyzing. It requires knowledge and techniques. I think it is well interesting because it seems like it takes a lot of practice to do well in this step. The concepts such as data cleaning dealing with missing data, visualizations are crucial knowledge."
+  },
+  {
+    "original_no": 26,
+    "question": "Q3",
+    "raw_response": "(Korean) About how the molecular and the reduction, the most interesting thing I learned was about independent analysis concepts. Found it interesting about how the overall concepts work."
+  },
+  {
+    "original_no": 27,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today and why? I think today's class was about the confusion and class related to data cleaning. Some data are not easy to find. I used to think the data is already clean but I found it was not the way. It is important to learn in this step."
+  },
+  {
+    "original_no": 28,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the most interesting thing. What I learned today is about visualization and data types. When I was looking at the types of data, their visualization. I also have different grades and graphs can capture different objects. I also enjoyed learning how different data objects can be related. How to point an equation with variables or logical thinking."
+  },
+  {
+    "original_no": 29,
+    "question": "Q3",
+    "raw_response": "I think what we most learned part of today's class is the situation where we analyze data carefully and quality data. In practice, I fell the best in the lecture. To analyze by data. It helps to become about which the subject of the data serves as an understanding to become knowledge. Since you understand this, it is really important. Because the more data the flow more interesting to learn concepts. How to better know when I am rapidly developing everyday."
+  },
+  {
+    "original_no": 30,
+    "question": "Q3",
+    "raw_response": "(Korean/mixed) Learned about data types and formats. Found it interesting how different representations affect the analysis approach."
+  },
+  {
+    "original_no": 31,
+    "question": "Q3",
+    "raw_response": "It was interesting that noisy data can be helpful for avoiding overfitting."
+  },
+  {
+    "original_no": 32,
+    "question": "Q3",
+    "raw_response": "(Korean) Data preprocessing and visualization were most interesting. Learning about different types of missing data and how to handle them was valuable."
+  },
+  {
+    "original_no": 33,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the different types of missing data (MCAR, MAR, MNAR) and how each requires a different approach for handling. This is important because it directly affects the reliability of the analysis."
+  },
+  {
+    "original_no": 34,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is that LLM model will preprocess data. We are able to understand that the data preprocessing step has its importance. But also I think that we have to see both supporting data without this step. The better data, the better result. The preprocessing step is important but it really only is the understanding. But it holds no value."
+  },
+  {
+    "original_no": 35,
+    "question": "Q3",
+    "raw_response": "For me the most interesting thing we learn today is visualization of data is interesting, as it make a long or complex or direct data easily understood by representing it using plot, graph or any visual. It is a phrase that 'one picture is worth a thousand words'. And it also the least complex they've learn today."
+  },
+  {
+    "original_no": 36,
+    "question": "Q3",
+    "raw_response": "What's interesting: I'm amazed at how data can be represented into discrete and continuous. Also data can be represented as regression or categorization. The possible different ways of learning is interesting."
+  },
+  {
+    "original_no": 37,
+    "question": "Q3",
+    "raw_response": "I enjoy by the data. I did not expect that the new idea will be in detail beyond the skill. I always that we can also avoid to doing level it, basically relating. But should be taken. The other data education as it is the way. I think."
+  },
+  {
+    "original_no": 38,
+    "question": "Q3",
+    "raw_response": "Data types differences. Understanding data types is visualizing my learning. Since data are at several involved has diagram new, think & use graph > understanding everything."
+  },
+  {
+    "original_no": 39,
+    "question": "Q3",
+    "raw_response": "The most important thing I found today and why? Importance of preprocessing in the data. When data is stored and it shows while it seems important, then it the data of AI, LLM, and only state models. If data was reformated the resulting model will change. If this sense more important than the model or computing methods."
+  },
+  {
+    "original_no": 40,
+    "question": "Q3",
+    "raw_response": "Preprocessing data with the relation was most interesting part. Because it can be treated data with more efficiently and interestly. Things I liked adopted the point of its being and in the middle, I like the one very interesting and also shared types, to feel this field more helpful."
+  },
+  {
+    "original_no": 41,
+    "question": "Q3",
+    "raw_response": "There is two very interesting things for today. The first one being there are various types of visualization. We can show all of them by using plots, charts and graphs. I want to use in my field. I see some having fun tables to turn to so we see visualization and data visualization about the question of AI generate plot to analyze chart in the real life."
+  },
+  {
+    "original_no": 42,
+    "question": "Q3",
+    "raw_response": "A data 100 visualization site was interesting."
+  },
+  {
+    "original_no": 43,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing? Data Analysis, and today I found weight analysis working. Without expert review. Weight case analysis is important. But today professor told us data analysis in movie weights. The movie derived in movie analysis weights case in real world. The picture describing in movie weights. LLM makes we look forward to assigning the feature at data science."
+  },
+  {
+    "original_no": 44,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data visualization and preprocessing. Found it interesting how visual representations can reveal hidden patterns in data."
+  },
+  {
+    "original_no": 45,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today has to do with data science. I realized that data science has a lot to do with attribute relationships. Two datasets with categories and attributes should be well covered in PCA. These are all closely related. I was able to see clearly my research including finding a very close relationship with my research."
+  },
+  {
+    "original_no": 46,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is that it happened this year and how new AI does. I received a visual model that removes every related data. It is related about it being together. The reasoning is the most important idea. It is related."
+  },
+  {
+    "original_no": 47,
+    "question": "Q3",
+    "raw_response": "(Korean) About data types and visualization concepts. Learned about different ways to process and handle data. Found the various data handling techniques interesting."
+  },
+  {
+    "original_no": 48,
+    "question": "Q3",
+    "raw_response": "(Korean) Found the classification and dimensionality reduction concepts most interesting. Learning about how data can be transformed for better analysis."
+  },
+  {
+    "original_no": 49,
+    "question": "Q3",
+    "raw_response": "I just interesting thing is that today I learned that data cleaning and preprocessing are really important. What I really important in data analysis. I think data preprocessing is the key to getting good results from any analysis. Without clean data, the results will be unreliable."
+  },
+  {
+    "original_no": 50,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is about data understanding and preprocessing. I could see that understanding patterns and relationships in data is very important. Data visualization helps a lot in understanding complex datasets. I also found the concept of missing value handling very important."
+  },
+  {
+    "original_no": 51,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is knowing the inaccuracy of data when it comes to the data itself. There was a missing data that is left behind. It means we need to learn how to see left over. However, after learning the deep reasoning behind it, which are called missing data. I learn of traits that are surprising that at some point in reality it was clean if it actually surprising to be the first."
+  },
+  {
+    "original_no": 52,
+    "question": "Q3",
+    "raw_response": "Thought in is relatively important: deep representation learning. Set in very intrigued in how neural networks work. Also how bits work is providing the world today more complex algorithms larger transformation of preprocessing. Basically it is simple logic. But we need to understand the basis of AI. It is believed we need to understand everything before we use AI for data. Gather analysis / processing a system-level / properties we can that the proper matter a lot even when using an AI agent. Teachers instead of wasting for its better to prompt and try one."
+  },
+  {
+    "original_no": 53,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is about the similarity. The reason is because the similarity that need to be measure. When we are facing a data, there can be very alternate ideas. It's like the the meaning is important. Especially when facing data, contain very alternate types."
+  },
+  {
+    "original_no": 54,
+    "question": "Q3",
+    "raw_response": "Most interesting thing I learned is NO, meeting of data preprocessing in data science letter building any model, data will be cleaned and imputed. Raw world data can be going complicated to collected the data, and more going to understand about them. Then we can make it more. Could also visualize into graph to make it more passthrough and easier for all. Development."
+  },
+  {
+    "original_no": 55,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today was this year about problems in data such as missing or noisy/incomplete values. I found this especially interesting because it showed how data preprocessing affects the quality of analysis and how important it is to set a proper cleaning step."
+  },
+  {
+    "original_no": 56,
+    "question": "Q3",
+    "raw_response": "We can visualize data through many tools, not specifically through scatter plot method. I found it interesting to use it for finding pattern and relations between data mathematically."
+  },
+  {
+    "original_no": 57,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the collecting and discovering data concepts and how our subject familiar or rather how to demonstrate the data and the concepts I think. It's important to know and also everything and will reasoning well and most part."
+  },
+  {
+    "original_no": 58,
+    "question": "Q3",
+    "raw_response": "I found interesting thing. I found that it varies not just the easy one. The real world and it may easily do the result. that is very easy and to AI the model. Once related analysis and optional mixed. It is possible to get some things that, and to be got the side of the AI. Those one were to be the types applying the something."
+  },
+  {
+    "original_no": 59,
+    "question": "Q3",
+    "raw_response": "I think interesting things. It was about visualization and data types. When I was looking at the types of data visualization, I also enjoyed to be how different data and graphs can capture insights and be presented in a meaningful way."
+  },
+  {
+    "original_no": 60,
+    "question": "Q3",
+    "raw_response": "In it, the most interesting thing per learned today I felt is the data care in the descriptive and values. Data completeness/discontinuity between data sets, relationship from the new data related to reporting. It results so it means the possibility of the sample in characteristics. Having the properties."
+  },
+  {
+    "original_no": 61,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned. A lot of compelling processes when it comes to data, the most useful I found is the preprocessing data. The initial step at data analysis the pair. And I think the properly step with certain method to combine and together it all in many related to explore the scope that represents a different data."
+  },
+  {
+    "original_no": 62,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today and why? Patterns finding was initially a similarity of data and its preprocessing. I found it was fascinating that you can look at the patterns and compare it mathematically by looking at the same development, and it was interesting to see how it can be established, relationships between kinds of objects."
+  },
+  {
+    "original_no": 63,
+    "question": "Q3",
+    "raw_response": "(Korean) Found dimensionality reduction and PCA concepts most interesting. The mathematical basis behind these techniques was enlightening."
+  },
+  {
+    "original_no": 64,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is similarity. Altough I used to only Semantic/sim, but I know most similarity in the same method. However, things I find it also in measuring things. Similarity can help us to capture the whole meaning. It is interest computing by some codes. Helps it word."
+  },
+  {
+    "original_no": 65,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data types, visualization methods, and preprocessing techniques. The practical applications of these concepts were the most interesting."
+  },
+  {
+    "original_no": 66,
+    "question": "Q3",
+    "raw_response": "(Korean) Understanding data visualization and classification concepts was most interesting. Found it valuable to learn about different approaches to data preprocessing."
+  }
+]

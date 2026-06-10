@@ -1,0 +1,28 @@
+# ── Core data science ──────────────────────────────────────────────
+numpy>=2.0
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.4
+openpyxl>=3.1
+pyyaml>=6.0
+tqdm>=4.66
+
+# ── Visualization ──────────────────────────────────────────────────
+matplotlib>=3.8
+seaborn>=0.13
+
+# ── NLP / stylometry (STYLE7, STYLO features) ──────────────────────
+nltk>=3.8
+regex>=2024.0
+
+# ── Semantic embeddings for [3-A] content analysis (Qwen3-4B) ──────
+#    Heavy deps; only needed for the embedding stage.
+torch>=2.2
+transformers>=4.44
+sentence-transformers>=3.0
+
+# ── LLM generation APIs for R0/R1/R2 ───────────────────────────────
+#    Pick ONE generator that differs from the preprocessing model (Claude).
+#    Uncomment what you use.
+# openai>=1.40
+# google-generativeai>=0.7

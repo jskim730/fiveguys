@@ -1,0 +1,94 @@
+# ════════════════════════════════════════════════════════════════════
+#  COSE471 Term Project — central configuration (single source of truth)
+#  FINALIZED design: content is FIXED via keywords in ALL rounds; only STYLE varies.
+#  -> No content/embedding analysis, no slides for generation, no GPU needed.
+# ════════════════════════════════════════════════════════════════════
+seed: 42
+
+paths:
+  raw_xlsx:         data/raw/26S_COSE471_Discussion_Datasets.xlsx
+  preprocessed_dir: data/preprocessed
+  master_glob:      data/preprocessed/Q*_corrected.json
+  llm_answers_dir:  data/llm_answers
+  features_dir:     data/features
+  figures_dir:      results/figures
+  tables_dir:       results/tables
+
+# ── Dataset ────────────────────────────────────────────────────────
+questions: [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9]
+stage_map:
+  Q1: pre
+  Q2: pre
+  Q3: discussion_1
+  Q4: discussion_1
+  Q5: discussion_2
+  Q6: discussion_2
+  Q7: discussion_3
+  Q8: discussion_3
+  Q9: discussion_4
+
+# Main text for style analysis. LLM generates English -> compare on english_text.
+#   english_text -> all responses in English (STYLE7/STYLO are EN-oriented)
+#   cleaned_text -> multilingual alternative
+text_field: english_text
+
+# Matched-human set (each gets a 1:1 LLM pair per round). Counts on current master:
+#   en (English-original) = 426 (== plan's "426")  |  non-low = 403  |  has-text = 510
+# english-only sets remove the Claude-translation confound from STYLO; we keep fragmented
+# ESL (real human messiness) and drop only empty/garbled text.
+human_set: en_with_text   # en_with_text (cleanest) | en_non_low | non_low | with_text
+# LLM answers were generated for the 510 superset, so every set above is already covered
+# (no regeneration when switching). See src/data_io.py: select_human_set().
+
+# ── Models (record exact ids for reproducibility) ──────────────────
+models:
+  preprocessing: "claude-opus-4-8[1m]"   # already used — record only
+  generator:     "openai/gpt-5-mini"     # ELICE; api_url + api_key in config/secrets.yaml
+  # embedding: dropped — content is fixed via keywords, not measured (no Qwen3-4B / no GPU)
+
+# ── Generation: content FIXED via keywords in EVERY round; only STYLE instruction varies ─
+generation:
+  keywords_all_rounds: true   # R0,R1,R2 all receive the paired human's keywords (content fixed)
+  use_slides:          false  # keywords provide content -> slides NOT used
+  matching:            "1:1"  # one LLM answer per usable human answer, paired by human id
+  persona:             "a data science undergraduate writing an in-class discussion answer"  # fixed all rounds
+  temperature:         null   # FIX across rounds; gpt-5-mini may only allow default -> omit
+  top_p:               null
+  output_schema:       [id, q, round, text, keywords]   # id = paired human id
+  rounds:
+    R0: "keywords + naive style (ZERO coaching) — baseline; GPT's natural (AI-ish) voice"
+    R1: "keywords + light coaching (undergrad: uneven length, less hedging, casual)"
+    R2: "keywords + aggressive evasion (fragmentary, no definitions, ungrammatical, personal examples)"
+
+# ── Style feature extractors (OUR code, not an LLM) ────────────────
+features:
+  style7: [n_words, avg_word_len, avg_sent_len, lexical_diversity,
+           first_person_ratio, hedging_ratio, comma_density]   # the 'tells' R1/R2 target
+  stylo:  "function-words (disjoint from STYLE7) + char 3-gram top-200 + punctuation (no comma)"
+  disjoint_assert: true       # STYLO must share NO token with STYLE7 (independent judge)
+  # measured length confound (current data, non-low): corr(n_words, lexical_diversity) = -0.578
+
+# ── Classification (Technique ①): human(0) vs LLM(1), per question ──
+classification:
+  per_question:         true     # NEVER pool across questions (topic confound; STYLE7 AUC≈0.82, STYLO≈0.98)
+  models:               [logistic_regression, gbm]
+  cv_folds:             5
+  length_only_baseline: true     # expose length's share of the AUC
+  n_bootstrap:          2000     # 95% CI
+  n_permutations:       1000     # label-shuffle null (-> AUC≈0.5)
+
+# ── Leakage-proof round evaluation (step 5) ────────────────────────
+evaluation:
+  train:                "human 70% + naive R0"
+  test:                 "unseen human 30% + coached R1 / R2 (and held-out R0)"
+  freeze_r0_classifier: true     # measure R1/R2 against a FIXED target (no peeking/tuning)
+  holdout_human_frac:   0.30
+  judges:               [STYLE7, STYLO]   # STYLE7 = targeted main detector; STYLO = independent
+  negative_controls:    [human_vs_human, label_shuffle]   # both must give AUC≈0.5
+
+# ── Outlier detection (Technique ②): LOF in STYLO space ────────────
+outlier:
+  method:      lof
+  space:       stylo            # find human answers farthest from the LLM distribution
+  n_neighbors: 20
+  metric:      euclidean

@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "Q2_001",
+    "original_no": 1,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Twitter(X)의 '트친소' 해시태그 데이터를 마이닝해 새로운 포스트 작성자와 사용자 간의 호환성(compatibility)을 분석하는 아이디어. Customer: primarily myself.",
+    "language": "mixed",
+    "cleaned_text": "Twitter(X)의 '트친소' 해시태그 데이터를 마이닝해 새로운 포스트 작성자와 사용자 간의 호환성(compatibility)을 분석하는 아이디어. Customer: primarily myself.",
+    "english_text": "An idea to mine the '트친소' hashtag data on Twitter (X) to analyze the compatibility between the authors of new posts and users. The customer is primarily myself.",
+    "one_sentence_summary": "The student proposes mining Twitter (X) hashtag data to analyze compatibility between post authors and users.",
+    "keywords": [
+      "social media data mining",
+      "compatibility analysis"
+    ],
+    "themes": [
+      "social analysis",
+      "data mining"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_002",
+    "original_no": 2,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "미디어(뉴스)에 숨겨진 정보, 정치적 편향 문제. 게임/TV 미출시 업데이트 정보. 데이터 마이닝을 통해 관심 분야 정보를 찾고 싶음.",
+    "language": "ko",
+    "cleaned_text": "미디어(뉴스)에 숨겨진 정보, 정치적 편향 문제. 게임/TV 미출시 업데이트 정보. 데이터마이닝을 통해 관심 분야 정보를 찾고 싶음.",
+    "english_text": "Hidden information in the media (news), and the problem of political bias. Information about unreleased game/TV updates. I want to use data mining to find information in the fields I am interested in.",
+    "one_sentence_summary": "The student wants to use data mining to find information of interest, such as hidden media information and unreleased game/TV updates.",
+    "keywords": [
+      "information retrieval",
+      "media bias"
+    ],
+    "themes": [
+      "pattern discovery",
+      "social analysis"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_003",
+    "original_no": 3,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "게임 추천 시스템 - 자세한 정보 없이도 적합한 게임을 추천해주는 시스템. 게임이 많아서 찾기 어렵고, 게임 데이터를 통해 데이터마이닝 개념을 활용하고 싶음.",
+    "language": "ko",
+    "cleaned_text": "게임 추천 시스템 - 자세한 정보 없이도 적합한 게임을 추천해주는 시스템. 게임이 많아서 찾기 어렵고, 게임 데이터를 통해 데이터마이닝 개념을 활용하고 싶음.",
+    "english_text": "A game recommendation system - a system that recommends suitable games even without detailed information. There are so many games that it is hard to find one, and I want to use data mining concepts through game data.",
+    "one_sentence_summary": "The student wants to build a game recommendation system using data mining.",
+    "keywords": [
+      "game recommendation system",
+      "data mining"
+    ],
+    "themes": [
+      "recommendation systems",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_004",
+    "original_no": 4,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "(Q1 이어지는 내용으로 Q2 별도 기재 없음)",
+    "language": "ko",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q2_005",
+    "original_no": 5,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "인생 문제... 수면 문제. 나쁜 라이프스타일로 인해 수면이 불규칙함. 수면 패턴 분석을 통해 수면 질 향상 가능. 오늘 데이터마이닝 공부로 이 문제에 대해 다뤄보고 싶음.",
+    "language": "ko",
+    "cleaned_text": "인생 문제... 수면 문제. 나쁜 라이프스타일로 인해 수면이 불규칙함. 수면 패턴 분석을 통해 수면 질을 향상할 수 있음. 오늘 데이터마이닝 공부로 이 문제를 다뤄보고 싶음.",
+    "english_text": "A life problem... a sleep problem. My sleep is irregular because of a bad lifestyle. Analyzing sleep patterns could improve sleep quality. I want to address this problem through studying data mining today.",
+    "one_sentence_summary": "The student wants to use data mining to analyze and improve their irregular sleep patterns.",
+    "keywords": [
+      "sleep pattern analysis",
+      "data mining"
+    ],
+    "themes": [
+      "daily life application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_006",
+    "original_no": 6,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Pattern mining을 통해 Data 분석 - DS가 어떻게 활용되는지 궁금. 여러 데이터로 패턴 찾기, 데이터 분야에서 활용되는 사고를 넓히고 싶음.",
+    "language": "mixed",
+    "cleaned_text": "Pattern mining을 통해 데이터 분석 - DS가 어떻게 활용되는지 궁금함. 여러 데이터로 패턴을 찾고, 데이터 분야에서 활용되는 사고를 넓히고 싶음.",
+    "english_text": "Analyzing data through pattern mining - I am curious how data science (DS) is used. I want to find patterns in various data and broaden the kind of thinking used in the data field.",
+    "one_sentence_summary": "The student is curious how data science is applied and wants to broaden their data-analysis thinking through pattern mining.",
+    "keywords": [
+      "pattern mining",
+      "data analysis"
+    ],
+    "themes": [
+      "pattern discovery",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q2_007",
+    "original_no": 7,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "카카오맵 업데이트 없이 대중교통 이용 어려움. 실시간 정보 부족으로 불편함. 10배정도 앞당겨서 출발해야 하는 불편함. 데이터마이닝을 통해 대중교통 정보를 개선하면 더 편리할 것.",
+    "language": "ko",
+    "cleaned_text": "카카오맵 업데이트 없이 대중교통 이용이 어려움. 실시간 정보 부족으로 불편함. 10배 정도 앞당겨서 출발해야 하는 불편함. 데이터마이닝을 통해 대중교통 정보를 개선하면 더 편리할 것.",
+    "english_text": "Without KakaoMap updates, using public transit is hard. The lack of real-time information is inconvenient. It is inconvenient to have to leave about ten times earlier. It would be more convenient if public transit information were improved through data mining.",
+    "one_sentence_summary": "The student wants to use data mining to improve public transit information, which is inconvenient due to a lack of real-time data.",
+    "keywords": [
+      "public transportation",
+      "real-time information"
+    ],
+    "themes": [
+      "real-world application",
+      "daily life application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_008",
+    "original_no": 8,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "One problem in my daily life is time management. I get distracted (screen time, YouTube, games, history). This class will help me be able to use daily data patterns and knowledge to help me focus better when it is harder.",
+    "language": "en",
+    "cleaned_text": "One problem in my daily life is time management. I get distracted (screen time, YouTube, games, history). This class will help me use daily data patterns and knowledge to focus better when it is harder.",
+    "english_text": "One problem in my daily life is time management. I get distracted (screen time, YouTube, games, history). This class will help me use daily data patterns and knowledge to focus better when it is harder.",
+    "one_sentence_summary": "The student wants to use data patterns to improve time management and reduce distractions.",
+    "keywords": [
+      "time management",
+      "distraction"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_009",
+    "original_no": 9,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Using raw data to usable data. For example, making a simple yet informative presentation from raw data. Could organize life more by categorizing monthly expenses. Track where money have gone to.",
+    "language": "en",
+    "cleaned_text": "Using raw data to make usable data. For example, making a simple yet informative presentation from raw data. I could organize my life more by categorizing monthly expenses and tracking where money has gone.",
+    "english_text": "Turning raw data into usable data. For example, making a simple yet informative presentation from raw data. I could organize my life more by categorizing monthly expenses and tracking where my money has gone.",
+    "one_sentence_summary": "The student wants to turn raw data into a usable form, such as categorizing monthly expenses to organize their life.",
+    "keywords": [
+      "expense tracking",
+      "data organization"
+    ],
+    "themes": [
+      "daily life application",
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q2_010",
+    "original_no": 10,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Trying to stay on track of my monthly budget. Been 2 years living in Korea University but still overspend. Hope this class helps me manage and recognize data patterns in life.",
+    "language": "en",
+    "cleaned_text": "Trying to stay on track of my monthly budget. I've been living at Korea University for 2 years but still overspend. I hope this class helps me manage and recognize data patterns in life.",
+    "english_text": "Trying to stay on track of my monthly budget. I've been living at Korea University for 2 years but still overspend. I hope this class helps me manage and recognize data patterns in life.",
+    "one_sentence_summary": "The student hopes to use data patterns to manage their monthly budget and reduce overspending.",
+    "keywords": [
+      "budget management",
+      "spending patterns"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_011",
+    "original_no": 11,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터 분류와 마이닝 방법들이 실제 어떤 시스템에서 어떻게 활용되는지 알고 싶음. 데이터 특징 추출이 어떤 식으로 이루어지는지 이해하고 싶음.",
+    "language": "ko",
+    "cleaned_text": "데이터 분류와 마이닝 방법들이 실제 어떤 시스템에서 어떻게 활용되는지 알고 싶음. 데이터 특징 추출이 어떤 식으로 이루어지는지 이해하고 싶음.",
+    "english_text": "I want to know how data classification and mining methods are actually used in real systems. I want to understand how data feature extraction is done.",
+    "one_sentence_summary": "The student wants to understand how data classification, mining, and feature extraction are used in real systems.",
+    "keywords": [
+      "data classification",
+      "feature extraction"
+    ],
+    "themes": [
+      "classification",
+      "data mining"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_012",
+    "original_no": 12,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 통한 분류, 클러스터링으로 다양한 문제 해결 시도. 실시간 교통 정보 제공이나 개인화된 경험 제공에 데이터마이닝 활용 가능.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 통한 분류와 클러스터링으로 다양한 문제 해결을 시도함. 실시간 교통 정보 제공이나 개인화된 경험 제공에 데이터마이닝을 활용할 수 있음.",
+    "english_text": "Trying to solve various problems through classification and clustering with data mining. Data mining can be used to provide real-time traffic information or personalized experiences.",
+    "one_sentence_summary": "The student wants to apply data mining classification and clustering to problems like real-time traffic information and personalized experiences.",
+    "keywords": [
+      "classification",
+      "clustering",
+      "personalization"
+    ],
+    "themes": [
+      "real-world application",
+      "clustering"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_013",
+    "original_no": 13,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "수업의 경우 여러 결과와 반응도가 많고 데이터를 변환하기 어려운 경우 있음. 제대로 다루게 되면 더 많은 사례에 활용 가능.",
+    "language": "ko",
+    "cleaned_text": "수업의 경우 여러 결과와 반응도가 많고 데이터를 변환하기 어려운 경우가 있음. 제대로 다루게 되면 더 많은 사례에 활용할 수 있음.",
+    "english_text": "In the case of classes, there are many results and levels of response, and the data is sometimes hard to convert. If it is handled properly, it can be applied to more cases.",
+    "one_sentence_summary": "The student notes that class-related data is hard to convert but could be applied to more cases if handled properly.",
+    "keywords": [
+      "data transformation",
+      "education data"
+    ],
+    "themes": [
+      "data preprocessing",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q2_014",
+    "original_no": 14,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I have a problem of choosing clothes/shoes to buy. By taking this course, it will help me make better decisions by collecting and analyzing data to see the most bought shoes. Concept of data mining will help choose the best one.",
+    "language": "en",
+    "cleaned_text": "I have a problem choosing clothes/shoes to buy. Taking this course will help me make better decisions by collecting and analyzing data to see the most-bought shoes. The concept of data mining will help me choose the best one.",
+    "english_text": "I have a problem choosing clothes/shoes to buy. Taking this course will help me make better decisions by collecting and analyzing data to see the most-bought shoes. The concept of data mining will help me choose the best one.",
+    "one_sentence_summary": "The student wants to use data mining to make better decisions about buying clothes and shoes.",
+    "keywords": [
+      "shopping decisions",
+      "data analysis"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_015",
+    "original_no": 15,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "친구의 작업물에 저작권법 관련 패턴을 찾고 싶음. 데이터마이닝 방법으로 텍스트 패턴에 접근하여 법적인 문제를 해결할 수 있을 것.",
+    "language": "ko",
+    "cleaned_text": "친구의 작업물에서 저작권법 관련 패턴을 찾고 싶음. 데이터마이닝 방법으로 텍스트 패턴에 접근하여 법적인 문제를 해결할 수 있을 것.",
+    "english_text": "I want to find copyright-law-related patterns in my friend's work. By approaching text patterns with data mining methods, legal problems could be solved.",
+    "one_sentence_summary": "The student wants to use data mining on text patterns to address copyright-related legal issues.",
+    "keywords": [
+      "copyright",
+      "text pattern mining"
+    ],
+    "themes": [
+      "pattern discovery",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q2_016",
+    "original_no": 16,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "수많은 데이터를 한 번에 볼 방법이 없어 어려움. 데이터마이닝을 통해 보기 힘든 정보를 이해하고 한 번에 정리할 수 있는 방법을 찾고 싶음.",
+    "language": "ko",
+    "cleaned_text": "수많은 데이터를 한 번에 볼 방법이 없어 어려움. 데이터마이닝을 통해 보기 힘든 정보를 이해하고 한 번에 정리할 수 있는 방법을 찾고 싶음.",
+    "english_text": "It is difficult because there is no way to view a huge amount of data at once. I want to find a way, through data mining, to understand information that is hard to see and organize it all at once.",
+    "one_sentence_summary": "The student wants to use data mining to understand and organize large amounts of hard-to-view data.",
+    "keywords": [
+      "data organization",
+      "data visualization"
+    ],
+    "themes": [
+      "data visualization",
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_017",
+    "original_no": 17,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "An AI model trained with date and specific parameters for a project. E.g. An AI model that collects BMI data and suggests eating habits and exercise based on weight and emotion. Data mining can shorten the research process by half.",
+    "language": "en",
+    "cleaned_text": "An AI model trained with data and specific parameters for a project. E.g., an AI model that collects BMI data and suggests eating habits and exercise based on weight and emotion. Data mining can shorten the research process by half.",
+    "english_text": "An AI model trained with data and specific parameters for a project. For example, an AI model that collects BMI data and suggests eating habits and exercise based on weight and emotion. Data mining can shorten the research process by half.",
+    "one_sentence_summary": "The student wants to build an AI model (e.g., for diet and exercise from BMI data) and believes data mining can speed up research.",
+    "keywords": [
+      "AI model",
+      "health recommendation",
+      "BMI data"
+    ],
+    "themes": [
+      "AI and machine learning",
+      "recommendation systems"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_018",
+    "original_no": 18,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "When people ask me 'what is data science?' I cannot answer. By taking this class and based on the concepts learned, I hope I can answer confidently. I can get out of my own anxiety.",
+    "language": "en",
+    "cleaned_text": "When people ask me 'what is data science?' I cannot answer. By taking this class and based on the concepts learned, I hope I can answer confidently and get out of my own anxiety.",
+    "english_text": "When people ask me 'what is data science?' I cannot answer. By taking this class and based on the concepts learned, I hope I can answer confidently and get out of my own anxiety.",
+    "one_sentence_summary": "The student hopes that taking this class will let them confidently explain what data science is.",
+    "keywords": [
+      "data science understanding",
+      "confidence"
+    ],
+    "themes": [
+      "data science curiosity",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q2_019",
+    "original_no": 19,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Image detection is related to the course concepts. For classification and detection of images, we need high-level pattern matching, data clustering. Real life: cameras on vehicles, CCTVs, autonomous driving (Tesla). Will learn basic concepts and apply to team project.",
+    "language": "en",
+    "cleaned_text": "Image detection is related to the course concepts. For classification and detection of images, we need high-level pattern matching and data clustering. In real life: cameras on vehicles, CCTVs, autonomous driving (Tesla). I will learn the basic concepts and apply them to the team project.",
+    "english_text": "Image detection is related to the course concepts. For classification and detection of images, we need high-level pattern matching and data clustering. In real life: cameras on vehicles, CCTVs, autonomous driving (Tesla). I will learn the basic concepts and apply them to the team project.",
+    "one_sentence_summary": "The student connects image detection (classification, clustering) to real-world uses like autonomous driving and plans to apply it in the team project.",
+    "keywords": [
+      "image detection",
+      "classification",
+      "clustering"
+    ],
+    "themes": [
+      "classification",
+      "clustering",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q2_020",
+    "original_no": 20,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "One problem is managing my sleep pattern. By collecting data on sleeping hours, screen time, and daily condition, I can find my sleep quality and build healthier habits.",
+    "language": "en",
+    "cleaned_text": "One problem is managing my sleep pattern. By collecting data on sleeping hours, screen time, and daily condition, I can find my sleep quality and build healthier habits.",
+    "english_text": "One problem is managing my sleep pattern. By collecting data on sleeping hours, screen time, and daily condition, I can find my sleep quality and build healthier habits.",
+    "one_sentence_summary": "The student wants to collect personal data to analyze and improve their sleep quality.",
+    "keywords": [
+      "sleep pattern",
+      "healthy habits"
+    ],
+    "themes": [
+      "daily life application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q2_021",
+    "original_no": 21,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Analyze my financial spending habits by looking at my purchases pattern. May optimize for more discounts or reduce overall spending.",
+    "language": "en",
+    "cleaned_text": "Analyze my financial spending habits by looking at my purchase patterns. I may optimize for more discounts or reduce overall spending.",
+    "english_text": "Analyze my financial spending habits by looking at my purchase patterns. I may optimize for more discounts or reduce overall spending.",
+    "one_sentence_summary": "The student wants to analyze their spending patterns to save money or get more discounts.",
+    "keywords": [
+      "spending patterns",
+      "financial analysis"
+    ],
+    "themes": [
+      "daily life application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_022",
+    "original_no": 22,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Game hack detection - detecting cheating in games through data mining by detecting abnormal behavior patterns.",
+    "language": "en",
+    "cleaned_text": "Game hack detection - detecting cheating in games through data mining by detecting abnormal behavior patterns.",
+    "english_text": "Game hack detection - detecting cheating in games through data mining by detecting abnormal behavior patterns.",
+    "one_sentence_summary": "The student wants to use data mining to detect cheating in games via abnormal behavior patterns.",
+    "keywords": [
+      "cheat detection",
+      "anomaly detection",
+      "games"
+    ],
+    "themes": [
+      "pattern discovery",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_023",
+    "original_no": 23,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 통해 개인적인 교통 수단 문제들을 해결할 수 있을 것으로 기대.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 통해 개인적인 교통수단 문제들을 해결할 수 있을 것으로 기대함.",
+    "english_text": "I expect that data mining can help solve personal transportation problems.",
+    "one_sentence_summary": "The student expects to use data mining to solve personal transportation problems.",
+    "keywords": [
+      "data mining",
+      "transportation",
+      "problem solving"
+    ],
+    "themes": [
+      "real-world application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q2_024",
+    "original_no": 24,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Edge cases in data, inconsistencies. Also: girlfriend lives near Hanyang and I live at Banwon - many ways to travel from A to B but the best route differs every time. Want to find the consistently best route.",
+    "language": "en",
+    "cleaned_text": "Edge cases in data, inconsistencies. Also, my girlfriend lives near Hanyang and I live at Banwon - there are many ways to travel from A to B, but the best route differs every time. I want to find the consistently best route.",
+    "english_text": "Edge cases in data, inconsistencies. Also, my girlfriend lives near Hanyang and I live at Banwon - there are many ways to travel from A to B, but the best route differs every time. I want to find the consistently best route.",
+    "one_sentence_summary": "The student wants to use data to find the consistently best travel route between two locations.",
+    "keywords": [
+      "route optimization",
+      "transportation"
+    ],
+    "themes": [
+      "real-world application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_025",
+    "original_no": 25,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I have many thought processes before I do something. Thoughts are overlapped and cluttered. Maybe I could learn how to process thoughts, know what's redundant, and understand what's important.",
+    "language": "en",
+    "cleaned_text": "I have many thought processes before I do something. My thoughts are overlapped and cluttered. Maybe I could learn how to process my thoughts, know what's redundant, and understand what's important.",
+    "english_text": "I have many thought processes before I do something. My thoughts are overlapped and cluttered. Maybe I could learn how to process my thoughts, know what's redundant, and understand what's important.",
+    "one_sentence_summary": "The student hopes to learn to organize their cluttered thoughts and identify what is redundant or important.",
+    "keywords": [
+      "thought organization",
+      "prioritization"
+    ],
+    "themes": [
+      "personal reflection",
+      "problem solving"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.7
+  },
+  {
+    "id": "Q2_026",
+    "original_no": 26,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Interesting to analyze reader behavior/patterns. Trying to explain why and how it relates to the world or psychology of a particular kind. Like a sociological/psychological analysis study.",
+    "language": "en",
+    "cleaned_text": "It is interesting to analyze reader behavior/patterns, trying to explain why and how it relates to the world or the psychology of a particular kind - like a sociological/psychological analysis study.",
+    "english_text": "It is interesting to analyze reader behavior/patterns, trying to explain why and how it relates to the world or the psychology of a particular kind - like a sociological/psychological analysis study.",
+    "one_sentence_summary": "The student is interested in analyzing reader behavior patterns as a kind of sociological or psychological study.",
+    "keywords": [
+      "reader behavior analysis",
+      "social analysis"
+    ],
+    "themes": [
+      "social analysis",
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q2_027",
+    "original_no": 27,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I'm riding subway daily to KU. The subway door closes too early even though there are lots of people to board. If opening door time would be flexibly determined based on data, it would improve subway experience.",
+    "language": "en",
+    "cleaned_text": "I ride the subway to KU daily. The subway door closes too early even though there are lots of people waiting to board. If the door-opening time were flexibly determined based on data, it would improve the subway experience.",
+    "english_text": "I ride the subway to KU daily. The subway door closes too early even though there are lots of people waiting to board. If the door-opening time were flexibly determined based on data, it would improve the subway experience.",
+    "one_sentence_summary": "The student suggests using data to flexibly adjust subway door-open times to improve the commuting experience.",
+    "keywords": [
+      "public transportation",
+      "subway",
+      "data-driven optimization"
+    ],
+    "themes": [
+      "real-world application",
+      "daily life application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_028",
+    "original_no": 28,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "공부해야 할 것이 너무 많고 일정이 맞지 않는 경우가 많음. 이 수업을 통해 기계가 패턴을 찾아내서 시간 조율이나 정보 정리를 도와주면 좋겠음.",
+    "language": "ko",
+    "cleaned_text": "공부해야 할 것이 너무 많고 일정이 맞지 않는 경우가 많음. 이 수업을 통해 기계가 패턴을 찾아내서 시간 조율이나 정보 정리를 도와주면 좋겠음.",
+    "english_text": "There is too much to study and my schedule often does not fit. Through this class, I hope a machine can find patterns and help me with time coordination or organizing information.",
+    "one_sentence_summary": "The student hopes machines can find patterns to help with scheduling and organizing information.",
+    "keywords": [
+      "scheduling",
+      "time management",
+      "pattern discovery"
+    ],
+    "themes": [
+      "daily life application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.86
+  },
+  {
+    "id": "Q2_029",
+    "original_no": 29,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I do part-time jobs at a convenience store. Customers really buy similar groups of stuff most of the time, which can be categorized by gender, age, Korean/foreigners. That's why Data Science/Data Clustering is interesting.",
+    "language": "en",
+    "cleaned_text": "I work part-time at a convenience store. Customers really buy similar groups of items most of the time, which can be categorized by gender, age, and Korean/foreigner. That's why data science / data clustering is interesting.",
+    "english_text": "I work part-time at a convenience store. Customers really buy similar groups of items most of the time, which can be categorized by gender, age, and Korean/foreigner. That's why data science / data clustering is interesting.",
+    "one_sentence_summary": "The student finds data clustering interesting because convenience-store customers buy similar groups of items by demographic.",
+    "keywords": [
+      "customer behavior",
+      "clustering",
+      "retail"
+    ],
+    "themes": [
+      "clustering",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_030",
+    "original_no": 30,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "This course may help me choose further study field, in terms of company or university/professor. Through classifying and considering all options available, a better choice can be made.",
+    "language": "en",
+    "cleaned_text": "This course may help me choose a further study field, in terms of company or university/professor. By classifying and considering all available options, a better choice can be made.",
+    "english_text": "This course may help me choose a further study field, in terms of company or university/professor. By classifying and considering all available options, a better choice can be made.",
+    "one_sentence_summary": "The student hopes the course will help them classify options to choose a future study or career path.",
+    "keywords": [
+      "decision making",
+      "classification",
+      "career"
+    ],
+    "themes": [
+      "classification",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_031",
+    "original_no": 31,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I don't read maps very well. When at a shopping mall, instead of looking at store names, I read store numbers in order. Related to data arrangements in information boards where stores can be sorted by category/services alphabetically.",
+    "language": "en",
+    "cleaned_text": "I don't read maps very well. When I'm at a shopping mall, instead of looking at store names, I read store numbers in order. This relates to data arrangement on information boards, where stores could be sorted by category/services alphabetically.",
+    "english_text": "I don't read maps very well. When I'm at a shopping mall, instead of looking at store names, I read store numbers in order. This relates to data arrangement on information boards, where stores could be sorted by category/services alphabetically.",
+    "one_sentence_summary": "The student relates their habit of reading store numbers to organizing and sorting store data on mall information boards.",
+    "keywords": [
+      "data organization",
+      "sorting",
+      "information board"
+    ],
+    "themes": [
+      "daily life application",
+      "classification"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.75
+  },
+  {
+    "id": "Q2_032",
+    "original_no": 32,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I have problems organizing my belongings in my small house. Need to categorize things I need, throw away seasonal items. The concept of data mining, outlier and detection can be used to solve my problem.",
+    "language": "en",
+    "cleaned_text": "I have problems organizing my belongings in my small house. I need to categorize the things I need and throw away seasonal items. The concepts of data mining and outlier detection can be used to solve my problem.",
+    "english_text": "I have problems organizing my belongings in my small house. I need to categorize the things I need and throw away seasonal items. The concepts of data mining and outlier detection can be used to solve my problem.",
+    "one_sentence_summary": "The student wants to apply data mining and outlier detection to organize and declutter their belongings.",
+    "keywords": [
+      "categorization",
+      "outlier detection",
+      "decluttering"
+    ],
+    "themes": [
+      "daily life application",
+      "classification"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_033",
+    "original_no": 33,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "The lack of organization in my Google Cloud storage - massive number of files scattered without clear structure. Want to apply clustering and classification to automatically group similar documents and categorize unsorted files.",
+    "language": "en",
+    "cleaned_text": "The lack of organization in my Google Cloud storage - a massive number of files scattered without clear structure. I want to apply clustering and classification to automatically group similar documents and categorize unsorted files.",
+    "english_text": "The lack of organization in my Google Cloud storage - a massive number of files scattered without clear structure. I want to apply clustering and classification to automatically group similar documents and categorize unsorted files.",
+    "one_sentence_summary": "The student wants to use clustering and classification to organize scattered files in their cloud storage.",
+    "keywords": [
+      "clustering",
+      "classification",
+      "file organization"
+    ],
+    "themes": [
+      "clustering",
+      "classification",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q2_034",
+    "original_no": 34,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "As a citizen in Gyeonggi province who commutes by public transportation, standing for over an hour is routine. Want to make a new algorithm that provides the best way to sit in train cars using mobile signal density data, adding a 'sitting first' option for route planning.",
+    "language": "en",
+    "cleaned_text": "As a resident of Gyeonggi province who commutes by public transportation, standing for over an hour is routine. I want to make a new algorithm that provides the best way to sit in train cars using mobile signal density data, adding a 'sitting first' option for route planning.",
+    "english_text": "As a resident of Gyeonggi province who commutes by public transportation, standing for over an hour is routine. I want to make a new algorithm that provides the best way to sit in train cars using mobile signal density data, adding a 'sitting first' option for route planning.",
+    "one_sentence_summary": "The student wants to build an algorithm using mobile signal density data to find seats on trains and add a 'sitting first' route option.",
+    "keywords": [
+      "public transportation",
+      "route planning",
+      "signal density data"
+    ],
+    "themes": [
+      "real-world application",
+      "daily life application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_035",
+    "original_no": 35,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Optimizing my nutrition plan by analyzing data on calorie intake, body weight, and exercise performance.",
+    "language": "en",
+    "cleaned_text": "Optimizing my nutrition plan by analyzing data on calorie intake, body weight, and exercise performance.",
+    "english_text": "Optimizing my nutrition plan by analyzing data on calorie intake, body weight, and exercise performance.",
+    "one_sentence_summary": "The student wants to analyze diet and exercise data to optimize their nutrition plan.",
+    "keywords": [
+      "nutrition",
+      "health data",
+      "optimization"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_036",
+    "original_no": 36,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "한국어: 글로벌 지표를 공부하며 전문화된 분야에서의 가이드라인을 얻고 싶음.",
+    "language": "ko",
+    "cleaned_text": "글로벌 지표를 공부하며 전문화된 분야에서의 가이드라인을 얻고 싶음.",
+    "english_text": "I want to study global indicators and obtain guidelines for a specialized field.",
+    "one_sentence_summary": "The student wants to study global indicators to gain guidelines for a specialized field.",
+    "keywords": [
+      "global indicators",
+      "guidelines"
+    ],
+    "themes": [
+      "career preparation",
+      "major relevance"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q2_037",
+    "original_no": 37,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "(Q2 미기재)",
+    "language": "ko",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q2_038",
+    "original_no": 38,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Pattern mining, classification, clustering, outlier detection에 대해 배우고, 사람들의 명상 특성을 데이터로 찾아 clustering으로 패턴을 찾아낼 수 있을 것이라 기대.",
+    "language": "mixed",
+    "cleaned_text": "Pattern mining, classification, clustering, outlier detection에 대해 배우고, 사람들의 명상 특성을 데이터로 찾아 clustering으로 패턴을 찾아낼 수 있을 것이라 기대함.",
+    "english_text": "I want to learn about pattern mining, classification, clustering, and outlier detection, and I expect to be able to find people's meditation characteristics from data and discover patterns through clustering.",
+    "one_sentence_summary": "The student wants to learn data mining methods and use clustering to find patterns in people's meditation characteristics.",
+    "keywords": [
+      "clustering",
+      "meditation",
+      "pattern discovery"
+    ],
+    "themes": [
+      "clustering",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_039",
+    "original_no": 39,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I've always struggled with scheduling and following plans. Can't organize well. Hope this course teaches me how to schedule my daily schedule through Data Mining.",
+    "language": "en",
+    "cleaned_text": "I've always struggled with scheduling and following plans, and I can't organize well. I hope this course teaches me how to manage my daily schedule through data mining.",
+    "english_text": "I've always struggled with scheduling and following plans. I can't organize well. I hope this course teaches me how to schedule my daily schedule through data mining.",
+    "one_sentence_summary": "The student hopes to learn to manage their daily schedule through data mining.",
+    "keywords": [
+      "scheduling",
+      "time management"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q2_040",
+    "original_no": 40,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Feature extraction that determines excess returns over the benchmark (factor selection). In other words, avoiding data overfitting (in DL, overfitting).",
+    "language": "en",
+    "cleaned_text": "Feature extraction that determines excess returns over the benchmark (factor selection). In other words, avoiding data overfitting (in deep learning, overfitting).",
+    "english_text": "Feature extraction that determines excess returns over the benchmark (factor selection). In other words, avoiding data overfitting (in deep learning, overfitting).",
+    "one_sentence_summary": "The student is interested in feature/factor selection for excess returns and in avoiding overfitting.",
+    "keywords": [
+      "feature extraction",
+      "factor selection",
+      "overfitting"
+    ],
+    "themes": [
+      "AI and machine learning",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_041",
+    "original_no": 41,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I'm using a company app for shipping and they recommend tools based on my data using clustering in complex ways. I could understand by attending this course how it works.",
+    "language": "en",
+    "cleaned_text": "I'm using a company app for shipping, and they recommend tools based on my data using clustering in complex ways. By attending this course, I could understand how it works.",
+    "english_text": "I'm using a company app for shipping, and they recommend tools based on my data using clustering in complex ways. By attending this course, I could understand how it works.",
+    "one_sentence_summary": "The student wants to understand how a shipping app uses clustering to recommend tools based on data.",
+    "keywords": [
+      "recommendation system",
+      "clustering"
+    ],
+    "themes": [
+      "recommendation systems",
+      "clustering"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_042",
+    "original_no": 42,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I bought an air purifier and I'm curious if I should keep it on 24 hours. The performance and needs would need to match balance with costs. Need data for evaluating and finding an efficient managing way.",
+    "language": "en",
+    "cleaned_text": "I bought an air purifier and I'm curious whether I should keep it on 24 hours. Its performance and my needs would need to balance with the costs. I need data to evaluate and find an efficient way to manage it.",
+    "english_text": "I bought an air purifier and I'm curious whether I should keep it on 24 hours. Its performance and my needs would need to balance with the costs. I need data to evaluate and find an efficient way to manage it.",
+    "one_sentence_summary": "The student wants to use data to decide how efficiently to run their air purifier, balancing performance and cost.",
+    "keywords": [
+      "efficiency",
+      "cost-benefit",
+      "data analysis"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_043",
+    "original_no": 43,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "Researching web novel popularity. Could extract certain traits, filter out irrelevant items, and distinguish safe-to-go needs. Use this class to support my research and predict the hit rate of web novels.",
+    "language": "en",
+    "cleaned_text": "Researching web novel popularity. I could extract certain traits, filter out irrelevant items, and distinguish safe-to-go needs. I will use this class to support my research and predict the hit rate of web novels.",
+    "english_text": "Researching web novel popularity. I could extract certain traits, filter out irrelevant items, and distinguish safe-to-go needs. I will use this class to support my research and predict the hit rate of web novels.",
+    "one_sentence_summary": "The student wants to use data mining to analyze traits of web novels and predict their popularity.",
+    "keywords": [
+      "web novel",
+      "popularity prediction",
+      "feature extraction"
+    ],
+    "themes": [
+      "prediction",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q2_044",
+    "original_no": 44,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I tend to get distracted while studying and use my phone a lot. Would be great if I could build something that detects when I am not focused and reminds me to concentrate on my task.",
+    "language": "en",
+    "cleaned_text": "I tend to get distracted while studying and use my phone a lot. It would be great if I could build something that detects when I am not focused and reminds me to concentrate on my task.",
+    "english_text": "I tend to get distracted while studying and use my phone a lot. It would be great if I could build something that detects when I am not focused and reminds me to concentrate on my task.",
+    "one_sentence_summary": "The student wants to build something that detects when they're distracted and reminds them to focus.",
+    "keywords": [
+      "focus detection",
+      "distraction",
+      "reminder"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_045",
+    "original_no": 45,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I studied cybersecurity and solved hundreds of CTF wargames from Dreamhack. Each paper has basic security theory and problem solving strategy. Some have common features. May I extract or cluster my papers so that I can search my archive efficiently?",
+    "language": "en",
+    "cleaned_text": "I studied cybersecurity and solved hundreds of CTF wargames from Dreamhack. Each paper has basic security theory and a problem-solving strategy. Some have common features. May I extract or cluster my papers so that I can search my archive efficiently?",
+    "english_text": "I studied cybersecurity and solved hundreds of CTF wargames from Dreamhack. Each paper has basic security theory and a problem-solving strategy. Some have common features. May I extract or cluster my papers so that I can search my archive efficiently?",
+    "one_sentence_summary": "The student wants to extract or cluster their cybersecurity/CTF writeups to search their archive efficiently.",
+    "keywords": [
+      "clustering",
+      "cybersecurity",
+      "document search"
+    ],
+    "themes": [
+      "clustering",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q2_046",
+    "original_no": 46,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I know data science is all about finding interesting patterns. My first 2 years in Korea, my grades were always going lower. But suddenly last semester I got the highest grade. Was it anomalous? Hope I can get a good grade so my grades data will keep increasing.",
+    "language": "en",
+    "cleaned_text": "I know data science is all about finding interesting patterns. My first 2 years in Korea, my grades were always going lower. But suddenly last semester I got the highest grade. Was it anomalous? I hope I can get a good grade so my grades data will keep increasing.",
+    "english_text": "I know data science is all about finding interesting patterns. My first 2 years in Korea, my grades were always going lower. But suddenly last semester I got the highest grade. Was it anomalous? I hope I can get a good grade so my grades data will keep increasing.",
+    "one_sentence_summary": "The student wonders whether their sudden grade improvement was an anomaly and hopes their grades keep increasing.",
+    "keywords": [
+      "grades",
+      "anomaly",
+      "pattern discovery"
+    ],
+    "themes": [
+      "personal reflection",
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q2_047",
+    "original_no": 47,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "All my friends have different food preferences and allergies which can act as data to decide a restaurant everyone agrees on. Categorizing by dietary restrictions, cuisine preferences, post-restaurant ratings - a recommendation system could suggest suitable restaurants.",
+    "language": "en",
+    "cleaned_text": "All my friends have different food preferences and allergies, which can act as data to decide on a restaurant everyone agrees on. Categorizing by dietary restrictions, cuisine preferences, and post-restaurant ratings, a recommendation system could suggest suitable restaurants.",
+    "english_text": "All my friends have different food preferences and allergies, which can act as data to decide on a restaurant everyone agrees on. Categorizing by dietary restrictions, cuisine preferences, and post-restaurant ratings, a recommendation system could suggest suitable restaurants.",
+    "one_sentence_summary": "The student wants a recommendation system that uses friends' food preferences and allergies to suggest restaurants everyone agrees on.",
+    "keywords": [
+      "recommendation system",
+      "food preferences",
+      "categorization"
+    ],
+    "themes": [
+      "recommendation systems",
+      "daily life application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q2_048",
+    "original_no": 48,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I'm interested in learning other languages. Since I am a lazy man, I wanted to learn a new language faster and easier. Want to gather many datasets of several methods of learning language to discover the most effective method using MRI pictures, brain waves, behavior, etc.",
+    "language": "en",
+    "cleaned_text": "I'm interested in learning other languages. Since I am a lazy man, I wanted to learn a new language faster and more easily. I want to gather many datasets on several language-learning methods to discover the most effective method, using MRI images, brain waves, behavior, etc.",
+    "english_text": "I'm interested in learning other languages. Since I am a lazy man, I wanted to learn a new language faster and more easily. I want to gather many datasets on several language-learning methods to discover the most effective method, using MRI images, brain waves, behavior, etc.",
+    "one_sentence_summary": "The student wants to analyze datasets (MRI, brain waves, behavior) to find the most effective language-learning method.",
+    "keywords": [
+      "language learning",
+      "effectiveness analysis",
+      "datasets"
+    ],
+    "themes": [
+      "real-world application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q2_049",
+    "original_no": 49,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "As a PL enthusiast, I want to devise some role/function language that has some engineers who write clean code for specific language. Want to answer: which tool should I use?",
+    "language": "en",
+    "cleaned_text": "As a PL (programming language) enthusiast, I want to devise some role/function language that has some engineers who write clean code for a specific language. I want to answer: which tool should I use?",
+    "english_text": "As a PL (programming language) enthusiast, I want to devise some role/function language that has some engineers who write clean code for a specific language. I want to answer: which tool should I use?",
+    "one_sentence_summary": "The student, a programming-language enthusiast, wants to determine which tool or language to use.",
+    "keywords": [
+      "programming languages",
+      "tool selection"
+    ],
+    "themes": [
+      "major relevance",
+      "problem solving"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q2_050",
+    "original_no": 50,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "여러 알고리즘을 어느 상황에 써야 하는지 고민하는 문제. 프로젝트로 모든 주요 알고리즘을 실습해보고 실생활 유용한 문제를 정의하고 해결책을 제시해보고 싶음.",
+    "language": "ko",
+    "cleaned_text": "여러 알고리즘을 어느 상황에 써야 하는지 고민하는 문제. 프로젝트로 모든 주요 알고리즘을 실습해보고, 실생활에 유용한 문제를 정의하고 해결책을 제시해보고 싶음.",
+    "english_text": "The problem of figuring out which algorithm to use in which situation. Through a project, I want to practice all the major algorithms, define a problem useful in real life, and propose a solution.",
+    "one_sentence_summary": "The student wants to practice major algorithms through a project and apply them to a useful real-life problem.",
+    "keywords": [
+      "algorithm selection",
+      "project-based learning",
+      "real-world application"
+    ],
+    "themes": [
+      "project-based learning",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q2_051",
+    "original_no": 51,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I always have problems managing my expenses. Can't manage what to buy and what's not to. I will always end up not knowing where I spent my money.",
+    "language": "en",
+    "cleaned_text": "I always have problems managing my expenses. I can't manage what to buy and what not to. I always end up not knowing where I spent my money.",
+    "english_text": "I always have problems managing my expenses. I can't manage what to buy and what not to. I always end up not knowing where I spent my money.",
+    "one_sentence_summary": "The student struggles to manage expenses and track where their money goes.",
+    "keywords": [
+      "expense management",
+      "spending tracking"
+    ],
+    "themes": [
+      "daily life application",
+      "problem solving"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q2_052",
+    "original_no": 52,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "I tend to write lecture notes online using Notion. I do find some connections between my notes despite taking notes on different subjects. Want to apply data mining concepts to clearly organize my notes and relate them based on their relevance.",
+    "language": "en",
+    "cleaned_text": "I tend to write lecture notes online using Notion. I do find some connections between my notes despite taking notes on different subjects. I want to apply data mining concepts to clearly organize my notes and relate them based on their relevance.",
+    "english_text": "I tend to write lecture notes online using Notion. I do find some connections between my notes despite taking notes on different subjects. I want to apply data mining concepts to clearly organize my notes and relate them based on their relevance.",
+    "one_sentence_summary": "The student wants to apply data mining to organize their notes and link them by relevance.",
+    "keywords": [
+      "note organization",
+      "relevance",
+      "data mining"
+    ],
+    "themes": [
+      "daily life application",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  }
+]

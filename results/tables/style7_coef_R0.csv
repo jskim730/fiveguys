@@ -1,0 +1,8 @@
+feature,mean_coef(+=LLM)
+lexical_diversity,-0.903
+first_person_ratio,-0.329
+hedging_ratio,-0.216
+comma_density,0.292
+avg_word_len,0.853
+avg_sent_len,1.108
+n_words,1.926

@@ -1,0 +1,317 @@
+## 최종 Pipeline과 방법론
+
+재현패키지_LLM말투분석.zip
+
+1. 원본 파일 26S_COSE471_Discussion_Datasets.xlsx 전처리.
+    1. **원본 데이터의 문제점**
+        - 영어와 한국어 응답이 섞여 있었다.
+        - 하나의 응답 안에서도 영어와 한국어가 혼재된 경우가 있었다.
+        - 일부 한국어 응답은 필기 인식 또는 번역 과정에서 문장이 많이 깨져 있었다.
+        - 일부 응답은 매우 짧거나, 의미가 불명확하거나, 결측에 가까웠다.
+        - 질문마다 응답자 수가 달랐다.
+        - 같은 번호가 같은 학생을 의미하지 않기 때문에, Q1의 1번과 Q5의 1번을 같은 학생으로 볼 수 없다.
+        - 일부 응답은 수업 개념을 잘 설명하지만, 일부 응답은 단어만 나열되어 있어 semantic analysis에 바로 사용하기 어려웠다.
+        
+        원본 텍스트를 그대로 embedding, clustering, topic modeling에 넣기보다는, 의미를 보존하면서 분석 가능한 형태로 정리하는 preprocessing이 필요.
+        
+    2. **LLM이 원본 데이터를 대체하거나 새롭게 작성한 것이 아님. 원본 응답을 그대로 보존한 상태에서 분석용 파생 필드를 추가. 각 학생 응답에 대해 다음과 같은 구조화된 JSON object를 생성.**
+        - raw_text: 원본 응답 그대로 보존
+        - cleaned_text: 원문 언어를 유지한 최소 정리본
+        - english_text: 영어 번역본
+        - one_sentence_summary: 한 문장 요약
+        - keywords: 응답별 핵심 키워드.
+        - themes: 응답별 넓은 의미 범주. 아무거나 막 생성하지 않도록 allowed common themes 목록 있음.
+        - quality: high / medium / low 품질 라벨
+        - reason_for_quality: 품질 판단 이유
+        - confidence: 전처리 결과가 원문 의미를 잘 보존했는지에 대한 LLM의 신뢰도. 자기평가. Robustness check할 때 보조적으로 사용 가능할 듯.
+        
+        원래, Multilingual version(cleaned_text를 main text로 사용, 한국어/영어/혼합 응답의 원래 언어 구조를 최대한 유지)와 English-translated version(english_text를 main text로 사용, 모든 응답을 영어 기반으로 통일) 이렇게 2가지 version을 사용할 수도 있을 거 같아서, 하나의 Master dataset을 만듦.
+        
+        이후 주제와 분석 목적에 따라서, 필요하지 않은 attribute인 column은 삭제하거나, prompt에서 생성 명령 삭제.
+        
+    3. **세션 : Claude Opus 4.8, model ID : claude-opus-4-8, 1M-context variant인 claude-opus-4-8[1m]를 사용해서 전처리를 했었음. 최종 보고서를 쓰기 전에는 API로 돌릴 수 있다면 재현성 구현 측면에서 좋을듯.**
+    4. **Q1부터 Q9까지 각 질문별 응답을 하나의 JSON batch로 만들고, 동일한 고정 prompt를 사용하여 Claude에서 전처리를 수행. 전처리 데이터셋 완성!**
+        
+        COSE471_preprocessing_batches_all_FULL_RAW-2.zip
+        
+    5. **헷갈리는 내용 있으면 보기.**
+    
+    Data-Preprocessing-377465dedb7080b3877ef650eca48db4
+    
+2. 전처리된 Dataset으로 LLM 답변 생성. Naive한 Prompt로 LLM 답변 생성(R0, 기준선).
+    1. **★대전제 — 모든 라운드(R0~R2)에 키워드 제공 = 내용 고정, 말투만 변수**
+    - 인간 답변별 `keywords`(전처리 산출물)를 **R0부터 R2까지 전부** 제공 → 인간·LLM 내용이 1:1로 같아짐.
+    - ⇒ **인간 vs LLM 차이 = 오로지 말투 / 라운드 간 차이 = 오로지 말투 코칭.**
+    - 구분: 내용을 '측정'하는 게 아니라 '고정'하는 것. (측정은 임계가 애매해 뺐지만, 고정은 그냥 같은 키워드를 주는 것이라 애매할 게 없음)
+    
+    **b. 어떤 LLM을 쓰나**
+    
+    - 전처리에 쓴 모델(Claude)과 다른 모델 → self-judging 차단. 생성자 ≠ 분석자.
+    - 예: GPT-5.5·Gemini·Llama·Mistral 등 Claude 외 capable 모델.
+    - LLM을 판정 모델로 안 쓰고 STYLO를 쓰니 LLM 과용 아님.
+    
+    **c. R0 = 키워드 + 진짜 naive 말투 (기준선)**
+    
+    - 내용은 키워드로 주되, **말투 코칭은 제로** → GPT 자연체(AI스러운)로 생성.
+    - R0은 "말투를 하나도 안 건드렸을 때 얼마나 들키나"의 기준선. (R1·R2에서 말투를 점점 코칭)
+    - 학생 페르소나("DS 학부생이 토론 답") + 키워드만. **페르소나는 전 라운드 고정**(변수 아님).
+    
+    **d. 규격 / 개수**
+    
+    - **1:1 매칭**: 426 인간 답변 각각에 LLM 1개(그 인간의 키워드로) → **라운드당 426개의 LLM 답변 생성**.
+    - 슬라이드는 키워드가 내용을 주니 **입력하지 않음!**
+    - 형식: `{id(인간 id), q, round, text, keywords}`.
+    - id(인간 id)는 ‘인간 vs 그 짝 LLM’ 짝지은 분석(옵션)을 위해 넣어봤음.
+    
+    **e. 고정할 것 (재현성)**
+    
+    - persona·temperature·top_p를 **전 라운드 동일 고정**. 오직 **말투 지시만 변화** → ΔAUC=말투 효과.
+    - **temperature·top_p =** LLM의 randomness 조절. temperature=얼마나 모험적으로 단어를 고르나, top_p=얼마나 넓은 단어 풀에서 고르나. 어휘다양성·길이를 흔들어버리니까, *전 라운드 동일 고정*이 중요(안 그러면 말투효과에 randomness 섞임).
+    - temperature/top_p 미확인 → API로 명시 고정 재생성 권장.
+    
+3. 학생 답변과 비교 / 분석 → 특성 파악 (말투)
+    
+    **[전제] 내용은 분석에서 제외 — 고정하고 말투만 본다**
+    
+    - 답변의 **내용적 측면(유사도·재현)은 분석 대상에서 제외.**
+    - 이유: ① 수업 **참여도(engagement)를 임의로 못 정함** → 내용 깊이·난이도를 공정히 못 맞춤. ② **"얼마나 유사하면 유사한가"의 임계가 애매**(주관적).
+    - 그래서, 내용을 **키워드로 고정** + **내용 무관 말투 특징을 분석(STYLE7·기능어·구두점)** + **질문별 통제** → 말투만 분리.
+    
+    **a. 분류기로 "LLM이 얼마나 티 나나"를 AUC로**
+    
+    - **내용이 키워드로 맞춰진** 인간 답(라벨 0) vs R0 LLM 답(라벨 1)을 판별기에 학습 → **AUC**.
+    - AUC **0.5 = 전혀 구별 못함 / 1.0 = 완벽 구별**(=LLM이 티 남). 높을수록 아직 말투가 인간과 다름.
+    
+    **b. 무슨 특징으로 판별하나 — STYLE7(표면 7특징, 내용 무관)**
+    
+    - 단어수 / 평균 단어길이 / 평균 문장길이 / 어휘 다양성 / 1인칭 비율 / 헤징(maybe·I think) 비율 / 쉼표 밀도.
+    - 내용과 무관한 **'말투'만 측정**. + 내용도 키워드로 맞춰짐 /  그리고, 로지스틱 회귀라 **계수 해석** 가능.
+    
+    **c. ★교란 통제**
+    
+    - 주제/내용 통제 = ① **키워드로 내용 고정**(인간-LLM 1:1 매칭) + ② **질문별 평가**(질문 간 주제 차단, 풀링 금지) + ③ **내용 무관 특징**.
+    - 질문별 평가 이유: 인간끼리도 이 말투특징으로 '어느 질문 답인지'가 AUC **0.80(STYLE7)·0.95(STYLO)**로 맞혀짐 → 특징이 '저자'가 아니라 **'주제'를 상당부분 담았기 때문.**
+    - **같은 질문 안에선 주제가 같아 분류기가 주제를 못 쓰고 말투만 본다!**
+    - **'길이만' 베이스라인 AUC** 병기 → 전체 AUC 중 **길이가 차지하는 몫**을 가시화. (길이도 말투의 일부지만, *가장 쉽게 바뀌는 것*이고 다른 특징까지 오염시켜서 — 어휘다양성 r=−0.62 — 따로 떼어 정직하게 공개.)(어휘다양성 -0.62는 어디서 나온 값이야? 다시 측정 안해도 돼?)
+    - 5-fold(처음 보는 답에서 측정) + 모델 **2종**(로지스틱=해석 + GBM=비선형) + **부트스트랩 95% 신뢰구간**으로 노이즈 여부 확인.
+        - **5-fold (처음 보는 답에서 측정):** 같은 데이터로 학습·채점하면 *암기*해서 AUC가 뻥튀기됨. 데이터를 5조각 내 → 4조각 학습/1조각 채점을 5번 돌려 평균 → **처음 보는 답**에서의 진짜 실력. (연습문제로 공부하고 *새* 시험으로 채점)
+        - **모델 2종 (로지스틱 + GBM):** 로지스틱=단순·해석가능(어느 특징이 가르나 계수로 봄), GBM=비선형 패턴까지 잡음. **둘 다 비슷한 AUC면** 특정 모델 버릇이 아닌 진짜 신호. (두 채점자가 같은 결론)
+        - **부트스트랩 95% 신뢰구간:** AUC 0.85가 *진짜 0.5보다 높나, 표본 노이즈인가?* 데이터를 무작위 재추출해 2000번 AUC 재계산 → 그 분포의 2.5~97.5% 구간이 신뢰구간. **[0.80, 0.90]이면** 0.5보다 확실히 위 = 진짜 신호. **[0.45, 0.65]면** 노이즈 의심.
+    - 3번 = **R0 특성 파악**(교차검증으로 R0가 뭘로 들키나·계수 분석). 뒤의 5번 = R의 변화 **궤적**(R0로 만든 판별기를 freeze해 R1/R2가 *고정 표적*을 뚫나). 목적이 다름.
+    
+    **d. 무엇이 'LLM 티'인지 뽑아냄 (→ 4번 입력)**
+    
+    - 특징 평균차/계수로: **LLM = 길고 매끈·헤징 많음·어휘 균질 / 인간 = 짧고 산만·단편적·개인적.**
+    - 이 차이가 곧 "다음 프롬프트에서 없앨 말투" = 4번 코칭의 재료.
+    
+    **e. 검증 (외부 모델 대신)**
+    
+    - **독립 판정자 STYLO**(스타일로메트리, 비-LLM, 프롬프트가 안 겨냥)로 교차.
+    - **음성통제:** 인간을 무작위 두 그룹으로 나눠 *인간 vs 인간* 분류 → 진짜 차이가 없으니 **AUC≈0.5 나와야 정상**. / 라벨을 무작위로 섞으면 0.5로 붕괴 → "우리 AUC가 진짜 신호"임을 보증.
+    - (옵션 - 일단 제외) **휴먼 평가:** 사람도 비슷하게 구별하나.
+    
+    **f. STYLE7 vs STYLO — 무엇이고 어떻게 다른가**
+    
+    둘 다 "글을 숫자로 바꾸는 특징 추출기"(둘 다 LLM 아님, 우리 코드). 
+    
+    하지만 *어떤* 숫자를 뽑는지가 다름 :
+    
+    |  | **STYLE7** | **STYLO** |
+    | --- | --- | --- |
+    | 정체 | 표면 말투 **7개** 특징 | 스타일로메트리: 기능어+문자3gram+구두점 **(~300개)** |
+    | 예 | 단어수·문장길이·어휘다양성·1인칭·헤징·쉼표밀도 | `the·of·and` 같은 기능어 빈도, 문자패턴, 구두점 리듬 |
+    | 성격 | **의식적·직관적** | **무의식적·비직관적** |
+    | 프롬프트가 겨냥? | **YES** — R1/R2가 없애려는 표적 | **NO** — 프롬프트가 안 건드림 |
+    | 역할 | **주 탐지기** = 우리가 이기려는 표적 | **독립 판정자** = 진짜 인간화인지 채점 |
+    
+    STYLE7 = 의식적으로 바꾸는 말투·자세(흉내내기 쉬움) / STYLO = 무의식적 버릇이라 숨기기 어려움.
+    
+    **왜 둘 다 쓰나:** 우리가 STYLE7을 코칭으로 없애도, **안 겨냥한 STYLO가 여전히 잡으면 = "겉만 흉내, 진짜 인간화 아님"**. 이게 핵심 실험 로직. 그래서 둘은 **토큰이 안 겹치게**(STYLO에서 1인칭·헤징·쉼표 제외) 코드로 강제해서(`assert_disjoint`) STYLO가 진짜 독립이 될 수 있도록.
+    
+    **STYLO는 LLM이 아니라, 그**냥 글에서 `the`·`of` 같은 단어 개수와 구두점을 세는 코드 + 로지스틱 회귀입니다. 프롬프트로 시키는 게 아니라 숫자를 계산하는 것.
+    
+    | 도구 | 프롬프트? | 정체 |
+    | --- | --- | --- |
+    | **GPT** (생성기) | ✅ 있음 (R0/R1/R2) | 답변 생성 LLM |
+    | **STYLE7** | ❌ 없음 | 7개 숫자 세는 우리 코드 |
+    | **STYLO** | ❌ 없음 | ~300개 숫자 세는 우리 코드 |
+    
+    **STYLE7 · STYLO 코드**
+    
+    ```python
+    import re, numpy as np
+    from sklearn.feature_extraction.text import CountVectorizer
+    
+    def tokens(text):                       # 단어 토큰 (소문자, 알파벳+아포스트로피)
+        return re.findall(r"[a-zA-Z']+", str(text).lower())
+    
+    # ═══════ STYLE7 : 표면 말투 7특징 (프롬프트가 '겨냥하는' tell) ═══════
+    FIRST_PERSON = {"i","my","we","me","our","mine","us","i'm","i've","i'd","i'll"}
+    HEDGE = ["maybe","perhaps","probably","i think","not sure","i guess",
+             "kind of","sort of","it seems","possibly","i believe","i feel like"]
+    STYLE7_NAMES = ["n_words","avg_word_len","avg_sent_len","lexical_diversity",
+                    "first_person_ratio","hedging_ratio","comma_density"]
+    
+    def style7(text):
+        t = str(text); low = t.lower()
+        w = tokens(t); n = len(w) or 1
+        sents = [s for s in re.split(r"[.!?]+", t) if s.strip()] or [""]
+        fp  = sum(1 for tok in w if tok in FIRST_PERSON)
+        hed = sum(low.count(h) for h in HEDGE)
+        return np.array([
+            len(w),                               # 1 단어수
+            float(np.mean([len(x) for x in w])),  # 2 평균 단어길이
+            n/len(sents),                         # 3 평균 문장길이
+            len(set(w))/n,                        # 4 어휘다양성 = 고유/전체
+            fp/n,                                 # 5 1인칭 비율
+            hed/n,                                # 6 헤징 비율
+            t.count(",")/n,                       # 7 쉼표 밀도
+        ], float)
+    
+    def style7_matrix(texts):
+        return np.vstack([style7(t) for t in texts])
+    
+    # ═══════ STYLO : 스타일로메트리 (프롬프트가 '안 겨냥하는' 무의식 지문) ═══════
+    # 기능어 목록에서 STYLE7이 쓰는 토큰(1인칭·단어헤징·쉼표)을 빼 → 두 특징을 disjoint하게
+    _FW_RAW = """the a an of to in for on with as at by from that this these those and or but so if then
+    than because while although however therefore thus also not no very just more most some any all
+    can could would should will shall may might must do does did have has had been being be is are was
+    were am of into onto upon about over under above below between among through during before after
+    again further once here there when where why how what which who whom its their his her your you
+    they them he she it we us our your what whose where""".split()
+    HEDGE_UNIGRAMS = {"maybe","perhaps","probably","possibly"}
+    STYLE7_OWNED   = FIRST_PERSON | HEDGE_UNIGRAMS | {","}             # STYLO에서 제외
+    FUNCTION_WORDS = [w for w in dict.fromkeys(_FW_RAW) if w not in STYLE7_OWNED]
+    PUNCT = list(".!?;:'\"()-/")                                       # 쉼표는 STYLE7 소유라 제외
+    
+    class Stylometry:
+        """기능어 상대빈도 + 문자 3-gram(상위 200) + 구두점 밀도. fit으로 n-gram 어휘 고정 후 transform."""
+        def __init__(self, char_ngram=(3,3), max_char=200):
+            self.fw = FUNCTION_WORDS
+            self.cv = CountVectorizer(analyzer="char_wb", ngram_range=char_ngram,
+                                      max_features=max_char, lowercase=True)
+        def fit(self, texts):
+            self.cv.fit([str(t) for t in texts]); return self
+        def transform(self, texts):
+            char = self.cv.transform([str(t) for t in texts]).toarray().astype(float)
+            rows = []
+            for i, t in enumerate(texts):
+                w = tokens(t); n = len(w) or 1; nchar = max(len(str(t)), 1)
+                fw = [sum(1 for tok in w if tok==f)/n for f in self.fw]   # 기능어 상대빈도
+                pn = [str(t).count(p)/nchar for p in PUNCT]               # 구두점 밀도
+                rows.append(np.concatenate([fw, char[i]/nchar, pn]))     # = 기능어 + 문자3gram + 구두점
+            return np.vstack(rows)
+        def fit_transform(self, texts):
+            return self.fit(texts).transform(texts)
+    ```
+    
+    코드 돌리는 방법
+    
+    ```python
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.pipeline import make_pipeline
+    from sklearn.metrics import roc_auc_score
+    
+    X = style7_matrix(texts)          # STYLE7  (또는  Stylometry().fit_transform(texts) = STYLO)
+    y = [0]*len(human) + [1]*len(llm) # 인간 0 / LLM 1
+    clf = make_pipeline(StandardScaler(),
+                        LogisticRegression(max_iter=2000, class_weight="balanced"))
+    # → 질문별 5-fold로 학습/평가해 AUC (코드 전체는 src/pipeline.py)
+    ```
+    
+4. 해당 특성을 반영한 Prompt로 LLM 답변을 다시 생성**(R1·R2) — 말투만 코칭**
+    
+    **a. 핵심 — 키워드(내용)는 R0부터 이미 고정, 여기선 *말투만* 코칭**
+    
+    - 내용은 **R0부터 모든 라운드에서 키워드로 고정**돼 있음(2번) → 여기선 안 건드림.
+    - 3번에서 찾은 'LLM 티 나는 말투'(길고 매끈·헤징 많음 등)를 없애도록 **프롬프트에 '말투 지시'만 추가**.
+    - 내용이 고정돼 있으니, AUC가 떨어지면 = **말투가 인간에 가까워진 것.**
+    
+    **b. 라운드 = 키워드 고정 위에 말투 코칭을 점점 세게**
+    
+    - **R0** = 키워드 + **naive 말투**(코칭 0) — 기준선
+    - **R1** = 키워드 + **가벼운 코칭**("학부생처럼: 길이 들쭉날쭉, 헤징 줄이고, 캐주얼")
+    - **R2** = 키워드 + **공격적 회피**(단서 무력화: 단편·정의금지·비문·개인적 예)
+    - 점점 세게 밀며 **AUC가 어디까지 떨어지고 어디서 멈추나(바닥)** 관찰.
+    
+    **c. 모든 ΔAUC가 순수 말투 효과**
+    
+    - 모든 라운드가 키워드로 내용 고정 → **R0→R1 = 가벼운 코칭 효과 / R1→R2 = 공격적 코칭 효과 / R0→R2 = 전체 효과.** 내용통제라는 변수가 없어 **전부 깨끗한 델타.**
+    - "어떤 *코칭 조건*이 효과/무효"를 보려면 코칭을 조건별로 쪼개(짧게만 / 헤징만 제거 / 개인적 예만 …) 각각 **R0 대비 ΔAUC** ← 원래 목표("어떤 프롬프트가 AI스러움을 벗기나")와 직결.
+    
+    **d. 판별기 tell을 겨냥해도 반칙 아닌가? (누수 방지)**
+    
+    - 일반 단서(길이·헤징) 겨냥은 OK(그게 실험). 단 **얼린 판별기의 계수·점수를 보고 튜닝하면 반칙**(정답지 보기) → 모델 안 보고 **사전 설계**. 진짜 회피인지는 5번의 독립 판정자(STYLO)가 채점.
+    
+    **e. 생성 규격**
+    
+    - `data/llm_answers/R0.json`·`R1.json`·`R2.json` — 모두 **같은 id로 짝**(426 인간), 모두 **키워드 포함**.
+    - 생성 설정 **전 라운드 동일 고정**: temperature·top_p·persona. **슬라이드 없음**(키워드가 내용 제공).
+    - 오직 프롬프트의 **'말투 지시'만 변화**(내용=키워드는 전 라운드 동일).
+    - **학습 = 인간(70%) + naive R0 / 테스트 = 처음 보는 인간(30%) + 코칭된 R1·R2**
+    
+    **f. STYLE7 vs STYLO**
+    
+    - **STYLE7** = R1/R2가 **겨냥하는** 주 표적. 여기서 AUC 떨어지면 = "표면 회피 성공." 표면적인 특징으로 사칭 가능.
+    - **STYLO** = R1/R2가 **안 겨냥한** 독립 판정자. 빈도 / trigram 등을 말로 지시 불가.
+        - STYLE7만 떨구고 **STYLO는 유지** → 진짜 인간화 아님.
+        - **둘 다 떨굼** → 진짜 인간화.
+    - "프롬프트가 *겨냥해서* 만졌느냐” 를 측정할 것임.
+    - STYLE7(뻔한 단서)이 뚫리는 건 **당연** — 길이·헤징은 누구나 프롬프트로 바꿈.
+    - 진짜 흥미로운 질문은 **"의식적으로 못 바꾸는 무의식적 단서들이 끝까지 살아남나?"** → 살아남으면 = LLM이 못 따라하는 **인간 고유 서명**(우리 결론).
+    
+5. 학생 답변과 다시 비교 / 분석 
+    
+    > 말투를 R0→R1→R2로 바꿔가며 **얼린 판별기의 AUC가 떨어지나** 측정 → 떨어지면 따라함(표면)·안 떨어지면 못 따라함(근본). 무엇이 따라지고 안 따라지는지, 그 특성까지 분석.
+    > 
+    
+    **a. 누수 방지 평가 프로토콜 (어떻게 *공정하게* 재나)**
+    
+    - 인간 **30%**(금고, 학습·프롬프트 설계에 안 씀) + **R0 분류기 freeze**(고정).
+    - 각 라운드(**R0 held-out·R1·R2**)를 **얼린 분류기 + 30%**로 평가 → "처음 보는 시험지"(암기·누수 차단).
+    - 3과 동일하게 **질문별**로.
+    
+    **b. AUC 궤적 측정 = 어떤 코칭이 효과 있나**
+    
+    - “R0(naive 기준선) → R1(가벼운) → R2(공격적)” 에서 AUC가 떨어지나. **ΔAUC = 말투 코칭 효과.** (모든 라운드 키워드 고정 → 순수 말투)
+    - 코칭 조건별(짧게 / 헤징 제거 / 개인적 예…) 각각 **R0 대비 ΔAUC** → **"어떤 조건이 AI스러움을 가장 크게 벗기나, 어떤 건 무의미한가"** 직접 답.
+    - 부트스트랩 CI로 "진짜 하락 vs 노이즈" 구분.
+    
+    **c. ★독립 판정자로 '진짜 인간화 vs 겉만' 가린다 (핵심). 정확한 값 재도출 필요!**
+    
+    - 겨냥당한 STYLE7에서 AUC 떨어져도, **안 겨냥한 STYLO에서 그대로면 = 진짜 인간화 아님.**
+    - 기존 결과(재검증 예정): STYLE7 **0.826→0.595**(뚫림) vs STYLO **0.943→0.949**(그대로) → "표면은 따라하지만 무의식 서명은 못 따라한다"의 증거.
+    
+    **d. 무엇이 따라지고 / 안 따라지나 (특성 분해)**
+    
+    - **따라짐(표면, evadable):** 길이·헤징·문장구조 — 명시적 지시로 통제 가능.
+    - **안 따라짐(근본, irreducible):** 기능어·구두점 패턴 등 무의식 서명.
+    - 방법: R별 판정자 계수 + **잔존 오분류**(LLM인데 인간으로 분류된 것 / 그 반대)를 직접 읽기. → 6번 Outlier Detection과 연결.
+    
+    **e. 결론 로직 (네가 쓴 것 정밀화)**
+    
+    - "AUC 떨어짐 = 따라할 수 있다(표면) / 안 떨어짐 = 못 따라한다(근본)" — 단, **독립 판정자(STYLO) 기준**으로. (겨냥당한 STYLE7만 보면 속음)
+    - 진짜 결론: **"표면 말투는 프롬프트로 닫히지만, 어떤 서명은 안 닫힌다 → 그게 인간 고유."**
+    
+    **f. ESL 교란 — Limitation & Future Work로 처리** 
+    
+    - **명시:** 인간=한국 학부 ESL, LLM=원어민 → 잔존 STYLO 서명 일부가 "인간 vs LLM"이 아니라 **"비원어민 vs 원어민"**일 가능성.
+    - **범위로 방어:** 우리 질문은 "LLM이 *이 학생들*을 따라할 수 있나" → ESL은 이 모집단의 **본질적 속성(연구 대상)**이지 confound 아님. 결론을 "인류 일반"으로 일반화 안 함.
+    - **정황 근거(공짜 진단):** 최상위 변별 특징이 L1 문법오류(관사·전치사)보다 **격식 표지(축약·괄호·헤징)** 우세 → "주범은 ESL 아닌 AI 격식성".
+    - **Future Work:** ① 원어민 코퍼스 재현 ② LLM에 ESL 조건 부여 재생성 ③ 유창도 층화 ④ 비원어민 표지 특징 제거.
+    - → **비싼 ESL 생성 라운드 불필요.**
+    
+6. 우리가 사용하는 2가지 기법
+
+**Classification (기법 ①)**
+
+- 인간 vs LLM 판별기 **직접 학습**(로지스틱 + GBM), **질문별 5-fold AUC**.
+- 누수방지: 30% 금고 + R0 freeze → "처음 보는 시험지" 평가.
+- 매 라운드(R0/R1/R2) AUC = 실험의 핵심 지표. (→ 3, 5번)
+
+**Outlier Detection (기법 ②)**
+
+- **STYLO 공간에서 LOF**(거리기반)로 "LLM 분포에서 가장 먼 인간 답변" 검출 = 끝까지 못 덮는 **'인간만의 말투'(위조 불가 서명 후보)**.
+    - LOF = 한 점이 *주변 이웃들에 비해* 얼마나 떨어졌나를 재는 거리기반 이상탐지. "LLM 답변들 무리에서 멀리 떨어진 인간 답변"을 찾음.
+- 거리기반이라 **분류 재탕 아님**(수업 정합). (→ 5-d 연결)

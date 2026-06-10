@@ -1,0 +1,1433 @@
+COSE471: Data Science
+Understanding and 
+Preprocessing Data
+Department of Computer Science and Engineering
+Korea University
+Susik Yoon
+March 13, 2026
+COSE471: Data Science
+DAIS lab at Korea University
+RECAP
+❑ Data science
+▪ Comparison with artificial intelligence
+▪ Definition: the process of discovering interesting patterns and knowledge from large amounts of data
+▪ Standard process
+• Domain/business understanding → Data understanding/preprocessing → Modeling → Evaluation → Presentation/Deployment
+2
+Data 
+Understanding
+& Preparation
+Modeling Evaluation Presentation
+& Deployment
+Domain
+& Business 
+Understanding
+Feedback
+COSE471: Data Science
+DAIS lab at Korea University
+RECAP
+3
+
+COSE471: Data Science
+DAIS lab at Korea University
+Course Schedule
+4
+Week Day Content HW/Project Note
+1 Mar 06 Introduction
+2 Mar 13 Data
+3 Mar 20 Pattern mining
+4 Mar 27 Tutorial 1 Latex , Preprocessing/Pattern mining
+5 Apr 03 Clustering
+6 Apr 10 Outlier Detection & Invited Talk An invited talk from Meta
+7 Apr 17 Tutorial 2 Clustering, Outlier detection
+8 Apr 24 Classification
+9 May 01 Classification
+10 May 08 Tutorial 3 Classification, Feature engineering 
+11 May 15 Mid-term exam Offline, Closed-book, No electronic devices
+12 May 22 Review & Project Notice
+13 May 29 Project discussion
+14 Jun 05 Project discussion
+15 Jun 12 Final presentation
+16 Jun 19 Wrap-up and Final report
+HW1 
+HW2
+Project
+COSE471: Data Science
+DAIS lab at Korea University
+Data Analysis in Movie vs. in Reality
+5
+
+COSE471: Data Science
+DAIS lab at Korea University
+Data Analysis in 2000s, 2010s, and now
+6
+
+COSE471: Data Science
+DAIS lab at Korea University
+Raw Data
+7
+
+COSE471: Data Science
+DAIS lab at Korea University
+Data Preparation for Real-World Applications
+8
+https://arxiv.org/pdf/2601.17058
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Diversity of data
+❑ Understanding Data
+❑ Preprocessing Data
+9
+
+COSE471: Data Science
+DAIS lab at Korea University
+Diversity of Data
+10
+❑ Data structures
+▪ Structured data
+• Uniform, table-like structures, defined by data dictionaries, with a 
+fixed set of attributes, each with a fixed set of value ranges and 
+semantic meaning
+• e.g., relational database, data cube, data matrix
+▪ Unstructured data
+• Text data and multimedia data
+• e.g., document, audio, image, video
+▪ Semi-structured data
+• Data objects containing a set value, a small set of heterogeneous 
+typed values, or nested structures, with flexible and dynamic 
+structures
+• e.g., XML, graph, network
+Image: https://www.researchgate.net/figure/Unstructured-semi-structured-and-structured-data_fig4_236860222
+
+COSE471: Data Science
+DAIS lab at Korea University
+Diversity of Data
+11
+❑ Data types 
+▪ Tabular data
+• Table-like structures with specified rows (instances) and columns (attributes)
+• e.g., relational database table, excel files
+▪ Sequence data
+• The order or sequence of elements
+• e.g., text, biological sequences, shopping transaction sequences
+▪ Time-series data
+• Ordered set of numerical values at specific time intervals
+• e.g., stock market prices, energy consumption, sensor readings
+▪ Spatial, temporal, and spatiotemporal data
+• Spatial (location-based) and temporal (time-based) information
+• e.g., GPS trajectories, traffic data, weather data
+▪ Graph and network data
+• Complex relationships and connections between entities
+• e.g., social networks, communication networks, biological networks
+Image: https://companiesmarketcap.com/, Microsoft
+
+COSE471: Data Science
+DAIS lab at Korea University
+Diversity of Data
+12
+❑ Data states
+▪ Stored data
+• a.k.a. offline data, static data
+• Finite, stored in various kinds of large data repositories
+• Given data, apply queries (tasks) to get a result
+• e.g., Databases
+▪ Streaming data
+• a.k.a. online data, dynamic data
+• Infinite, constantly coming, real-time response
+• Given a query (a task), apply data to get results
+• e.g., Social media feeds, IoT sensor data, Video surveillance
+Stored dataQuery Result
+Streaming data Query Results
+COSE471: Data Science
+DAIS lab at Korea University
+Diversity of Data
+13
+Heung-Min Son, born 
+on July 8, 1992 (age 
+32), is a South 
+Korean professional 
+footballer who plays 
+as a forward for 
+Tottenham Hotspur in 
+the Premier League 
+and serves as the …
+<Player> 
+<Name>Heung-Min Son 
+</Name> <DateOfBirth>1992-
+07-08 </DateOfBirth> 
+<Age>32</Age><Nationality> 
+South Korean</Nationality> 
+<Club> <Team>Tottenham 
+Hotspur</Team> <League> 
+Premier League</League>
+</Club></Player>
+ID 1 2
+Name Heung-Min Son Kangin Lee
+Date of Birth July 8, 1992 Feb 19, 2001
+Age 32 23
+Nationality South Korean South Korean
+Club Team Tottenham 
+Hotspur PSG
+League Premier League Ligue 1
+Ligue 1
+PSGTottenham
+HM Son KI Lee
+Football
+EPL
+Peer
+TeamTeam
+age
+age
+HM.S KI.L
+TTH
+Kor
+PSG
+32 23
+National
+Data structure (flexibility-efficiency trade-off)
+Data states (static-streaming)
+Heung-Min Son with 
+rumors of a transfer to 
+Barcelona, Real 
+Madrid, Man United, 
+… 
+Heung-Min Son nets 
+4th goal of season in 
+loss with Chelsea …
+86’ Heung-Min Son 
+wins a free kick in the 
+defensive zone
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Diversity of data
+❑ Understanding data
+▪ Data sets, objects, attributes, matrix
+▪ Data statistics
+▪ Data visualization 
+▪ Data similarity
+❑ Preprocessing data
+14
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Sets
+❑ A data set represents a collection of data (i.e., a city)
+15
+Image: https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Objects
+❑ A data object represents an entity in a data set (i.e., a citizen in a city)
+▪ a.k.a., data point, sample, example, instance, tuple
+▪ Examples
+• Sales database: customers, store items, sales
+• Medical database: patients, hospitals, treatments
+• University database: students, professors, courses
+▪ Data objects are described by attributes
+• Typically, rows → objects; columns → attributes
+16
+ID Name Age … Salary
+1 Kim 24 … 100
+2 Jason 35 ... 300
+… … … … .
+100 Lee 22 … 200
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Attributes
+❑ An attribute represents a characteristic of a data object (i.e., info of a citizen)
+▪ a.k.a., dimension, feature, variable
+▪ Example: gender, name, grade, age of a customer
+17
+ID Gender COVID Name Grade Body Temp Age …
+1 Male Positive Kim Junior 38.5 24 …
+2 Female Negative Sarah Graduated 36.0 35 ...
+… … … . … …
+100 Female Negative Park Sophomore 36.5 22 …
+A list of COVID-19 test results
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Attributes
+❑ An attribute represents a characteristic of a data object
+▪ Types
+• Categorical (qualitative)
+‒ Binary (e.g., {true, false})
+> Symmetric: both states are equally important (e.g., gender: {male, female})
+> Asymmetric: only one state is important (e.g., COVID: {positive, negative})
+‒ Nominal (e.g., name)
+‒ Ordinal (e.g., grade: {freshman, sophomore, junior, senior})
+18
+ID Gender COVID Name Grade Body Temp Age …
+1 Male Positive Kim Junior 38.5 24 …
+2 Female Negative Sarah Graduated 36.0 35 ...
+… … … . … …
+100 Female Negative Park Sophomore 36.5 22 …
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Attributes
+❑ An attribute represents a characteristic of a data object
+▪ Types
+• Numerical (quantitative)
+‒ Interval-scaled
+> No inherent zero-point, values are measured on a scale of equal-sized units (e.g., temperature in ˚C or ˚F, IQ scores)
+‒ Ratio-scaled
+ > Inherent true zero-point (e.g., temperature in Kelvin, length, counts, monetary quantities)
+19
+ID Gender COVID Name Grade Body Temp Age …
+1 Male Positive Kim Junior 38.5 24 …
+2 Female Negative Sarah Graduated 36.0 35 ...
+… … … . … …
+100 Female Negative Park Sophomore 36.5 22 …
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Attributes
+❑ An attribute represents a characteristic of a data object
+▪ Ranges
+• Discrete: a finite or countably infinite set of values
+‒ e.g., zip codes, profession, a bag of words
+• Continuous: real numbers
+‒ e.g., temperature, height, or weight
+20
+ID Gender COVID Name Grade Body Temp Age …
+1 Male Positive Kim Junior 38.5 24 …
+2 Female Negative Sarah Graduated 36.0 35 ...
+… … … . … …
+100 Female Negative Park Sophomore 36.5 22 …
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Data Matrix
+❑ Data matrix (a set of data objects)
+▪ A data matrix of n data points with l dimensions (i.e., attributes)
+21
+𝑥1
+𝑥2
+⋮
+𝑥𝑛
+ = 
+𝑥11 𝑥12 . . . 𝑥1𝑙
+𝑥21 𝑥22 . . . 𝑥2𝑙
+⋮ ⋮ ⋱ ⋮
+𝑥𝑛1 𝑥𝑛2 . . . 𝑥𝑛𝑙
+ID Gender COVID Name Grade Body Temp Age …
+1 Male Positive Kim Junior 38.5 24 …
+2 Female Negative Sarah Graduated 36.0 35 ...
+… … … . … …
+100 Female Negative Park Sophomore 36.5 22 …
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Statistics
+❑ Central tendency
+▪ Mean, median, mode
+❑ Dispersion
+▪ Range, quartile, five-number summary, outlier
+❑ Covariance and correlation
+22
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Statistics
+❑ Central tendency
+▪ Mean: an average value of data
+• Arithmetic mean
+• Weighted mean
+• Trimmed mean
+‒ Chopping extreme values (e.g., dropping max/min scores)
+▪ Median: a middle value of ordered data
+• Odd number of values → middle value 
+• Even number of values → average of the middle two values
+• Grouped data → approximate median by interpolation
+23
+ǉ𝑥 = 1
+𝑛 ෍
+𝑖=1
+𝑛
+𝑥𝑖 ǉ𝑥 = σ𝑖=1
+𝑛 𝑤𝑖𝑥𝑖
+σ𝑖=1
+𝑛 𝑤𝑖
+𝑚𝑒𝑑𝑖𝑎𝑛≈ 𝐿1 + 𝑁/2 − (σ 𝑓𝑟𝑒𝑞)𝑙
+𝑓𝑟𝑒𝑞𝑚𝑒𝑑𝑖𝑎𝑛
+𝑤𝑖𝑑𝑡ℎ
+the lower boundary of 
+the median interval
+21 +
+3194
+2 − 950
+1500 30 = 33.94 
+The total number 
+of values
+Sum of frequencies lower 
+than the median interval
+Width of the 
+median interval
+Frequency of the median interval
+Ordered values Median
+ǉ𝑥 =
+σ𝑗=2
+𝑛−1 𝑤𝑗𝑥𝑗
+σ𝑗=2
+𝑛−1 𝑤𝑗
+(𝑥𝑗: ordered values)
+1-5 6-15 16-20 21-50 51-80
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Statistics
+❑ Central tendency
+▪ Mode: a value that occurs most frequently
+• Unimodal
+‒ For moderately skewed data, empirically, 𝑚𝑒𝑎𝑛− 𝑚𝑜𝑑𝑒≈ 3 × 𝑚𝑒𝑎𝑛− 𝑚𝑒𝑑𝑖𝑎𝑛
+‒ Positively skewed: Mode < Median < Mean
+‒ Negatively skewed: Mean < Median < Mode
+• Multi-modal
+‒ Greatest frequencies found in several different values. e.g., bimodal and trimodal
+24
+Frequency
+COSE471: Data Science
+DAIS lab at Korea University
+Min
+Median
+Q1
+Q3
+Max
+Outliers
+Whisker
+Whisker
+Box-and-whisker plot
+❑ Dispersion
+▪ Range
+• Max value – min value
+▪ Quartile
+• Divide an ordered data into four parts (quarters)
+‒ Q1(25th percentile)
+‒ Q2(50th percentile = median) 
+‒ Q3(75th percentile)
+• Interquartile range
+‒ IQR = Q3 – Q1
+▪ Five number summary
+• Min, Q1, Median, Q3, Max
+▪ Outlier
+• A value lower/higher than 1.5 IQR (e.g.,  x < Q1 - 1.5*IQR or x > Q3 +1.5*IQR)
+Understanding Data > Statistics
+25
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Statistics
+❑ Dispersion
+▪ Variance and standard deviation
+• A measure of how far a set of numbers is spread out from their average value
+• Variance: the expected value of the squared deviation from the mean of values
+• Standard deviation: the square root of the variance
+26
+𝜇 = 𝐸 𝑋 =
+1
+𝑛 σ𝑖=1
+𝑛 𝑥𝑖
+𝜎2 = var( 𝑋) = 𝐸[(X − 𝜇)2] =
+෍
+𝑥
+(𝑥 − 𝜇)2𝑓(𝑥) if 𝑋 is discrete
+න
+−∞
+∞
+(𝑥 − 𝜇)2𝑓(𝑥)𝑑𝑥 if 𝑋 is continuous
+𝜎2 = 𝐸[(X − 𝜇)2] = 𝐸[X2] − 𝜇2 =  𝐸[X2] − [𝐸(𝑋)]2
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Statistics
+❑ Covariance and correlation
+▪ Covariance
+• A measure of how much two variables (𝑋 and 𝑌) change together
+▪ Correlation coefficient
+• a.k.a. Pearson’s correlation coefficient
+• 𝜌𝑋𝑌 > 0: positive correlation
+• 𝜌𝑋𝑌 < 0: negative correlation
+• 𝜌𝑋𝑌 = 0: no linear correlation (e.g., may be independent)
+27
+𝜎𝑋𝑌 = 𝐸[(𝑋 − 𝜇𝑋)(𝑌 − 𝜇𝑌)] = 𝐸[𝑋𝑌] − 𝜇𝑋𝜇𝑌
+𝜌𝑋𝑌 = 𝜎𝑋𝑌
+𝜎𝑋𝜎𝑌
+= 𝐸[(𝑋 − 𝜇𝑋)(𝑌 − 𝜇𝑌)]
+𝐸[X2] − 𝜇𝑋
+2 𝐸[Y2] − 𝜇𝑌
+2
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Distribution plot
+▪ Histogram
+▪ Density plot
+▪ Box plot
+▪ Violin plot
+❑ Scatter plot
+❑ Quantile plot
+▪ Quantile-Quantile plot
+28
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Distribution plot
+▪ Histogram
+• Shows the overall (discrete) distribution of values 
+• Divides the range of values into intervals (i.e., buckets or bins) 
+‒ i.e., ranges in X-axis
+• Displays the frequency of observations in each bin (i.e., bars)
+‒ i.e., values in Y-axis
+▪ Density plot
+• Shows the overall (continuous) distribution of values
+• Smoothing curve is used instead of bars
+• A continuous estimate of the probability density function
+‒ i.e., Kernel density estimation
+29
+Image: https://towardsdatascience.com/recipes-for-the-visualizations-of-data-distributions-a1527a0faf77
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Distribution plot
+▪ Box plot (a.k.a. box-and-whisker plot)
+• Min, Q1, Median, Q3, Max
+▪ Violin plot
+• Combines box plot and density plot
+• Allows for richer comparison of different distributions
+• Procedures
+30Image: https://www.labxchange.org/library/items/lb:LabXchange:46f64d7a:html:1
+
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Distribution plot
+▪ Example 
+31
+Image: https://towardsdatascience.com/recipes-for-the-visualizations-of-data-distributions-a1527a0faf77
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Scatter plot
+▪ Determines whether there appears to be a relationship, pattern, or trend in or between data sets 
+▪ Visualizes relationships between (usually) two continuous variables 
+• Each pair of values is treated as a pair of coordinates and plotted as points in the plane
+▪ Shows correlation between the two variables and/or comparison between observations
+32
+Players in the 2017/2018 season who played at least 900 minutes in the Spanish or English league
+Image: https://dl.acm.org/doi/10.1145/3292500.3330758
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Quantile plot
+▪ Shows a quantile (equal-sized subsets) information of a single data set 
+• 4-quantile → quartile, 100-quantile → percentile
+▪ Each ordered observation 𝑥𝑖 is associated with a quantile 𝑓𝑖
+• Reorganize the observations into ordered set with an equal-width
+• e.g., 𝑓𝑖 =
+𝑖−0.5
+𝑁  (𝑁 is the number of data)
+33
+Unit price ($)
+75
+120
+40
+…
+78
+115
+𝒊 𝒇𝒊 Unit price ($)
+1 0.013 40
+2 0.040 43
+3 0.067 47
+… … …
+36 0.959 117
+37 0.986 120
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Quantile-Quantile plot
+▪ Easily compare two data sets by comparing their quantiles
+• i.e., match observations in the two data sets by their rankings 
+▪ Example
+• The unit price of items sold in Branch 1 tends to be lower than those in Branch 2
+• Such trends are more highlighted in the Interquartile range (IQR)
+34
+
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ There are numerous options for more graphical visualization!
+35
+
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ 1 dataset 100 visualizations?
+36
+https://100.datavizproject.com/
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Visualization
+❑ Popular Python libraries
+▪ Matplotlib (https://matplotlib.org/)
+• Most popular in the scientific community. Customization of various plot types
+▪ Seaborn (https://seaborn.pydata.org/)
+• Built on top of Matplotlib and provides a high-level interface
+▪ Plotly (https://plotly.com/python/)
+• Interactive web-based visualization 
+37
+
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity
+❑ Similarity
+▪ A real-valued function that quantifies the similarity between two objects
+▪ Measure how two data objects are alike: the higher value, the more alike
+▪ Often falls in the range [0,1]:  0: no similarity; 1: completely similar
+❑ Dissimilarity (i.e., distance) 
+▪ Numerical measure of how different two data objects are
+▪ In some sense, the inverse of similarity: the lower, the more alike
+▪ Minimum dissimilarity is often 0 (i.e., completely similar)
+▪ Range [0, 1] or [0, ∞), depending on the definition
+❑ Proximity usually refers to either similarity or dissimilarity
+38
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity
+❑ (Recap) Data matrix
+▪ A data matrix of n data points with l dimensions (i.e., attributes)
+❑ Similarity/distance matrix
+• Similarity or distance of two data points 𝑥𝑖 and 𝑥𝑗 by a function 𝑑(∙,∙)
+• Usually symmetric, thus a triangular matrix
+39
+𝑥1
+𝑥2
+⋮
+𝑥𝑛
+ = 
+𝑥11 𝑥12 . . . 𝑥1𝑙
+𝑥21 𝑥22 . . . 𝑥2𝑙
+⋮ ⋮ ⋱ ⋮
+𝑥𝑛1 𝑥𝑛2 . . . 𝑥𝑛𝑙
+𝑑(𝑥1, 𝑥1)
+𝑑(𝑥2, 𝑥1) 𝑑(𝑥2, 𝑥2)
+⋮ ⋮ ⋱
+𝑑(𝑥𝑛, 𝑥1) 𝑑(𝑥𝑛, 𝑥2) . . . 𝑑(𝑥𝑛, 𝑥𝑛)
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Numerical Attributes
+❑ Properties for a distance function (i.e., metric)
+▪ Positivity: d(i, j) > 0 if i ≠ j, and d(i, i) = 0 
+▪ Symmetry: d(i, j) = d(j, i)
+▪ Triangle inequality: d(i, j) ≤ d(i, k) + d(k, j)
+❑ Minkowski distance
+▪ A generalized popular distance metric
+▪ Special cases
+• p = 1 (L1 norm): Manhattan (or city block) distance
+‒ e.g., Hamming distance
+• p = 2 (L2 norm): Euclidean distance
+• p → ∞ (Lmax norm or Linf norm): Supremum distance
+‒ e.g., Chebyshev distance
+40
+𝑑(𝑥𝑖, 𝑥𝑗) =
+𝑝
+|𝑥𝑖1 − 𝑥𝑗1|𝑝 + |𝑥𝑖2 − 𝑥𝑗2|𝑝 + ⋯ + |𝑥𝑖𝑙 − 𝑥𝑗𝑙|𝑝
+Image: https://www.researchgate.net/figure/Three-typical-Minkowski-distances-ie-Euclidean-Manhattan-and-Chebyshev-distances_fig1_349155159
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+41
+❑ Contingency table for binary attributes
+▪ Count the number of states for each data objects
+❑ Symmetric binary distance
+▪ Two states are equally important
+▪ e.g., Gender: {Male, Female}
+❑ Asymmetric binary distance
+▪ One state (usually positive) is more important
+▪ e.g., Covid case: {Positive, Negative}
+❑ Jaccard coefficient (index or similarity)
+▪ A popular similarity measure for asymmetric binary attributes
+𝑑 𝑖, 𝑗 = 𝑟 + 𝑠
+𝑞 + 𝑟 + 𝑠 + 𝑡
+𝑑 𝑖, 𝑗 = 𝑟 + 𝑠
+𝑞 + 𝑟 + 𝑠
+𝐽 𝑖, 𝑗 = 1 − 𝑟 + 𝑠
+𝑞 + 𝑟 + 𝑠 = 𝑞
+𝑞 + 𝑟 + 𝑠
+1 0
+1 q r 
+0 s t
+Object i
+Object j
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+❑ Example
+▪ Asymmetric binary distance (except Gender)?
+• Y, P → 1 (important) and N → 0 (not important)
+• Out of the three people, which two are the most dissimilar to each other?
+‒ Jack and Jim? Jim and Mary? Jack and Mary?
+42
+
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+❑ Example
+▪ Asymmetric binary distance (except Gender)?
+• Y, P → 1 (important) and N → 0 (not important)
+43
+𝑑 𝑗𝑎𝑐𝑘, 𝑚𝑎𝑟𝑦 = 0 + 1
+2 + 0 + 1 = 0.33
+1 0 ∑row
+1 2 0 2
+0 1 3 4
+∑col 3 3 6
+Mary
+Jack
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+❑ Example
+▪ Asymmetric binary distance (except Gender)?
+• Y, P → 1 (important) and N → 0 (not important)
+44
+𝑑 𝑗𝑎𝑐𝑘, 𝑚𝑎𝑟𝑦 = 0 + 1
+2 + 0 + 1 = 0.33 𝑑 𝑗𝑎𝑐𝑘, 𝑗𝑖𝑚 = 1 + 1
+1 + 1 + 1 = 0.67
+1 0 ∑row
+1 2 0 2
+0 1 3 4
+∑col 3 3 6
+1 0 ∑row
+1 1 1 2
+0 1 3 4
+∑col 2 4 6
+Jack
+Mary
+Jack
+Jim
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+❑ Example
+▪ Asymmetric binary distance (except Gender)?
+• Y, P → 1 (important) and N → 0 (not important)
+45
+𝑑 𝑗𝑎𝑐𝑘, 𝑚𝑎𝑟𝑦 = 0 + 1
+2 + 0 + 1 = 0.33 𝑑 𝑗𝑎𝑐𝑘, 𝑗𝑖𝑚 = 1 + 1
+1 + 1 + 1 = 0.67 𝑑 𝑗𝑖𝑚, 𝑚𝑎𝑟𝑦 =
+1 0 ∑row
+1 2 0 2
+0 1 3 4
+∑col 3 3 6
+1 0 ∑row
+1
+0
+∑col
+1 0 ∑row
+1 1 1 2
+0 1 3 4
+∑col 2 4 6
+Jack
+Mary
+Jack
+Jim Mary
+Jim
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Binary Attributes
+❑ Example
+▪ Asymmetric binary distance (except Gender)?
+• Y, P → 1 (important) and N → 0 (not important)
+46
+𝑑 𝑗𝑎𝑐𝑘, 𝑚𝑎𝑟𝑦 = 0 + 1
+2 + 0 + 1 = 0.33 𝑑 𝑗𝑎𝑐𝑘, 𝑗𝑖𝑚 = 1 + 1
+1 + 1 + 1 = 0.67 𝑑 𝑗𝑖𝑚, 𝑚𝑎𝑟𝑦 = 1 + 2
+1 + 1 + 2 = 0.75
+1 0 ∑row
+1 2 0 2
+0 1 3 4
+∑col 3 3 6
+1 0 ∑row
+1 1 1 2
+0 2 2 4
+∑col 3 3 6
+1 0 ∑row
+1 1 1 2
+0 1 3 4
+∑col 2 4 6
+Jack
+Mary
+Jack
+Jim Mary
+Jim
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Nominal Attributes
+❑ Simple matching
+▪ See how many values of attributes are matched
+▪ m: # of matches, p: total # of attributes
+❑ Convert to a large number of asymmetric binary attributes
+▪ Creating a new binary attribute for each of the states (i.e., one-hot encoding)
+▪ Calcuate asymmetric binary distances
+47
+𝑑(𝑖, 𝑗) = 𝑝− 𝑚
+𝑝
+Image: https://scales.arabpsychology.com/stats/how-to-perform-one-hot-encoding-in-python/
+Obj1
+Obj2
+Obj3
+Obj4
+Obj5
+Obj6
+Obj7
+Obj8
+1 0 ∑row
+1 0 1 1
+0 1 1 2
+∑col 1 2 3
+Obj3
+Obj2
+𝑑 obj2, obj3 = 1 + 1
+0 + 1 + 1 = 1.0
+Asymmetric binary distance
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Ordinal Attributes
+❑ Order is important
+▪ e.g., {freshman, sophomore, junior, senior}
+❑ Can be treated like numeric attributes such as interval-scaled 
+▪ Replace an ordinal attribute value given 𝑁 states by its rank→ 𝑟𝑖 ∈ {1, . . . , 𝑁}
+▪ Normalize the rank onto [0, 1] → 𝑧𝑖 =
+𝑟𝑖−1
+𝑁−1
+• e.g.,
+‒ freshman: (1-1)/(4-1) = 0
+‒ sophomore: (2-1)/(4-1) = 1/3
+‒ junior: (3-1)/(4-1) = 2/3
+‒ senior (4-1)/(4-1) = 1
+• Compute the distance using any methods for numerical attributes
+‒ e.g., d(freshman, senior) = 1, d(junior, senior) = 1/3
+48
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Mixed Types
+❑ A dataset may contain all attribute types
+▪ Nominal, symmetric binary, asymmetric binary, numeric, and ordinal
+❑ A weighted distance to combine their effects
+▪ Distance between objects 𝑖 and 𝑗 with 𝑝 attributes (𝑓) of mixed types
+▪ Notes
+• Weight of an attribute 𝑓, 𝑤𝑖𝑗
+(𝑓) = 0 if 𝑥𝑖𝑓 and 𝑥𝑗𝑓 are missing or not important (asymmetric binary attributes)
+• 𝑑𝑖𝑗
+(𝑓) needs to be normalized into [0,1]
+42
+𝑑(𝑖, 𝑗) =
+σ𝑓=1
+𝑝 𝑤𝑖𝑗
+(𝑓)𝑑𝑖𝑗
+(𝑓)
+σ𝑓=1
+𝑝 𝑤𝑖𝑗
+(𝑓)
+𝑑𝑖=1,𝑗=2
+(𝑓=Test1) = 1 𝑑𝑖=1,𝑗=2
+(𝑓=Test2) = 1.0 
+→ 1.0
+→ 0.0
+→ 0.5
+→ 1.0
+𝑑𝑖=1,𝑗=2
+(𝑓=Test3) =
+45−22
+64−22 = 0.55 
+Assuming 𝑤𝑖𝑗
+(𝑓=Test1) = 0.2, 𝑤𝑖𝑗
+(𝑓=Test2) = 0.3, 𝑤𝑖𝑗
+(𝑓=Test3) = 0.5, 𝑑 𝑖, 𝑗 = 0.2×1+0.3×1.0+0.5×0.55
+0.2+0.3+0.5 = 0.775 
+Simple
+Matching
+→ [0,1]
+Normalize
+→ [0,1]
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Vectors
+❑ High-dimensional and sparse vector 
+▪ Only none-zero elements needs to be considered
+▪ e.g., document term-frequency, user-item interaction
+❑ Cosine similarity
+▪ Measures the similarity between two vectors in an inner product space
+▪ The cosine of the angle showing whether they are pointing in the same direction
+▪ Cosine distance = 1 – cosine similarity
+50
+𝑐𝑜𝑠 𝑥1, 𝑥2 = 𝑥1 ∙ 𝑥2
+𝑥1 × 𝑥2
+~[−1,1]
+𝑥 : Euclidean norm (i.e., length) of a vector 𝑥
+𝑥1 ∙ 𝑥2: Dot product of vectors 𝑥1 and 𝑥2 
+Image: https://www.learndatasci.com/glossary/cosine-similarity
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity > Distributions
+❑ Kullback-Leibler (KL) divergence
+▪ Measure the difference between two probability distributions over the same variable x
+▪ From information theory, closely related to relative entropy, information divergence, and 
+information for discrimination
+▪ DKL(p(x) || q(x)):  divergence of q(x) from p(x)
+• Measuring the information lost when q(x) is used to approximate p(x)
+▪ Not a distance measure: asymmetric, not satisfy triangular inequality 
+• DKL(P‖Q) does not equal DKL(Q‖P)
+51
+Image: wikipedia
+COSE471: Data Science
+DAIS lab at Korea University
+Understanding Data > Similarity
+❑ Capturing hidden semantics in distance
+▪ The above similarity measures cannot capture hidden semantics 
+• e.g., which pairs are more similar: geometry, algebra, music, politics?
+▪ The same bags of words may express rather different meanings 
+• e.g., “The cat bites a mouse” vs. “The mouse bites a cat”
+▪ New similarity measures may be needed to handle complex semantics
+• e.g., Distributive representation and representation learning 
+52Image: https://towardsdatascience.com/creating-word-embeddings-coding-the-word2vec-algorithm-in-python-using-deep-learning-b337d0ba17a8
+Reference
+Reference
+Semantle
+Semantle
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Diversity of data
+❑ Understanding data
+❑ Preprocessing data
+▪ Data quality measures
+▪ Data cleaning
+▪ Data integration
+▪ Data transformation 
+53
+
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Quality Measures
+❑ Accuracy
+▪ Is the data value correct or incorrect? 
+❑ Completeness
+▪ Have all the data been recorded? or available?
+❑ Consistency
+▪ Has some of data been modified while some not?
+❑ Timeliness
+▪ Has the data been timely updated? 
+❑ Believability
+▪ How trustable the data are correct?
+❑ Interpretability
+▪ How easily the data can be understood?
+54
+
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning
+❑ Cleaning dirty data with lots of potentially incorrect data 
+▪ Possible reasons: instrument faulty, human or computer error, and transmission error
+❑ Issues 
+▪ Missing (or incomplete) values
+• Lacking attribute values of interest or containing only aggregate data
+• e.g., Sales = “ ” or Sales = “100” (average value)
+▪ Noisy values
+• Containing noise, errors, or outliers
+• e.g., Salary = “−10”
+▪ Inconsistent values
+• Containing discrepancies in records
+• e.g., Rating = “B” or “2” ({A, B, C} or {1, 2, 3})
+▪ Intentional values (i.e., disguised missing values)
+• e.g., Birthday = “Jan. 1” (as everyone’s birthday)
+55
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning
+❑ Cleaning dirty data with lots of potentially incorrect data 
+▪ Possible reasons: instrument faulty, human or computer error, and transmission error
+❑ Example
+▪ Are there any issues with this data set?
+56
+Customer ID Age Email Subscription Sales
+1 10 kim@naver.com Active 100
+2 -5 jane#google.com Expired
+3 32 NA Pending 210
+4 45 park@korea.ac.kr active 270
+new 50 dave@korea.ac.kr Cancelled 120
+… … … … …
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning
+❑ Cleaning dirty data with lots of potentially incorrect data 
+▪ Possible reasons: instrument faulty, human or computer error, and transmission error
+❑ Example
+▪ Are there any issues with this data set?
+57
+Customer ID Age Email Subscription Sales
+1 10 kim@naver.com Active 100
+2 -5 jane#google.com Expired
+3 32 NA Pending 210
+4 45 park@korea.ac.kr active 270
+new 50 dave@korea.ac.kr Cancelled 120
+… … … … …
+Missing
+Inconsistent
+Noisy
+Intentional
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning > Missing
+❑ MCAR (Missing Completely At Random)
+▪ The probability of a value being missing is essentially a coin flip, unrelated to any other variable.
+▪ e.g., a sensor randomly loses power for 5 minutes due to an external power grid error.
+❑ MAR (Missing At Random)
+▪ Missingness depends on other observed variables in the dataset, not the missing value itself.
+▪ e.g., men might be less likely to fill out the “skincare routine” survey question than women. 
+  (If we know the gender, we might predict the missingness.)
+❑ MNAR (Missing Not At Random)
+▪ Missingness depends heavily on the unobserved missing value itself.
+▪ e.g., people with high debt are less likely to report their credit card balance on a loan application.
+58
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning > Missing
+❑ Handling missing values
+▪ Fill in the missing value manually
+• Optimal, but tedious and infeasible
+▪ Ignore the object with missing values (e.g., for MCAR)
+• e.g., remove objects with missing class labels when doing classification
+• Not effective when the ratio of missing values per attribute varies considerably
+▪ Fill in it automatically with (e.g., for MAR)
+• The statistics (e.g., mean) of existing attribute values (in the same class if available)
+• Inference the most probable values
+‒ Regression, nearest neighbors, decision tree, or Bayesian methods
+‒ e.g., the annual salary of a person can be inferred using his occupation and age
+▪ Indicate missingness with a flag (e.g., for MNAR)
+• Fill in it with a global constant: e.g., “unknown” as a new class when doing classification
+59
+Sales
+100
+210
+270
+120
+…
+Average
+120
+ID Age Email Subscription Sales
+3 32 NA Pending 210
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning > Noisy
+❑ Handling noisy values
+▪ Binning
+• Sort values and partition into equal-frequency or equal-width bins
+• Smooth original values by bin means, median, or bin boundaries, etc. 
+▪ Regression
+• Smooth by fitting the data into regression functions
+▪ Clustering
+• Detect and remove outliers
+▪ Filtering
+• Consult predefined rules (e.g., age should be positive integer)
+60
+Age
+10
+-5
+32
+45
+50
+Age
+0-10
+0-10
+31-40
+41-50
+41-50
+Age
+Age
+2.5
+2.5
+32
+47.5
+47.5
+Equal-width bin Mean
+Sales
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Cleaning > Inconsistent/Intentional
+❑ Handling inconsistent/intentional values
+• Simply correct it with a predefined rule
+‒ e.g., new = max(customer ID) + 1
+• Filter by regular expression (i.e., regex)
+‒ e.g., Email address: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+• Inspect the unique values 
+‒ e.g., Subscription = [Active, active, Expired, Pending, Cancelled] 
+61
+Customer ID Age Email Subscription Sales
+1 10 kim@naver.com Active 100
+2 -5 jane#google.com Expired
+3 32 NA Pending 210
+4 45 park@korea.ac.kr active 270
+new 50 dave@korea.ac.kr Cancelled 120
+… … … … …
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Integration
+❑ Combining data from multiple sources into a coherent data store
+▪ Advantages
+• Help reduce or avoid noise
+• Get a more complete picture of data
+• Improve speed and quality of analysis
+▪ Issues
+• Redundancy
+• Inconsistency
+▪ Methods
+• Schema integration
+‒ Integrate metadata from different sources (e.g., A.C# ≡ B.ID)
+• Entity resolution
+‒ Identify the matching records from multiple sources (e.g., Gil Dong Hong ≡ Hong Gil Dong)
+• Correlation analysis
+‒ Keep only one of two attributes showing a high correlation (e.g., A.Deposit = 2 * B.Sales)
+62
+ID Age Email Subscription Sales
+1 2.5 kim@naver.com Active 100
+2 2.5 jane@google.com Expired 120
+4 47.5 park@korea.ac.kr Active 270
+5 47.5 dave@korea.ac.kr Cancelled 120
+… … … … …
+C# Name Deposit
+1 Kim 200
+2 Jane 240
+4 Park 540
+5 Dave 240
+… …
+Dataset A Dataset B
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation
+❑ Mapping the entire values of an attribute to a new set of replacement values
+▪ Advantages
+• Make the attributes in different units or scales be comparable
+• Help improve model performance
+• Simplify complex relationships between attributes for easy interpretation
+▪ Methods
+• Normalization
+‒ Scaled to fall within a smaller, specified range
+• Discretization
+‒ Partition values into coarse intervals (i.e., binning or clustering)
+‒ Concept hierarchy generation
+• Reduction
+‒ Obtain a reduced representation of a data set 
+63
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation
+❑ Normalization
+▪ Min-max normalization: to [new_minA, new_maxA]
+• Example
+‒ Let income values range from $12,000 to $98,000 and we want to normalize them to [0.0, 1.0]
+‒ Then $73,600 is mapped to  
+73,600−12,000
+98,000−12,000 (1.0 − 0) + 0 = 0.716  
+▪ Z-score normalization (i.e., standardization) with 𝜇: mean and 𝜎: standard deviation
+• The distance between the raw score and the population mean in the unit of the standard deviation
+‒ The new mean = 0, the new standard deviation = 1
+• Example
+‒ Let 𝜇 = 54000 and 𝜎 = 16000
+‒ Then, z-score of $73,600 =
+73,600−54,000
+16,000 = 1.225
+64
+𝑣′ = 𝑣 − 𝑚𝑖𝑛𝐴
+𝑚𝑎𝑥𝐴− 𝑚𝑖𝑛𝐴(𝑛𝑒𝑤_𝑚𝑎𝑥𝐴− 𝑛𝑒𝑤_𝑚𝑖𝑛𝐴) + 𝑛𝑒𝑤_𝑚𝑖𝑛𝐴
+𝑣′ = 𝑣 − 𝜇
+𝜎
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation
+❑ Normalization
+▪ Min-max normalization
+▪ Z-score normalization (standardization)
+65
+
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation
+❑ Discretization
+▪ Binning and clustering
+• Transform values into bins or clusters (like handling noisy data)
+‒ Equal-width: the width of each bin is uniform
+‒ Equal-frequency: the frequency of each bin is (roughly) constant
+▪ Concept hierarchy generation
+• Specification of a partial/total ordering of attributes explicitly at 
+the schema level by users or experts
+‒ e.g., street < city < state < country
+• Automatic generation of hierarchies by the analysis of the 
+number of distinct values
+‒ e.g., {street, city, state, country} → street < city < state < country
+66
+17 15 17 13
+2.5 2.5 2.5 2.5
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation
+❑ Reduction
+▪ Sampling
+▪ Compression
+▪ Dimensionality reduction
+• Feature subset selection
+• Linear methods
+• Non-linear methods
+67
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Sampling
+❑ Reduction
+▪ Sampling
+• Obtaining a set of small samples to represent the whole data set
+• Sampling with or without replacement
+‒ With replacement: consistent and independent samples
+‒ Without replacement: representative and irredundant samples
+• Random sampling
+‒ Set the equal probability of selecting items
+‒ May have very poor performance in the presence of skewness
+• Stratified sampling
+‒ Partition the entire data set and draw samples from each partition proportionally
+‒ Approximately keep the ratio of each partition
+68
+Image: wikipedia
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Compression
+❑ Reduction
+▪ Compression
+• String compression
+‒ Typically lossless, but only limited manipulation is possible
+‒ e.g., Run-Length Encoding (RLE), 
+‒ AAAABBBCCCDDDDD → 4A3B3C5D
+• Image/audio/video compression
+‒ Typically lossy compression, with progressive refinement
+‒ e.g., PNG, GIF, JPEG, MP3, MP4…
+• Time-series compression
+‒ e.g., Fourier transform, Wavelet transform, …
+69
+Original data Compressed 
+data
+Lossless
+Original data
+approximated 
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Dim Reduction
+❑ Reduction
+▪ Dimensionality reduction
+• Curse-of-dimensionality
+‒ When dimensionality increases, data becomes increasingly 
+sparse in the space that it occupies
+‒ Density and distance between points become meaningless
+• Approaches
+‒ Attribute subset selection 
+‒ Linear methods
+> Principal component analysis (PCA)
+‒ Non-linear methods
+> Kernel principal component analysis (Kernel PCA)
+> t-Stochastic neighborhood embedding (t-SNE)
+> Uniform manifold approximation and projection (UMAP)
+70
+1-dimension         2-dimension            3-dimension
+• Randomly generate 500 points
+• Compute difference between max and min distance 
+between any pair of points
+COSE471: Data Science
+DAIS lab at Korea University
+❑ Attribute subset selection 
+▪ Reduce the dimensionality of data by removing redundant and irrelevant features
+▪ Redundant features 
+• Duplicating much or all of the information contained in one or more other attributes
+• e.g., the purchase price of a product and the amount of sales tax paid
+▪ Irrelevant features
+• Containing no information that is useful for the data science task at hand
+• e.g., students' ID is often irrelevant to the task of predicting students' GPA
+▪ Heuristics (greedy approach)
+• Hypothesis testing- or value-based
+‒ Stepwise forward selection: repeatedly picking the best single-attribute
+‒ Stepwise backward elimination: repeatedly eliminating the worst attribute
+‒ Combination of the two heuristics
+• Decision tree-based (e.g., information gain-based): using the attributes that appeared in the decision tree
+71
+Preprocessing Data > Transformation > Dim Reduction
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Dim Reduction
+❑ Attribute subset selection
+▪ Example 
+72
+Initial reduced set: 
+{} / Value: 0
+ {A4} / Value: 40
+ {A1, A4} / Value: 60
+ Reduced attribute set: 
+{A1, A4, A6} / Value: 80
+Initial reduced set: 
+{A1, A2, A3, A4, A5, A6} / Value: 100
+ {A1, A3, A4, A5, A6} / Value: 97
+ {A1, A4, A5, A6} / Value: 90
+ Reduced attribute set:
+{A1, A4, A6} / Value: 80
+ Reduced attribute set:
+{A1, A4, A6}
+A4?
+A1? A6?
+C1 C2 C3 C4
+Y N
+Y           N              Y         N
+Initial attribute set:
+{A1, A2, A3, A4, A5, A6}
+Associated value:
+{20, 3, 7, 40, 10, 20}
+Forward selection Backward selection Decision tree induction
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Dim Reduction
+❑ Linear methods
+▪ Principal component analysis (PCA)
+• A statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly 
+correlated variables into a set of values of linearly uncorrelated variables called principal components
+• The number of principal components is less than or equal to the number of original variables 
+73
+Image: https://setosa.io/ev/principal-component-analysis/
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Dim Reduction
+❑ Linear methods
+▪ Principal component analysis (PCA)
+• An eigenvector: a direction of the principal component
+• An eigenvalue: a value, telling the variance of the data in that direction
+• Example
+‒ ev1 is the 1st eigen vector with the largest eigenvalue, followed by ev2 and ev3
+74
+Image: http://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
+COSE471: Data Science
+DAIS lab at Korea University
+Preprocessing Data > Transformation > Dim Reduction
+❑ Non-linear methods
+▪ Kernel PCA
+• Uses kernel functions to project data into a higher-dim space
+▪ t-SNE (t-Distributed Stochastic Neighboring Embedding)
+• Converts similarities between data points to joint probabilities and tries to 
+minimize the divergence between these probabilities in a lower-dim space
+▪ UMAP (Uniform Manifold Approximation and Projection)
+• Constructs a high-dim graph representation of the data and optimizes a 
+lower-dim graph to be as structurally similar as possible
+75Image: https://ml-lectures.org/docs/structuring_data/ml_without_neural_network-2.html, https://meta.caspershire.net/umap/ 
+https://projector.tensorflow.org/
+COSE471: Data Science
+DAIS lab at Korea University
+Tutorial References
+❑ Basic Python, Jupyter Notebook or Google Colab
+▪ https://wesmckinney.com/book/python-basics
+▪ https://docs.jupyter.org/en/latest/install/notebook-classic.html
+▪ https://colab.research.google.com/
+❑ Pandas DataFrame
+▪ https://wesmckinney.com/book/pandas-basics
+▪ https://learningds.org/ch/06/pandas_intro.html
+• Datasets: https://github.com/DS-100/textbook/tree/master/content/datasets
+❑ Preprocessing data
+▪ https://wesmckinney.com/book/data-cleaning
+▪ https://learningds.org/ch/09/wrangling_intro.html
+• Datasets: https://github.com/DS-100/textbook/tree/master/content/datasets
+76
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Today
+▪ Diversity of data
+▪ Understanding Data
+▪ Preprocessing Data
+❑ Next
+▪ Pattern mining
+77
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Reference] Representation learning
+❑ Learning a transformation function of raw data into a representation that makes 
+it easier to perform downstream tasks
+▪ i.e., automatic feature engineering
+78
+𝑥1
+𝑥2
+⋮
+𝑥𝑛
+ = 
+𝑥11 𝑥12 . . . 𝑥1𝑙
+𝑥21 𝑥22 . . . 𝑥2𝑙
+⋮ ⋮ ⋱ ⋮
+𝑥𝑛1 𝑥𝑛2 . . . 𝑥𝑛𝑙
+𝑥1
+′
+𝑥2
+′
+⋮
+𝑥𝑛′
+ = 
+𝑥11
+′ 𝑥12
+′ . . . 𝑥1𝑚
+′
+𝑥21
+′ 𝑥22
+′ . . . 𝑥2𝑚
+′
+⋮ ⋮ ⋱ ⋮
+𝑥𝑛1
+′ 𝑥𝑛2
+′ . . . 𝑥𝑛𝑚′
+𝑓 ∙
+𝑓 𝑥2
+Image: https://sthalles.github.io/a-few-words-on-representation-learning/
+COSE471: Data Science
+DAIS lab at Korea University
+❑ Deep representation learning
+▪ Use a deep neural network to learn the transformation function
+▪ Aim to optimize the distances of data objects
+• e.g., contrastive learning 
+[Reference] Representation learning
+79
+𝑑 𝑥𝑖, 𝑥𝑗 → 𝑓 ∙  → 𝑑(𝑓 𝑥𝑖 , 𝑓(𝑥𝑗))
+Image: https://towardsdatascience.com/dimensionality-reduction-using-t-distributed-stochastic-neighbor-embedding-t-sne-on-the-mnist-9d36a3dd4521
+Original image (Linear) 2D transformation Deep representation learning in 2D
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Reference] Representation learning
+❑ Examples
+▪ Novel embedding, Movie embedding, User embedding, Time-series embedding, …
+80
+Image: https://netflixtechblog.com/supporting-content-decision-makers-with-machine-learning-995b7b76006f
+Back
+Back
+COSE471: Data Science
+DAIS lab at Korea University
+[Reference] Data Preparation by Agent!
+81
+https://arxiv.org/pdf/2601.17058
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Reference] Data Preparation by Agent!
+82
+https://arxiv.org/pdf/2601.17058
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Reference] KDD Cup 2026 (optional topic for term project)
+❑ Data Agent Challenge
+▪ You may pre-form your own team to participate in this competition. (Note that, by default, team 
+formation for the term project is randomized) 
+• All teams must successfully complete Phase 2, in addition to final report and presentation for term project.
+• Credits for cloud/API usage might be supported upon demands/requests
+▪ Official website: https://dataagent.top/ (in affiliation with KDD 2026: https://kdd2026.kdd.org/)
+▪ Schedule
+• Preview | Mar 15, 2026 | Sample Data & Baselines Release
+• Phase 1 | Apr 1, 2026 | Competition Officially Opens
+• Phase 1 | Apr 1 – May 15, 2026 | Phase 1: Open Competition
+• Phase 2 | May 20, 2026 | Phase 2 Begins
+• Phase 2 | May 31, 2026 | Registration Freeze
+• Phase 2 | Jun 30, 2026 | Final Submission Deadline
+• Final | Jul 15, 2026 | Winners Notified
+• Final | Aug 9, 2026 | KDD 2026 Announcement
+83

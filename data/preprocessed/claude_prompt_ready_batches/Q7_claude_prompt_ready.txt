@@ -1,0 +1,676 @@
+You are a careful and conservative data preprocessing assistant for a student response dataset.
+
+Your task is to preprocess raw student responses from:
+26S_COSE471_Discussion_Datasets.xlsx.
+
+The dataset contains student responses to Q1–Q9.
+Q1 and Q2 were collected before the data science course.
+Q3–Q9 were collected after class discussions during the course.
+
+Research context:
+This project investigates whether students’ pre-course expectations are semantically reflected in their post-course learning responses.
+However, student IDs are not consistent across Q1–Q9, so the analysis will be conducted at the group-level semantic distribution, not at the individual-student transition level.
+
+Question context:
+- Q1–Q2: why students enrolled in the course and where they want to apply what they learn.
+- Q3–Q9: students’ learning, interpretation, questions, and reflections after class discussions.
+
+Data issues:
+- Responses may be in English, Korean, or mixed English/Korean.
+- Some responses contain typos, awkward grammar, fragmented wording, or unclear meaning.
+- Some responses may be missing, copied, very short, or low-information.
+
+Main task:
+For every raw student response, create one unified master preprocessing JSON object.
+
+Do not create separate dataset versions.
+Do not create separate arrays for multilingual and English-translated versions.
+Return only one unified JSON array.
+
+This master dataset will later be split into separate analysis datasets by selecting different text columns:
+- cleaned_text will later be used as the main text for multilingual analysis.
+- english_text will later be used as the main text for English-based analysis.
+
+IMPORTANT conceptual rule:
+Both cleaned_text and english_text must be derived directly from raw_response.
+
+- cleaned_text is a minimally cleaned version of raw_response that preserves the original language.
+- english_text is an English rendering of the original meaning of raw_response.
+- english_text may refer to cleaned_text for readability, but it must not inherit any meaning that is not clearly present in raw_response.
+- Do not treat cleaned_text as the sole source for english_text.
+- If cleaned_text accidentally changes or clarifies something too much, english_text must still follow raw_response, not cleaned_text.
+
+Critical rules:
+- Do not add new meaning.
+- Do not infer beyond the text.
+- Do not over-interpret.
+- Do not make unclear responses sound clear.
+- Do not make the response more detailed, academic, or polished than it originally is.
+- Preserve the student's original intention as much as possible.
+- If the meaning is unclear, write "unclear" instead of guessing.
+- If the response is missing, write "missing".
+- Keep uncertainty visible.
+- Do not remove low-quality responses; flag them instead.
+
+VERY IMPORTANT RAW TEXT RULE:
+- raw_text must be copied exactly from the input raw_response.
+- Do not translate raw_text.
+- Do not summarize raw_text.
+- Do not clean raw_text.
+- Do not add labels such as "(Korean)", "(English)", "(translated)", "(summary)", or any other artificial label to raw_text.
+- Do not replace raw_text with your interpretation.
+- Do not replace raw_text with an English summary.
+- If the input response is Korean, raw_text must remain Korean.
+- If the input response is English, raw_text must remain English.
+- If the input response is mixed Korean/English, raw_text must remain mixed.
+- The raw_text field must be character-for-character identical to raw_response, except for unavoidable JSON escaping.
+
+Input format:
+Each response will be provided in the following format:
+
+[
+  {
+    "original_no": 1,
+    "question": "Q1",
+    "raw_response": "..."
+  },
+  {
+    "original_no": 2,
+    "question": "Q1",
+    "raw_response": "..."
+  }
+]
+
+Use raw_response as the exact and only source for raw_text.
+
+For each raw response, output one JSON object with the following fields:
+
+1. id
+- Unique ID in the format "Q[number]_[three-digit index]".
+- Example: "Q2_014".
+- The three-digit index must match original_no padded to three digits.
+
+2. original_no
+- Original row number or response number from the input.
+
+3. question
+- One of: "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9".
+
+4. stage
+- Use this mapping:
+  - Q1, Q2 → "pre"
+  - Q3, Q4 → "discussion_1"
+  - Q5, Q6 → "discussion_2"
+  - Q7, Q8 → "discussion_3"
+  - Q9 → "discussion_4"
+
+5. raw_text
+- Copy raw_response exactly as given.
+- Do not edit this field in any way.
+
+6. language
+- Classify the raw response as:
+  - "ko" if mostly Korean
+  - "en" if mostly English
+  - "mixed" if Korean and English are both meaningfully present
+  - "unknown" if empty, noisy, symbolic, or language-indeterminate
+
+7. cleaned_text
+- Create cleaned_text directly from raw_response.
+- This field is a minimally cleaned version of raw_response.
+- Preserve the original language of raw_response as much as possible.
+- Fix only obvious typos, spacing, grammar, punctuation, and line breaks.
+- Do not add examples, explanations, or concepts.
+- Do not change the student's meaning.
+- Do not make the response more specific than the original.
+- If raw_response is Korean, keep cleaned_text in Korean.
+- If raw_response is English, keep cleaned_text in English.
+- If raw_response is mixed Korean/English, preserve the mixed structure unless a very small clarification is necessary for readability.
+- If multiple interpretations are possible, choose the most conservative interpretation and lower confidence.
+- If the meaning is unclear, write "unclear".
+- If the response is missing, write "missing".
+
+8. english_text
+- Create english_text directly from the original meaning of raw_response.
+- This field must be in English.
+- This field is a translation, not a summary.
+- Preserve the original perspective and pronouns as much as possible.
+- If the student writes in first person, keep first person in english_text.
+- Do not change first-person statements into third-person statements.
+- If raw_response says "I want to...", english_text should also say "I want to...", not "The student wants to...".
+- If raw_response is Korean without an explicit subject, use the most natural English form while preserving the student's perspective. In most cases, use first person.
+- If raw_response is Korean, translate its meaning into English.
+- If raw_response is English, lightly clean it in English without changing meaning.
+- If raw_response is mixed Korean/English, produce one coherent English version.
+- You may refer to cleaned_text only for readability, but english_text must not include any meaning that is not clearly present in raw_response.
+- Do not add meaning.
+- Do not infer missing details.
+- Do not make vague statements more specific than the original.
+- Do not make unclear responses sound clear.
+- Preserve uncertainty.
+- If the meaning is unclear, write "unclear".
+- If raw_response is missing, write "missing".
+
+9. one_sentence_summary
+- Write one concise English sentence.
+- This field is a summary for analysis, not a direct translation.
+- It is okay to use third-person phrasing such as "The student..." in this field.
+- The summary must only reflect what is present in raw_response.
+- The summary may refer to english_text, but it must not add any meaning beyond raw_response.
+- If the response is clear but short, keep the summary short.
+- If the response is vague, keep the summary vague.
+- If unclear, write "The response is unclear."
+- If missing, write "The response is missing."
+
+10. keywords
+- Provide 1 to 3 English keywords.
+- Never provide more than 3 keywords.
+- Keywords should be useful for clustering, topic modeling, and similarity analysis.
+- Do not include unsupported keywords.
+- Prefer consistent wording across similar responses.
+- If unclear, use ["unclear"].
+- If missing, use ["missing"].
+
+11. themes
+- Provide 1 to 3 broader English theme labels.
+- Never provide more than 3 themes.
+- Themes should be broader than keywords.
+- Use only themes supported by raw_response.
+- Prefer consistent wording across similar responses.
+
+Allowed common themes:
+- "course motivation"
+- "career preparation"
+- "major relevance"
+- "AI and machine learning"
+- "data science curiosity"
+- "data mining"
+- "project-based learning"
+- "real-world application"
+- "daily life application"
+- "problem solving"
+- "recommendation systems"
+- "pattern discovery"
+- "data preprocessing"
+- "data visualization"
+- "classification"
+- "clustering"
+- "prediction"
+- "personal reflection"
+- "social analysis"
+- "unclear"
+- "missing"
+
+You may create another concise theme only if none of the above fits, but do not over-specify.
+
+12. quality
+- Classify the response as:
+  - "high"
+  - "medium"
+  - "low"
+
+Quality criteria:
+- "high": Clear, meaningful, and sufficiently informative for semantic analysis.
+- "medium": Understandable but short, general, partially vague, or mildly fragmented.
+- "low": Missing, unclear, extremely short, low-information, copied without meaningful content, or too noisy to analyze reliably.
+
+13. reason_for_quality
+- Give one short standardized reason.
+- Use exactly one of the following whenever possible:
+  - "Clear and specific response."
+  - "Clear but somewhat general."
+  - "Understandable but short."
+  - "Understandable but partially vague."
+  - "Partially unclear due to fragmented wording."
+  - "Low-information response."
+  - "Meaning is unclear."
+  - "Missing response."
+
+Missing response rule:
+Use "Missing response." when the response is empty, blank, says there is no separate answer, says it continues from another question without adding new Q-specific content, or contains only placeholders.
+
+Low-information rule:
+Use "Low-information response." when the response contains a few words but does not provide enough meaning for semantic analysis.
+
+Unclear response rule:
+Use "Meaning is unclear." when the response contains text but its meaning cannot be determined without guessing.
+
+14. confidence
+- A number from 0 to 1.
+- This means your confidence that cleaned_text, english_text, one_sentence_summary, keywords, and themes correctly preserve the original meaning of raw_response.
+- It is not the student's confidence.
+- It is not whether the student's statement is true.
+- It is the reliability of this preprocessing output.
+
+Important confidence rule:
+- If the response is clearly missing and you are confident it is missing, confidence should be high, such as 0.90 to 1.00.
+- If the response is unclear because the meaning is ambiguous, confidence should be low.
+- If the response is short but still clear, confidence can be medium-high.
+- If the response is fragmented or has multiple possible meanings, lower the confidence.
+- If any part of the response required conservative interpretation, lower the confidence.
+
+Suggested scale:
+- 0.90–1.00: very clear and reliable preprocessing
+- 0.70–0.89: mostly clear
+- 0.50–0.69: partially clear but ambiguous
+- 0.20–0.49: mostly unclear or very low information
+- 0.00–0.19: unusable or impossible to interpret
+
+Final self-check before output:
+Before returning the JSON, verify the following:
+1. raw_text is exactly identical to the input raw_response.
+2. No raw_text starts with artificial labels such as "(Korean)", "(English)", "(translated)", or "(summary)" unless those exact words appeared in raw_response.
+3. cleaned_text is derived directly from raw_response.
+4. english_text is derived directly from the original meaning of raw_response, not only from cleaned_text.
+5. Every object contains all required fields.
+6. keywords has 1 to 3 items.
+7. themes has 1 to 3 items.
+8. quality is only "high", "medium", or "low".
+9. language is only "ko", "en", "mixed", or "unknown".
+10. stage follows the Q1–Q9 mapping exactly.
+11. The output is one unified JSON array, not separate version arrays.
+12. The output is valid JSON.
+13. There are no explanations outside the JSON.
+
+Output requirements:
+- Return only one valid unified JSON array.
+- Do not create separate arrays.
+- Do not create separate dataset versions.
+- Do not include markdown.
+- Do not include commentary.
+- Do not include explanations outside the JSON.
+- Do not use trailing commas.
+- Every object must contain all fields.
+- Use double quotes for all JSON strings.
+- Keep the order of fields exactly as specified.
+
+Example input:
+[
+  {
+    "original_no": 14,
+    "question": "Q2",
+    "raw_response": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대."
+  }
+]
+
+Example output:
+[
+  {
+    "id": "Q2_014",
+    "original_no": 14,
+    "question": "Q2",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 통해 개인적인 교통 수단 문제를 해결할 수 있을 것으로 기대.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 통해 개인적인 교통수단 문제를 해결할 수 있을 것으로 기대한다.",
+    "english_text": "I expect that data mining can help solve personal transportation problems.",
+    "one_sentence_summary": "The student wants to apply data mining to personal transportation problems.",
+    "keywords": ["data mining", "transportation", "problem solving"],
+    "themes": ["real-world application", "problem solving"],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.93
+  }
+]
+
+Batch processing instruction:
+The dataset will be processed question by question or in small batches.
+
+For each run, only preprocess the responses included in the current input batch.
+Do not assume that responses from other questions are included.
+Do not generate responses for missing question numbers unless they are explicitly provided in the current input.
+Do not continue to the next question automatically.
+Do not merge this batch with previous or future batches.
+
+The input batch will usually contain responses from a single question, such as Q1 only, Q2 only, or Q3 only.
+All output objects must use the question value provided in each input item.
+Return only the JSON array for the current input batch.
+
+Now preprocess the following Q7 input batch using all rules above.
+
+This batch contains exactly 67 responses.
+Your output must contain exactly 67 JSON objects.
+
+Do not omit any input response.
+Do not combine multiple responses into one object.
+Do not create extra objects.
+The first output object must be Q7_001.
+The last output object must be Q7_067.
+
+[
+  {
+    "original_no": 1,
+    "question": "Q7",
+    "raw_response": "Pattern mining finds rules that decide common structure and clustering sorts how groups of similar data. The similarities of the two concept and they try to find interesting features/structure from a large dataset. They make complicated data to be understood much more.\nThe difference between the two would be that pattern mining tries to find relationship between the attributes which means clustering puts the entire object into groups."
+  },
+  {
+    "original_no": 2,
+    "question": "Q7",
+    "raw_response": "pattern mining과 clustering은 = 가지 모두 가는 거에서 비슷하다고 보인다. 데이터에서 패턴을 찾고 그것을\n이용하는 점이 그렇다. 차이점은 패턴이라는 것이 자주 등장하는 데이터에서 빈도 등을 이용하여 정보를 찾는 일에 가깝지만 clustering은 무엇이 비슷한지를 보는 것에 가깝다는 점이다.\n그것을 빼고는 두 가지가 비슷한 의미를 같는다고 생각하면 좋을 것 같다. 그리고"
+  },
+  {
+    "original_no": 3,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\n→ Pattern mining and clustering are similar in some points. First, both are the ways of discovering information in given data. Also, there are many standards to do these methods. However, pattern mining is a kind of finding relations/rules like x→y, while clustering is a grouping of data with similar properties."
+  },
+  {
+    "original_no": 4,
+    "question": "Q7",
+    "raw_response": "패턴 마이닝, 클러스터링은 데이터의 패턴, 군집 같은 통계적인 특징을 찾는다는 점에서 비슷합니다.\n2021320131은 군집 데이터 클러스터링 distance, density 등의 기반에서 비집한 데이터를 묶는다는 차이가 있습니다."
+  },
+  {
+    "original_no": 5,
+    "question": "Q7",
+    "raw_response": "Similarity: Both Pattern mining and clustering are methods for discovering useful structure from data rather than simply memorizing label. In other words, both are exploratory data analysis tools that help us understand what is hidden in dataset.\n↳\nclustering (as a way to partition data points into groups) can serve as an intermediate (ex. PiMSM mining) steps for other tasks, & they try to discover.\nDifference: The main difference between them I think is that they try to discover. Pattern mining focuses on finding recurring patterns and relationships. However, clustering focuses on grouping data objects into clusters. Therefore, conceptually, pattern mining looks for repeated things(sequential patterns or associations), whereas clustering looks for natural groupings among objects.\nclustering in full space vs subspace). Scalable clustering focuses on efficiency for large datasets, and exploring.\nAlso, there can be semi-supervised, ensemble-based, and validation-based clustering."
+  },
+  {
+    "original_no": 6,
+    "question": "Q7",
+    "raw_response": "패턴 마이닝과 클러스터링의 비슷한 점\n둘 다 데이터의 거대를 파악(개별 흐름)\n이외에도 잘하는 비슷한 부분도 패턴 마이닝으로\n걸을 찾을수 있는 clustering 비슷한 부분도\n묶여서 묶일수 있다."
+  },
+  {
+    "original_no": 7,
+    "question": "Q7",
+    "raw_response": "2022320010\nConceptual similarities & differences between pattern mining & clustering.\nBoth topics try to find relationships between data, as in how the data might be correlated with each other.\nBut clustering involves unknown ground truth between data, as in trying to find a relationship between data, despite not knowing exact information about some data."
+  },
+  {
+    "original_no": 8,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\n비슷한 점 데이터에 가지 패턴을 분석하여 의미있는 결과를 찾아내는 부분이 비슷하다고 생각한다. 음, 양식, 동물 등 일반적인 데이터의 분포가 어떤지 활용 모형 활용도가 어디인지 파악하는 데이서 활용된다. 둘다 비슷한 보면 데이터마이닝으로 분류된다는 점에서 비슷하다고 볼 수 있는것 같습니다."
+  },
+  {
+    "original_no": 9,
+    "question": "Q7",
+    "raw_response": "패션 마이닝은 단어의 뜻 그대로 데이터에 베어있어서 메일 양상이 가는 것을 찾을 수 있다는 측면에서 강력합니다.\n해석가 새 음원유에 분 어떤 음원을 가나 산 점차 같은 데이터들이나 단번에 데이터 적용 같은 데이터를이 맞춰져 빛난 데이터들이 클러스터링은 마음 같은 데이터에 근간 도착 마련하는 데이터들이 클러스터링은 마음 같은 단계가 있는 데이터에 끝되여 다른지 판단해 줍니다."
+  },
+  {
+    "original_no": 10,
+    "question": "Q7",
+    "raw_response": "conceptual similarities of \"pattern mining\" and \"clustering\"\n- both are collected from frequent patterns or structure\n- both identify relationships between data\n- work directly from raw data without labels\n\n1.5 differences\n- pattern mining discover frequent patterns or associations,\nclustering group data into similar clusters\n- pattern mining discover relationships between items or features,\nclustering discover relationships between data points or objects\n- pattern mining → co-occurrence, relationship, sequence, relations,\n\n- clustering → similarly-based groupings, same features, proximity, similarity, distance closer to each other\n- pattern mining → items together\n- clustering → objects together"
+  },
+  {
+    "original_no": 11,
+    "question": "Q7",
+    "raw_response": ""
+  },
+  {
+    "original_no": 12,
+    "question": "Q7",
+    "raw_response": "Similarity - unsupervised learning\n• no labels\n• we try to discover hidden structure in data\n• both help find meaningful information and\n\nDifference - Pattern mining focuses on discovering recurring relationships rules, combinations.\nClustering focuses on grouping similar data points together."
+  },
+  {
+    "original_no": 13,
+    "question": "Q7",
+    "raw_response": "Pattern Mining | Clustering | Sim: both are not labeled data.\nRules, dense, patterns | Data points in clusters | both want to discover\nFocusing on var relations | Focus on similarities | data smart info.\nAim to find freq, parts | Aim to group data"
+  },
+  {
+    "original_no": 14,
+    "question": "Q7",
+    "raw_response": "Pattern mining and clustering are conceptually similar because both aim to discover hidden structures in undealed data. They are both useful for exploring data analysts and help us better understand the underlying patterns in a dataset. However, they focus on different types of structure. Pattern mining tries to find frequently co-occurring items or itemsets, they often use as different types of clustering, this is they works pattern mining focuses on grouping data and/or data points into clusters. In other words, pattern mining focuses more on similarities among features (or relationships among items or features), whereas clustering focuses more on similarities among items themselves."
+  },
+  {
+    "original_no": 15,
+    "question": "Q7",
+    "raw_response": "Similarities -\n- Both are unsupervised learning methods\n- Both aim to discover hidden structure or patterns\n- Both are used for data understanding and insights\nDifferences -\n- Pattern mining: 1) Finds frequent patterns, itemsets or rules"
+  },
+  {
+    "original_no": 16,
+    "question": "Q7",
+    "raw_response": "| pattern mining | clustering |\n| finds interesting patterns | group similar data |\n| or relationship in the | points together |\n| data, (answer pattern) | (answer group) |\nboth, look for pattern or interestingness.\n\nother approaches of clustering"
+  },
+  {
+    "original_no": 17,
+    "question": "Q7",
+    "raw_response": "By conceptual pattern mining finds pattern by looking on the frequency of co-occurring items and its output related on Association rule.\nClustering's goal is to group object and one similar or related to one and another in same group together. We can expect on object from clustering in the first 4 sets of group.\nThe similarities of these two approaches are uncovering and discovering often the labeled DATA is unsorted or unknown, we can leverage method when no labeled data, as we will discover hidden datasets structure in than two approaches."
+  },
+  {
+    "original_no": 18,
+    "question": "Q7",
+    "raw_response": "1 What are conceptual similarities and differences between \"pattern mining\" and \"clustering\".\n- Similarities = both applied the same thing as finding interesting connection (relation) or association between set of data.\n- differences = pattern mining focuses on correlation while clustering focuses on grouping data.\n2"
+  },
+  {
+    "original_no": 19,
+    "question": "Q7",
+    "raw_response": "Between pattern mining and clustering both have to gather specifically, pattern mining can look for more interesting in finding things like rules in a group\nSimilarities → pattern is related\ndifference\npattern mining vs clustering\n→find pattern with → external & pattern\ndata depends with data occ (assertion, association)\n→ field pattern in\nproperties of self data"
+  },
+  {
+    "original_no": 20,
+    "question": "Q7",
+    "raw_response": "In pattern mining, we try to find similar features of data object so that we can do meaningful analysis.\nIn clustering we try to find clusters that can generalize the data points into a few group or noise.\nConceptually in this two scenario, the similarities are that we are trying to see if these are data that are similar and happening frequently enough for us to draw conclusions."
+  },
+  {
+    "original_no": 21,
+    "question": "Q7",
+    "raw_response": "What are 4 conceptual similarities and differences between 'pattern mining' and 'clustering'?\nI think both processes have pattern that's need to be classified and make grouping data from a larger group to smaller ones. While the differences is pattern mining are derived from correlation and certain trend or repetition, clustering is more statistical say of grouping nearest data together and discard the relevant ones"
+  },
+  {
+    "original_no": 22,
+    "question": "Q7",
+    "raw_response": "→similarities and differences\n→pattern mining do preprocessed data, if that is corrupt etc or not compatible with the dataset to be used.\nClustering are pre-processed data, to find its group or level, that is based on what we perform onto the data.\nclustering data #-> perform data\n# pattern mining on data\nto find groupy level. to find correlation\nsimilarities: both of them was used to find an interesting facts and find the abnormalities within dataset.\na. both of them also have degree of similarities in cluster or their own pattern.\n→ to find pattern that can cluster\nordinal / internal factor: the originality of a data / date of data /cold or even\n→ simple"
+  },
+  {
+    "original_no": 23,
+    "question": "Q7",
+    "raw_response": "pattern mining is the first step to learn some of the relationship of the relations. Meanwhile, clustering is a method to group some similar data points. Even-let-them are learn the pattern. one was partition one I group similar data together.\nFor the similarities, both are trying to learn the data but just the output we got could be different."
+  },
+  {
+    "original_no": 24,
+    "question": "Q7",
+    "raw_response": "The conceptual similarities between \"pattern mining\" and \"clustering\" is both aim to find hidden structure when are pattern mining → relationship and clustering →groups. Both also can be unsupervised learning which is no rules and organizes pattern from raw data.\nMeanwhile, the differences these two are \"pattern mining\" find patterns and \"clustering\" find groups with similar data. The deep types of \"pattern mining\" is to discover data and clustering is to find common pattern. The output for pattern mining is rules for \"clusters\" is my data (numeric, text, etc). The output for pattern mining is rules and \"clustering\" is clusters."
+  },
+  {
+    "original_no": 25,
+    "question": "Q7",
+    "raw_response": "Pattern mining is based on frequent pattern and relationship if it is to find what they its occur together. meanwhile cluster is just cluster similar group of similar data point in to cluster. It is to find similar pattern mining which data point is similar. The similarities is both pattern mining and clustering is unsupervised data mining technique. Because there is no label data. Both is also used to find pattern, which is to find group, pattern mining used to find typical pattern and cluster is to find them relationship. The difference is pattern mining is used to find them relationship meanwhile clustering is for object similarity."
+  },
+  {
+    "original_no": 26,
+    "question": "Q7",
+    "raw_response": "The conceptual similarity between pattern mining and 'clustering' is that the result of (mathematical) operations may not be always interesting, because of the chance of noise hidden in the dataset.\nAnd the difference is that pattern mining discovers 'patterns' which are 'frequent' items, subsequences, or substructures, whereas clustering nears similar or 'close enough' data points into clusters."
+  },
+  {
+    "original_no": 27,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between\n\"Pattern Mining\" and \"clustering\"\nSimilarities: Unsupervised. Finally, hidden features.\nExtracting useful information\n\nDifferences: Pattern mining can be applied in different type of data, because it uses relational frequency.\nClustering is applied for some type of data\n(or converted data form different type if is homogeneous)."
+  },
+  {
+    "original_no": 28,
+    "question": "Q7",
+    "raw_response": "Clustering and pattern mining are both unsupervised techniques used to discover hidden structures in data. Clustering involves grouping objects into clusters, while pattern mining finds frequent patterns or association rules in data. Thus, clustering focuses on grouping, whereas pattern mining focuses on discovering relationships."
+  },
+  {
+    "original_no": 29,
+    "question": "Q7",
+    "raw_response": "Compare pattern mining & clustering?\nThey both find data's common contents/similarity. They both are unsupervised learning.\nHowever, clustering focuses on shapes, but pattern mining contrasts on finding correlation/cause and effect."
+  },
+  {
+    "original_no": 30,
+    "question": "Q7",
+    "raw_response": "Both pattern mining and clustering are unsupervised methods that discover hidden structures in data, but while pattern mining focuses on identifying frequent co-occurrence relationships among items, clustering aims to group data points based on their similarity."
+  },
+  {
+    "original_no": 31,
+    "question": "Q7",
+    "raw_response": "Pattern Mining 가 Clustering의 공통점은 데이터에서 어떤 특정을 발견할 수 있다는 것입니다. 그리고 일단 비슷한 데이터로 묶이게 된다는 점에서 그렇다고 봅니다.\n차이로는 Clustering은 단순한 개로 단순화 시킨다면 Pattern Mining 그 자체에 데이터 깊숙히 있는 게 차이라 생각합니다.\nClustering은 도 데이터에 그것을 가져 학습됩니다."
+  },
+  {
+    "original_no": 32,
+    "question": "Q7",
+    "raw_response": "similarities\nunsupervised learning: They do not require labeled data and aim to discover hidden structures or relationships within the data.\nData exploration: used to explore and summarize large datasets.\ndata summarization /reduction: making easier to analyze and interpret\ndifferences:\n     Pattern mining:                  | Clustering:\n     find patterns,                   | group similar\n     associations, rules              | data points into clusters\n     Supervision: seeks specific      | seeks natural grouping\n     patterns"
+  },
+  {
+    "original_no": 33,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities between pattern mining and clustering?\nBoth of two make groups from the datapoints.\nWhile pattern mining make groups based on how frequently they occur together,\nclustering make groups based on how similar or close they are."
+  },
+  {
+    "original_no": 34,
+    "question": "Q7",
+    "raw_response": "\nSimilarity: 'pattern mining' and 'clustering' find kind of pattern in given data set"
+  },
+  {
+    "original_no": 35,
+    "question": "Q7",
+    "raw_response": "Pattern Mining and clustering are to find hiding structure in data.\ndata learning is only data without (label and based on similarities).\ndifferences are Goal and Output.\nclustering's goal is to do group similar data. Pattern mining's goal is to find common pattern.\nClustering's output is cluster, pattern mining's output is frequent itemset."
+  },
+  {
+    "original_no": 36,
+    "question": "Q7",
+    "raw_response": "패턴마이닝-클러스터링이 공통점 / 차이점\n공통점: 데이터 군집을 짓는다(여러분 찾기) - 의미찾기\n이지러분 유사성/문자기반 개념으로 관찰한다.\n차이점: 클러스터링은 유사성 기반 패턴인은 동기적인 패턴인도 찾는 것이다 (단어들 작는것)\n그 의미는 그 데이터 우음 (속도) 이다. 도 데이터의 우음 (속도) 점이, 단계는 이다."
+  },
+  {
+    "original_no": 37,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\nPattern mining과 Clustering의 가장 비슷한 점은 둘 다 사용에서 어떤 패턴을 찾기 위해 사용한다는 것. 두 방법은 도와 비슷하다는 점에서 같은 그래도 그러나 단계없습니다라는 떠는 것에 다소 차이가 있다. 그러서 입력다른 비슷한 데이터들이 가진다고 다 의미함을 그래도 찾고지 한다는것이라 우리는 다른 의미가 있다.\nPattern mining은 다른 단계는 같이 거나 다 입체 의미하는 우 더 데이터 점들의 변화 패턴을 찾는 것을 가는 것 들과 의미가 있고 그러나 Clustering의 다른 것과 같다고 단계는 그러서 별도 같는다는 것에 더 의미가 있어 라."
+  },
+  {
+    "original_no": 38,
+    "question": "Q7",
+    "raw_response": "Pattern mining uses \"support\" and \"trust\" value to measure, while clustering basically uses distance and density.\nHowever, they are similar to finding some useful data by organizing what to like similar between objects."
+  },
+  {
+    "original_no": 39,
+    "question": "Q7",
+    "raw_response": "Pattern mining and clustering are both unsupervised learning to discover interesting ideas, without relying on labeled examples.\nPattern mining focuses on discovering recurring relationships among items (e.g., co-occurrences, sets..). Clustering aims to partition data points into groups using spatial information on the fly."
+  },
+  {
+    "original_no": 40,
+    "question": "Q7",
+    "raw_response": "Q. What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\n공통점: 둘다 정보를 가져 데이터 카기 한다. 그 기준으로 Clustering은 distance를 사용한다. 그리고 그 기준으로 pattern mining은 빈 빈도, 빈도수 등을 사용한다. 비슷한 방식이 그렇지만 그것이 다르다.\n차이점: clustering은 가까운 데이터에 부터 다른 분류 가까운 데이터에 부터 다른 분류 다른 데이터들로 그루즈로 인지된다. 라이 단점이 다 있어요.\nQ."
+  },
+  {
+    "original_no": 41,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between pattern mining and clustering?\nSimilarities: Both are to find things in common in a set of data.\ndifference: pattern mining does not necessarily group data together, but clustering puts data into group.\npattern mining has its setup and impact whereas clustering uses distance matrix."
+  },
+  {
+    "original_no": 42,
+    "question": "Q7",
+    "raw_response": "Conceptual similarities and differences between \"pattern mining\" and \"clustering\"\nClustering involves grouping objects that are similar to one another to one another while pattern mining involves discovering substructures that occur frequently together in a dataset.\nThey are similar in a sense that both processes aim to get underlying structures within the dataset and summarize the data to make it easier to interpret."
+  },
+  {
+    "original_no": 43,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\nPattern mining focuses on discovering rules among items in dataset, such as identifying items often bought together.\nClustering focuses on partitioning data objects into groups where items gather similar.\nBoth are unsupervised learning but pattern mining looks for specific relations while clustering looks for similar objects."
+  },
+  {
+    "original_no": 44,
+    "question": "Q7",
+    "raw_response": "They are both used to organize data set and extract information that we can get from the data set.\nPattern Mining is used to find frequent patterns among the data, while Clustering is used to group similar data together."
+  },
+  {
+    "original_no": 45,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\n• Similarities:\nBoth of them are unsupervised learning which we discover the structure or patterns of data without ground truth.\n• Differences:\nPattern mining is discovering frequent patterns, relationships, associations of dataset.\nclustering is collecting data points and grouping them based on certain rules."
+  },
+  {
+    "original_no": 46,
+    "question": "Q7",
+    "raw_response": "The similarities between \"pattern mining\" and \"clustering\" are they both observe the data and explore hidden information that help in decision making finds the data. The different is that \"pattern mining\" finds relationship between data and output rules or pattern, while \"clustering\" groups similar data and form cluster."
+  },
+  {
+    "original_no": 47,
+    "question": "Q7",
+    "raw_response": "Both pattern mining and clustering are unsupervised techniques used to discover structure in data, but they focus on different types of insights. Pattern mining aims to find frequent or associated itemsets, like \"items bought together,\" while clustering is to find natural groupings of data based on similarity, putting like things in same cluster. Both share the goal of revealing hidden patterns without labels, but pattern mining looks for specific item-level relationships, whereas clustering focuses on the overall structure of the data."
+  },
+  {
+    "original_no": 48,
+    "question": "Q7",
+    "raw_response": "Pattern Mining ↔ Clustering\nSimilarity: 데이터 (지식, 정보) 가지고 분석한다는 점에서 공통점이 있고, Pattern Mining 가\n관련된 정의는 것이 그렇다 등의 정의들은 Pattern Mining ↔ Co-Concept이\n인지하다는 그러서, Clustering 도 비슷하게 이러한 (의미를) class를 data들의\n이런 관계로 형식이 가 가지가 자기 단계 됨에서.\nDifference: data로 둘이 함께 indicating한 의미가 다른지, 그러는\n뜻 또. Pattern Mining은 비교적으로 시간문제까지 이루어지는 거리지가, 그것을 들이.\n그러서 Clustering은 동적인이 있을 알게 결과들이 가는것이가.\n그러기는 가 가 가는 결과로 격다."
+  },
+  {
+    "original_no": 49,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between\nPattern mining and clustering.\nThey find interesting information by collecting patterns. The patterns may be also some kind of similarity. Difference can be that clustering is more a grouping method for datapoints and pattern mining is a method for interpreting relations between data."
+  },
+  {
+    "original_no": 50,
+    "question": "Q7",
+    "raw_response": "Similarities: Both are unsupervised approaches that discover structure in data without labeled examples. Neither requires predefined answers.\nDifferences: Clustering partitions data points into groups such that similar instances are assigned together.\nPattern mining finds relationships among items or attributes, like frequent co-occurrences, sequences, or association rules."
+  },
+  {
+    "original_no": 51,
+    "question": "Q7",
+    "raw_response": "• The conceptual similarity between pattern mining and clustering is that we want to find some interesting features between datas that are collected by using the similarity between datas.\nThe difference is that in pattern mining we use the frequency of the data. and in clustering we use the distance or the probability of the data."
+  },
+  {
+    "original_no": 52,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\".\nPattern mining and clustering both looks for repeated and similar data points. For instance, pattern mining discovers rules of patterns shopping lists by finding frequent items and Clustering groups similar data points together. However, they differ in how they are affected by scale. Clustering is more complex than pattern mining as it is affected by representation. If feature set is changed, the different clusters are generated."
+  },
+  {
+    "original_no": 53,
+    "question": "Q7",
+    "raw_response": "Conceptual and difference between \"pattern mining\" and \"clustering\"\nI think the main concept is about finding interesting and useful patterns for both methods. And one of the main different\nfor me is PM (pattern mining) tends to find similar data from a large amounts of different not related data. It goes through multiple process with occasional (even always) omitting information /data not needed for the purpose (pruning).\n\"clust\" on the other hand, try to group not similar data in a similar group. It does not normally remove from original set of data but it try to group every data in every possible way. Ofc, as a side effect, some data might come out as noise, not belonging to any cluster. I would not call this pruning but a form of natural selection that just happened along the way. not actively searching for noise."
+  },
+  {
+    "original_no": 54,
+    "question": "Q7",
+    "raw_response": "1.??\n2."
+  },
+  {
+    "original_no": 55,
+    "question": "Q7",
+    "raw_response": "Conceptually they're similar in a sense that both perform mining and clustering are used to find useful information when needing that data to be labeled.\nI think the difference lies in the fact that they have different methods when finding data relevant useful data.\nPattern mining doesn't direct the relationship and reveals interesting patterns that closer connections that cannot be increasing matchups while clustering groups closer with similar or closer objects but the result of objects together.\nBoth are useful, of course, but what kind of right differ depending on what we aim to discover from the data we give find data."
+  },
+  {
+    "original_no": 56,
+    "question": "Q7",
+    "raw_response": "pattern mining과 clustering 두 개념은 데이터를 분석하는데 많은 의미가 있다.\n둘 다 데이터 사이의 인사이트를 알아낼 수 있고, clustering에서 비슷한 데이터의 비교를 위해 패턴을 발견하고 clustering에서 이러한 Association rules을\nas 알 수 있다. 그러므로 모두 비숙해진 데이터를 만져서 이런\n분야의 패턴을 통해 안가하는 데이터의 비교의 변형하는 데이터가\n생각하는 비행한 단계."
+  },
+  {
+    "original_no": 57,
+    "question": "Q7",
+    "raw_response": "They both try to what condition of feature has direct to mean.\nbasically each data by sorting and slice the interaction to your algorithm with a recomputation. However, having always to cluster, I think the distance of them is that pattern mining (might or in the modern test (A and B has solutions because if (...) and clustering would on the group itself (Forgot there data by use the theory ...) So I think they are not mutually exclusive method."
+  },
+  {
+    "original_no": 58,
+    "question": "Q7",
+    "raw_response": "그래도 이상해도 데이터에 있어서도 그 어떤 데이터들로 가는 보이는 데이터들 그러나도 차이도 그래서 차이도 그러나도 데이터를 그릇으로 가는 그러나도 데이터를 그러나도 그러나도 그러나도. 그러나도 그러는 그러는 의 그러는 데이터에 그러나도 그러나도 생각하다.\n다시 그러나도 그러나도 그러나도 결과 그러나도 그러나도 그러나도\n중요하게 그러나도 그러나도 그러나도 비교해야 그러나도."
+  },
+  {
+    "original_no": 59,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\nPattern mining and clustering are both unsupervised learning methods that aim to discover hidden structures in data. However, pattern mining focuses on finding frequent or meaningful patterns, while clustering groups similar data points into clusters based on similarity or distance."
+  },
+  {
+    "original_no": 60,
+    "question": "Q7",
+    "raw_response": "비교한 방법이 같는 데이터를 어떻게 그러서 다 묶어서 다른 그러는 그러서 그것이 같이 데이터들 묶음 그러서 가 묶음 데이터를 발견하는 데이터로 어떻게 그러서 의 그러는 묶음의 결과가 그러서 다른 그러는 차이가 가 묶음.\n그러는 그러는 그러는 데이터에서 의 묶음 가 그러서 비싸지가 단단 비싸. 그러는 그러는 같은 그러는 의 그러서 의 그러는 그러서 그러는 가는 그러서 결과의 그러는 같은 같는 같다.\n그러는 결과 같은 같는 비싸지가 같다는 단단 그러는 의 더 그러서 비싸지가 단단 결과 같는 단어가 다 결과."
+  },
+  {
+    "original_no": 61,
+    "question": "Q7",
+    "raw_response": "Similarities: Both are unsupervised\nDifferences: Goals are different.\nPattern Mining's goal is to\nfind the rules /associations\nbut \"clustering\"'s goal is to group"
+  },
+  {
+    "original_no": 62,
+    "question": "Q7",
+    "raw_response": "Both pattern mining and clustering is a method use to find hidden structures in data, that's the similarities. The difference is clustering focus on the rows of object, try to bucket group every data point into buckets of same item. Pattern mining search for specific combinations or items that frequently occur together."
+  },
+  {
+    "original_no": 63,
+    "question": "Q7",
+    "raw_response": "Pattern mining and clustering are both ways to separate data into several partitions and labeling them. Pattern mining finds frequent patterns from massive datasets and clustering partitions data points into groups. Both of them collects close with similar features together.\nDifference is that pattern mining focuses on finding recurring sequences, or co-occurrence chains between data while clustering focuses on grouping data objects that has similar features."
+  },
+  {
+    "original_no": 64,
+    "question": "Q7",
+    "raw_response": "Conceptual similarities and differences between pattern mining and clustering?\nSimilarities\n→ Both are unsupervised exploratory\n→ Deal with relationships between data points\n\nDifferences\n   PM                           Cluster\nrules/frequent                → groups of similar\npattern                         data points\n→ relationship                 → relationship\nbetween features                between data points\n→ what features                → what data points\nappear together freq.           similar to each other"
+  },
+  {
+    "original_no": 65,
+    "question": "Q7",
+    "raw_response": "What are conceptual similarities and differences between \"pattern mining\" and \"clustering\"?\n공통점: 데이터에서 찾을 수가 패턴을 찾는 것이 동일하다.\n차이점: pattern mining - 데이터 사이의 관계에 매여 활용을\nclustering - 비슷한 데이터를 그룹 하나로 묶는것"
+  },
+  {
+    "original_no": 66,
+    "question": "Q7",
+    "raw_response": "similarity: 두 방법 모두 데이터 안에서 유의미한 구조를 찾는다는 점에서 동일하다 표 양적으로 데이터를 분석하는 것이라는 것에서 비슷하다.\n차이점은: 이 두 가지 분석에서 데이터는 패턴을 같는 데이터에서 단어가 단어\nTransaction DB에서 빈도와 모듈 단지가 같는 결과 두 그러는."
+  },
+  {
+    "original_no": 67,
+    "question": "Q7",
+    "raw_response": "Both pattern mining and clustering revolves around unlabeled data to find 'interesting' pattern and relation between each other. However, pattern mining focuses on the association rule or frequent pattern while clustering focuses on the partitioning and grouping of the data."
+  }
+]

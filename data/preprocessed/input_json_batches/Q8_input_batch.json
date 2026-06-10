@@ -1,0 +1,337 @@
+[
+  {
+    "original_no": 1,
+    "question": "Q8",
+    "raw_response": "Some other approaches for clustering could be by making it simple and only using features to cluster. For example, we could find the most significant/important feature from the data and we get higher (clustering) clusters those data into desired buckets. This might not be the best clustering objects, but for sparse data/objects this may be an option for useful, but for dense it could be mapping the high-dimensional data to a low-dimensional clustering. Mainly, often the lower dimension and the cluster hyperplane there is fewer dimension. This could be used to do clustering hyper-dimensional data."
+  },
+  {
+    "original_no": 2,
+    "question": "Q8",
+    "raw_response": "다른 방식을 떠올린다면 종류별로 가는 것이 있을 것 같다. 즉, 분야를 나누어서 데이터의 비교 보는 것이 좋다."
+  },
+  {
+    "original_no": 3,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance\", \"density\", or \"probabilistic\" methods?\n→ I think we can apply \"timeline\" methods for clustering some data when the data is continuous against time. For example, some words appear only in particular moments, and we may utilize this point for clustering.\nrandom, KIDST자료, 자별 vibe1 clustering 사용. (예)"
+  },
+  {
+    "original_no": 4,
+    "question": "Q8",
+    "raw_response": "모든 개념은 그리드 기반의 모델 distance, density, probabilistic. 정답이가 있도 발생을 기반으로 비슷한 군집이 묶을 수 있다."
+  },
+  {
+    "original_no": 5,
+    "question": "Q8",
+    "raw_response": "According to lecture, I think clustering can be categorized by other approaches such as high-dimensional or scalable clustering methods.\nFor example, high dimensional clustering is useful when the data has many features. ("
+  },
+  {
+    "original_no": 6,
+    "question": "Q8",
+    "raw_response": "clustering의 이 의는 그러나, dataset의 공간을 분류한 점들까지 차이를 좁힌다. clustering은 이러한 묶음에도 우리가 알고 데이터들이 묶을수 있다.\n위의 그러한 처럼\n그러한 데이터들에 대해서도\n데이터의 두께 가는 군장이도 알게\n생각ㄱ했다."
+  },
+  {
+    "original_no": 7,
+    "question": "Q8",
+    "raw_response": "Different approaches in clustering:\nIntroduce a single parameter or a category to the data, then see how the data is exploited in a graph.\nThen iterate the process of putting different parameters to the data each time, &\nFind similarities into the graph based on these categorical itents."
+  },
+  {
+    "original_no": 8,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance\", \"density\", \"probabilistic\" methods?\n질문점 시간을 활용해서 거리, 밀도, 확률을 둔 일정한 시간내 데이터들을 묶어주는 방법으로 생각해보았다. 일반적인 거리, 밀도와 일정한 시간내 양상 묶음과 가능 활용함이 어느 일관성이 있는지에 대해 알아보고 싶은 호기심이 생겼습니다."
+  },
+  {
+    "original_no": 9,
+    "question": "Q8",
+    "raw_response": "데이터들이 어떤지 주관적인 데이터를 게임 등 레이트들이 결말 강성에는 활동들이 한 게 있는 게 분는 게 활동들이 길어졌다는 것 같다. 라이프 기간, 깊은 사람들이 잘 즐고지 있는 게 빛 잡상이 살아남기다는 것을 분류 활동들 분류 활동들 한 게 활동들이 살아남는 게 있겠다.\n이상으로 생각하다."
+  },
+  {
+    "original_no": 10,
+    "question": "Q8",
+    "raw_response": "other approaches\n- answer at the back."
+  },
+  {
+    "original_no": 11,
+    "question": "Q8",
+    "raw_response": "other approaches for clustering\n- I am thinking on combining two approaches: distance and density on two different background but using some test subjects. For instance, we can use one person as a subject. we then divide his background into two different background: working background and life background; varying background and life background with big sets of data which by number of subjects we have two big sets of data which we apply two diff method. We then correlates both sets to find way you can cluster data across sets of data."
+  },
+  {
+    "original_no": 12,
+    "question": "Q8",
+    "raw_response": "Other clustering approaches:\n• hierarchical clustering\n• graph-based\n• grid-based\n• neural network (use AE embeddings, then use latent space)"
+  },
+  {
+    "original_no": 13,
+    "question": "Q8",
+    "raw_response": "Hierarchical clustering. Like a tree of clusters."
+  },
+  {
+    "original_no": 14,
+    "question": "Q8",
+    "raw_response": "Beyond distance-, density-, and probabilistic-based methods, there are other approaches to clustering. One is graph-based clustering, which models data as a graph and identifies clusters based on the connections between nodes.\nThis is useful when the relationships among data points are more important than their physical distance.\nAnother is constraint-based clustering, which incorporates prior knowledge or predefined rules into the clustering process. For instance, some data points may be required to belong to same cluster, while others must be placed in different clusters. These approaches are especially helpful when standard methods cannot fully capture the true structure of the data."
+  },
+  {
+    "original_no": 15,
+    "question": "Q8",
+    "raw_response": "Focus is on relationships between items\n- Clustering: 1) Groups data into clusters based on similarity\nFocus is on grouping similar data points together\n\nOther clustering approaches:\nGraph based clustering\n- Treat data as a graph (nodes = data, edges = similarity)\n- Find clusters by cutting the graph or find connected components"
+  },
+  {
+    "original_no": 16,
+    "question": "Q8",
+    "raw_response": "Maybe use a graph like point or node in the graph is a data point and the edges between point is the relationship which is the similarity."
+  },
+  {
+    "original_no": 17,
+    "question": "Q8",
+    "raw_response": "Other clustering approaches like hierarchical clustering where it builds a tree like hierarchy and visualized as a dendrogram.\n- Grid based clustering when it quantizes object space into finite number of cells. Then a grid structure. Clustering will occur on grid rather than the distance points directly."
+  },
+  {
+    "original_no": 18,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance\", \"density\", or \"probabilistic\" methods?\n- Maybe line clustering method, with this we can add more line into the data so that we can see a good sign of cluster."
+  },
+  {
+    "original_no": 19,
+    "question": "Q8",
+    "raw_response": "I would suggest pattern. Maybe that we sort from pattern mining could be used to cluster things together that we can group, in chapter, we begin them shows data assigns its cluster. So check that we what are within the same group/and that are another. Make later within the same group/data unless within the type two patterns might be used as pattern doing to try we got two patterns."
+  },
+  {
+    "original_no": 20,
+    "question": "Q8",
+    "raw_response": "Question 2\nMaybe we can use cosine similarity to find vectors that are actually similar but different magnitude."
+  },
+  {
+    "original_no": 21,
+    "question": "Q8",
+    "raw_response": "Can you think of any approaches for clustering, beyond 'distance',\n'density', or 'probabilistic' methods?\nRoot: Threshold /bandwidth /limit concept of clustering where data points in a same range, except a threshold is considered as a one cluster.\nbelow\nSelective clustering /patternized clustering where there is a certain sequence /trend to classify a cluster\neg. skip one"
+  },
+  {
+    "original_no": 22,
+    "question": "Q8",
+    "raw_response": "other approaches:\nsequence / order of data within threshold. (20 entry per dataset)."
+  },
+  {
+    "original_no": 23,
+    "question": "Q8",
+    "raw_response": "Other approach, instead of learning, divide too calculations, maybe can use deep learning approach so that network will learn the representation before clustering, being some research, there one is deep Embedded Clustering (DEC)."
+  },
+  {
+    "original_no": 24,
+    "question": "Q8",
+    "raw_response": "Other approaches for clustering, beyond \"distance\", \"density\" or \"probabilistic\" methods.\n• maybe grid-based clustering, which it can divide space into grid cell, then cluster is may be grid-based. Secondly, graph-based clustering which represent data as graph and then cluster based on connections /relationships."
+  },
+  {
+    "original_no": 25,
+    "question": "Q8",
+    "raw_response": "Constraint based clustering: Cluster it by satisfying user defined constraint or rule. Consider additional condition give by user or application."
+  },
+  {
+    "original_no": 26,
+    "question": "Q8",
+    "raw_response": "In case of clustering Social network. data such as X (former Twitter) follower network, I would insist on using 'following' information as a connectivity - base similarity measure. Since traditional approaches seem to be problematic to be defined in this context."
+  },
+  {
+    "original_no": 27,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond 'distance', 'density', and probabilistic-?\nI think there is no such method. Because any methods that we use are mostly transforming data, extracting features, and convert them into numeric data. At the end,\nWe choose one of \"distance\", \"density\" or \"probability\"\nThere may be a \"frequency\" of common token method, but it also need transformation of data. And it is without transformation, it is pattern mining, not clustering."
+  },
+  {
+    "original_no": 28,
+    "question": "Q8",
+    "raw_response": "Yes, there are other clustering approaches beyond \"distance-\", \"density-\", or \"probabilistic\" methods. For example, hierarchical clustering builds a tree-like structure, and grid-based clustering partitions and data space into grids. Additionally, model-based and constraint-based clustering can incorporate prior knowledge or rules into the clustering process."
+  },
+  {
+    "original_no": 29,
+    "question": "Q8",
+    "raw_response": "Any other approaches for clustering?\nClustering can be similar with classifying if there are low number of clusters. Will clustering with labels helpful?\nAlso, like network of networks, we can make cluster of clusters.\nex) cluster of car + cluster of train + cluster of bus\n→ cluster of vehicles."
+  },
+  {
+    "original_no": 30,
+    "question": "Q8",
+    "raw_response": "I think there is a way to distinguish groups by defining specific ranges."
+  },
+  {
+    "original_no": 31,
+    "question": "Q8",
+    "raw_response": "1) Clustering이 너무 많아 분류 가능성을\n너무 적게 분류 분석해 Clustering도 결과적일 것 같습니다."
+  },
+  {
+    "original_no": 32,
+    "question": "Q8",
+    "raw_response": "Grid based clustering: divides the data space into a finite number of grids and performs clustering on the grid structure.\nConstraint based: Incorporates user specified constraints into the clustering process.\nfuzzy clustering: belong to multiple clusters"
+  },
+  {
+    "original_no": 33,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches of clustering, beyond distance-based,\ndensity, or probabilistic method?\nwe can first classify the dataset on labeled criteria,\nand then, cluster the points that are on similar location in each group."
+  },
+  {
+    "original_no": 34,
+    "question": "Q8",
+    "raw_response": "Difference: 'pattern mining' can find not only clusters, but also other patterns like trends (include) or relations.\nclustering is useful only when data set can be divided into clusters.\n\"If-then\" rules. I think it is very inefficient, but it can be used when data set is small and we need very accurate clustering result. Additionally, we have to know largely how clusters look like in advance."
+  },
+  {
+    "original_no": 35,
+    "question": "Q8",
+    "raw_response": "I think using graph. Keep its similarity is other approach for clustering."
+  },
+  {
+    "original_no": 36,
+    "question": "Q8",
+    "raw_response": "거리/일도/확률 외, 다른 클러스터링 방법은\n데이터들을 통해서 클러스터링 한 후 있는 것으로 살펴봐\n대해서 데이터스로 가나간다 사는 것은 것이다.\n=> \"의 단정질로 같는 부분들 두 일고 있는 같다.\n→ 생각났다."
+  },
+  {
+    "original_no": 37,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches to clustering, beyond \"distance\", \"density\", or \"probabilistic\" methods?\n그러한 군집 만들기 차원과 다 그러는 그러나 노드 별로 같는 다른 군집 만들기, 그래도 같는 단계는, 차이가 그러서, 라는 그러서 데이터를 단계같다.\n비유들 Clustering을 사용한다."
+  },
+  {
+    "original_no": 38,
+    "question": "Q8",
+    "raw_response": "I think if data can be clustered by inner product\nof cosine, which means \"they have same directions\". I think same direction can provide the ratio of data occurrence. So they can be clustered.\nEx) Essay A: \"x1\" included 10 times. \"poliphemy\" included 20 times. (1000 times)\n   Essay B: \"   \" 5 times.        \"\"          \"\"     (1000 times)\nratio is same → clustered each other.\ndistance? → Cannot be clustered..."
+  },
+  {
+    "original_no": 39,
+    "question": "Q8",
+    "raw_response": "I think clustering by encoding can be on another approach. By using neural network (e.g., autoencoder), with some known metrics (e.g., contrastive losing), it can be partitioned with details (e.g., BIST/it is) value computationally heavy. I think technique should be seriously considered before application."
+  },
+  {
+    "original_no": 40,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"density\", or \"probabilistic\" methods?\n사실 카네기랑 거리적으로 분류는 클러스터링이 가장 일적입니다. 행 잘 분류한 게 그러는 거나, 안에 들어 멜리 매개로 갈수도 있다는 변동도 그러죠. 도매기는 갈리는 게 라인 같지만, 그러므로 단가 분류가 그렇게 갈 것이다.\n사실 분류기 적으로 같는 것은 살리 동기적이며 알 게 클러스터링 그게 있어요. 그 도매가 이 같는 같은 게 같이 분명한 같이 살라."
+  },
+  {
+    "original_no": 41,
+    "question": "Q8",
+    "raw_response": "Can you think of any of the approach for clustering, beyond 'distance', 'density' or 'probabilistic' methods?\nI guess there is k-means which is centroid based and hierarchical which is connectivity-based."
+  },
+  {
+    "original_no": 42,
+    "question": "Q8",
+    "raw_response": "Any other approaches for clustering, beyond \"distance-\", \"density-\" or \"probabilistic\" methods.\n- graph-based clustering"
+  },
+  {
+    "original_no": 43,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering?\nAs we learned today, we can think of hierarchical clustering.\nAs another approach, we can think of graph-based clustering.\nWe can treat datas as nodes and use connectivity measures or network structures to identify communities or clusters."
+  },
+  {
+    "original_no": 44,
+    "question": "Q8",
+    "raw_response": "Both do not have 'correct output' or 'correct structure' because we use them to find unseen structure from an existing data.\nPattern mining can overlap and similarities and differences of one point in case on are clusters.\nGrid-Based clustering → makes as the data points edges as the similarities as the small clusters\n/Grid - Based clustering → we divide data space into cells / grids and at certain grid regions will form clusters."
+  },
+  {
+    "original_no": 45,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance-\", \"density-\", or \"probabilistic-\" methods?\nOne of the other approaches might be grid-based method. The data points on the graph are observed and grouped based on the grid positions in the graph."
+  },
+  {
+    "original_no": 46,
+    "question": "Q8",
+    "raw_response": "Beyond \"distance-\", \"density-\" and \"probabilistic-\" methods, clustering may use graph where node as data point and edge as relationship. The outcome may be visually appear."
+  },
+  {
+    "original_no": 47,
+    "question": "Q8",
+    "raw_response": "Beyond the mentioned methods, another important approach is graph-based clustering, where data points are treated as nodes in a graph and clusters are formed based on connectivity. Additionally, indirect methods like deep self-supervised clustering are useful, when data lacks clear definitions efficiently which can be useful. Methods like spectral clustering can be useful, but als by structure or connectivity, or technical requirements."
+  },
+  {
+    "original_no": 48,
+    "question": "Q8",
+    "raw_response": "Other approaches: 가는것이로 결과 같은 결과로 Assumption이 그게 다.\n또는 그것이는 단계의 정의 의 결과 Assumption.\n네그가, 데이터의 같은 같는 같다른 자기 의 같은 같는 같다른 자기 의 같은. density 길이고 결과 결정 그를 그가 비싸\nMore 같는 그러서, Approach 의 그게 같는 같이 그게 비례인 그게 같는 그가 다른\ndataset 들 가 같은 같다른 자기 의 단계 같다른."
+  },
+  {
+    "original_no": 49,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches to clustering, beyond distance/density probabilistic?\nA: Maybe for certain specific datasets, pre-defined bounds or lines can work as clustering in case of classification.\n→ Maybe starting from a point\nMaybe merging clusters with a given threshold can be done by clustering. Two different clusters can merge if the central less smaller certain distance of method for competing similarity."
+  },
+  {
+    "original_no": 50,
+    "question": "Q8",
+    "raw_response": "Graph Spectral - based: Data is treated as a graph. clusters are found via eigenvectors of the graph Laplacian. The criterion is topological connectivity, not raw distance.\n→ non-convex, irregular-shaped clusters are handled well."
+  },
+  {
+    "original_no": 51,
+    "question": "Q8",
+    "raw_response": "• We can use the notion of harmony for clustering.\nFor instance, we can cluster numbers that are illustrated in (ratios?) by multiples in ratio of natural numbers. In the science of harmony, there are 12 keys in the piano. Each keys are clustered (most pitches) number.\nby checking if it is in a ratio of natural numbers.\nFor example, in the C major key, the pitch C# and C5 is clustered in C major key because it has a ratio of 1:2 frequency. (Equal Temperament)."
+  },
+  {
+    "original_no": 52,
+    "question": "Q8",
+    "raw_response": "Other approaches for clustering\nFor if we discretize all the features that represent data points, we may construct a decision tree. From the root of the tree, if we apply division with a feature that reduces entropy the most, we may obtain leafs that represent clusters."
+  },
+  {
+    "original_no": 53,
+    "question": "Q8",
+    "raw_response": ""
+  },
+  {
+    "original_no": 54,
+    "question": "Q8",
+    "raw_response": ""
+  },
+  {
+    "original_no": 55,
+    "question": "Q8",
+    "raw_response": ""
+  },
+  {
+    "original_no": 56,
+    "question": "Q8",
+    "raw_response": "대용 사용의 관심도원의 새로운 형태가 묶음 일수 있고, 예측을 적도가 단정한 패턴들이 단지 두 가지 그룹이 단정한 단계가 종류한 단계가\n관련하는 새 데이터의 단어를 알 수 있는 데이터를 형식이가 묶음 의 인지가\nclustering의 단어가\n비싸지가 가 다른 의 변형이 단가 의 자상의 의미가 와입소사 가지가\n방향으로 분류하는 기준이 있을 그래도 다 단어를 의 변형이 가는 의미가 있어 단어를 모이 차에 좋은 단어 분류한 단어를 가 묶음 의미가 가 묶음 가는 결과가 한다단데."
+  },
+  {
+    "original_no": 57,
+    "question": "Q8",
+    "raw_response": "We can divide the feature space by gives or informed criteria. like dictate this method will have closer similarity in the result."
+  },
+  {
+    "original_no": 58,
+    "question": "Q8",
+    "raw_response": "두 다양 새는 그것이 매개로 그러나도 생각하면 가 새이 그러는 그러나도. 그러는 그러는 그러는 가는 거이 안 있을 수 있다. 가도 그러는 가도 그러는 그러나는 그러는 가는 거이 같이 그러는 그러는 그러나는 다른 그러나는 그러나는 그러나는 그러나는 그러나는 그러나는 그러나는 그러나는 그러나는 그러나는."
+  },
+  {
+    "original_no": 59,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance-\", \"density-\" or \"probabilistic\" methods?\nYes, other approaches include graph-based clustering where data points are treated as nodes and clusters are formed based on connectivity, and model-based or deep learning approaches such as auto encoder-based clustering."
+  },
+  {
+    "original_no": 60,
+    "question": "Q8",
+    "raw_response": "비교한 그러는 비싸 그러서 같는 가는 그러서 같는 같는 가 묶음 데이터의 그러서 같는 같는 단어를 단가 비싸지가 단단 단어가 같는 비싸지가 단단 그러는 같는 가는 단단 그러서 비싸지가 단단 그러는 같는 비싸지가 단단."
+  },
+  {
+    "original_no": 61,
+    "question": "Q8",
+    "raw_response": "Graph-based approach can be one of approaches.\nWe can think about Graph\nwhich is out of distance space."
+  },
+  {
+    "original_no": 62,
+    "question": "Q8",
+    "raw_response": "Maybe we can use grid, turn the whole data space into giant sheet of graph paper, computer can look at the grid and make analysis, like which cell are full and merges them together."
+  },
+  {
+    "original_no": 63,
+    "question": "Q8",
+    "raw_response": "Other approaches include high-dimensional clustering and scalable Clustering. Also we can think visual-insight-based, semi-supervised clustering."
+  },
+  {
+    "original_no": 64,
+    "question": "Q8",
+    "raw_response": "Any other approaches other than 'distance based' and 'probability methods\n→ Grid-based method            → Self-organizing Maps (SOM)\n(Divide data with               (use neural networks for clustering)\nfinite no. of cells              ↳ use of map processing\n(g DBR)                          and map visualization"
+  },
+  {
+    "original_no": 65,
+    "question": "Q8",
+    "raw_response": "Can you think of any other approaches for clustering, beyond \"distance-\", \"density-\", or \"probabilistic-\" methods?\n그것을 정확하 매우가 어떤 기준으로 두고 같은 분류한다든가 차원하다.\nSME 클래스 별 비싸지가 단단 단어가 매우 안에 같이 단단. 단단 단어가\n그러나 그러는 그러는 그러는 그러는 그러는 그러는 그러는 그러는 그러는 그러는\n사람들이 매우 결과 같는 것 같는 그러는 같는."
+  },
+  {
+    "original_no": 66,
+    "question": "Q8",
+    "raw_response": "그러는 distance, density, probabilistic 이외 단단 단어가 그러는 라가 비싸. 단단 클러스터링 단가 (예) features 자세한이 단단 같는 같다 그러는 단어가 같은 같는 결과의 그러는 그러는 다른 그러는 그러는 결과 같는 같는 그러는 같는 그러는 approach 와 같이 그러는 가 묶음 결과 단어가 clustering 의 그러는 의 그러는 가는 가 단어가 단어가 단어가 같는 같는."
+  },
+  {
+    "original_no": 67,
+    "question": "Q8",
+    "raw_response": "Maybe using grid? Make a grid on the datasets and clustering is performed at the level of the cells rather than individual data points. So, instead of comparing the pairwise distance, just look at the spatial arrangement."
+  }
+]

@@ -1,0 +1,4 @@
+feature_set,n_features,accuracy,macro_auc_ovr,chance_acc,chance_auc
+length_only(word_count),1,0.221,0.639,0.111,0.5
+STYLE7,7,0.42,0.816,0.111,0.5
+STYLO,313,0.8,0.964,0.111,0.5

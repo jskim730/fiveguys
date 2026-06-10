@@ -1,0 +1,5355 @@
+[
+  {
+    "id": "Q1_001",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I need this data science class to meet a major graduation requirement. I switched my spring schedule to enroll in CSDS 410. My advisor said it is required and I want to finish on time.",
+    "keywords": [
+      "graduation requirement",
+      "course enrollment"
+    ]
+  },
+  {
+    "id": "Q1_002",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used pattern mining on my lab web logs to spot odd login bursts. That anomaly detection helped me flag a likely brute force event and write a small rule for my class firewall. I think this boosts basic cybersecurity.",
+    "keywords": [
+      "cybersecurity",
+      "pattern mining",
+      "anomaly detection"
+    ]
+  },
+  {
+    "id": "Q1_003",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I learned data mining by doing a project where I cleaned logs and found patterns. Project-based learning made me use real tools and made ideas stick. Maybe this hands-on work is the best way to learn and show skills.",
+    "keywords": [
+      "data mining",
+      "project-based learning"
+    ]
+  },
+  {
+    "id": "Q1_004",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I tried reinforcement learning to teach an agent to solve a maze and it learned odd shortcuts. I think this shows a problem solving win but also an AI alignment worry when rewards miss human intent. Maybe more constraints fix it.",
+    "keywords": [
+      "reinforcement learning",
+      "AI alignment",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "Q1_005",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I had a summer internship where I did data mining on messy customer logs and built simple models with Python and scikit learn. That project became a demo in my portfolio. It helped me prepare for interviews and made me feel more ready.",
+    "keywords": [
+      "career preparation",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q1_006",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I am a data science major and I think it matters because I used simple Python and plots during an internship to clean messy lab data and find a pattern that changed our test plan. It felt useful and real.",
+    "keywords": [
+      "data science",
+      "major relevance"
+    ]
+  },
+  {
+    "id": "Q1_007",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I did a quick data analysis on logs from my indie game to find why players left. I saw a big drop in sessions after level three and think a sharp jump in difficulty and failure rate is the cause.",
+    "keywords": [
+      "games",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "Q1_008",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I did a small class project using a random forest to predict bike rentals. I think the main win was cleaning the data and choosing good features. That simple fix solved most of my model problems.",
+    "keywords": [
+      "data science",
+      "machine learning",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "Q1_009",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I plan to work as a data analyst and my major in statistics gives me the tools I need. I did a summer internship cleaning survey data and learning SQL and Excel. That felt like real career prep for me.",
+    "keywords": [
+      "data analyst",
+      "career preparation",
+      "major relevance"
+    ]
+  },
+  {
+    "id": "Q1_010",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I get curious when a chart looks wrong so I dig deeper. Last week I saw a big spike in bike-share rides at 3am and I explored weather logs and event pages until I found a small festival nearby.",
+    "keywords": [
+      "data science curiosity",
+      "exploration"
+    ]
+  },
+  {
+    "id": "Q1_011",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I worked on system development by building a small pipeline that pulled web logs and fed a model. I used basic statistics like mean and std dev to check feature drift. I also did simple data mining to find user patterns in the logs.",
+    "keywords": [
+      "system development",
+      "statistics",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q1_012",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think I did data mining on web logs to find user groups. I then used a small machine learning model to flag likely churners. This helped my problem solving in a class project and saved time.",
+    "keywords": [
+      "data mining",
+      "machine learning",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "Q1_013",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I made a small project that used Python stats and linear algebra and put it on GitHub. It helped me with prep for interviews and showed I know the core math and coding.",
+    "keywords": [
+      "career preparation",
+      "foundational knowledge"
+    ]
+  },
+  {
+    "id": "Q1_014",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used my analytical skills on a messy sales log. I found a pattern of missing weekend entries. I solved it by writing a small script to fill gaps and that fixed our weekly report errors.",
+    "keywords": [
+      "analytical skills",
+      "problem solving",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q1_015",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used clustering on a campus survey to find student groups. My curiosity made me try odd settings. I found a small cluster I did not expect and it made me want to explore more.",
+    "keywords": [
+      "data clustering",
+      "curiosity"
+    ]
+  },
+  {
+    "id": "Q1_016",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used basic data mining at my internship to find patterns in sales. I think this helped me solve a stocking problem by predicting hot items. It felt real and showed how small models can fix real world business issues.",
+    "keywords": [
+      "data mining",
+      "problem solving",
+      "real-world cases"
+    ]
+  },
+  {
+    "id": "Q1_017",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used data mining on my blog logs to find which keywords worked on one post. A small prediction model helped me tweak SEO and maybe raise clicks by about 20 percent in a week.",
+    "keywords": [
+      "search engine optimization",
+      "prediction",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q1_018",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think model interpretability is major because it builds trust. I used SHAP to explain a loan model at my summer job and it helped me spot bias and learn more about the data.",
+    "keywords": [
+      "major relevance",
+      "real-world application",
+      "personal reflection"
+    ]
+  },
+  {
+    "id": "Q1_019",
+    "q": "Q1",
+    "round": "R2",
+    "text": "In my team project I used an LLM to draft user stories and to generate image prompts for mockups. It saved time but gave weird outputs sometimes. Maybe next time I will fine tune prompts and filter images more.",
+    "keywords": [
+      "team project",
+      "LLM",
+      "image generation"
+    ]
+  },
+  {
+    "id": "Q1_020",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used data science in a student project to solve a real problem. I looked at old sign-up data and found when people came. That helped me and the team pick the best event time and make a clearer decision.",
+    "keywords": [
+      "data science",
+      "real-world problems",
+      "decision making"
+    ]
+  },
+  {
+    "id": "Q1_021",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I get curious when numbers don't match my gut. I explore by plotting and slicing the data. Once I found a mislabeled column by making a scatter plot and asking why a cluster sat apart.",
+    "keywords": [
+      "data science curiosity",
+      "exploration"
+    ]
+  },
+  {
+    "id": "Q1_022",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used data mining to find key churn factors in my part-time job's sales logs. I ran clustering and found a group of weekend buyers who stopped. I think we could target them with a small promo and win some back.",
+    "keywords": [
+      "data mining",
+      "practical application"
+    ]
+  },
+  {
+    "id": "Q1_023",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used k-means and decision trees in a project. I saw how data mining algorithms find groups and simple rules. I think grad study would help me learn more tools and math and maybe shape my path.",
+    "keywords": [
+      "data mining algorithms",
+      "graduate study"
+    ]
+  },
+  {
+    "id": "Q1_024",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I did basic data mining on online listings to find underpriced items. I resold them on marketplaces for small profit and learned business needs clear demand signals. It was messy but useful and maybe I could scale with better models.",
+    "keywords": [
+      "data mining",
+      "reselling",
+      "business"
+    ]
+  },
+  {
+    "id": "Q1_025",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think data science is about finding patterns in data and making tools. My major in statistics is helpful because I learn models and code, and I used that in a lab project to predict student outcomes from quiz scores.",
+    "keywords": [
+      "data science understanding",
+      "major relevance"
+    ]
+  },
+  {
+    "id": "Q1_026",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I signed up for this 3 credit data science course because I need the credits for my major. I think maybe it will help me learn tools I can use for my lab project where I analyze survey data.",
+    "keywords": [
+      "course credits",
+      "course motivation"
+    ]
+  },
+  {
+    "id": "Q1_027",
+    "q": "Q1",
+    "round": "R2",
+    "text": "In my small research project I dug into user logs and found a clear churn spike. That insight made me build a tiny web tool in Python to chart sessions and try a fix. I learned to write tests.",
+    "keywords": [
+      "research",
+      "data insights",
+      "software development"
+    ]
+  },
+  {
+    "id": "Q1_028",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I joined a team project where we used big data and a simple AI to predict user churn. I cleaned logs and made features. I think the AI helped find patterns but team syncs were key to avoid duplicate work.",
+    "keywords": [
+      "big data",
+      "AI",
+      "team project"
+    ]
+  },
+  {
+    "id": "Q1_029",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I did a small project analyzing gym attendance data to find peak hours and missed classes. I put the cleaned notebook on my GitHub and used it to practice talking through methods for interviews.",
+    "keywords": [
+      "data analysis",
+      "career preparation"
+    ]
+  },
+  {
+    "id": "Q1_030",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I am taking this 3 credit course to finish my major course credits. I think the hands on data work will build skills for my resume and career prep. Maybe I can show a small project in internship interviews.",
+    "keywords": [
+      "course credits",
+      "career preparation"
+    ]
+  },
+  {
+    "id": "Q1_031",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I cleaned messy survey rows and filled blanks as preprocessing before training a small decision tree for machine learning. I then made a bar chart to spot class balance. It helped me find a bad feature and improve accuracy.",
+    "keywords": [
+      "machine learning",
+      "data visualization",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q1_032",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I organize messy survey files into named folders and tidy CSVs so I can find columns fast. I think working as a data analyst fits me since I like cleaning data and making simple charts for decisions and maybe a stable career.",
+    "keywords": [
+      "data organization",
+      "data analyst",
+      "career"
+    ]
+  },
+  {
+    "id": "Q1_033",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I spent a week cleaning missing values and normalizing test scores before modeling. That prep made me follow weird rows and ask why patterns exist. I think small hunches lead to new features and I jot notes each step.",
+    "keywords": [
+      "data preprocessing",
+      "data science curiosity"
+    ]
+  },
+  {
+    "id": "Q1_034",
+    "q": "Q1",
+    "round": "R2",
+    "text": "In my team project I used data mining to extract knowledge from sensor logs. I ran simple clustering and found three user groups. It helped our model and my role was cleaning and running the analysis.",
+    "keywords": [
+      "knowledge extraction",
+      "data mining",
+      "team project"
+    ]
+  },
+  {
+    "id": "Q1_035",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think my work shifts clash with the data lab times so I had to pick a later section and join the waitlist. Maybe I lose a slot in another course. It made my schedule messy.",
+    "keywords": [
+      "scheduling",
+      "course enrollment"
+    ]
+  },
+  {
+    "id": "Q1_036",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think I follow simple data rules: clean data, pick one metric, and log each step. For problem solving I break tasks into small tests and use quick plots to find bugs.",
+    "keywords": [
+      "data science guidelines",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "Q1_037",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I served in the Army for six years and am now a returning student. My discipline helps me stay on track. But my stats and coding feel rusty so I study more at night.",
+    "keywords": [
+      "military service",
+      "returning student"
+    ]
+  },
+  {
+    "id": "Q1_038",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I take data mining in my data science major because it matters for real work. For example I used clustering on messy survey data in a class project and found groups that helped shape the final model.",
+    "keywords": [
+      "data mining",
+      "major relevance"
+    ]
+  },
+  {
+    "id": "Q1_039",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I study data science because it feels useful for real problems and jobs. I think the major helped me learn how to turn messy data into insight. For example I used Python and linear regression to predict house prices in a class project.",
+    "keywords": [
+      "major relevance",
+      "data science understanding"
+    ]
+  },
+  {
+    "id": "Q1_040",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I do quantitative research on option pricing using Python. I like applying stats to market data and maybe want a career in finance as a quant. I hope to get an internship at a trading firm.",
+    "keywords": [
+      "quantitative research",
+      "finance",
+      "career"
+    ]
+  },
+  {
+    "id": "Q1_041",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used machine learning and simple clustering in a class project. I think it helped me find three customer groups from sales data and stats showed the groups differ in mean spend. Maybe next I will try more features and ask why groups form.",
+    "keywords": [
+      "machine learning",
+      "clustering",
+      "statistics"
+    ]
+  },
+  {
+    "id": "Q1_042",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I chose data science as my major because it helps solve real problems and gets jobs. In a class project I cleaned messy survey data ran a simple model and found a trend. It showed me how data drives decisions.",
+    "keywords": [
+      "major relevance",
+      "data science understanding"
+    ]
+  },
+  {
+    "id": "Q1_043",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I follow a web novel and I scraped its chapter titles and short blurbs. I used simple data mining like word counts and ngrams to train a tiny model to predict the next plot twist. It got some hits and some misses but I learned a lot.",
+    "keywords": [
+      "web novel",
+      "data mining",
+      "prediction"
+    ]
+  },
+  {
+    "id": "Q1_044",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I think basics like clean data and simple stats mattered when my team built a churn model in Python and we kept failing from messy joins. It made me want a job doing data cleaning and coding, maybe as a junior data analyst.",
+    "keywords": [
+      "fundamentals",
+      "team project",
+      "career"
+    ]
+  },
+  {
+    "id": "Q1_045",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I served in the military for four years and am now catching up on stats and coding. I think my discipline helps but I need practice on Python and data science work. Maybe a group project will speed things up.",
+    "keywords": [
+      "military service",
+      "catching up",
+      "data science"
+    ]
+  },
+  {
+    "id": "Q1_046",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I chose this 3-credit course to finish my degree and get practical skills. I am curious about data science. I tinker with city bike trip data on weekends and try to clean and visualize it to spot patterns.",
+    "keywords": [
+      "course credits",
+      "data science curiosity"
+    ]
+  },
+  {
+    "id": "Q1_047",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I get curious when a dataset has odd gaps. I used Python and basic CS ideas to write a small script to clean and plot the data and found a hidden trend. It felt like sleuthing with code.",
+    "keywords": [
+      "data science curiosity",
+      "computer science"
+    ]
+  },
+  {
+    "id": "Q1_048",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I did four years in the military and learned to follow orders and plan under stress. Now I study AI and hope it can improve logistics and safety. I feel curious but also wary of handing over tough choices.",
+    "keywords": [
+      "military service",
+      "AI",
+      "personal reflection"
+    ]
+  },
+  {
+    "id": "Q1_049",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I do data science work and I also do software engineering tasks. I think my code testing and version control skills make my analyses repeatable. Maybe I need to learn better design patterns but tests already save me time and bugs.",
+    "keywords": [
+      "data science",
+      "software engineering"
+    ]
+  },
+  {
+    "id": "Q1_050",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used a basic machine learning model to predict house prices in a class project. I cleaned messy data made features and fixed bugs one step at a time. It improved my data skills and my problem solving habit.",
+    "keywords": [
+      "machine learning",
+      "problem solving",
+      "data skills"
+    ]
+  },
+  {
+    "id": "Q1_051",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I focus on practical data skills. I spend evenings cleaning messy datasets in pandas and making a simple dashboard. I put the code and screenshots on GitHub and use them in mock interviews to prepare for real data roles.",
+    "keywords": [
+      "data skills",
+      "career preparation"
+    ]
+  },
+  {
+    "id": "Q1_052",
+    "q": "Q1",
+    "round": "R2",
+    "text": "I used data mining to pull patterns from my campus survey and then tried a tiny deep learning model for sentiment. It overfit and was messy but I learned to prep data better and to keep experiments simple.",
+    "keywords": [
+      "data mining",
+      "deep learning",
+      "personal reflection"
+    ]
+  },
+  {
+    "id": "Q2_001",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used social media data mining on public tweets to see if people who like hiking also like camping. I ran a simple compatibility analysis and found a 70% overlap, so maybe this could help targeted local ads.",
+    "keywords": [
+      "social media data mining",
+      "compatibility analysis"
+    ]
+  },
+  {
+    "id": "Q2_002",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used web search for a class project on climate policy last term. Top hits were from partisan sites so my initial results skewed and I had to cross check sources and adjust my retrieval filters.",
+    "keywords": [
+      "information retrieval",
+      "media bias"
+    ]
+  },
+  {
+    "id": "Q2_003",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I think a game recommendation system can use data mining on my play logs to find my taste. For example my many short puzzle sessions would point it to short bite sized indie puzzles I like.",
+    "keywords": [
+      "game recommendation system",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q2_005",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I tracked my phone sleep data for a month and used basic data mining to find patterns. I think I sleep worse on nights I scroll late. This sleep pattern analysis helped me set a strict bedtime.",
+    "keywords": [
+      "sleep pattern analysis",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q2_006",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I ran pattern mining on my small store sales logs to find products sold together. Then I did simple data analysis on time and price to see if spikes match a promo. I think this found one promo that really works.",
+    "keywords": [
+      "pattern mining",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "Q2_007",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I ride the bus to campus and I think real-time arrival info would help. I often wait 20 minutes because the timetable is off. If an app told me live bus locations I would plan better and avoid standing in the cold.",
+    "keywords": [
+      "public transportation",
+      "real-time information"
+    ]
+  },
+  {
+    "id": "Q2_008",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I set a simple schedule and use 25 minute blocks to focus. I also put my phone in another room so I don't get pulled into social apps. It helps me finish data tasks on time and stay calm.",
+    "keywords": [
+      "time management",
+      "distraction"
+    ]
+  },
+  {
+    "id": "Q2_009",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I track my daily expenses in a simple spreadsheet. I organize the data by date and category and add a short note for each line. I think this lets me filter and spot spend patterns fast.",
+    "keywords": [
+      "expense tracking",
+      "data organization"
+    ]
+  },
+  {
+    "id": "Q2_010",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I set a small weekly budget for food and transit and track it in my phone. I found my spending pattern is lots of small buys like coffee and app subs. I think cutting one small habit helped my budget.",
+    "keywords": [
+      "budget management",
+      "spending patterns"
+    ]
+  },
+  {
+    "id": "Q2_011",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used feature extraction on phone sensor logs to get mean and peak and frequency bands and then trained a small classifier to tell walking from sitting. I think the features helped the class split but I need more tuning.",
+    "keywords": [
+      "data classification",
+      "feature extraction"
+    ]
+  },
+  {
+    "id": "Q2_012",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used classification to predict which emails were spam and which were not. I then used clustering to find similar users and personalization to show each a different homepage. I think clicks rose a bit.",
+    "keywords": [
+      "classification",
+      "clustering",
+      "personalization"
+    ]
+  },
+  {
+    "id": "Q2_013",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I worked with student grades and attendance data. I had to transform letter grades to numeric scores and scale them by class mean. It fixed skew and helped my simple model find patterns in who might need tutoring.",
+    "keywords": [
+      "data transformation",
+      "education data"
+    ]
+  },
+  {
+    "id": "Q2_014",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I use simple data when I shop. I track prices and ratings in a small spreadsheet to spot deals and avoid bad products. Maybe I wait for sales.",
+    "keywords": [
+      "shopping decisions",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "Q2_015",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I did a small text pattern mining project on scraped blog posts. I worry it may breach copyright and maybe I should use public domain data or ask the authors for clear written permission.",
+    "keywords": [
+      "copyright",
+      "text pattern mining"
+    ]
+  },
+  {
+    "id": "Q2_016",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I keep my data in tidy tables with clear column names and a folder for raw vs cleaned. I plot quick scatter and heatmap to spot errors and odd values. It helps me catch bad rows early.",
+    "keywords": [
+      "data organization",
+      "data visualization"
+    ]
+  },
+  {
+    "id": "Q2_017",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I trained a small AI model on BMI data to make a health recommendation. It told me to cut 300 calories a day and walk 30 minutes. I think that may ignore stress and sleep and feel hard to follow.",
+    "keywords": [
+      "AI model",
+      "health recommendation",
+      "BMI data"
+    ]
+  },
+  {
+    "id": "Q2_018",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I think data science is about finding patterns in messy data and telling a story. I feel more sure after cleaning a messy sales file for class and making a clear chart. I am still shaky on model math.",
+    "keywords": [
+      "data science understanding",
+      "confidence"
+    ]
+  },
+  {
+    "id": "Q2_019",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used simple image detection to find faces in my project. Then I trained a classifier to tag emotion. I also ran clustering to group similar selfies and spot weird outliers. It saved me time and found messy labels.",
+    "keywords": [
+      "image detection",
+      "classification",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q2_020",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I try to keep a steady sleep pattern by going to bed at 11pm and rising at 7am. I think my habit of no screens 30 minutes before bed helps. I still eat snacks late sometimes.",
+    "keywords": [
+      "sleep pattern",
+      "healthy habits"
+    ]
+  },
+  {
+    "id": "Q2_021",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I tracked my spending and saw most money goes to coffee and takeout. A quick budget check showed cutting two takeout meals a week saves about $60 a month I could use to pay down a card.",
+    "keywords": [
+      "spending patterns",
+      "financial analysis"
+    ]
+  },
+  {
+    "id": "Q2_022",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I tried anomaly detection on my game's player data to help cheat detection. I used simple metrics like score per minute and click timing and it flagged weird outliers. I think it helped me find cheaters fast.",
+    "keywords": [
+      "cheat detection",
+      "anomaly detection",
+      "games"
+    ]
+  },
+  {
+    "id": "Q2_023",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used data mining on bus GPS logs to spot delays and strange stops in my city's transportation system. I think this simple step helped my problem solving and led me to suggest a timetable tweak.",
+    "keywords": [
+      "data mining",
+      "transportation",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "Q2_024",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I think route optimization can cut travel time and fuel cost in transit. I used a simple app to reorder my delivery stops and saved 30 minutes on a city run. Maybe we can scale that for bus routes.",
+    "keywords": [
+      "route optimization",
+      "transportation"
+    ]
+  },
+  {
+    "id": "Q2_025",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I draw a quick map of the pipeline on paper and mark the three tasks with most risk or impact. I do the small high impact checks first then deeper models. It helps me stay clear and on main tasks.",
+    "keywords": [
+      "thought organization",
+      "prioritization"
+    ]
+  },
+  {
+    "id": "Q2_026",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I tracked where readers pause and which links they click and found most stop after the intro. I think posts that get more comments and shares come from small groups that tag each other so social ties boost reach.",
+    "keywords": [
+      "reader behavior analysis",
+      "social analysis"
+    ]
+  },
+  {
+    "id": "Q2_027",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I use public transportation and ride the subway to campus every day. I think simple counts and delay logs could guide when to add trains. Maybe that data driven plan would cut my wait and make trips less crowded.",
+    "keywords": [
+      "public transportation",
+      "subway",
+      "data-driven optimization"
+    ]
+  },
+  {
+    "id": "Q2_028",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I use simple time management. I schedule two hour blocks for coding and notes. Tracking my work showed a pattern: I focus best in the morning and I tend to procrastinate on Fridays so I move hard tasks to Tuesday.",
+    "keywords": [
+      "scheduling",
+      "time management",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q2_029",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I ran clustering on purchase and visit data from my retail job and found three customer behavior groups: deal hunters, frequent browsers, and brand loyalists. I think tailoring displays for each group raised impulse buys a bit.",
+    "keywords": [
+      "customer behavior",
+      "clustering",
+      "retail"
+    ]
+  },
+  {
+    "id": "Q2_030",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I use classification models to help with decision making at internships. I built a simple customer churn classifier and it helped my team pick who to call. I think this work makes me want a career in applied data science.",
+    "keywords": [
+      "decision making",
+      "classification",
+      "career"
+    ]
+  },
+  {
+    "id": "Q2_031",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I keep my data in clear folders by project and date. I sort files and CSV rows by key columns before any analysis. I post a short update on the information board so the team knows what is ready.",
+    "keywords": [
+      "data organization",
+      "sorting",
+      "information board"
+    ]
+  },
+  {
+    "id": "Q2_032",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I grouped my survey answers into low, medium, high so I could spot trends. I flagged the weird long responses as outliers and set them apart. Then I hid rare fields to declutter the dashboard and keep it readable.",
+    "keywords": [
+      "categorization",
+      "outlier detection",
+      "decluttering"
+    ]
+  },
+  {
+    "id": "Q2_033",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used k-means to cluster app users by activity and then a simple tree to classify likely churners. My file org was messy at first so I started date tagging folders and that saved time.",
+    "keywords": [
+      "clustering",
+      "classification",
+      "file organization"
+    ]
+  },
+  {
+    "id": "Q2_034",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I looked at signal density data for my bus route. I saw big dead zones near the river and under the bridge. I think planners could move stops or tweak timing so riders do not lose GPS or service.",
+    "keywords": [
+      "public transportation",
+      "route planning",
+      "signal density data"
+    ]
+  },
+  {
+    "id": "Q2_035",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I log my nutrition and sync it with my health data from my watch. Then I run a small optimization to pick meals that keep my energy and sleep better. It feels clunky but useful.",
+    "keywords": [
+      "nutrition",
+      "health data",
+      "optimization"
+    ]
+  },
+  {
+    "id": "Q2_036",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I use global indicators like GDP per capita and life expectancy to pick variables for models. I try to follow UN and WHO guidelines on data quality and ethics. For example I removed a country with poor reporting.",
+    "keywords": [
+      "global indicators",
+      "guidelines"
+    ]
+  },
+  {
+    "id": "Q2_038",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used clustering on my meditation logs to find patterns in my sit times and feelings. I think sessions cluster by morning versus night and by calm versus anxious. That pattern discovery nudged me to stick to a morning habit.",
+    "keywords": [
+      "clustering",
+      "meditation",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q2_039",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I schedule my week on Sunday and block study slots for class work and projects. I set a 25 minute timer for each task and take short breaks. It keeps me from cramming at night.",
+    "keywords": [
+      "scheduling",
+      "time management"
+    ]
+  },
+  {
+    "id": "Q2_040",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I think I extracted time features from sensor logs and kept mean and max as factors. I cut many features to avoid overfitting. My model scored great on train but flopped on new data.",
+    "keywords": [
+      "feature extraction",
+      "factor selection",
+      "overfitting"
+    ]
+  },
+  {
+    "id": "Q2_041",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I clustered my movie ratings with k-means to find user groups. Then I built a simple recommendation system that suggests top movies per cluster and it seemed to give better picks for me than global popular lists.",
+    "keywords": [
+      "recommendation system",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q2_042",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I ran a quick data analysis to see if automating our cleaning step would boost efficiency. It cut my run time in half but required a $500 tool. My simple cost-benefit calc showed payback in about three months.",
+    "keywords": [
+      "efficiency",
+      "cost-benefit",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "Q2_043",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used a web novel set and tried to predict which stories get big. I did simple feature extraction like chapter length genre tag upload pace and reader sentiment. I think upload pace and short chapters helped.",
+    "keywords": [
+      "web novel",
+      "popularity prediction",
+      "feature extraction"
+    ]
+  },
+  {
+    "id": "Q2_044",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I think a focus detection that watches my typing and gaze would flag when I lose focus. My main distraction is my phone and web tabs. A quick reminder ping or small pop up helps me stop and get back to work.",
+    "keywords": [
+      "focus detection",
+      "distraction",
+      "reminder"
+    ]
+  },
+  {
+    "id": "Q2_045",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used clustering on server logs in a small cybersecurity drill. It grouped users and made document search faster so I found risky files. I think the method cut our response time a lot.",
+    "keywords": [
+      "clustering",
+      "cybersecurity",
+      "document search"
+    ]
+  },
+  {
+    "id": "Q2_046",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I saw my grades rise for weeks but one low midterm felt like an anomaly. By plotting my scores I found a pattern: I do much better when I study in the morning so I will try that.",
+    "keywords": [
+      "grades",
+      "anomaly",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q2_047",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I used a food app recommendation system that kept pushing spicy curries. It learned my picks then put me in one category so I got similar food. Maybe it should learn more fine food prefs like heat level and veggie options.",
+    "keywords": [
+      "recommendation system",
+      "food preferences",
+      "categorization"
+    ]
+  },
+  {
+    "id": "Q2_048",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I studied language learning by using a small flashcard dataset for Spanish verbs. I did a simple effectiveness analysis with pre and post tests and accuracy rose but not much. Maybe the dataset was too small and unbalanced.",
+    "keywords": [
+      "language learning",
+      "effectiveness analysis",
+      "datasets"
+    ]
+  },
+  {
+    "id": "Q2_049",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I usually use Python for cleaning and R for stats. I pick tools by task and team skill. For class work I choose Python with pandas and Jupyter because it is fast to try ideas and teammates can run it.",
+    "keywords": [
+      "programming languages",
+      "tool selection"
+    ]
+  },
+  {
+    "id": "Q2_050",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I pick simple algorithms first and test a few on the project to find what fits. In my marketing project I tried logistic regression then used random forest on messy click data. That hands on work made a model I could use in real work.",
+    "keywords": [
+      "algorithm selection",
+      "project-based learning",
+      "real-world application"
+    ]
+  },
+  {
+    "id": "Q2_051",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I try to manage my expenses by tracking every purchase in a simple spreadsheet. I log small buys daily and review weekly so I can spot leaks like subscriptions and cut them.",
+    "keywords": [
+      "expense management",
+      "spending tracking"
+    ]
+  },
+  {
+    "id": "Q2_052",
+    "q": "Q2",
+    "round": "R2",
+    "text": "I keep my notes by project. I tag key stats and code snippets so I can find what is relevant when I do data mining on class data. For example I pulled tags to match features fast and found a cleaning step I forgot.",
+    "keywords": [
+      "note organization",
+      "relevance",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q3_001",
+    "q": "Q3",
+    "round": "R2",
+    "text": "In my class survey some answers were missing. I think ages were MCAR, income was MNAR, and test scores were maybe MAR because absences related to grades. I imputed some with median and flagged others for review.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ]
+  },
+  {
+    "id": "Q3_002",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I tried dimensionality reduction with PCA on my sensor data to shrink 100 features into 5. I kept the components with the most variance so the model still learned the signal and did not overfit.",
+    "keywords": [
+      "dimensionality reduction",
+      "variance"
+    ]
+  },
+  {
+    "id": "Q3_003",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I often use dimensionality reduction in projects. PCA flattened my image features and blurred classes so I tried nonlinear UMAP and it pulled out the curved manifold of digits. I think nonlinear methods reveal structure PCA missed.",
+    "keywords": [
+      "dimensionality reduction",
+      "nonlinear methods"
+    ]
+  },
+  {
+    "id": "Q3_004",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I made simple plots and heatmaps to visualize features. I tried cosine and Euclidean to measure similarity and then used KL divergence to spot a distribution shift between train and test. It found a class skew I missed.",
+    "keywords": [
+      "visualization",
+      "similarity measures",
+      "KL divergence"
+    ]
+  },
+  {
+    "id": "Q3_005",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had missing data in my course survey. I think some gaps were MCAR, some MAR and some MNAR. For example, students left the income item blank so maybe MNAR. I tried mean impute and it felt shaky.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ]
+  },
+  {
+    "id": "Q3_006",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I spent hours cleaning and imputing missing values and scaling features so the model would not be biased by one column. After that k-means found three clear groups and I think those patterns matched user types from the survey.",
+    "keywords": [
+      "data preprocessing",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q3_007",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used simple plots to look for links and confounders. I ran a quick conditional independence test after scatter and box plots. For example I saw age and income look linked but they seemed independent once I conditioned on education.",
+    "keywords": [
+      "visualization",
+      "independence analysis"
+    ]
+  },
+  {
+    "id": "Q3_008",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used PCA for dimensionality reduction on my gene expression project and it helped me spot two main clusters. I think it cut noise and made plots simpler. Maybe I lost subtle features but it made models faster.",
+    "keywords": [
+      "PCA",
+      "dimensionality reduction"
+    ]
+  },
+  {
+    "id": "Q3_009",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I worked with a sensor CSV that had low data quality and lots of noise and missing values. I tried simple mean imputation but maybe I hid real spikes and the model did worse. I plan to try smoothing or drop bad rows next.",
+    "keywords": [
+      "data quality",
+      "noise",
+      "missing data"
+    ]
+  },
+  {
+    "id": "Q3_010",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used numeric and text data from a small survey. In preprocessing I fixed missing cells and scaled the scores. For visualization I made bar and box plots to spot outliers and trends.",
+    "keywords": [
+      "data types",
+      "preprocessing",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_011",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used an LLM to help me write a Python script for EDA and pick features. AI-assisted analysis saved me time when I was stuck cleaning missing values and let me try more models faster.",
+    "keywords": [
+      "LLM",
+      "AI-assisted analysis"
+    ]
+  },
+  {
+    "id": "Q3_012",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I imputed missing ages with the median and scaled numeric fields. Then I made a simple scatter of age vs income and a histogram of income to spot outliers and skew. I think the plots showed a few bad rows to fix.",
+    "keywords": [
+      "data preprocessing",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_013",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think data cleaning made the difference. I removed duplicates, filled missing ages and fixed category labels in a small survey and my classifier accuracy jumped. Maybe data quality matters more than fancy models.",
+    "keywords": [
+      "data cleaning",
+      "data quality"
+    ]
+  },
+  {
+    "id": "Q3_014",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think data quality nearly ruined my group project when we rushed. Missing values and wrong labels made our models useless. Now I check core data quality dimensions like completeness, accuracy, consistency and timeliness early and log issues to fix them.",
+    "keywords": [
+      "data quality",
+      "data quality dimensions"
+    ]
+  },
+  {
+    "id": "Q3_015",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I spend most time on preprocessing like filling holes and scaling. For a class project I dropped noisy cols and binned variables to cut data complexity and the model trained far faster and was less overfit.",
+    "keywords": [
+      "data preprocessing",
+      "data complexity"
+    ]
+  },
+  {
+    "id": "Q3_016",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had numeric, categorical and text data. I filled gaps, scaled numbers and cleaned text. I turned each sample into a feature vector with one-hot for cats and TF-IDF for text so my models could use it.",
+    "keywords": [
+      "data types",
+      "preprocessing",
+      "data representation"
+    ]
+  },
+  {
+    "id": "Q3_017",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I use plots to find mistakes in data. I often use matplotlib and seaborn in Python. I think a quick scatter or heatmap shows bad outliers fast. Maybe I should try interactive tools like Plotly next time.",
+    "keywords": [
+      "visualization",
+      "visualization tools"
+    ]
+  },
+  {
+    "id": "Q3_018",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I try to keep data preprocessing simple. For missing data I usually impute the median or drop rows if few; I once imputed age in a class project and the model improved.",
+    "keywords": [
+      "data preprocessing",
+      "missing data"
+    ]
+  },
+  {
+    "id": "Q3_019",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had missing data in a class survey so I used simple mean imputation and then multiple imputation with mice in R. When I ran linear regression the estimates changed a lot so I think the choice of method matters.",
+    "keywords": [
+      "missing data",
+      "statistical methods"
+    ]
+  },
+  {
+    "id": "Q3_020",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I focus on data preprocessing like filling missing values and standardizing formats to improve data quality. If I skip it the model gives odd outputs. Once a bad timestamp column ruined my features and reprocessing raised accuracy a lot.",
+    "keywords": [
+      "data preprocessing",
+      "data quality"
+    ]
+  },
+  {
+    "id": "Q3_021",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used cosine similarity on word embeddings to find similar job titles. It felt better than raw string match. Semantic distance seemed to capture meaning not just characters so embeddings helped group roles like dev and developer.",
+    "keywords": [
+      "similarity measures",
+      "semantic distance",
+      "embeddings"
+    ]
+  },
+  {
+    "id": "Q3_022",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I spent hours cleaning a messy CSV file fixing types and removing duplicates before I ran a model. That preprocessing made the results usable. I think data science is more about data work than fancy algorithms.",
+    "keywords": [
+      "data preprocessing",
+      "data science"
+    ]
+  },
+  {
+    "id": "Q3_023",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I worked with survey data that had numeric ages, free text comments and yes/no answers. I encoded the text and yes/no as categorical codes and scaled ages. The transform fixed type issues and helped my model run and learn.",
+    "keywords": [
+      "data types",
+      "data transformation"
+    ]
+  },
+  {
+    "id": "Q3_024",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think good data handling starts with clear folders and file names. In my group project I made a simple naming rule and found it saved time and avoided messed up merges. Maybe it seems basic but it helped everyone.",
+    "keywords": [
+      "data handling"
+    ]
+  },
+  {
+    "id": "Q3_025",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I cleaned my survey data by standardizing names and removing duplicates. I imputed missing age with the median since many were blank. I then made simple bar and box plots to spot odd values and guide further cleaning.",
+    "keywords": [
+      "data preprocessing",
+      "missing data",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_026",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think independence checks help me pick features that add new info. For example I checked correlation and a chi square on my loan data and dropped a column that was nearly independent of default.",
+    "keywords": [
+      "independence analysis"
+    ]
+  },
+  {
+    "id": "Q3_027",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I spent hours cleaning a survey file with missing age and duplicate IDs. I think cleaning fixed many errors but maybe I lost some real cases and now I worry data quality still has bias.",
+    "keywords": [
+      "data cleaning",
+      "data quality"
+    ]
+  },
+  {
+    "id": "Q3_028",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I made a scatter plot for two numeric columns to spot trends and outliers. I also plotted a bar chart of a categorical column to see counts and to check types (numeric vs categorical) in my dataset.",
+    "keywords": [
+      "visualization",
+      "data types"
+    ]
+  },
+  {
+    "id": "Q3_029",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I ran a small analysis of sales logs and found strange spikes. I think it was bad timestamps and missing rows. I had to drop messy days and flag the dataset for cleaning so my chart looked off.",
+    "keywords": [
+      "data analysis",
+      "data quality"
+    ]
+  },
+  {
+    "id": "Q3_030",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I deal with numeric and text data in my class. I save small tables as CSV and images as PNG. Sometimes I get JSON and it breaks my code. I think picking a clear format helps me debug fast.",
+    "keywords": [
+      "data types",
+      "data formats"
+    ]
+  },
+  {
+    "id": "Q3_031",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had sensor noise in a phone dataset and my model learned the random spikes. It fit training noise and failed on new data. I think I need a simpler model or more clean data to avoid overfitting.",
+    "keywords": [
+      "noise",
+      "overfitting"
+    ]
+  },
+  {
+    "id": "Q3_032",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I preprocessed my class survey by scaling scores and encoding yes/no as 0/1. I had missing ages so I imputed the median. I then made histograms and a scatter plot to spot odd values and show patterns.",
+    "keywords": [
+      "data preprocessing",
+      "missing data",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_033",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had lots of missing quiz scores in my project. At first I thought MCAR but then I saw students with jobs missed more so maybe MAR. And some who did poorly may have purposefully not reported scores so maybe MNAR.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ]
+  },
+  {
+    "id": "Q3_034",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used an LLM to suggest features for a churn model during a quick project. But my preprocessing — filling missing values, encoding categoricals and scaling numeric cols — made the biggest jump in accuracy, maybe more than the LLM.",
+    "keywords": [
+      "LLM",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_035",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used a bar chart to show class grades and changed raw scores to z-scores so bars are comparable. The plot made patterns clear. Maybe I should try color for groups next time.",
+    "keywords": [
+      "visualization",
+      "data representation"
+    ]
+  },
+  {
+    "id": "Q3_036",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had numeric and categorical data from a small shop. I used regression to predict daily sales and to test price effects. I used classification to mark customers as likely to buy or not and it gave a quick hint.",
+    "keywords": [
+      "data types",
+      "regression",
+      "classification"
+    ]
+  },
+  {
+    "id": "Q3_038",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think knowing data types matters. In my last project I had numeric ages and categorical job titles so I made a histogram for age and a bar chart for jobs. The plots made patterns pop and maybe I will try a scatter next.",
+    "keywords": [
+      "data types",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_039",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think handling missing values is key. In my last project I dropped rows with lots of NaNs. I imputed medians for age and scaled features before modeling and performance improved.",
+    "keywords": [
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_040",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I usually clean and impute missing values before modeling. For a class project I replaced blanks in survey scores with the median per question which fixed weird spikes and made training faster. I think simple fixes help a lot.",
+    "keywords": [
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_041",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used an AI tool to auto-make a scatter plot from my lab data and it made a neat image fast. I felt uneasy since the AI chose scales and filters I did not expect. I think I must check the plot.",
+    "keywords": [
+      "visualization",
+      "AI-generated plots"
+    ]
+  },
+  {
+    "id": "Q3_042",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I think good visualization helps spot odd patterns fast. For example when I made a scatter of study hours vs grades I saw one point with high hours but low grade and then found a data entry error.",
+    "keywords": [
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_043",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I ran a quick data analysis and saw a heavy skew in the target. I assigned simple features like day, promo and price bin and dropped user id. Maybe this will cut noise and help the model learn.",
+    "keywords": [
+      "data analysis",
+      "feature assignment"
+    ]
+  },
+  {
+    "id": "Q3_044",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used simple data visualization via line plots and heatmaps to look at web traffic. I think the plots made a repeating weekly pattern pop out and also showed one big outlier day that I then checked in the logs.",
+    "keywords": [
+      "data visualization",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q3_045",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I saw correlated attributes in my sensor data so I used PCA. It pulled linked features into one axis and made my model simpler and less noisy.",
+    "keywords": [
+      "attribute relationships",
+      "PCA"
+    ]
+  },
+  {
+    "id": "Q3_046",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used an AI tool to help reason through a data cleaning plan for my project. It gave useful stepwise logic but sometimes skipped why a choice was valid so I had to check assumptions myself.",
+    "keywords": [
+      "AI",
+      "reasoning"
+    ]
+  },
+  {
+    "id": "Q3_047",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had numeric and text data from a survey and I imputed missing values by median for numbers and mode for categories. I drew a histogram and a bar chart to spot skew and weird bins. It made me try a log transform.",
+    "keywords": [
+      "data types",
+      "data handling",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_048",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used logistic regression to classify emails as spam or not but many text features slowed training and caused overfit. I applied PCA to the TF-IDF matrix to cut dimensions and it made training faster and generalization slightly better in my project.",
+    "keywords": [
+      "classification",
+      "dimensionality reduction"
+    ]
+  },
+  {
+    "id": "Q3_049",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I did data cleaning by removing duplicates and filling missing survey answers with medians. For preprocessing I scaled numeric fields and one-hot encoded city and job columns. It helped the model train faster and reduced odd errors.",
+    "keywords": [
+      "data cleaning",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_050",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I preprocessed my survey file by dropping junk rows and scaling scores. I made quick histograms and scatter plots to see trends. For missing values I used median imputation for age and flagged rows with many blanks.",
+    "keywords": [
+      "data preprocessing",
+      "visualization",
+      "missing data"
+    ]
+  },
+  {
+    "id": "Q3_051",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I worked on a client survey with many missing ages and wrong zip codes. I filled blanks with the mean and later saw bad predictions. I think missing data and inaccuracy can ruin results.",
+    "keywords": [
+      "missing data",
+      "data inaccuracy"
+    ]
+  },
+  {
+    "id": "Q3_052",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used neural networks in my project and saw deep representation learning find good features from raw data. I think this made AI work better than my hand made rules. It felt like the model learned ideas I could not code.",
+    "keywords": [
+      "deep representation learning",
+      "neural networks",
+      "AI"
+    ]
+  },
+  {
+    "id": "Q3_053",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used cosine similarity to find similar news articles in a class project and it did well on long articles. It failed on short tweets and phrases. Maybe Jaccard or more context would help.",
+    "keywords": [
+      "similarity measures"
+    ]
+  },
+  {
+    "id": "Q3_054",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I preprocess by trimming whitespace and scaling numeric columns and dropping duplicates. For missing values I impute medians in skewed features which helped my model. I then plot histograms and boxplots to check changes.",
+    "keywords": [
+      "data preprocessing",
+      "imputation",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q3_055",
+    "q": "Q3",
+    "round": "R2",
+    "text": "In a class project my survey had missing ages and a phone sensor file with noisy spikes. I imputed ages with the median and used a small rolling mean to smooth the sensor in preprocessing. It helped but maybe lost some detail.",
+    "keywords": [
+      "missing data",
+      "noisy data",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_056",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I made a line chart of weekly app users and saw a clear weekday spike I missed before. A small heatmap of feature correlations revealed a cluster tied to login time and country. I then tested for workday effects.",
+    "keywords": [
+      "visualization",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q3_057",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I scraped my class survey responses for a small project and found many empty fields. I think missing data and sampling bias messed up my mean and made me rethink how I collect data next time.",
+    "keywords": [
+      "data collection",
+      "data concepts"
+    ]
+  },
+  {
+    "id": "Q3_059",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I use a bar chart to check mix of data types in my project. It shows counts for categorical fields and lets me spot numeric columns with lots of zeros. Maybe a simple plot saves time when cleaning data.",
+    "keywords": [
+      "visualization",
+      "data types"
+    ]
+  },
+  {
+    "id": "Q3_060",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had a survey dataset with many skipped answers so my sample was incomplete. I think that hurt my model. I also found inconsistent age fields like 30 and thirty which made cleaning slow.",
+    "keywords": [
+      "data completeness",
+      "data quality"
+    ]
+  },
+  {
+    "id": "Q3_061",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I always check for missing values and impute simple ones. For a project I replaced blanks in age with the median and fixed some outliers. It was messy but the model ran and results improved.",
+    "keywords": [
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_062",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used pattern discovery to find buying habits in my class project. I looked for repeated item sets and weekly trends. I then used cosine similarity on purchase vectors to group similar customers and spot a small loyal group.",
+    "keywords": [
+      "pattern discovery",
+      "similarity measures"
+    ]
+  },
+  {
+    "id": "Q3_063",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used PCA to reduce features from 200 to 10 before clustering. Dimensionality reduction cut noise and sped up my model. Maybe I lost some rare signals but results were clearer and visuals easier to read.",
+    "keywords": [
+      "dimensionality reduction",
+      "PCA"
+    ]
+  },
+  {
+    "id": "Q3_064",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used cosine similarity to cluster my short product reviews. It helped me group similar wording even when lengths differ and maybe Euclidean would fail. I think cosine felt right for sparse text and quick prototyping in a class project.",
+    "keywords": [
+      "similarity measures"
+    ]
+  },
+  {
+    "id": "Q3_065",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I had numeric and categorical data from a survey. I made a bar chart for categories and a scatter for numbers to spot trends. I handled missing fields by dropping rows and scaled the numeric features.",
+    "keywords": [
+      "data types",
+      "visualization",
+      "preprocessing"
+    ]
+  },
+  {
+    "id": "Q3_066",
+    "q": "Q3",
+    "round": "R2",
+    "text": "I used quick data visualization with scatter plots to spot outliers before a classification task. I then did simple preprocessing — dropped bad rows, filled missing with median and scaled features. It helped my random forest learn better.",
+    "keywords": [
+      "data visualization",
+      "classification",
+      "preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_001",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I use pandas and scikit-learn for most tasks. I try to follow best practice by writing small functions and using git for versions. For my last project I wrote simple tests for the data loader and it saved me hours.",
+    "keywords": [
+      "libraries",
+      "best practice"
+    ]
+  },
+  {
+    "id": "Q4_002",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I once let an AI agent fill missing values for ages and it hallucinated dates that did not match records. I think this is risky. Now I always flag imputed rows and spot check against raw data.",
+    "keywords": [
+      "AI agents",
+      "hallucination",
+      "missing values"
+    ]
+  },
+  {
+    "id": "Q4_003",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to label my photos for a class project. My data was images and text so I cleaned bad files, scaled pixels, and tokenized short notes.",
+    "keywords": [
+      "AI agents",
+      "data types",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_004",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to preprocess my survey CSV and it flagged outliers and filled blanks. I still spot-checked raw rows and stats because the tool missed context, altered categories, and crashed on an unusual date format.",
+    "keywords": [
+      "AI agents",
+      "data verification",
+      "tool limitations"
+    ]
+  },
+  {
+    "id": "Q4_005",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to preprocess a small survey set and it imputed missing values automatically. I think I missed a weird outlier and it skewed my mean and my final claim. I should have checked the list before trusting it.",
+    "keywords": [
+      "AI agents",
+      "missing values",
+      "outliers"
+    ]
+  },
+  {
+    "id": "Q4_006",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to label survey answers and it hallucinated details it never saw. I think it lacked data context like timestamps and source notes. Next time I'll add clear metadata so the agent won't guess missing facts.",
+    "keywords": [
+      "AI agents",
+      "hallucination",
+      "data context"
+    ]
+  },
+  {
+    "id": "Q4_007",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I try to verify AI outputs with spot checks and simple tests because it can give wrong answers. Once it made up labels for a column, so I explored the raw data and found missing values and bad formatting.",
+    "keywords": [
+      "AI verification",
+      "incorrect outputs",
+      "data understanding"
+    ]
+  },
+  {
+    "id": "Q4_008",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I had an AI agent suggest fills for missing values in my sensor dataset. It imputed noisy outliers as real data and my model got worse. I think I should clean noise first or tell the agent to ignore outliers.",
+    "keywords": [
+      "AI agents",
+      "missing values",
+      "noise"
+    ]
+  },
+  {
+    "id": "Q4_009",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to rank job applicants and it copied my bias because past hires were mostly one group and the training data had noisy labels from typos. Maybe it kept skipping good diverse candidates.",
+    "keywords": [
+      "AI agents",
+      "biased data",
+      "noise"
+    ]
+  },
+  {
+    "id": "Q4_010",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I had an AI agent scrub my messy survey data but it missed context from bad entries. I had to step in with my subject knowledge to correct labels and guide the agent. Maybe agents need human expertise for data quality.",
+    "keywords": [
+      "AI agents",
+      "data quality",
+      "human expertise"
+    ]
+  },
+  {
+    "id": "Q4_011",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I had messy survey data with many missing and wrong entries. I cleaned imputed and normalized it as preprocessing. I think that fixed noise and made my AI classifier about 15% more accurate in a small class project.",
+    "keywords": [
+      "data quality",
+      "data preprocessing",
+      "AI"
+    ]
+  },
+  {
+    "id": "Q4_012",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto-clean my survey data and it did many transforms like date parsing and null filling. I had to double check by sample checks and unit tests to make sure the changes matched my intent.",
+    "keywords": [
+      "AI agents",
+      "data transformation",
+      "verification"
+    ]
+  },
+  {
+    "id": "Q4_013",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I once leaked test info by using target stats in my features. I used label encoding for cities and it made the model prefer big cities. I think an AI agent auto-featurized my data and hid the leak.",
+    "keywords": [
+      "data leakage",
+      "label encoding",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_014",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used numbers and text data and then got errors when types mixed. I try to keep types consistent and run an AI agent to flag mismatches. That helped me catch label flips.",
+    "keywords": [
+      "data types",
+      "data consistency",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_015",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I clean timestamps and fill missing sensor values before modeling. I think domain knowledge matters. In my IoT project wrong time zones and a unit conversion error hid peak patterns and a domain rule fixed the data and improved predictions.",
+    "keywords": [
+      "data preprocessing",
+      "domain knowledge"
+    ]
+  },
+  {
+    "id": "Q4_016",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I had an AI agent auto-clean my lab sensor data but it ignored context like which tests came from a faulty device. In preprocessing I trimmed outliers and normalized per device to keep real events from being erased.",
+    "keywords": [
+      "AI agents",
+      "data context",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_017",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I spent hours preprocessing my survey set and found missing ages. I cleaned by dropping rows and imputing medians and flagged them. I worry this may add bias because younger people were more likely to skip.",
+    "keywords": [
+      "data preprocessing",
+      "bias",
+      "data cleaning"
+    ]
+  },
+  {
+    "id": "Q4_018",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I avoid using real student IDs in class projects to protect privacy and I mask names. I always check data types, missing values and run simple stats and plots to understand distributions and spot errors before I model.",
+    "keywords": [
+      "data privacy",
+      "data understanding"
+    ]
+  },
+  {
+    "id": "Q4_019",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto-format my lab CSV and JSON files. It fixed dates and parsed text and numbers. I think it helped me spot mixed data types fast and maybe next time I'll try XML too.",
+    "keywords": [
+      "AI agents",
+      "data format",
+      "data types"
+    ]
+  },
+  {
+    "id": "Q4_020",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to scan my dataset and it flagged a few outliers. I filled missing values with the median and left the outliers aside for later checks.",
+    "keywords": [
+      "AI agents",
+      "outliers",
+      "missing values"
+    ]
+  },
+  {
+    "id": "Q4_021",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I once used a tiny set of handwritten machine logs from a local factory. It felt like rare data so I was extra cautious and checked scans time stamps and odd values. Maybe I overdid it but that caught bad rows.",
+    "keywords": [
+      "uncommon data",
+      "caution"
+    ]
+  },
+  {
+    "id": "Q4_022",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used a small AI tool to explore my class survey data and it flagged bad entries I missed. I think the quick patterns it found helped my simple analysis and saved me hours of tedious cleaning.",
+    "keywords": [
+      "data analysis",
+      "AI"
+    ]
+  },
+  {
+    "id": "Q4_023",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I spent a day cleaning messy survey data so the agent would not learn garbage. Then I let a small AI agent make draft charts. The charts were OK but I think my cleanup still mattered most.",
+    "keywords": [
+      "data cleaning",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_024",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I often use public data from my city portal or Kaggle for class projects. I think these sources are easy to get but messy. For my last assignment I used bus sensor logs and had to fix missing timestamps and duplicates.",
+    "keywords": [
+      "data sources"
+    ]
+  },
+  {
+    "id": "Q4_025",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I am trying to model customer churn so I can target offers. I flagged a few huge purchase spikes as outliers and removed them, but in retail they may be real seasonal buys so maybe I should keep or treat them differently.",
+    "keywords": [
+      "analysis purpose",
+      "outliers",
+      "domain context"
+    ]
+  },
+  {
+    "id": "Q4_026",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to label images for my project and it missed context like seasonal markers. It made wrong calls. I think agents need richer data context or metadata to avoid mistakes.",
+    "keywords": [
+      "AI agents",
+      "data context"
+    ]
+  },
+  {
+    "id": "Q4_027",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I dropped rows with bad timestamps and filled a sensor gap with median impute. I plotted histograms and saw the target was heavily right skewed. I then ran cross validation and checked accuracy was stable across folds.",
+    "keywords": [
+      "data preprocessing",
+      "data understanding",
+      "verification"
+    ]
+  },
+  {
+    "id": "Q4_028",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to test a hypothesis that site visits rise on weekends. It flagged a repeating pattern in my data and made me tweak my model. I think this helps but maybe it is just noise.",
+    "keywords": [
+      "AI agents",
+      "hypothesis",
+      "data patterns"
+    ]
+  },
+  {
+    "id": "Q4_029",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I made a simple chart to show prediction errors and noticed a cluster. An AI agent then suggested new features and flagged bad rows. I think the plot made the agent's advice clear and easier to act on.",
+    "keywords": [
+      "data visualization",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_030",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I tried an AI agent to draft CSV rows for a model. The agent kept changing the output format so my parser broke. I fixed it by adding strict schema tests and validating outputs on a small holdout set.",
+    "keywords": [
+      "AI agents",
+      "output format",
+      "validation"
+    ]
+  },
+  {
+    "id": "Q4_031",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto-clean a dataset and it filled many null values with zeros. I think that led me to misinterpret age trends and made my model biased. Next time I will check nulls first.",
+    "keywords": [
+      "AI agents",
+      "null values",
+      "interpretation"
+    ]
+  },
+  {
+    "id": "Q4_032",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to clean my sensor dataset and gave it clear instructions to drop nulls and normalize each column. It helped speed up preprocessing but I think it missed outliers. I then fixed some rows by hand.",
+    "keywords": [
+      "AI agents",
+      "instructions",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_033",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think domain knowledge saved me when I cleaned a messy medical data set from the EHR. I used a rule from clinicians to impute missing vitals and it stopped strange model errors and weird predictions.",
+    "keywords": [
+      "domain knowledge",
+      "missing values",
+      "medical data"
+    ]
+  },
+  {
+    "id": "Q4_034",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I first explored my dataset by plotting histograms and looking for missing values to understand variable ranges and skew. Then I did simple preprocessing like median impute for missing ages and scaled income so models train better.",
+    "keywords": [
+      "data preprocessing",
+      "data understanding"
+    ]
+  },
+  {
+    "id": "Q4_035",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think outliers and extreme values can wreck models and lead to odd behavior. In my class project one extreme sensor reading made the AI agent take dangerous actions because it learned from that bad data and I only noticed after a crash.",
+    "keywords": [
+      "outliers",
+      "extreme values",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_036",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I found 999s in a column and flagged them as errors. I checked the source form and asked the collector to verify a row and it fixed a coding error.",
+    "keywords": [
+      "error detection",
+      "data verification"
+    ]
+  },
+  {
+    "id": "Q4_038",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think labels often need a second human check. In my last project I labeled 200 images and had a teammate verify 10% and they caught many errors. Maybe a quick human verification pass saves time later.",
+    "keywords": [
+      "data labeling",
+      "human verification"
+    ]
+  },
+  {
+    "id": "Q4_039",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I found one big outlier in my temperature readings that came from a miscalibrated sensor. I think it was an error not real signal. Maybe an AI agent could flag this kind of bad row but it might miss subtle faults.",
+    "keywords": [
+      "outliers",
+      "errors",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_040",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I usually clean and scale data before I train a model. For example I once imputed median income and removed outliers and scaled features and kNN test accuracy went from low sixties to about seventy eight percent.",
+    "keywords": [
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_041",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I try to verify AI outputs by spot checking a few records against original sources. Once I found fabricated rows in a scraped dataset and removed them. I avoid storing raw names or SSNs and use hashed IDs for sensitive data.",
+    "keywords": [
+      "AI verification",
+      "data fabrication",
+      "sensitive data"
+    ]
+  },
+  {
+    "id": "Q4_042",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I had missing ages in my dataset and used the default mean imputation in sklearn. I think that biased my predictions. Now I try simple imputation plus a missing flag and I don't just trust AI defaults.",
+    "keywords": [
+      "missing values",
+      "imputation",
+      "AI defaults"
+    ]
+  },
+  {
+    "id": "Q4_043",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an LLM fine tuned on medical notes to help write patient summaries. An AI agent ran checks and found inconsistencies. I think this domain fit cuts time and might save work in my clinic shift.",
+    "keywords": [
+      "LLM",
+      "domain-specific use",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q4_044",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I tried an AI agent to extract features from radiology reports. I validated its labels on fifty cases with a clinician and cross checked a small expert set. Domain context changed meaning so simple validation failed and I think more domain checks are needed.",
+    "keywords": [
+      "AI agents",
+      "validation",
+      "domain context"
+    ]
+  },
+  {
+    "id": "Q4_045",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I worry about data privacy when I upload class notes that include names and health info. Sensitive data should be removed before I use AI. AI summaries can leak details so I try to scrub info first.",
+    "keywords": [
+      "data privacy",
+      "sensitive data",
+      "AI summaries"
+    ]
+  },
+  {
+    "id": "Q4_046",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I asked an AI for sources for my project and it gave fake papers with authors that don't exist. I learned AI hallucination is real and that it can fabricate facts so I double check now.",
+    "keywords": [
+      "AI hallucination",
+      "fabrication"
+    ]
+  },
+  {
+    "id": "Q4_047",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I tried an AI agent to clean ECG data for a class project. I lacked cardiology domain knowledge so my preprocessing missed QRS peaks. I then added a bandpass filter and simple peak rules and the results got better.",
+    "keywords": [
+      "AI agents",
+      "domain knowledge",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q4_048",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto-clean a survey dataset and I watched its logs for a day. It made label errors on odd rows. I think we need simple monitoring and a fast rollback.",
+    "keywords": [
+      "AI agents",
+      "monitoring",
+      "errors"
+    ]
+  },
+  {
+    "id": "Q4_049",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I worry about data privacy in class projects and avoid using names or IDs. I think human oversight matters so I always review AI outputs because models assume training data matches reality and that can be wrong.",
+    "keywords": [
+      "data privacy",
+      "human oversight",
+      "AI assumptions"
+    ]
+  },
+  {
+    "id": "Q4_050",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto-label survey responses and it made obvious errors. I think adding quick data validation rules would have caught wrong labels and saved time. Next time I will add simple checks before trusting the agent.",
+    "keywords": [
+      "AI agents",
+      "errors",
+      "data validation"
+    ]
+  },
+  {
+    "id": "Q4_051",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I try to verify AI outputs by checking them against my raw data. I scan sample rows and compute simple stats like mean and sd. If the AI claims a big effect I run a t test or plot to see if numbers match.",
+    "keywords": [
+      "AI verification",
+      "data understanding",
+      "statistics"
+    ]
+  },
+  {
+    "id": "Q4_052",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think my job is to pick goals and check results. I let AI agents do the busy work and I write short clear prompts. A good prompt once saved me hours cleaning a bad CSV.",
+    "keywords": [
+      "human role",
+      "AI agents",
+      "prompting"
+    ]
+  },
+  {
+    "id": "Q4_053",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to preprocess a 10 million row dataset for my class project. It found weird outliers fast but I had to check its labels. Maybe I trust it too much.",
+    "keywords": [
+      "AI agents",
+      "large datasets"
+    ]
+  },
+  {
+    "id": "Q4_054",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I found many missing ages in my survey data so I filled them with the median but added a flag column. I then spot-checked records by hand. Maybe that saved bad imputations in weird cases.",
+    "keywords": [
+      "missing values",
+      "imputation",
+      "human oversight"
+    ]
+  },
+  {
+    "id": "Q4_055",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to auto label 5k images for a class project. I cleaned the labels and fixed bad ones and normalized pixel values during preprocessing. I made my lab mate spot check 200 images so a human oversees the output.",
+    "keywords": [
+      "AI agents",
+      "data preprocessing",
+      "human oversight"
+    ]
+  },
+  {
+    "id": "Q4_056",
+    "q": "Q4",
+    "round": "R2",
+    "text": "In my project I saw data accuracy drop when people typed ages wrong. I think my sample was biased toward college friends. Many rows had missing values so I filled them with medians and flagged them.",
+    "keywords": [
+      "data accuracy",
+      "bias",
+      "missing values"
+    ]
+  },
+  {
+    "id": "Q4_058",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think AI agents need the right data context to work well. In my project I fed an agent sensor logs but no metadata so it failed. Maybe we should pair time stamps and labels with numeric and text data.",
+    "keywords": [
+      "AI agents",
+      "data context",
+      "data types"
+    ]
+  },
+  {
+    "id": "Q4_059",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to test a hypothesis that clicks rise at noon. The agent found a clear time of day pattern and also more clicks from phone users so I think my hypothesis needs to be split. Maybe add device as factor.",
+    "keywords": [
+      "AI agents",
+      "hypothesis",
+      "data patterns"
+    ]
+  },
+  {
+    "id": "Q4_060",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I ran a small survey and had lots of missing data. I think some were MCAR from blank forms and some MAR when busy people skipped income. Maybe MNAR for weight because shy folks left it out.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ]
+  },
+  {
+    "id": "Q4_061",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I found an LLM gave biased hiring tips favoring one group. I think the training data lacked diversity. I had to study the data and use my own judgment to interpret outputs and flag errors before I share results.",
+    "keywords": [
+      "LLM bias",
+      "data understanding",
+      "human interpretation"
+    ]
+  },
+  {
+    "id": "Q4_062",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used CSV logs as my data format. I extracted fields with pandas read_csv and a few regex filters. I ran a small GPT check to flag odd entries and spot missing labels, but I treat it as rough verification.",
+    "keywords": [
+      "data format",
+      "extraction",
+      "AI verification"
+    ]
+  },
+  {
+    "id": "Q4_063",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used an AI agent to scan customer logs and it flagged odd clusters. I think my weak domain expertise kept me from seeing true data relationships like churn tied to plan changes.",
+    "keywords": [
+      "AI agents",
+      "domain expertise",
+      "data relationships"
+    ]
+  },
+  {
+    "id": "Q4_065",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I think I let an AI agent speed up labeling but I keep human checks. Once it dropped records with non-English names so I added supervision to catch that bias. Now I audit samples each week and log fixes.",
+    "keywords": [
+      "AI agents",
+      "human supervision",
+      "bias"
+    ]
+  },
+  {
+    "id": "Q4_066",
+    "q": "Q4",
+    "round": "R2",
+    "text": "I used AI agents to clean messy survey data. I then run a quick verification step by spot checking 10% of cases. I think human review caught two bad auto decisions so maybe we should keep that step for risky outputs.",
+    "keywords": [
+      "AI agents",
+      "verification",
+      "human review"
+    ]
+  },
+  {
+    "id": "Q5_001",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I use search suggestions when shopping. Once I typed coffee and it showed coffee filters and coffee maker. I think that mirrors an association rule where searches for A often lead to B. My click pattern matched the rule.",
+    "keywords": [
+      "search suggestions",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_003",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a simple market basket analysis on a small retail dataset and saw clear purchasing patterns. I think chips and salsa came up together a lot so the store put them by each other and maybe sales improved.",
+    "keywords": [
+      "market basket analysis",
+      "purchasing patterns",
+      "retail"
+    ]
+  },
+  {
+    "id": "Q5_004",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I read web novels and ran a market basket analysis on their tags. I saw romance and time travel often bought together. Maybe I can use that to make tag based recommendations for my reading list.",
+    "keywords": [
+      "web novels",
+      "market basket analysis",
+      "tags"
+    ]
+  },
+  {
+    "id": "Q5_005",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I used natural language processing on product reviews to spot word patterns like 'fast' with 'friendly'. I then ran an association rule to see which words co-occur and made simple tags to summarize. I think it helped prioritize fixes.",
+    "keywords": [
+      "natural language processing",
+      "association rule",
+      "word patterns"
+    ]
+  },
+  {
+    "id": "Q5_006",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I recommend using pattern mining on movie watch histories to improve recommendations. For example I noticed my last five movie picks were indie comedies so a pattern miner could push similar indie comedies and I liked that.",
+    "keywords": [
+      "recommendation",
+      "movies",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_007",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a market basket analysis on my game purchases and saw I often buy a shooter, a season pass and a cosmetic pack. A bundle that groups those at a small cut would make me add a new indie title. I think it would boost my spend.",
+    "keywords": [
+      "game purchases",
+      "market basket analysis",
+      "bundling"
+    ]
+  },
+  {
+    "id": "Q5_008",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I shop online a lot. I think pattern mining could spot an itemset like the phone case and charger I always buy together. Maybe that would make stores show better bundles and save me time and money.",
+    "keywords": [
+      "online shopping",
+      "pattern mining",
+      "itemset"
+    ]
+  },
+  {
+    "id": "Q5_009",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a quick market basket analysis on a supermarket receipt data set from my local store app. It found an association between chips and soda. I even bought both together last week so it feels real.",
+    "keywords": [
+      "supermarket",
+      "market basket analysis",
+      "association"
+    ]
+  },
+  {
+    "id": "Q5_010",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at course enrollment to find frequent itemsets of classes students take together. Pattern mining showed CS101 and Stat201 often co-occur in my data. I think this could help plan class times or recommend bundles.",
+    "keywords": [
+      "course enrollment",
+      "frequent itemset",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_011",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked for bots in a mobile game's logs by mining patterns of actions. I used simple sequence counts and timing gaps to flag accounts that acted like scripts. It helped me find several cheaters and think about game balance.",
+    "keywords": [
+      "bot detection",
+      "games",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_012",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I shopped at a supermarket and grabbed chips and dip. Market basket analysis might make an association rule chips → dip from my basket. Maybe the store puts them close to spark that buy.",
+    "keywords": [
+      "supermarket",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_013",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at my course registration list to find frequent itemsets of classes students pick together. I think an association rule like CS101 to STAT200 could help decide prereqs or add sections. Maybe it shows when to open more sections.",
+    "keywords": [
+      "course registration",
+      "frequent itemset",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_014",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran market basket analysis on my online store logs and found an association rule that ties phone cases to screen cleaners. I think bundling them in checkout boosted add-on sales in a quick A/B test I did last month.",
+    "keywords": [
+      "online store",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_015",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I notice I buy snacks and ready meals on days I am busy. I think I spend more on groceries right after payday and then cut back for two weeks. I try sale brands but mostly stick to the same staples.",
+    "keywords": [
+      "purchasing patterns",
+      "groceries"
+    ]
+  },
+  {
+    "id": "Q5_016",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I interned on an e-commerce site and I ran simple association rules to find items often bought together. I used the rules to build a basic recommendation system for cross sells. It raised my click rate a bit and maybe I can refine support thresholds.",
+    "keywords": [
+      "e-commerce",
+      "association rule",
+      "recommendation systems"
+    ]
+  },
+  {
+    "id": "Q5_017",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a quick association rule on my movie ratings and found sci‑fi often links to action. Maybe I can recommend action titles when someone likes sci‑fi. It seemed to work for my friends who liked Interstellar and Mad Max.",
+    "keywords": [
+      "movies",
+      "genres",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_018",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I work at a small e-commerce shop and we ran market basket analysis. An association rule showed phone cases go with screen protectors so we bundled them and sales rose. I think it helped a lot.",
+    "keywords": [
+      "e-commerce",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_019",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at my online shopping viewing history and I saw phone cases and screen protectors often viewed together. I think a frequent itemset could help the site bundle them for me and maybe boost sales.",
+    "keywords": [
+      "online shopping",
+      "frequent itemset",
+      "viewing history"
+    ]
+  },
+  {
+    "id": "Q5_020",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I think Coupang's recommendation system could use market basket analysis to show combos and boost my basket size. Once I bought ramen and the app suggested an egg pack during a late night buy. I clicked add and saved time.",
+    "keywords": [
+      "recommendation systems",
+      "market basket analysis",
+      "Coupang"
+    ]
+  },
+  {
+    "id": "Q5_021",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I used pattern mining on species counts from a local pond ecosystem. I found links between plant cover and insect diversity. I think biodiversity may follow simple rules but my sample size was tiny and more data is needed.",
+    "keywords": [
+      "ecosystem",
+      "biodiversity",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_022",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I play online team games with the same few friends. I think there is an association between who joins my lobby and my win rate. Maybe I could test this by tracking sessions and outcomes for each teammate.",
+    "keywords": [
+      "games",
+      "association"
+    ]
+  },
+  {
+    "id": "Q5_023",
+    "q": "Q5",
+    "round": "R2",
+    "text": "At the supermarket I stick to the same three aisles and buy the same items every week. I think I do this out of habit. Maybe I would find better deals if I looked more.",
+    "keywords": [
+      "supermarket",
+      "purchasing patterns"
+    ]
+  },
+  {
+    "id": "Q5_024",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I work at a supermarket and I think market basket analysis could help. I saw many people buy salsa and chips together. Maybe putting them on a shared endcap would boost sales.",
+    "keywords": [
+      "supermarket",
+      "market basket analysis"
+    ]
+  },
+  {
+    "id": "Q5_025",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I watch my video history and my podcast plays to see how the app learns my taste. After I removed one podcast from my history the recommender stopped pushing crime shows to me.",
+    "keywords": [
+      "watch history",
+      "podcasts",
+      "recommendation systems"
+    ]
+  },
+  {
+    "id": "Q5_026",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at airline booking logs to find travel patterns and saw midday weekday drops. I think aviation marketing could push cheap offers then to fill seats. My small test for a regional route cut empty seats by maybe 10%.",
+    "keywords": [
+      "aviation",
+      "travel patterns",
+      "marketing"
+    ]
+  },
+  {
+    "id": "Q5_027",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at my dad's medical records to match the timeline of his symptoms. I think fever and fatigue were underreported in the charts. Maybe patient reported symptoms need a simple daily log to help data work.",
+    "keywords": [
+      "medical records",
+      "symptoms"
+    ]
+  },
+  {
+    "id": "Q5_028",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I mined my game logs and used data mining to look for association rules. One rule showed that if I play puzzles for 10 minutes first my win rate goes up, so I do that before ranked games.",
+    "keywords": [
+      "games",
+      "data mining",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_029",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I worked on a small movie project. I scraped IMDb ratings and tried to predict score from genre and runtime. I think it overfit on train and did bad on test so I need more data.",
+    "keywords": [
+      "movies"
+    ]
+  },
+  {
+    "id": "Q5_030",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at clinic records and saw fever and cough often co-occur in the same patients. Maybe a simple pattern mining run could flag that pair and help target tests. I think this might show seasonal links or comorbidity to check.",
+    "keywords": [
+      "illnesses",
+      "co-occurrence",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_031",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I used market basket analysis on my small KPOP merchandise set from a pop up. I found one clear association rule: people who buy albums often buy posters and lightsticks too. I think bundling albums with posters might help sales.",
+    "keywords": [
+      "KPOP merchandise",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_032",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a quick market basket analysis on my food delivery orders. An association rule showed that if I order pizza I often add garlic knots. Maybe the app could push a small upsell.",
+    "keywords": [
+      "food delivery",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_033",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at my Netflix viewing history and used a simple association rule idea. When I watch crime dramas I often next play true crime docs. Maybe Netflix could use that to suggest shows I will like.",
+    "keywords": [
+      "Netflix",
+      "viewing history",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_034",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I use music streaming a lot and make many playlists. I think a frequent itemset on my playlists could spot songs that co-occur and auto-mix them.",
+    "keywords": [
+      "music streaming",
+      "playlists",
+      "frequent itemset"
+    ]
+  },
+  {
+    "id": "Q5_035",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I once used association rules to help a medical diagnosis project by linking symptom sets like fever and cough to suggest tests. I also applied the same rule mining to web logs to spot pages often viewed together.",
+    "keywords": [
+      "medical diagnosis",
+      "web log analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_036",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I mine my phone logs to find patterns in my human behavior. I think short texts spike before meals and late night app use shows a bad habit. Pattern mining helps me spot that and try one small change.",
+    "keywords": [
+      "human behavior",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_037",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I check my iPad usage data each week. It shows I use social apps about two hours a day and I scroll late at night. I cut notifications and set downtime. Maybe I sleep and focus more.",
+    "keywords": [
+      "usage data",
+      "iPad"
+    ]
+  },
+  {
+    "id": "Q5_038",
+    "q": "Q5",
+    "round": "R2",
+    "text": "In my class project I saw an association between sleep hours and exam scores. I used a scatter plot to show the link and a short caption to explain it. I think clear visuals help me communicate the main idea fast.",
+    "keywords": [
+      "association",
+      "communication"
+    ]
+  },
+  {
+    "id": "Q5_039",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I think YouTube's recommendation system keeps me stuck in the same loop. Last week it only showed me clickbait tech videos and I couldn't find new topics so the UX felt annoying. Maybe a simple show more variety toggle would help.",
+    "keywords": [
+      "YouTube",
+      "recommendation systems",
+      "UX"
+    ]
+  },
+  {
+    "id": "Q5_040",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran market basket analysis on my food delivery history to spot combos. One association rule said I often order fries with burgers so I added a combo once and saved money and time maybe worth automating.",
+    "keywords": [
+      "food delivery",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_041",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I tried a simple association rule on my Netflix movie history and saw that after watching indie dramas I often watch foreign films. I think Netflix could prompt one as a follow up maybe.",
+    "keywords": [
+      "Netflix",
+      "movies",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_042",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I did a small fraud detection project on banking data and used anomaly scores to flag odd transactions. I think a few late night big buys were the anomaly and one turned out to be real fraud.",
+    "keywords": [
+      "fraud detection",
+      "banking",
+      "anomaly"
+    ]
+  },
+  {
+    "id": "Q5_043",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I checked my course registration logs and found a frequent itemset of CS101 and Math101. Maybe an association rule like CS101 implies CS102 could help suggest next classes for me and others.",
+    "keywords": [
+      "course registration",
+      "frequent itemset",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_044",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I worked in a small restaurant and did a market basket analysis on orders. I found an association rule: customers who buy fries also buy milkshakes, so maybe a fries+shake combo would boost sales.",
+    "keywords": [
+      "restaurant",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_045",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I work part time in retail and I notice purchasing patterns like people buying chips and soda together. I think better product categorization could boost sales by placing them near each other. Maybe add small signs or endcap displays.",
+    "keywords": [
+      "retail",
+      "purchasing patterns",
+      "categorization"
+    ]
+  },
+  {
+    "id": "Q5_046",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I built a small recommendation system that suggests movies by genre and by a simple association rule from my watch list. It often links comedies with romcoms. I think it still misses the odd picks I like.",
+    "keywords": [
+      "recommendation systems",
+      "genres",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_047",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at patient notes and saw diabetes and depression co-occur a lot. I used a small pattern mining run to pull frequent illness pairs and it pointed to shared risk factors. I think this helps flag patients early.",
+    "keywords": [
+      "illnesses",
+      "co-occurrence",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q5_048",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a quick market basket analysis on my campus coffee stand to spot combos. One association rule was coffee to croissant with support about 12% so I think a small combo price could raise repeat buys.",
+    "keywords": [
+      "market basket analysis",
+      "association rule",
+      "support"
+    ]
+  },
+  {
+    "id": "Q5_049",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I did a telecom project on service bundling to reduce churn. I found that bundling phone and internet cut churn a bit but a single bad bill still made one friend leave.",
+    "keywords": [
+      "telecom",
+      "service bundling",
+      "churn"
+    ]
+  },
+  {
+    "id": "Q5_050",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I saw user behavior where people check the map then follow main corridors. Maybe movement patterns favor wide flat routes at rush hour. For example I always leave early and take the main path to class to avoid crowds.",
+    "keywords": [
+      "user behavior",
+      "movement patterns"
+    ]
+  },
+  {
+    "id": "Q5_052",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran a quick market basket analysis on my food delivery history and found strong rules like burger to fries. I think association rules could let the app suggest combos and cheap deals to save me time and money.",
+    "keywords": [
+      "food delivery",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_053",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran an association rule on supermarket till data and found chips and salsa pair. I think product placement near each other or at the aisle end could raise buys. Maybe test it for a week.",
+    "keywords": [
+      "supermarket",
+      "association rule",
+      "product placement"
+    ]
+  },
+  {
+    "id": "Q5_054",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I think my search keywords shape the recommendations I get. My app learns simple associations from my clicks. When I search jazz piano it then suggests related albums and playlists I might like.",
+    "keywords": [
+      "search keywords",
+      "recommendation systems",
+      "association"
+    ]
+  },
+  {
+    "id": "Q5_055",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I think Netflix could use my watch history with an association rule to link shows. My watch history often has sitcoms then sci fi. So it might suggest sci fi after I finish a sitcom.",
+    "keywords": [
+      "Netflix",
+      "watch history",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_056",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I looked at my Steam library and used a simple association rule to see which genres pair. I found that action and RPG often appear together in my games. Maybe I could use that for my next buy.",
+    "keywords": [
+      "games",
+      "genres",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_058",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I use my Steam wishlist to watch for sales and trends. I ran a simple association rule on wishlist items and found players who add Hades also add Hollow Knight so I wait for bundle deals.",
+    "keywords": [
+      "Steam",
+      "wishlist",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q5_059",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I used pattern mining on public transportation bus card data to find morning peaks. I did a simple demand analysis and suggested one extra bus on Line 5. Maybe it cut wait time and a small test felt promising.",
+    "keywords": [
+      "public transportation",
+      "pattern mining",
+      "demand analysis"
+    ]
+  },
+  {
+    "id": "Q5_060",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I ran an association rule on my Instagram likes and found travel and food often appear together. Maybe the semantics of captions would help filter noise and make the rules more meaningful. For example beach posts with adventure link to sushi.",
+    "keywords": [
+      "social media",
+      "association rule",
+      "semantics"
+    ]
+  },
+  {
+    "id": "Q5_061",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I noticed my store's sales jump on weekends when I bundle snacks with drinks for a small discount. I think customers buy both more often together so bundling alters purchasing patterns and raises total sales. I would test other combos.",
+    "keywords": [
+      "sales",
+      "product bundling",
+      "purchasing patterns"
+    ]
+  },
+  {
+    "id": "Q5_062",
+    "q": "Q5",
+    "round": "R2",
+    "text": "I did a small project using market basket analysis for a local department store. An association rule showed kids socks and school backpacks sell together so maybe bundling can boost sales.",
+    "keywords": [
+      "department store",
+      "market basket analysis",
+      "association rule"
+    ]
+  },
+  {
+    "id": "Q6_002",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I ran association rules on my grocery data and got milk to cookies with lift 1.8. The correlation was only 0.2. I think lift caught a real link that correlation missed.",
+    "keywords": [
+      "lift",
+      "association rule",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_003",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think seasonality matters: my campus coffee cart sells out in fall. Location matters because I set up near the library. My target audience is students so I make student deals and late hours.",
+    "keywords": [
+      "seasonality",
+      "location",
+      "target audience"
+    ]
+  },
+  {
+    "id": "Q6_004",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I like the independence of choosing web novels. I use them to study hybrid genres in my project and maybe that breaks simple classifiers. One concrete example: a romance is also sci fi and that confuses tags and my model.",
+    "keywords": [
+      "independence",
+      "web novels",
+      "hybrid genres"
+    ]
+  },
+  {
+    "id": "Q6_005",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I looked at web click sequences to find common paths. I used support to keep only paths seen often and that helped my pattern discovery: users who view product A then B often buy B next.",
+    "keywords": [
+      "sequence",
+      "support",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q6_006",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I used my Spotify liked songs to look at co-occurrence of artists in playlists. I think clustering split them into chill pop and workout groups. That showed me odd artist pairs and helped pick songs for study sessions.",
+    "keywords": [
+      "music",
+      "co-occurrence",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q6_007",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I found an outlier in my fitness tracker steps. It felt like an anomaly and pushed me to check sensors. That led me to find a pattern: weekends had low steps when I forgot the device. Maybe I can fix it.",
+    "keywords": [
+      "outliers",
+      "anomaly",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q6_008",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I track a recipe app that shows short videos and step lists. I think my use shows a pattern: I open it mostly on weekend afternoons when I cook and I skip it on busy weeknights maybe due to time.",
+    "keywords": [
+      "app content",
+      "pattern"
+    ]
+  },
+  {
+    "id": "Q6_010",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I group items by category then look for relationships like co-buying. In my app data I put products into snacks drinks and meals. I saw snacks and drinks often bought together so maybe a bundle.",
+    "keywords": [
+      "item grouping",
+      "relationships"
+    ]
+  },
+  {
+    "id": "Q6_011",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I found a rare pattern where one user always uploaded a file at 3 AM. I think it was a bot. An unexpected pattern was a big drop on weekends that turned out to be a sync bug I fixed once.",
+    "keywords": [
+      "rare patterns",
+      "unexpected patterns"
+    ]
+  },
+  {
+    "id": "Q6_012",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think my confidence grew when I pruned redundant rules in a decision rule set for a class project. Removing two nearly identical rules cut contradictions. Now I trust the model more and debug faster.",
+    "keywords": [
+      "confidence improvement",
+      "rule redundancy"
+    ]
+  },
+  {
+    "id": "Q6_013",
+    "q": "Q6",
+    "round": "R2",
+    "text": "In my market basket project I saw high lift for coffee and muffin pairs so those rules mattered. But correlation between age and spend was low in my sample. I think lift showed strong co buy ties while correlation missed it.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_014",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I am pretty sure a tiny change can matter. In my project I added a time of day feature and maybe got a clear boost in accuracy. It felt novel because no one else tried it and I could explain why.",
+    "keywords": [
+      "conviction",
+      "novelty"
+    ]
+  },
+  {
+    "id": "Q6_016",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I use conditional probability to update class chances when I see a feature. I prune my decision tree by cutting small branches that overfit; for example I removed a rare value split and validation accuracy went up.",
+    "keywords": [
+      "conditional probability",
+      "pruning"
+    ]
+  },
+  {
+    "id": "Q6_017",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I use similarity of items to find likely pairs and then check support and confidence to pick useful rules. For example I noticed chips and soda are similar in carts so with support about 8% and confidence near 70% I trusted that rule.",
+    "keywords": [
+      "similarity",
+      "support",
+      "confidence"
+    ]
+  },
+  {
+    "id": "Q6_018",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I pick top-5 items by matching item attributes like genre and length to my user history of clicks and purchases. For example the top-5 movies are heavy on sci‑fi because I watched lots this month.",
+    "keywords": [
+      "top-k",
+      "item attributes",
+      "user history"
+    ]
+  },
+  {
+    "id": "Q6_019",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I checked lift for chips and soda in my campus store to see if they sell together. Conviction helped me trust rules that seem real and correlation of weather and sales was weak. I think lift gave the best signal.",
+    "keywords": [
+      "lift",
+      "conviction",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_023",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I looked at lift to pick a promo for email users. For one rule lift was 1.8 and I sent that offer to the target group. Clicks went up and we got more buys so maybe lift was useful.",
+    "keywords": [
+      "lift"
+    ]
+  },
+  {
+    "id": "Q6_024",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think the novelty is using cheap bike GPS logs to infer micro traffic patterns in my city. I used a week of rides and simple clustering. Maybe no one has done that here and it could help local plans.",
+    "keywords": [
+      "novelty"
+    ]
+  },
+  {
+    "id": "Q6_025",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I looked at our app metrics this month and saw weekday use rise while weekend sessions fall. I think we should test a simpler mobile onboarding and a weekend promo push to bring weekend users back.",
+    "keywords": [
+      "engagement",
+      "trends",
+      "recommendation"
+    ]
+  },
+  {
+    "id": "Q6_026",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I saw an anomaly in my web log when one user made 200 requests in a minute. I think the probability it was a bot was high, maybe 90%. I flagged it and will check more again tomorrow.",
+    "keywords": [
+      "anomaly",
+      "probability"
+    ]
+  },
+  {
+    "id": "Q6_027",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I noticed a clear correlation between my coffee intake and late nights studying. Maybe it is just coincidence that this also matches the weeks I order pizza and sleep poorly during exams. I lean toward coincidence.",
+    "keywords": [
+      "correlation",
+      "coincidence"
+    ]
+  },
+  {
+    "id": "Q6_028",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think noise in my wearable sensor data made heart rate readings jump in my class project. I set a fixed threshold to ignore small jumps. That boosted data reliability but maybe I filtered out real quick spikes.",
+    "keywords": [
+      "noise",
+      "threshold",
+      "data reliability"
+    ]
+  },
+  {
+    "id": "Q6_030",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think models can pick up bad patterns from context. In a class project my loan default model mapped ZIP codes to risk and ended up hurting poor neighborhoods. I had to remove location to reduce that bias.",
+    "keywords": [
+      "negative patterns",
+      "context"
+    ]
+  },
+  {
+    "id": "Q6_031",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I tried transfer learning to leverage a small labeled set. It gave good coverage of edge cases but the pipeline did not scale. Maybe moving to batch inference on the cloud fixed scalability in my last project.",
+    "keywords": [
+      "leverage",
+      "coverage",
+      "scalability"
+    ]
+  },
+  {
+    "id": "Q6_032",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I once found a strong correlation in my project between phone use and low grades. I thought it meant phones hurt study but later I saw the pattern was misleading. Both tied to stress and bad sleep not a direct cause.",
+    "keywords": [
+      "correlation",
+      "misleading patterns"
+    ]
+  },
+  {
+    "id": "Q6_033",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I saw a lift of two in click rate for older users in my model. The unexpectedness was high because I did not expect older users to change. In actuality the A/B test showed only a small gain so maybe the model overfit.",
+    "keywords": [
+      "lift",
+      "unexpectedness",
+      "actuality"
+    ]
+  },
+  {
+    "id": "Q6_034",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think consistency helps with both data work and music. I practice guitar every morning for 30 minutes and run small scripts right after. That routine made my model scores less jumpy and my playing improve.",
+    "keywords": [
+      "consistency",
+      "music"
+    ]
+  },
+  {
+    "id": "Q6_035",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I gave more leverage to a small feature I had conviction in for a churn model. It helped some but the correlation was weak so results were noisy and I might be wrong and I logged it for review.",
+    "keywords": [
+      "leverage",
+      "conviction",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_036",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I used a simple rule: flag rows with missing values over 30% and high variance as my criteria. I think this found a pattern of cluster of bad sensors at the edge of the farm. Maybe it's a placement issue.",
+    "keywords": [
+      "criteria",
+      "pattern"
+    ]
+  },
+  {
+    "id": "Q6_037",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I hypothesize that short study sessions with breaks improve my memory and test scores. I think when I study 25 minutes then take a 5 minute break I recall more facts and do better on quizzes.",
+    "keywords": [
+      "hypothesis"
+    ]
+  },
+  {
+    "id": "Q6_039",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I often learn how to handle exceptions from short YouTube clips. I used one tutorial to fix a try/except that kept crashing my data pipeline and maybe now I stop errors more cleanly.",
+    "keywords": [
+      "exceptions",
+      "YouTube"
+    ]
+  },
+  {
+    "id": "Q6_040",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think my model has consistency in training loss but poor reliability on new data because sensor noise makes inputs jitter. Maybe I need more runs and a simple filter. I log raw and clean streams to see the gap.",
+    "keywords": [
+      "consistency",
+      "reliability",
+      "noise"
+    ]
+  },
+  {
+    "id": "Q6_041",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I checked correlation between my study time and grades and found a small link. I think lift gave a clearer signal when I paired review sessions with higher quiz scores. Maybe that pair happens more than by chance.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_042",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I use past click logs as history to watch student behavior in my class. I think patterns like late-night edits show cramming. It helped me spot a group that always redoes labs before deadlines and ask them to change study habits.",
+    "keywords": [
+      "history",
+      "behavior",
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q6_043",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I saw a strong correlation between my study hours and quiz scores in a mini project. I bought extra time-tracking data and its value of information showed when it boosted my model enough to matter.",
+    "keywords": [
+      "correlation",
+      "value of information"
+    ]
+  },
+  {
+    "id": "Q6_044",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I relate when a data trend mirrors my life, like more screen time on days I skip sleep. But I also see coincidence — once my step count jumped the day I bought new shoes and it turned out to be a fluke.",
+    "keywords": [
+      "relatability",
+      "coincidence"
+    ]
+  },
+  {
+    "id": "Q6_046",
+    "q": "Q6",
+    "round": "R2",
+    "text": "In my last class project two rare features co-occurred and those cases had high leverage and skewed my regression. Maybe I should downweight or flag co-occurrence clusters next time. I think that cost my model accuracy.",
+    "keywords": [
+      "leverage",
+      "co-occurrence"
+    ]
+  },
+  {
+    "id": "Q6_047",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I saw a negative pattern in my class survey where many scores were low. In the context of remote labs it felt like students did not try. I think this skewed my model and I flagged it.",
+    "keywords": [
+      "negative patterns",
+      "context"
+    ]
+  },
+  {
+    "id": "Q6_048",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think the novelty is using routine sensor logs for contact tracing. My data was unique because it tied badge scans to self reports. That insight showed missed scans predicted later sickness reports and maybe this helps early warning.",
+    "keywords": [
+      "novelty",
+      "uniqueness",
+      "insight"
+    ]
+  },
+  {
+    "id": "Q6_049",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I use distance for clustering of customers in my project. One outlier with huge spend pulled the center and made a wrong cluster so I removed it and the groups looked much clearer.",
+    "keywords": [
+      "distance",
+      "clustering",
+      "outliers"
+    ]
+  },
+  {
+    "id": "Q6_050",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I used cosine similarity in a class project to find near duplicate tweets. I made TF-IDF vectors and then picked pairs with high cosine score to merge labels which helped me clean my dataset fast and save time.",
+    "keywords": [
+      "cosine similarity"
+    ]
+  },
+  {
+    "id": "Q6_051",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I looked at marketing data and saw high lift for coupons with clicks but low correlation with purchase amounts. I think lift showed the campaign helped conversion while correlation with spend was weak so other factors drive order size.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ]
+  },
+  {
+    "id": "Q6_052",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think consistency beats one lucky result. In my class project I ran the model five times and got similar scores so I felt it was reliable. When noise crept in one run jumped and that lowered my trust.",
+    "keywords": [
+      "consistency",
+      "reliability",
+      "noise"
+    ]
+  },
+  {
+    "id": "Q6_053",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I see seasonality in my buys. In summer I buy cold drinks and ice cream. At big festivals like Lunar New Year I buy sweets and gifts in bulk so my normal purchasing pattern spikes.",
+    "keywords": [
+      "seasonality",
+      "festivals",
+      "purchasing patterns"
+    ]
+  },
+  {
+    "id": "Q6_054",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think k-means clustering helped me group my small shop's buyers by how much and when they buy. One group was clear heavy buyers. I sent them a trial promo and saw more repeat sales.",
+    "keywords": [
+      "clustering",
+      "grouping"
+    ]
+  },
+  {
+    "id": "Q6_055",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I found an unexpected pattern in my class project where churn rose on weekends. I thought weekdays would be worse. Maybe bots or a promo ran then. I need to dig deeper but it's odd.",
+    "keywords": [
+      "unexpected patterns"
+    ]
+  },
+  {
+    "id": "Q6_058",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I think demographics in my class project showed gender differences. For example 70 percent were female and 30 percent male. I am 20 and most respondents were 18 to 24 so age may bias results.",
+    "keywords": [
+      "demographics",
+      "gender",
+      "age"
+    ]
+  },
+  {
+    "id": "Q6_059",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I ran a chi-squared test on my class survey to check independence of study method and pass/fail. The p value was small so I think they are not independent. Maybe study method affects pass rates but the sample is small and noisy.",
+    "keywords": [
+      "statistical test",
+      "independence",
+      "chi-squared"
+    ]
+  },
+  {
+    "id": "Q6_060",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I found patterns in my workout app data and noticed I run faster on weekdays when I sleep more. I think more sleep links to speed. Maybe I will use that for training and track it next month.",
+    "keywords": [
+      "pattern discovery"
+    ]
+  },
+  {
+    "id": "Q6_061",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I do goal-based buying when I shop for a study snack run for late night work. Market basket analysis in my app shows chips and salsa often go together so I add dip too. It cuts extra trips.",
+    "keywords": [
+      "goal-based buying",
+      "market basket analysis"
+    ]
+  },
+  {
+    "id": "Q6_062",
+    "q": "Q6",
+    "round": "R2",
+    "text": "I chose to leverage co-occurrence counts as extra features in a text model. The small tweak left a clear impact on accuracy and on which tokens the model trusted so I think it is worth more study.",
+    "keywords": [
+      "leverage",
+      "co-occurrence",
+      "impact"
+    ]
+  },
+  {
+    "id": "Q7_001",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I ran pattern mining on sales logs to spot repeat buys. Then I used clustering to group similar customers and a hash table data structure to speed lookups. It helped but maybe overfit some noisy spikes in the data.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "data structure"
+    ]
+  },
+  {
+    "id": "Q7_002",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to pull frequent itemsets from sales logs and then ran clustering on the frequency vectors. It gave me clusters of high medium and low buyers and helped me spot a group for a promo.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "frequency"
+    ]
+  },
+  {
+    "id": "Q7_003",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I ran clustering on store data to make three buyer groups. Pattern mining found weekly buys and association rules showed milk to bread so I moved them closer and sales rose a bit I think.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "association rules"
+    ]
+  },
+  {
+    "id": "Q7_004",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my grocery logs and ran k-means clustering. Distance choice really changed my groups: Euclidean split by spend while cosine grouped by item mix so I picked cosine.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "distance"
+    ]
+  },
+  {
+    "id": "Q7_005",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried unsupervised learning on web logs to find user groups. I did clustering to group sessions and used pattern mining to pull common click sequences. It helped me see clear user habits and maybe build simple site fixes.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_006",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent web click paths in my project. Then I used clustering to group users with similar paths. It helped me spot one group who always left at checkout and maybe to try a simpler checkout flow.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_007",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to pull out frequent item sets from sales logs and then did k-means clustering on users. My clusters only partly matched the ground truth segments we had so I think the patterns missed some user intent.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "ground truth"
+    ]
+  },
+  {
+    "id": "Q7_008",
+    "q": "Q7",
+    "round": "R2",
+    "text": "In my project I used pattern mining to spot frequent web click paths and clustering to group users by behavior. I think this helped my data mining work by making models simpler and by finding odd patterns that needed cleaning.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "data mining"
+    ]
+  },
+  {
+    "id": "Q7_009",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my small online store data to find frequent item sets like bread and milk. Then I clustered customers by those patterns and found a group that buys snacks at night so I tried a simple night promo.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_010",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I use unsupervised learning when I have no labels to find structure. For example I applied clustering and pattern mining on shopping logs and found three customer types and a common basket of items.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_012",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on shop sales to do pattern mining in class. Clustering showed three buyer types and helped me pick a niche for a promo plan. Maybe the clusters were noisy yet the idea seemed right.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_013",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I did a class project using unsupervised learning to find click patterns. I used pattern mining and simple clustering to group users. It helped me spot a small group of users who acted very differently and maybe were bots.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_014",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used k-means clustering to find hidden groups in my retail data and pattern mining to pull common buying rules. I think this revealed a hidden structure of weekend buyers vs weekday buyers and helped me target promos better.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "hidden structure"
+    ]
+  },
+  {
+    "id": "Q7_015",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning to explore my shopping dataset. I ran pattern mining and then clustering to find groups of customers. I think it helped me spot a small loyal group and weird outliers I did not expect.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_016",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried pattern mining on sales logs to find frequent item sets. Then I did clustering to group similar buyers and used an interestingness score to pick one surprising high value rule I will maybe explore more later.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "interestingness"
+    ]
+  },
+  {
+    "id": "Q7_017",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my app logs and found repeat peaks in activity. I then used clustering to group users by session length and saw three clear types. Association rules showed short sessions often include the help screen. Maybe fix UI.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "association rules"
+    ]
+  },
+  {
+    "id": "Q7_018",
+    "q": "Q7",
+    "round": "R2",
+    "text": "My class project used pattern mining to find common click paths in our app. Then I used clustering to split users by behavior and association rules showed one group bought product A with B so I think cross ads might help.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "association"
+    ]
+  },
+  {
+    "id": "Q7_019",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent item pairs in my class project and then used clustering to group students by study habits. It let me spot a small cluster who always do readings together and maybe prefer morning sessions.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_020",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my class sales log to find common item sets. Then I ran clustering to group customers by buys. In my data analysis I found a small cluster with many returns and that changed my project plan.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "Q7_021",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my campus cafe receipts to see which items sell together. Then I ran a simple clustering to group similar buyers by time and order size. Maybe those groupings help make small targeted deals.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "grouping"
+    ]
+  },
+  {
+    "id": "Q7_022",
+    "q": "Q7",
+    "round": "R2",
+    "text": "In my last project I used pattern mining to find common item sets. I preprocessed by dropping bad rows and scaling numbers. Then I ran clustering and saw groups change a lot, so preprocessing felt key.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "Q7_023",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I did a quick pattern mining on my fitness app data and found repeated morning runs. I then clustered users by run time and maybe found relationships between cluster and step count. It helped me spot groups with better habits.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "relationships"
+    ]
+  },
+  {
+    "id": "Q7_024",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning in my class project. I ran pattern mining to find common product combos and then used clustering to group customers. It let me find a tiny segment that buys running shoes and earbuds together.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_025",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used clustering in an unsupervised learning project last term. I did simple pattern mining on shopping data to find bundles and similar buyers. It felt rough but gave me a few useful leads for marketing.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_026",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on our class shopping logs to find frequent item sets. Then I ran clustering to group buyers by style. But noise in the logs made a few weird clusters. I think cleaning helps a lot.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "noise"
+    ]
+  },
+  {
+    "id": "Q7_027",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning for clustering my app users into groups by activity. Pattern mining then found repeat habits like morning logins, short sessions, and weekend purchases. I think this helped target emails to each group.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_028",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on my app logs to look for hidden user habits. Pattern mining showed common action sequences like view add to cart checkout and maybe errors. Clustering split users into three groups that seem budget casual and power users I might target.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_029",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent items in my grocery receipts. Then I used clustering as unsupervised learning to group shoppers into four groups. It helped me spot a small group that bought baby and pet items.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_030",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried unsupervised learning on my shopping data and used simple pattern mining to find frequent dates. Then I ran clustering to group customers by buy habits. I think it helped me spot a few odd groups to inspect.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_031",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I think pattern mining helped me find repeated shopping paths in my app logs last month. Then I used k-means clustering to group similar users and tailor emails, which maybe lifted open rates a bit.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_032",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning like clustering to mine patterns in sales logs. I ran k-means and found three groups that matched casual, loyal, and bargain buyers. It felt rough but useful for targeting offers.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_033",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find common product sets in shopping data and then ran clustering to split customers by buying habits. I then grouped those clusters by city to make local promos. I think it helped focus offers.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "grouping"
+    ]
+  },
+  {
+    "id": "Q7_034",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my store sales to find repeated item combos I had missed. I then ran clustering to group shoppers by the combos and got quick ideas for simple promos.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_035",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my store logs to spot repeat buys. Then I ran clustering as an unsupervised learning step to group customers by behavior. Maybe this found a niche group that loved sale socks.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_036",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent item sets in my retail data and then used clustering to group customers. That showed three rough buyer types in my small project. I think it helped me see patterns I missed before.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_037",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my small grocery dataset to find frequent item sets like bread and milk. Then I ran clustering to group customers and found two clear shopper types which helped me target promotions.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_038",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my dorm store data and used support to drop rare combos. Clustering then grouped buyers into small snack lovers frequent buyers and erratic shoppers which I think could guide offers.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "support"
+    ]
+  },
+  {
+    "id": "Q7_039",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried unsupervised learning to do pattern mining on web logs. I used clustering to group sessions by behavior. It helped me find a tiny group of bots hidden in noise and saved time in cleaning data.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_040",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on web logs to pull out common click paths. Then I clustered users by behavior with k-means and used Euclidean distance. Some users ended up in wrong groups so maybe I need a better distance or different clustering.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "distance"
+    ]
+  },
+  {
+    "id": "Q7_041",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent product combos in an online sales log. I then ran k-means clustering on customer vectors with a simple distance matrix to group shoppers. The clusters helped me target promotions.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "distance matrix"
+    ]
+  },
+  {
+    "id": "Q7_042",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to spot repeated user paths in web logs. I then ran clustering to group similar sessions. That made me pick a simple data structure, a dict of lists keyed by session id, to store sessions.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "data structure"
+    ]
+  },
+  {
+    "id": "Q7_043",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I ran clustering on web logs to group sessions by behavior. Then I used pattern mining to find common click paths and odd loops. Unsupervised learning let me spot a small group of users who always bounced and maybe need a fix.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_044",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on retail logs to pull common item combos. Then I ran clustering to split shoppers into groups by those combos. It let me spot a bargain group and a gift group. I think it could guide promos.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_045",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning in a small project where I did pattern mining on store logs. I ran clustering to group customers by behavior. It was rough but the clusters showed clear buying habits I didn't expect.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_046",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on app logs to find frequent action sets. I then did simple clustering of users. It revealed hidden info: a tiny cluster that opens the app at 3am and buys one cheap item. I think they might be bots.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "hidden information"
+    ]
+  },
+  {
+    "id": "Q7_047",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on sales logs where I did pattern mining and then clustering to find buyer groups. I think it helped spot a few odd buying habits. Maybe more features would sharpen the clusters.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "id": "Q7_048",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on store sales to find common item sets. It showed socks and shoes often sell together. I then ran clustering on customers and found three groups with different buying habits that helped target promotions.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_049",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried pattern mining on my retail dataset and found repeat buy patterns. I then used k-means clustering to group customers. Maybe the clusters matched the patterns and helped me spot a weekend buyer group I can target.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "patterns"
+    ]
+  },
+  {
+    "id": "Q7_050",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning for pattern mining on my bike shop sales. I ran clustering to find customer groups. I think it helped me spot weekday vs weekend buyers. Maybe I can target them differently.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_051",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I ran pattern mining on my snack receipts to find frequent items. Then I used simple clustering and saw days group by those high frequency buys. I think it shows my weekly habit of grabbing chips and soda.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "frequency"
+    ]
+  },
+  {
+    "id": "Q7_052",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I think I used pattern mining on my store receipt data to find items that go together. Then I clustered customers by those patterns using a simple one hot representation and got groups that matched shopping habits.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "representation"
+    ]
+  },
+  {
+    "id": "Q7_053",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find shopping combos and then used clustering to group buyers by behavior. I pruned tiny clusters and low-support patterns to cut noise and speed things up, but maybe I tossed a rare useful case.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "pruning"
+    ]
+  },
+  {
+    "id": "Q7_055",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried pattern mining on my grocery receipt data to find frequent item sets. Then I used clustering to group shoppers by basket type. It showed a small group that always buys tea and cookies. Maybe I can target them with offers.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_056",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to spot repeated buys in my app logs. I then did simple clustering to group users by buy time and ran association rules that found bread with milk. Maybe I can push coupons to each group.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "association rules"
+    ]
+  },
+  {
+    "id": "Q7_057",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent combo of actions in app logs and then clustered users by those combos. It let me spot a small group with weird jump rates. I think this could guide a focused test.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_059",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on app logs to see habits. I ran clustering to find user groups and simple pattern mining to spot common click paths. It gave me clear segments I then checked with a small survey.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_061",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I tried unsupervised learning on my project to find patterns in sales logs. Pattern mining found that people buy snacks with drinks. Clustering then grouped customers by those habits and helped me pick which group to target.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_062",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on my app logs to find frequent click sequences. I then ran clustering and found hidden structure: a tiny group that always drops off after signup. I think we should test a different flow.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "hidden structure"
+    ]
+  },
+  {
+    "id": "Q7_063",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find frequent item sets in a class retail dataset. Then I used clustering to group customers and partitioning to split the data for models. I think it helped find real segments but was noisy.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "partitioning"
+    ]
+  },
+  {
+    "id": "Q7_064",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on retail logs to explore behavior. Pattern mining pulled out frequent item combos and clustering grouped shoppers into three noisy segments. I think this gave quick insights but maybe I would tune features next time.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_065",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining to find common item pairs in a small retail log. Then I used k means clustering to group shoppers by those patterns. I think clusters made it easy to target deals for each group.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q7_066",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used pattern mining on grocery receipts to pull frequent item pairs. Then I ran clustering on customers by buy frequency to find groups. I think it showed loyal and casual buyers.",
+    "keywords": [
+      "pattern mining",
+      "clustering",
+      "frequency"
+    ]
+  },
+  {
+    "id": "Q7_067",
+    "q": "Q7",
+    "round": "R2",
+    "text": "I used unsupervised learning on my app logs to find hidden user behavior. Pattern mining pulled out common action sequences. Clustering split users into three groups so I made small UI tweaks per group and maybe boosted engagement.",
+    "keywords": [
+      "unsupervised learning",
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_001",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I did feature selection to drop noisy sensors and keep few signals. Then I used PCA for dimensionality reduction and k-means clustering to find groups of days with similar patterns. It made patterns clearer for my model.",
+    "keywords": [
+      "feature selection",
+      "dimensionality reduction",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_002",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used category-based clustering to group my survey replies by hobby and time of day. I think it made a small art-loving night-owl group stand out. Maybe I can send them a late class invite next week.",
+    "keywords": [
+      "category-based clustering",
+      "grouping"
+    ]
+  },
+  {
+    "id": "Q8_003",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried timeline clustering on app event logs to group users by when they are active. I clustered weekly activity curves with DTW and found late-night users as one cluster. Maybe it helps target pushes at the right time.",
+    "keywords": [
+      "timeline clustering",
+      "temporal data"
+    ]
+  },
+  {
+    "id": "Q8_004",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used grid-based clustering once on GPS traces in a city project to find hotspots by binning the map into cells. It was fast and scaled to lots of points. Maybe it missed small clusters near cell borders unless I tuned cell size.",
+    "keywords": [
+      "grid-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_005",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I think high dimensional data needs a light reduction step before clustering to avoid noise. In my project I used PCA to cut 1000 gene features to 20 and then ran mini batch k means to scale to a million cells.",
+    "keywords": [
+      "high-dimensional clustering",
+      "scalable clustering"
+    ]
+  },
+  {
+    "id": "Q8_006",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used k-means once on app logs to split users by activity and it found a quiet group and a power-user group. I think this let me try a simple email test and save time on small users.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_007",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried parameter-based clustering on sensor data by tuning distance threshold and min cluster size. I then drew a graph of clusters as nodes and edges for shared points. It helped me spot unstable clusters when I changed parameters.",
+    "keywords": [
+      "parameter-based clustering",
+      "graph"
+    ]
+  },
+  {
+    "id": "Q8_008",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried time-based clustering on my phone step data to find my routines. I measured distance between daily time series with simple Euclidean distance. Then I used a density cutoff so dense pockets of time show when I am active.",
+    "keywords": [
+      "time-based clustering",
+      "distance",
+      "density"
+    ]
+  },
+  {
+    "id": "Q8_009",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I ran k-means on my small shop sales to find buyer groups. I think it helped me design offers for each group. Maybe I picked too many clusters and did not scale features so results were messy and hard to trust.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_010",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering session data with k-means to find user types. It maybe showed a group that reads long posts and another that skims, so I pushed deep posts for the first group and saw more time on page.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_011",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used a combo of distance and density tools on bike GPS data. I ran k-means to get coarse groups by distance then DBSCAN to pull dense routes and drop noise. It helped find real trails that pure distance missed.",
+    "keywords": [
+      "combined methods",
+      "distance",
+      "density"
+    ]
+  },
+  {
+    "id": "Q8_012",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used hierarchical clustering to group customer ages and liked the tree view. I tried graph-based clustering once for social ties and it found tight friend groups. I also fed features into a small neural network but it overfit.",
+    "keywords": [
+      "hierarchical clustering",
+      "graph-based clustering",
+      "neural network"
+    ]
+  },
+  {
+    "id": "Q8_013",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used hierarchical clustering on a small dataset of store sales to find similar days. I looked at the dendrogram and cut at three clusters. It helped me see temporal patterns I had not guessed.",
+    "keywords": [
+      "hierarchical clustering"
+    ]
+  },
+  {
+    "id": "Q8_014",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used graph-based clustering on my class project to find friend groups by linking users with strong ties. I think constraint-based clustering helped when I added must-link rules from my survey so noisy links did not merge groups.",
+    "keywords": [
+      "graph-based clustering",
+      "constraint-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_015",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried graph-based clustering on my social network class project. I formed edges by profile similarity and used community detection to group friends. It helped find tight cliques I didn't expect, though maybe thresholds matter a lot.",
+    "keywords": [
+      "graph-based clustering",
+      "similarity"
+    ]
+  },
+  {
+    "id": "Q8_016",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried graph-based clustering on my music playlist to group songs by similarity of tags and listens. I think making edges from high similarity found tight clusters of mood songs and helped my playlist edits. Maybe threshold choice mattered.",
+    "keywords": [
+      "graph-based clustering",
+      "similarity"
+    ]
+  },
+  {
+    "id": "Q8_017",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used hierarchical clustering to explore how my small survey groups nest and made a dendrogram to pick a cut. For big GPS logs I used grid based clustering to bin points fast and spot dense cells.",
+    "keywords": [
+      "hierarchical clustering",
+      "grid-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_018",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used line clustering on GPS tracks to find main bike routes in my city. It grouped similar paths and cut noise. I think it helps map building but it missed rare turns and needed tuning.",
+    "keywords": [
+      "line clustering"
+    ]
+  },
+  {
+    "id": "Q8_019",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used pattern mining on my grocery receipts to find items bought together. Then I clustered my shoppers and found a small group who always buy snacks and energy drinks maybe target them with coupons.",
+    "keywords": [
+      "pattern mining",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_020",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used cosine similarity to compare my playlist vectors when I built a tiny music recommender. It helped me find songs with similar style even when listen counts were very different so I think it captures taste not play volume.",
+    "keywords": [
+      "cosine similarity"
+    ]
+  },
+  {
+    "id": "Q8_021",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used threshold clustering on a sensor sequence to cut out noise. I set a high threshold so only long runs of heat count. It helped me find event sequences, though maybe I lost small bursts.",
+    "keywords": [
+      "threshold clustering",
+      "sequence"
+    ]
+  },
+  {
+    "id": "Q8_022",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I think the sequence of feature scaling then PCA mattered. When I moved normalization past PCA the error crossed a threshold and spiked. Maybe I should test other orders.",
+    "keywords": [
+      "sequence",
+      "threshold"
+    ]
+  },
+  {
+    "id": "Q8_023",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used deep learning to learn features for images. I tried Deep Embedded Clustering and it grouped my cats and dogs better. Representation learning made the features compact and more clusterable.",
+    "keywords": [
+      "deep learning",
+      "Deep Embedded Clustering",
+      "representation learning"
+    ]
+  },
+  {
+    "id": "Q8_024",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used a grid-based method once to find a hotspot of car crashes by binning a city map into squares and it was fast but coarse. For social links I tried a graph cluster and it found tight friend groups that grid could not.",
+    "keywords": [
+      "grid-based clustering",
+      "graph-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_025",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried constraint-based clustering on a student project. I used must-link to force records from same user into one cluster and cannot-link to keep known spam apart. It helped guide clusters when data was noisy though maybe I overconstrained.",
+    "keywords": [
+      "constraint-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_026",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I ran social network clustering on my college friend graph using a graph-based clustering method to spot groups. It showed low connectivity between clubs and a few bridge people. I think boosting those bridges could improve info flow across the network.",
+    "keywords": [
+      "social network clustering",
+      "connectivity",
+      "graph-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_027",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used k-means to cluster customers. I first scaled and log transformed skewed spend and ran PCA to cut dims. The clusters looked cleaner. I think it helped.",
+    "keywords": [
+      "clustering",
+      "data transformation"
+    ]
+  },
+  {
+    "id": "Q8_028",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used hierarchical clustering to see nested user groups in my app. I tried grid-based clustering to spot dense areas of logins on a city map. I also used constraint-based clustering to force clusters by team size.",
+    "keywords": [
+      "hierarchical clustering",
+      "grid-based clustering",
+      "constraint-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_029",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I think clustering grouped my study sessions by time and mood. I used classification to predict if I pass a quiz. Hierarchical clustering helped me see which sessions nested into morning vs evening groups.",
+    "keywords": [
+      "clustering",
+      "classification",
+      "hierarchical clustering"
+    ]
+  },
+  {
+    "id": "Q8_030",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used range based clustering to group my sensor data by value bands. For example I split temp readings into low mid high and the method flagged a sensor that jumped ranges suddenly so I found a faulty probe.",
+    "keywords": [
+      "range-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_031",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering my online store users with k-means to find frequent buyers. It revealed one tight group of loyal customers but was hurt by outliers and unscaled features so next time I would scale data and drop extreme values.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_032",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried grid-based clustering on heatmap data and it was fast but crude. I used constraint-based clustering to force known groups to stay together in a class project. I like fuzzy clustering for messy overlaps since it gives soft labels.",
+    "keywords": [
+      "grid-based clustering",
+      "constraint-based clustering",
+      "fuzzy clustering"
+    ]
+  },
+  {
+    "id": "Q8_033",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used classification to flag spam and legit emails in a class project. I then used clustering to group users by when they open mail and how often they click so I could tweak filters.",
+    "keywords": [
+      "classification",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_034",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used if-then rules to tag spam emails in my inbox. I did clustering by word counts and then used pattern mining to pull common phrases. The phrases helped me tweak my if-then rules and cut spam the next week.",
+    "keywords": [
+      "if-then rules",
+      "clustering",
+      "pattern mining"
+    ]
+  },
+  {
+    "id": "Q8_035",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried graph-based clustering on a kNN graph of my music likes. I built edges by similarity of song vectors and found clusters that matched my moods. I think it helped find small genre groups I hadn't seen.",
+    "keywords": [
+      "graph-based clustering",
+      "similarity"
+    ]
+  },
+  {
+    "id": "Q8_036",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering on bike share data to find commute patterns. I ran k-means and found a small group of early riders who only go short trips. This helped me think about where to add bike docks.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_037",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used K-means to group customers by purchase day. It helped me spot a small group who buy late at night. I think this could guide a targeted email at midnight to boost sales, maybe a discount would work.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_038",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used cosine similarity and the inner product to cluster text vectors for a class project. I think it helped k means group news articles by topic. Maybe similarity based on angle was better than raw length.",
+    "keywords": [
+      "cosine similarity",
+      "inner product",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_039",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used an autoencoder for representation learning on wrist sensor data. I then ran clustering on the latent codes and it grouped activities nicely so I think the learned features captured useful patterns with minimal labels.",
+    "keywords": [
+      "autoencoder",
+      "representation learning",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_040",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used k-means to cluster my playlist by song features and tried Euclidean and cosine distance. I think Euclidean grouped songs by tempo and loudness while cosine found timbre style. Maybe distance choice changed the clusters more than k value.",
+    "keywords": [
+      "clustering",
+      "distance"
+    ]
+  },
+  {
+    "id": "Q8_041",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried k-means on a small customer dataset to group ages and it was fast but changed with seeds. I used hierarchical clustering for a tree view and it felt clearer on small samples but slow on big data.",
+    "keywords": [
+      "k-means",
+      "hierarchical clustering"
+    ]
+  },
+  {
+    "id": "Q8_042",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried graph based clustering on my class social data and it found groups I knew. I built a k-NN graph and ran Louvain. It felt robust to weird shapes and noise but took some tuning of the k and resolution.",
+    "keywords": [
+      "graph-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_043",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used hierarchical clustering on my project scores to see nested groups. I then made a graph of classmates by shared projects and used graph-based clustering. Connectivity helped me pick cuts and find tight teams.",
+    "keywords": [
+      "hierarchical clustering",
+      "graph-based clustering",
+      "connectivity"
+    ]
+  },
+  {
+    "id": "Q8_044",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used grid-based clustering on GPS traces by dividing the map into squares and it quickly showed dense hotspots. It was rough but very fast and I think it handled noise okay when I needed a quick view.",
+    "keywords": [
+      "grid-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_045",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I think grid-based clustering is fast and simple for big spatial data. I used it on taxi GPS points by binning city into 100 m cells and found hot zones quickly. It can miss oddly shaped clusters though.",
+    "keywords": [
+      "grid-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_046",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used graph-based clustering on my campus social network to find friend groups. I then visualized the network with a force layout and colored nodes by cluster. It helped me spot bridges and central nodes.",
+    "keywords": [
+      "graph-based clustering",
+      "visualization"
+    ]
+  },
+  {
+    "id": "Q8_047",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used graph-based clustering on my class social graph and it gave clear groups. Spectral clustering on the same graph used eigenvectors and found subtle splits. Deep clustering with an autoencoder on messages maybe gave the best feature separation for noisy data.",
+    "keywords": [
+      "graph-based clustering",
+      "spectral clustering",
+      "deep clustering"
+    ]
+  },
+  {
+    "id": "Q8_048",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used k-means to group customers by spend and visits. It helped me spot a small high-value group I could target. I think clustering is useful for quick segmentation though my small sample made it noisy.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_049",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried threshold clustering on web logs by cutting at a distance of 0.5 to get loose groups. I then merged tiny clusters into bigger ones when they had fewer than five sessions. It felt crude but made patterns clearer.",
+    "keywords": [
+      "threshold clustering",
+      "cluster merging"
+    ]
+  },
+  {
+    "id": "Q8_050",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried spectral clustering on my WiFi sensor graph and it helped find weakly connected devices. The graph Laplacian eigenvectors separated clusters. I think low connectivity made one group stand out and flagged a bad router.",
+    "keywords": [
+      "spectral clustering",
+      "graph Laplacian",
+      "connectivity"
+    ]
+  },
+  {
+    "id": "Q8_051",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I think harmony in music comes from simple frequency ratios like 2:1 or 3:2. When I tune my guitar by ear I listen for beats to vanish and this matches those ratios.",
+    "keywords": [
+      "harmony",
+      "frequency ratios",
+      "music"
+    ]
+  },
+  {
+    "id": "Q8_052",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used a decision tree in my project to predict pass or fail and I looked at entropy to decide good splits. Clustering then helped me find study groups in the data so I could target help.",
+    "keywords": [
+      "decision tree",
+      "entropy",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_056",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering on my project to group customers by purchase patterns. I used k-means and found three main groups which helped me pick tailored emails. Maybe the clusters were noisy but they made outreach easier.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_057",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used clustering to split the feature space when I worked on my project. I applied k means to partition features into three regions and it found three groups of users. It helped me spot weird clusters and guide feature selection.",
+    "keywords": [
+      "feature space partitioning",
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_059",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used an autoencoder to compress my image data then made a kNN graph on the latent codes for graph-based clustering. I think deep clustering that trains the encoder with a cluster loss could make the clusters cleaner and help separate shapes.",
+    "keywords": [
+      "graph-based clustering",
+      "autoencoder",
+      "deep clustering"
+    ]
+  },
+  {
+    "id": "Q8_061",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used a graph of users with kNN edges and ran Louvain to find communities. It helped me spot a small circle of bot accounts that shared links. Maybe this works best when clusters are not sphere like.",
+    "keywords": [
+      "graph-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_062",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used grid-based clustering on city GPS data to find dense spots quickly. It was fast and handled lots of points, though boundaries felt rough. I think it's good for quick spatial summaries.",
+    "keywords": [
+      "grid-based clustering"
+    ]
+  },
+  {
+    "id": "Q8_063",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I did high-dimensional clustering on gene expression so I first used PCA to cut dims. For scale I ran mini-batch k-means in chunks. I also tried semi-supervised must-link labels to nudge tricky groups maybe.",
+    "keywords": [
+      "high-dimensional clustering",
+      "scalable clustering",
+      "semi-supervised clustering"
+    ]
+  },
+  {
+    "id": "Q8_064",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried grid-based clustering to group GPS points on a map and it was fast. I also used a small Self-Organizing Map as a neural network to visualize clusters and it helped me see patterns I missed.",
+    "keywords": [
+      "grid-based clustering",
+      "Self-Organizing Maps",
+      "neural network"
+    ]
+  },
+  {
+    "id": "Q8_065",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering our course survey to find study types. K-means split students into three groups and one cluster barely studied. I used that to pair them with tutors and it seemed to help attendance.",
+    "keywords": [
+      "clustering"
+    ]
+  },
+  {
+    "id": "Q8_066",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I tried clustering my store data with k-means to find customer types. Using only two features recency and frequency gave neat groups but adding price broke them up so feature choice really changed the clusters.",
+    "keywords": [
+      "clustering",
+      "features"
+    ]
+  },
+  {
+    "id": "Q8_067",
+    "q": "Q8",
+    "round": "R2",
+    "text": "I used grid-based clustering for a campus footfall project by binning GPS hits into cells. It showed spatial arrangement of hotspots and empty corridors and seemed fast and stable for my sparse data.",
+    "keywords": [
+      "grid-based clustering",
+      "spatial arrangement"
+    ]
+  },
+  {
+    "id": "Q9_001",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I tried an AI agent to do outlier detection on my lab sensor data. It flagged spikes as outliers but missed a slow drift anomaly. I think human checks still help and I had to adjust thresholds manually.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "anomaly"
+    ]
+  },
+  {
+    "id": "Q9_002",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection to flag odd sensor readings in my lab project. Then I let an AI agent suggest corrections but it missed context like recent repairs. I think agents need more context or a human in the loop.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "context"
+    ]
+  },
+  {
+    "id": "Q9_003",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I think using outlier detection to remove bad frames helped my AI agents learn image detection faster. One odd case was glare that made a car look like a bright blob.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "image detection"
+    ]
+  },
+  {
+    "id": "Q9_004",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection to drop weird GPS points in my project. My small AI agent then planned routes but was slow on my laptop. I think computation limits shaped model choices and made me pick lighter agents.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "computation"
+    ]
+  },
+  {
+    "id": "Q9_005",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection to remove bad sensor reads before I let AI agents run a control loop. I think better prompts cut false alarms. Maybe next I will test prompt templates on new data.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "prompting"
+    ]
+  },
+  {
+    "id": "Q9_006",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to flag odd sensor reads from our weather station. An AI agent reviewed the flagged logs. I retrained my spam classifier with those cases and classification of anomalies improved in my tests.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "classification"
+    ]
+  },
+  {
+    "id": "Q9_007",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to flag a wrong blood sugar reading in a small hospital dataset. An AI agent then suggested a repeat test. I think this helped avoid a bad diagnosis in healthcare, but maybe humans should confirm.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "Q9_008",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on my home router logs and it flagged one IP as strange. It looked like a network intrusion but the model then hallucinated details like a fake port and time. I think I should add a simple sanity check.",
+    "keywords": [
+      "outlier detection",
+      "network intrusion",
+      "hallucination"
+    ]
+  },
+  {
+    "id": "Q9_009",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection to find bad points in my image detection dataset. I then let a small AI agent run checks and it flagged mislabeled images. That saved me time and fixed some weird model errors.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "image detection"
+    ]
+  },
+  {
+    "id": "Q9_010",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to drop weird records from a high-dimensional gene dataset. An AI agent helped pick rows to inspect. I think the many features made the agent act odd and slow. Maybe I need feature selection.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "high-dimensional data"
+    ]
+  },
+  {
+    "id": "Q9_011",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used an outlier detector on transaction amounts to spot a strange refund pattern. It helped me flag fraud and I gave cases to an AI agent to draft alerts and open tickets. It saved time and found one scam.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_012",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on login times to spot a strange IP. I had an AI agent run checks and it helped find a breach in our campus system. I think agents speed up cybersecurity work but can miss new tricks.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "cybersecurity"
+    ]
+  },
+  {
+    "id": "Q9_013",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple outlier detection to drop weird temp readings from my project. Then I let small AI agents decide whether to request a new sample. It helped cut false alerts, though the agents missed some edge cases.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_014",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I think outlier detection can help spot ATM fraud. For example my bank flagged a huge ATM withdrawal at 3am as an outlier and I called to stop it.",
+    "keywords": [
+      "outlier detection",
+      "ATM fraud"
+    ]
+  },
+  {
+    "id": "Q9_015",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection on player stats and found a few extreme cases. I think they were using AI agents to cheat in my online game. I flagged them and shared results with the admins.",
+    "keywords": [
+      "outlier detection",
+      "game cheating",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_016",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple z-score outlier checks on sales and flagged a weird spike. I tied that to server CPU alerts so ops saw a crash. I think the LLM I tried missed the root cause and gave vague fixes.",
+    "keywords": [
+      "outlier detection",
+      "server monitoring",
+      "LLM limitations"
+    ]
+  },
+  {
+    "id": "Q9_017",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I ran z-score outlier detection on weekly sales and it flagged one big spike. I used a median filter and a t-test to check it and then had an AI agent suggest possible causes which gave me a useful lead.",
+    "keywords": [
+      "outlier detection",
+      "statistical methods",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_018",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I check for outliers with a boxplot and a quick scatter. I think one odd point can wreck a linear fit. For example I removed a single bad sensor reading last month and the slope and RMSE changed a lot.",
+    "keywords": [
+      "outlier detection"
+    ]
+  },
+  {
+    "id": "Q9_019",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection on my app's transactions and it flagged one odd purchase that turned out to be fraud. I think an AI agent could watch streams and alert me. Maybe it could even freeze suspect accounts fast.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_020",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to flag odd medical bills. I think it could spot fraud in claims when a provider's charges are way different from peers. Maybe we can save money and protect patients.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "Q9_021",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple z-score outlier detection on sensor logs and found one bad batch. I then had an AI agent suggest possible causes and it guessed a sensor drift. I think agents can speed debugging but may miss context.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_022",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on transaction amounts to flag credit card fraud. I ran a simple isolation forest on my bank data and found a few extreme purchases at odd hours. I think this helped catch one likely fraud case.",
+    "keywords": [
+      "outlier detection",
+      "credit card fraud"
+    ]
+  },
+  {
+    "id": "Q9_023",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection on my bike sensor logs to drop spikes before testing an AI agent that steers a map app. I think giving the agent my background knowledge about signal noise helped it not overreact.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "background knowledge"
+    ]
+  },
+  {
+    "id": "Q9_024",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple z score outlier detection on lab sensor data and removed a weird spike that broke my model. I think an AI agent could watch streams and flag such outliers and maybe suggest fixes.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_025",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to flag weird payments and found a fraud ring. I think an AI agent could watch transactions and auto-flag suspicious patterns. Maybe it would cut false alarms and speed investigations.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_026",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used z-score to find outliers in our sales log that broke our model. I think an AI agent could watch the stream and flag or fix odd rows for me so I do not retune models all the time.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_027",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on credit card data and found a few weird transactions that looked like fraud. I think automated AI agents could watch accounts and flag them in real time. Maybe a human should check.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_028",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple z-score outlier test to find weird sensor readings in my project. I think an AI agent could watch the stream and auto-flag or request labels. Maybe it would save time but could miss rare true events.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_029",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I use outlier detection to flag bad sensor reads before my AI agent acts. For example I built a tiny agent that drops rows with z>3 and treats them as errors. Context matters since the same spike was real at one site.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "context"
+    ]
+  },
+  {
+    "id": "Q9_030",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I think outlier detection helped me spot a weird price spike in the stock market last month. My AI agent paused buys after my rule flagged the move as an outlier and maybe saved my small paper portfolio from a bad trade.",
+    "keywords": [
+      "outlier detection",
+      "stock market",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_031",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple outlier detector on my credit card dataset and it flagged a few strange payments. One turned out to be fraud and I let an AI agent propose a block. It helped but it also missed context.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_032",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection to drop weird temp readings on a project. I then had AI agents fetch images and notes and a multimodal model read both to spot the event. It saved time but maybe missed subtle cases.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "multimodal"
+    ]
+  },
+  {
+    "id": "Q9_033",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple IQR outlier detector on lab sensor data and removed a big spike that broke a task. Then my AI agent stopped hallucinating fake readings. Maybe cleaning outliers can cut hallucination in agents in practice.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "hallucination"
+    ]
+  },
+  {
+    "id": "Q9_034",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on lab sensor logs and it found lone bad reads. But when many sensors drifted together as a collective outlier my AI agents missed the pattern. I think we need cross checks.",
+    "keywords": [
+      "outlier detection",
+      "collective outliers",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_035",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used z scores to flag outliers in my sales data and then cleaned bad rows by hand. I let an AI agent suggest fixes and I only accepted the ones that matched my checks.",
+    "keywords": [
+      "outlier detection",
+      "data cleaning",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_036",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to find odd grades in my project and then ran a plagiarism check on those students. Maybe an AI agent could do the triage and flag cases for a human to review, but it might miss intent.",
+    "keywords": [
+      "outlier detection",
+      "plagiarism detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_037",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used basic outlier detection on GPS data to drop weird points that broke my model. After that I let a simple AI agent learn route choices and it reacted poorly until I fixed the outliers. I think it helped a lot.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_038",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to clean sensor images before training a CV model. Some weird frames still fooled my object detector. Maybe an AI agent could flag those frames and request quick human review.",
+    "keywords": [
+      "outlier detection",
+      "computer vision",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_039",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple z-score outlier check to find a few bad sensor readings in my project. Then I let an AI agent suggest cleaning steps and it helped me decide which points to drop. I think it saved time but maybe hid edge cases.",
+    "keywords": [
+      "outlier detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_040",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection on a payments log and found one weird client. That led me to flag suspected fraud. I think an AI agent could run checks and alert me fast, though I would still review results.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_041",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection to spot bot posts in a Twitter social analysis project. I think AI agents could flag these outliers and help me trace fake accounts but they might miss nuance and need human checks.",
+    "keywords": [
+      "outlier detection",
+      "social analysis",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_042",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I think outlier detection helped when my wearable health data showed a heart rate spike that looked like noise. A small AI agent flagged it and told me to ignore it, but maybe it missed a real issue.",
+    "keywords": [
+      "outlier detection",
+      "health data",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_043",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used simple outlier detection on transaction amounts to flag odd rows in a class project. That helped with fraud detection. I then let an AI agent draft investigation notes, rank leads and send alerts automatically.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_044",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used a simple outlier detector on minute stock prices to flag big spikes and drops in my paper trading set. My small AI agent then ignored those ticks and made steadier trades. It seemed to cut losses in weird runs.",
+    "keywords": [
+      "outlier detection",
+      "stock market",
+      "AI agents"
+    ]
+  },
+  {
+    "id": "Q9_045",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection with z-scores to remove bad sensor readings in a project. I built a small AI agent that flags odd points and prompts me with one-line questions to confirm labels and speed up review. It helped cut model errors.",
+    "keywords": [
+      "outlier detection",
+      "AI agents",
+      "prompting"
+    ]
+  },
+  {
+    "id": "Q9_046",
+    "q": "Q9",
+    "round": "R2",
+    "text": "I used outlier detection on transaction amounts. It flagged odd payouts and led to a fraud detection case. I built a simple spam detection filter and maybe linking them would catch more bad actors.",
+    "keywords": [
+      "outlier detection",
+      "fraud detection",
+      "spam detection"
+    ]
+  }
+]

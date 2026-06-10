@@ -1,0 +1,1195 @@
+[
+  {
+    "id": "Q1_001",
+    "original_no": 1,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "8학기 내에 졸업하려면 선택권이 없어서 수강함.",
+    "language": "ko",
+    "cleaned_text": "8학기 내에 졸업하려면 선택권이 없어서 수강함.",
+    "english_text": "I took this course because I had no other choice in order to graduate within eight semesters.",
+    "one_sentence_summary": "The student took the course because it was the only option to graduate within eight semesters.",
+    "keywords": [
+      "graduation requirement",
+      "course enrollment"
+    ],
+    "themes": [
+      "course motivation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.93
+  },
+  {
+    "id": "Q1_002",
+    "original_no": 2,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Computer science 4학년. 다른 선택지가 없어서. 패턴 마이닝, 분류, 비정상 네트워크 탐지 등 사이버보안에 도움이 될 것이라 생각.",
+    "language": "mixed",
+    "cleaned_text": "Computer science 4학년. 다른 선택지가 없어서. 패턴 마이닝, 분류, 비정상 네트워크 탐지 등 사이버보안에 도움이 될 것이라 생각.",
+    "english_text": "I'm a 4th-year computer science student. I took it because there was no other option. I think pattern mining, classification, abnormal network detection, and so on will be helpful for cybersecurity.",
+    "one_sentence_summary": "The student, a computer science senior, enrolled with no other option and expects pattern mining, classification, and anomaly detection to help with cybersecurity.",
+    "keywords": [
+      "cybersecurity",
+      "pattern mining",
+      "anomaly detection"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_003",
+    "original_no": 3,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터마이닝 수업과 컴퓨터 관련 수업을 함께 수강하며 프로젝트를 통해 제대로 배워나가고 싶음. 데이터마이닝 프로젝트로 자세히 배우고 싶어서 이 강의를 선택.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝 수업과 컴퓨터 관련 수업을 함께 수강하며 프로젝트를 통해 제대로 배워나가고 싶음. 데이터마이닝 프로젝트로 자세히 배우고 싶어서 이 강의를 선택함.",
+    "english_text": "I want to take the data mining course together with computer-related courses and learn properly through projects. I chose this course because I want to learn in detail through a data mining project.",
+    "one_sentence_summary": "The student chose the course to learn data mining thoroughly through projects alongside other computer courses.",
+    "keywords": [
+      "data mining",
+      "project-based learning"
+    ],
+    "themes": [
+      "course motivation",
+      "project-based learning"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_004",
+    "original_no": 4,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I hope to study RL, especially AI alignment. I have taken lots of courses in CS and statistics, I haven't done anything. To practice, I'll make the core basis. I'll make bases for AI with data science knowledges and want to complete my own project to improve problem solving skill.",
+    "language": "en",
+    "cleaned_text": "I hope to study RL, especially AI alignment. I have taken lots of courses in CS and statistics, but I haven't done anything. To practice, I'll make the core basis. I'll make bases for AI with data science knowledge and want to complete my own project to improve my problem-solving skill.",
+    "english_text": "I hope to study RL, especially AI alignment. I have taken lots of courses in CS and statistics, but I haven't done anything. To practice, I'll make the core basis. I'll make bases for AI with data science knowledge and want to complete my own project to improve my problem-solving skill.",
+    "one_sentence_summary": "The student wants to study reinforcement learning and AI alignment and build a foundation through a personal project to improve problem-solving.",
+    "keywords": [
+      "reinforcement learning",
+      "AI alignment",
+      "problem solving"
+    ],
+    "themes": [
+      "AI and machine learning",
+      "course motivation",
+      "personal reflection"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q1_005",
+    "original_no": 5,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 배우면서 취업 준비를 하고 싶어서 수강. 데이터마이닝으로 상상하는 것들을 만들어 나가고 싶음. (친절 현우진... 적음)",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 배우면서 취업 준비를 하고 싶어서 수강함. 데이터마이닝으로 상상하는 것들을 만들어 나가고 싶음. (친절 현우진... 적음)",
+    "english_text": "I'm taking this course because I want to prepare for employment while learning data mining. I want to build the things I imagine using data mining. (Kind Hyun Woo-jin... wrote little.)",
+    "one_sentence_summary": "The student enrolled to prepare for employment and to build ideas using data mining.",
+    "keywords": [
+      "career preparation",
+      "data mining"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q1_006",
+    "original_no": 6,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "The reason is that I want to learn about data science. My major is data science, but I didn't learn about data science in university. So, I chose this course and I want to build deeper knowledge about DS.",
+    "language": "en",
+    "cleaned_text": "The reason is that I want to learn about data science. My major is data science, but I didn't learn about data science in university. So I chose this course, and I want to build deeper knowledge about DS.",
+    "english_text": "The reason is that I want to learn about data science. My major is data science, but I didn't learn about data science in university. So I chose this course, and I want to build deeper knowledge about DS.",
+    "one_sentence_summary": "The student, a data science major who hadn't studied DS in university, chose the course to build deeper knowledge.",
+    "keywords": [
+      "data science",
+      "major relevance"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "data science curiosity"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q1_007",
+    "original_no": 7,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "이 강의는 게임을 좋아하는 3학년 학생에게 맞는 강의. 게임에 관심이 많고, 게임 데이터를 분석하고 싶어서 수강.",
+    "language": "ko",
+    "cleaned_text": "이 강의는 게임을 좋아하는 3학년 학생에게 맞는 강의임. 게임에 관심이 많고, 게임 데이터를 분석하고 싶어서 수강함.",
+    "english_text": "This course suits a third-year student who likes games. I'm very interested in games and took it because I want to analyze game data.",
+    "one_sentence_summary": "The student enrolled out of interest in games and a desire to analyze game data.",
+    "keywords": [
+      "games",
+      "data analysis"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_008",
+    "original_no": 8,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I wanted to get a better understanding of data science. I already took the course for AI. Learned about ML and what to do with data. Good opportunity to learn how and what to do with data to actually solve problems.",
+    "language": "en",
+    "cleaned_text": "I wanted to get a better understanding of data science. I already took the course for AI and learned about ML and what to do with data. This is a good opportunity to learn how and what to do with data to actually solve problems.",
+    "english_text": "I wanted to get a better understanding of data science. I already took the course for AI and learned about ML and what to do with data. This is a good opportunity to learn how and what to do with data to actually solve problems.",
+    "one_sentence_summary": "The student, who has taken an AI course, wants a better understanding of data science to actually solve problems with data.",
+    "keywords": [
+      "data science",
+      "machine learning",
+      "problem solving"
+    ],
+    "themes": [
+      "course motivation",
+      "problem solving",
+      "AI and machine learning"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_009",
+    "original_no": 9,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose to take this class because I am majoring in data science. I also would like to be a data analyst. I once worked in a telecom company and heard that field of data science is one of the most upcoming job positions.",
+    "language": "en",
+    "cleaned_text": "I chose to take this class because I am majoring in data science. I would also like to be a data analyst. I once worked in a telecom company and heard that the field of data science is one of the most upcoming job positions.",
+    "english_text": "I chose to take this class because I am majoring in data science. I would also like to be a data analyst. I once worked in a telecom company and heard that the field of data science is one of the most upcoming job positions.",
+    "one_sentence_summary": "The student, a data science major aiming to be a data analyst, enrolled seeing data science as a growing career field.",
+    "keywords": [
+      "data analyst",
+      "career preparation",
+      "major relevance"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation",
+      "major relevance"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q1_010",
+    "original_no": 10,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "The main reason is to explore a new path of computer science since I have not yet tried any class related to data science.",
+    "language": "en",
+    "cleaned_text": "The main reason is to explore a new path of computer science, since I have not yet tried any class related to data science.",
+    "english_text": "The main reason is to explore a new path of computer science, since I have not yet tried any class related to data science.",
+    "one_sentence_summary": "The student enrolled to explore data science as a new area of computer science.",
+    "keywords": [
+      "data science curiosity",
+      "exploration"
+    ],
+    "themes": [
+      "course motivation",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_011",
+    "original_no": 11,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "AI 세대에 살아가는 시스템 개발자로서 데이터마이닝 활용. 통계 공부. 학교에서도 여러 방면에서 활용할 수 있을 것 같아서.",
+    "language": "ko",
+    "cleaned_text": "AI 세대에 살아가는 시스템 개발자로서 데이터마이닝을 활용하고 통계를 공부하고 싶음. 학교에서도 여러 방면에서 활용할 수 있을 것 같아서 수강함.",
+    "english_text": "As a system developer living in the AI generation, I want to use data mining and study statistics. I took it because it seems applicable in many areas, including at school.",
+    "one_sentence_summary": "As a system developer, the student enrolled to use data mining and statistics, seeing broad applicability.",
+    "keywords": [
+      "system development",
+      "statistics",
+      "data mining"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_012",
+    "original_no": 12,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터마이닝 배우며 지식과 도구를 통한 실생활 문제 해결. 머신러닝과 인공지능을 더 깊게 공부하고 실제 기업 활용 방식 이해하고 싶음.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 배우며 지식과 도구를 통해 실생활 문제를 해결하고 싶음. 머신러닝과 인공지능을 더 깊게 공부하고 실제 기업의 활용 방식을 이해하고 싶음.",
+    "english_text": "While learning data mining, I want to solve real-life problems using its knowledge and tools. I want to study machine learning and AI more deeply and understand how companies actually use them.",
+    "one_sentence_summary": "The student wants to learn data mining and ML/AI to solve real-life problems and understand real-world business use.",
+    "keywords": [
+      "data mining",
+      "machine learning",
+      "problem solving"
+    ],
+    "themes": [
+      "course motivation",
+      "problem solving",
+      "AI and machine learning"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_013",
+    "original_no": 13,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "취업 시 역량 향상을 위해 수강. 데이터마이닝 관련 강의 수강에 필요한 배경지식 습득. 기초 지식을 쌓고 수업 내용을 더 잘 이해하기 위해.",
+    "language": "ko",
+    "cleaned_text": "취업 시 역량 향상을 위해 수강함. 데이터마이닝 관련 강의 수강에 필요한 배경지식을 습득하고, 기초 지식을 쌓아 수업 내용을 더 잘 이해하기 위해서.",
+    "english_text": "I'm taking this to improve my skills for employment. I want to acquire the background knowledge needed to take data mining courses, and to build foundational knowledge so I can better understand the course content.",
+    "one_sentence_summary": "The student enrolled to build foundational knowledge and improve their skills for employment.",
+    "keywords": [
+      "career preparation",
+      "foundational knowledge"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_014",
+    "original_no": 14,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose this Data Science class to improve my analytical and problem-solving skills. Data is an important role in making decisions. I hope this class helps me understand trends and patterns efficiently. (Note: thought class was related to Database but turns out it is AI field.)",
+    "language": "en",
+    "cleaned_text": "I chose this Data Science class to improve my analytical and problem-solving skills. Data plays an important role in making decisions. I hope this class helps me understand trends and patterns efficiently. (Note: I thought the class was related to Database but it turns out it is in the AI field.)",
+    "english_text": "I chose this Data Science class to improve my analytical and problem-solving skills. Data plays an important role in making decisions. I hope this class helps me understand trends and patterns efficiently. (Note: I thought the class was related to Database but it turns out it is in the AI field.)",
+    "one_sentence_summary": "The student enrolled to improve analytical and problem-solving skills and understand trends and patterns, noting they initially mistook it for a database course.",
+    "keywords": [
+      "analytical skills",
+      "problem solving",
+      "pattern discovery"
+    ],
+    "themes": [
+      "course motivation",
+      "problem solving",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_015",
+    "original_no": 15,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "겨울방학에 '기계는 왜 학습하는가?' 책을 읽다가 data clustering 관련 내용이 나와서, 4학년 수준에서 더 자세한 내용을 알아보고 싶어 선택.",
+    "language": "mixed",
+    "cleaned_text": "겨울방학에 '기계는 왜 학습하는가?' 책을 읽다가 data clustering 관련 내용이 나와서, 4학년 수준에서 더 자세한 내용을 알아보고 싶어 선택함.",
+    "english_text": "Over winter break, while reading the book 'Why Do Machines Learn?', I came across content about data clustering, so I chose this course because I wanted to learn more detailed content at a senior-year level.",
+    "one_sentence_summary": "The student enrolled after encountering data clustering in a book and wanting to learn it in more detail.",
+    "keywords": [
+      "data clustering",
+      "curiosity"
+    ],
+    "themes": [
+      "course motivation",
+      "data science curiosity",
+      "clustering"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_016",
+    "original_no": 16,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터마이닝을 이용해 여러 문제들을 해결하고, 실제 사례를 접하며 배우고 싶음.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝을 이용해 여러 문제들을 해결하고, 실제 사례를 접하며 배우고 싶음.",
+    "english_text": "I want to solve various problems using data mining and learn by encountering real cases.",
+    "one_sentence_summary": "The student wants to learn data mining by solving problems and studying real cases.",
+    "keywords": [
+      "data mining",
+      "problem solving",
+      "real-world cases"
+    ],
+    "themes": [
+      "course motivation",
+      "problem solving",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_017",
+    "original_no": 17,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "To learn more about data mining and how it could benefit website search engine optimization. Planning to integrate data mining insights. Intrigued by how collected and trained data can be extrapolated to predict future or upcoming data.",
+    "language": "en",
+    "cleaned_text": "To learn more about data mining and how it could benefit website search engine optimization. I'm planning to integrate data mining insights. I'm intrigued by how collected and trained data can be extrapolated to predict future or upcoming data.",
+    "english_text": "To learn more about data mining and how it could benefit website search engine optimization. I'm planning to integrate data mining insights. I'm intrigued by how collected and trained data can be extrapolated to predict future or upcoming data.",
+    "one_sentence_summary": "The student wants to learn data mining for search engine optimization and is interested in predicting future data.",
+    "keywords": [
+      "search engine optimization",
+      "prediction",
+      "data mining"
+    ],
+    "themes": [
+      "course motivation",
+      "prediction",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_018",
+    "original_no": 18,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I am a data science student but still don't know what I am learning until now and how to apply it in real world. Had taken machine learning and AI class last semester which could be helpful in this class.",
+    "language": "en",
+    "cleaned_text": "I am a data science student but still don't know what I have been learning until now and how to apply it in the real world. I had taken a machine learning and AI class last semester, which could be helpful in this class.",
+    "english_text": "I am a data science student but still don't know what I have been learning until now and how to apply it in the real world. I had taken a machine learning and AI class last semester, which could be helpful in this class.",
+    "one_sentence_summary": "A data science student who feels unsure what they've learned hopes the course clarifies real-world application.",
+    "keywords": [
+      "major relevance",
+      "real-world application",
+      "personal reflection"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_019",
+    "original_no": 19,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Chose this class for team project. There are lots of advanced LLM models today and also image generation. Hope to learn how these work and make a great data processing class project with team.",
+    "language": "en",
+    "cleaned_text": "I chose this class for the team project. There are lots of advanced LLM models today, and also image generation. I hope to learn how these work and make a great data processing class project with my team.",
+    "english_text": "I chose this class for the team project. There are lots of advanced LLM models today, and also image generation. I hope to learn how these work and make a great data processing class project with my team.",
+    "one_sentence_summary": "The student enrolled for the team project, hoping to learn about LLMs and image generation.",
+    "keywords": [
+      "team project",
+      "LLM",
+      "image generation"
+    ],
+    "themes": [
+      "course motivation",
+      "project-based learning",
+      "AI and machine learning"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_020",
+    "original_no": 20,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose this cause because I want to understand how data can be used to solve real world problems. I'm interested in Data Science. This class would help me build a foundation in analyzing data and making meaningful decisions.",
+    "language": "en",
+    "cleaned_text": "I chose this course because I want to understand how data can be used to solve real-world problems. I'm interested in Data Science. This class would help me build a foundation in analyzing data and making meaningful decisions.",
+    "english_text": "I chose this course because I want to understand how data can be used to solve real-world problems. I'm interested in Data Science. This class would help me build a foundation in analyzing data and making meaningful decisions.",
+    "one_sentence_summary": "The student enrolled to learn how data solves real-world problems and to build a foundation in data analysis.",
+    "keywords": [
+      "data science",
+      "real-world problems",
+      "decision making"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application",
+      "data science curiosity"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_021",
+    "original_no": 21,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose this course because I am interested in exploring how data works since every information and knowledge in life can also be considered as data.",
+    "language": "en",
+    "cleaned_text": "I chose this course because I am interested in exploring how data works, since every piece of information and knowledge in life can also be considered as data.",
+    "english_text": "I chose this course because I am interested in exploring how data works, since every piece of information and knowledge in life can also be considered as data.",
+    "one_sentence_summary": "The student enrolled out of curiosity about how data works, seeing everything in life as data.",
+    "keywords": [
+      "data science curiosity",
+      "exploration"
+    ],
+    "themes": [
+      "course motivation",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_022",
+    "original_no": 22,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Previously studied data mining with a vision-based topic. Want to learn more broadly and in practical fields where data mining can be used.",
+    "language": "en",
+    "cleaned_text": "I previously studied data mining with a vision-based topic. I want to learn more broadly and in practical fields where data mining can be used.",
+    "english_text": "I previously studied data mining with a vision-based topic. I want to learn more broadly and in practical fields where data mining can be used.",
+    "one_sentence_summary": "The student, who studied vision-based data mining before, wants broader and more practical knowledge.",
+    "keywords": [
+      "data mining",
+      "practical application"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_023",
+    "original_no": 23,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터마이닝 관련 알고리즘 등을 배우면서 앞으로 대학원에서도 활용 가능한 방향으로 공부하고 싶음.",
+    "language": "ko",
+    "cleaned_text": "데이터마이닝 관련 알고리즘 등을 배우면서 앞으로 대학원에서도 활용 가능한 방향으로 공부하고 싶음.",
+    "english_text": "While learning data mining algorithms and so on, I want to study in a direction that I can also use in graduate school in the future.",
+    "one_sentence_summary": "The student wants to learn data mining algorithms with future graduate study in mind.",
+    "keywords": [
+      "data mining algorithms",
+      "graduate study"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_024",
+    "original_no": 24,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I work part-time at a shoe reselling company. Developed a software that mines data to make money. (Cannot say too much :p)",
+    "language": "en",
+    "cleaned_text": "I work part-time at a shoe reselling company. I developed software that mines data to make money. (Cannot say too much :p)",
+    "english_text": "I work part-time at a shoe reselling company. I developed software that mines data to make money. (Cannot say too much :p)",
+    "one_sentence_summary": "The student already built data-mining software for shoe reselling and is taking the course in that context.",
+    "keywords": [
+      "data mining",
+      "reselling",
+      "business"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q1_025",
+    "original_no": 25,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I actually want to know and understand what data science is. I have a lot of friends in Data Science major but I don't really know what they do or how it differs from CS (AI). Hope this course can give me insights.",
+    "language": "en",
+    "cleaned_text": "I actually want to know and understand what data science is. I have a lot of friends in the Data Science major but I don't really know what they do or how it differs from CS (AI). I hope this course can give me insights.",
+    "english_text": "I actually want to know and understand what data science is. I have a lot of friends in the Data Science major but I don't really know what they do or how it differs from CS (AI). I hope this course can give me insights.",
+    "one_sentence_summary": "The student enrolled to understand what data science is and how it differs from CS/AI.",
+    "keywords": [
+      "data science understanding",
+      "major relevance"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "data science curiosity"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_026",
+    "original_no": 26,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Reason for choosing: mostly for fulfilling credits. But it also seemed the most interesting and useful, and we put with data evaluation.",
+    "language": "en",
+    "cleaned_text": "Reason for choosing: mostly for fulfilling credits. But it also seemed the most interesting and useful, and we put with data evaluation.",
+    "english_text": "My reason for choosing it: mostly to fulfill credits. But it also seemed the most interesting and useful, and it involves data evaluation.",
+    "one_sentence_summary": "The student enrolled mainly for credits but also because the course seemed interesting and useful.",
+    "keywords": [
+      "course credits",
+      "course motivation"
+    ],
+    "themes": [
+      "course motivation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.75
+  },
+  {
+    "id": "Q1_027",
+    "original_no": 27,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I'm investigating how software developers improve their methods. Researchers draw out meaningful insights from data. Finding meaningful insights from real world data is important for my research. Chose this course to enhance my research.",
+    "language": "en",
+    "cleaned_text": "I'm investigating how software developers improve their methods. Researchers draw out meaningful insights from data. Finding meaningful insights from real-world data is important for my research. I chose this course to enhance my research.",
+    "english_text": "I'm investigating how software developers improve their methods. Researchers draw out meaningful insights from data. Finding meaningful insights from real-world data is important for my research. I chose this course to enhance my research.",
+    "one_sentence_summary": "The student enrolled to strengthen their research by learning to extract meaningful insights from real-world data.",
+    "keywords": [
+      "research",
+      "data insights",
+      "software development"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application",
+      "career preparation"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_028",
+    "original_no": 28,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose this course to develop my skills to analyze a vast amount of data. Got interested in AI & deep learning. Looking forward to getting knowledge about data science so I can adapt well in AI society where big data is important. Also wanted to experience team project.",
+    "language": "en",
+    "cleaned_text": "I chose this course to develop my skills to analyze a vast amount of data. I got interested in AI & deep learning. I'm looking forward to gaining knowledge about data science so I can adapt well in an AI society where big data is important. I also wanted to experience a team project.",
+    "english_text": "I chose this course to develop my skills to analyze a vast amount of data. I got interested in AI & deep learning. I'm looking forward to gaining knowledge about data science so I can adapt well in an AI society where big data is important. I also wanted to experience a team project.",
+    "one_sentence_summary": "The student enrolled to build big-data analysis skills for an AI-driven society and to experience a team project.",
+    "keywords": [
+      "big data",
+      "AI",
+      "team project"
+    ],
+    "themes": [
+      "course motivation",
+      "AI and machine learning",
+      "career preparation"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_029",
+    "original_no": 29,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I am interested in Data Analysis and it might be considered to be my future career. I wish to learn more concepts, knowledge, and practice in university.",
+    "language": "en",
+    "cleaned_text": "I am interested in Data Analysis, and it might be considered to be my future career. I wish to learn more concepts, knowledge, and practice in university.",
+    "english_text": "I am interested in Data Analysis, and it might be considered to be my future career. I wish to learn more concepts, knowledge, and practice in university.",
+    "one_sentence_summary": "The student enrolled out of interest in data analysis as a possible future career.",
+    "keywords": [
+      "data analysis",
+      "career preparation"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_030",
+    "original_no": 30,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "One of the interesting topics I would like to know more about. Needed credit hours for major. DS is useful and needed knowledge that may help a lot in future career. Professor's teaching style is interesting.",
+    "language": "en",
+    "cleaned_text": "One of the interesting topics I would like to know more about. I needed credit hours for my major. DS is useful, needed knowledge that may help a lot in my future career. The professor's teaching style is interesting.",
+    "english_text": "One of the interesting topics I would like to know more about. I needed credit hours for my major. DS is useful, needed knowledge that may help a lot in my future career. The professor's teaching style is interesting.",
+    "one_sentence_summary": "The student enrolled for interest, major credits, and future career usefulness, and likes the professor's teaching style.",
+    "keywords": [
+      "course credits",
+      "career preparation"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_031",
+    "original_no": 31,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "The course would teach me how to connect dots between other courses (machine learning, regression analysis, data visualization). Will gain better insights of real world data and how it will be processed.",
+    "language": "en",
+    "cleaned_text": "The course would teach me how to connect the dots between other courses (machine learning, regression analysis, data visualization). I will gain better insights into real-world data and how it is processed.",
+    "english_text": "The course would teach me how to connect the dots between other courses (machine learning, regression analysis, data visualization). I will gain better insights into real-world data and how it is processed.",
+    "one_sentence_summary": "The student enrolled to connect prior courses and better understand how real-world data is processed.",
+    "keywords": [
+      "machine learning",
+      "data visualization",
+      "data preprocessing"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_032",
+    "original_no": 32,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I want to learn to organize data and know how the field of Data Science is actually applied because data analyst job is trendy nowadays.",
+    "language": "en",
+    "cleaned_text": "I want to learn to organize data and know how the field of Data Science is actually applied, because the data analyst job is trendy nowadays.",
+    "english_text": "I want to learn to organize data and know how the field of Data Science is actually applied, because the data analyst job is trendy nowadays.",
+    "one_sentence_summary": "The student enrolled to learn data organization and real-world data science, drawn by the data analyst job trend.",
+    "keywords": [
+      "data organization",
+      "data analyst",
+      "career"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_033",
+    "original_no": 33,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I was fascinated by the idea that data analysis is like cooking: cleaning and processing raw ingredients to create something meaningful. After learning that 80% of a data scientist's time is spent on data processing, I chose this course.",
+    "language": "en",
+    "cleaned_text": "I was fascinated by the idea that data analysis is like cooking: cleaning and processing raw ingredients to create something meaningful. After learning that 80% of a data scientist's time is spent on data processing, I chose this course.",
+    "english_text": "I was fascinated by the idea that data analysis is like cooking: cleaning and processing raw ingredients to create something meaningful. After learning that 80% of a data scientist's time is spent on data processing, I chose this course.",
+    "one_sentence_summary": "The student enrolled, fascinated by data preprocessing as the core of data analysis.",
+    "keywords": [
+      "data preprocessing",
+      "data science curiosity"
+    ],
+    "themes": [
+      "course motivation",
+      "data preprocessing",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_034",
+    "original_no": 34,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I was interested in methods that can extract interesting knowledge from massive data in various types (numeric, text, image, acoustic, etc.). Taking this lecture especially to learn modern methods and apply through a team project.",
+    "language": "en",
+    "cleaned_text": "I was interested in methods that can extract interesting knowledge from massive data of various types (numeric, text, image, acoustic, etc.). I'm taking this lecture especially to learn modern methods and apply them through a team project.",
+    "english_text": "I was interested in methods that can extract interesting knowledge from massive data of various types (numeric, text, image, acoustic, etc.). I'm taking this lecture especially to learn modern methods and apply them through a team project.",
+    "one_sentence_summary": "The student enrolled to learn modern methods for extracting knowledge from large, varied data via a team project.",
+    "keywords": [
+      "knowledge extraction",
+      "data mining",
+      "team project"
+    ],
+    "themes": [
+      "course motivation",
+      "data mining",
+      "project-based learning"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_035",
+    "original_no": 35,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I wanted to place all classes in one day.",
+    "language": "en",
+    "cleaned_text": "I wanted to place all my classes in one day.",
+    "english_text": "I wanted to place all my classes in one day.",
+    "one_sentence_summary": "The student enrolled to fit all their classes into one day.",
+    "keywords": [
+      "scheduling",
+      "course enrollment"
+    ],
+    "themes": [
+      "course motivation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_036",
+    "original_no": 36,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I chose this course to learn guideline of Data Science. I'm afraid of solving problems which don't have specific answers. I want to know some guideline of Data Science (how to define answers, methods).",
+    "language": "en",
+    "cleaned_text": "I chose this course to learn guidelines of Data Science. I'm afraid of solving problems which don't have specific answers. I want to know some guidelines of Data Science (how to define answers, methods).",
+    "english_text": "I chose this course to learn guidelines of Data Science. I'm afraid of solving problems which don't have specific answers. I want to know some guidelines of Data Science (how to define answers, methods).",
+    "one_sentence_summary": "The student enrolled to learn data science guidelines for solving open-ended problems.",
+    "keywords": [
+      "data science guidelines",
+      "problem solving"
+    ],
+    "themes": [
+      "course motivation",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_037",
+    "original_no": 37,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "This is my first semester after completing military service (discharge date: Feb 26). Was looking for courses to take after returning to school. Found this course and signed up with enthusiasm. First semester back at school after military service.",
+    "language": "en",
+    "cleaned_text": "This is my first semester after completing military service (discharge date: Feb 26). I was looking for courses to take after returning to school. I found this course and signed up with enthusiasm. First semester back at school after military service.",
+    "english_text": "This is my first semester after completing military service (discharge date: Feb 26). I was looking for courses to take after returning to school. I found this course and signed up with enthusiasm. First semester back at school after military service.",
+    "one_sentence_summary": "A student returning from military service enthusiastically enrolled in their first semester back.",
+    "keywords": [
+      "military service",
+      "returning student"
+    ],
+    "themes": [
+      "course motivation",
+      "personal reflection"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_038",
+    "original_no": 38,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "데이터과학과 학생으로서 데이터마이닝을 배울 수 있다는 것에 기대. 데이터마이닝의 활용성을 배울 수 있을 것이라 생각.",
+    "language": "ko",
+    "cleaned_text": "데이터과학과 학생으로서 데이터마이닝을 배울 수 있다는 것에 기대함. 데이터마이닝의 활용성을 배울 수 있을 것이라 생각함.",
+    "english_text": "As a data science student, I look forward to being able to learn data mining. I think I'll be able to learn how data mining can be used.",
+    "one_sentence_summary": "As a data science major, the student is eager to learn data mining and its applications.",
+    "keywords": [
+      "data mining",
+      "major relevance"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_039",
+    "original_no": 39,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I'm a Data Science major student. I can finally learn more about my major in details. All subjects from previous semesters are kind of broad and general so I still can't see the real definition of Data Science.",
+    "language": "en",
+    "cleaned_text": "I'm a Data Science major student. I can finally learn more about my major in detail. All subjects from previous semesters are kind of broad and general, so I still can't see the real definition of Data Science.",
+    "english_text": "I'm a Data Science major student. I can finally learn more about my major in detail. All subjects from previous semesters are kind of broad and general, so I still can't see the real definition of Data Science.",
+    "one_sentence_summary": "The data science major enrolled to finally study their major in detail, since previous subjects were too broad.",
+    "keywords": [
+      "major relevance",
+      "data science understanding"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_040",
+    "original_no": 40,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I would like to start my career as a quantitative researcher at an asset management company. Data mining is highly related to qualitative decisions, so I would like to adopt those types of skills & technologies.",
+    "language": "en",
+    "cleaned_text": "I would like to start my career as a quantitative researcher at an asset management company. Data mining is highly related to qualitative decisions, so I would like to adopt those types of skills & technologies.",
+    "english_text": "I would like to start my career as a quantitative researcher at an asset management company. Data mining is highly related to qualitative decisions, so I would like to adopt those types of skills & technologies.",
+    "one_sentence_summary": "The student wants to become a quantitative researcher in asset management and adopt data mining skills.",
+    "keywords": [
+      "quantitative research",
+      "finance",
+      "career"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.87
+  },
+  {
+    "id": "Q1_041",
+    "original_no": 41,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I'm interested in AI topics such as machine learning, clustering, etc. Also making statistics to study data analytics. Statistics are highly related to data science. With this course, I can get a lot of help to consider my career.",
+    "language": "en",
+    "cleaned_text": "I'm interested in AI topics such as machine learning, clustering, etc. I'm also studying statistics for data analytics. Statistics are highly related to data science. With this course, I can get a lot of help to consider my career.",
+    "english_text": "I'm interested in AI topics such as machine learning, clustering, etc. I'm also studying statistics for data analytics. Statistics are highly related to data science. With this course, I can get a lot of help to consider my career.",
+    "one_sentence_summary": "Interested in AI and statistics, the student expects the course to help with career decisions.",
+    "keywords": [
+      "machine learning",
+      "clustering",
+      "statistics"
+    ],
+    "themes": [
+      "course motivation",
+      "AI and machine learning",
+      "career preparation"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_042",
+    "original_no": 42,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "My major is data science and still after studying for 2 years, I haven't got a concept of what I'm learning and exactly what my major is. I chose this course to understand truly what I am majoring on.",
+    "language": "en",
+    "cleaned_text": "My major is data science and still, after studying for 2 years, I haven't got a concept of what I'm learning and exactly what my major is. I chose this course to understand truly what I am majoring in.",
+    "english_text": "My major is data science and still, after studying for 2 years, I haven't got a concept of what I'm learning and exactly what my major is. I chose this course to understand truly what I am majoring in.",
+    "one_sentence_summary": "After two years as a data science major, the student still doesn't understand their major and enrolled to truly understand it.",
+    "keywords": [
+      "major relevance",
+      "data science understanding"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_043",
+    "original_no": 43,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "The reason was to get useful insights and skills for my personal data science project. I'm currently researching the relevance between a web novel's certain traits and the novel's hit rate. Data mining, outlier detection, classification would be a great theoretical foundation.",
+    "language": "en",
+    "cleaned_text": "The reason was to get useful insights and skills for my personal data science project. I'm currently researching the relevance between a web novel's certain traits and the novel's hit rate. Data mining, outlier detection, and classification would be a great theoretical foundation.",
+    "english_text": "The reason was to get useful insights and skills for my personal data science project. I'm currently researching the relevance between a web novel's certain traits and the novel's hit rate. Data mining, outlier detection, and classification would be a great theoretical foundation.",
+    "one_sentence_summary": "The student enrolled to support a project linking web novel traits to popularity using data mining methods.",
+    "keywords": [
+      "web novel",
+      "data mining",
+      "prediction"
+    ],
+    "themes": [
+      "course motivation",
+      "real-world application",
+      "prediction"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_044",
+    "original_no": 44,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I want to learn the fundamental concepts of data science as it is detrimental to my major. The team project for this class will help me gain good experience for my future career.",
+    "language": "en",
+    "cleaned_text": "I want to learn the fundamental concepts of data science as it is detrimental to my major. The team project for this class will help me gain good experience for my future career.",
+    "english_text": "I want to learn the fundamental concepts of data science as it is detrimental to my major. The team project for this class will help me gain good experience for my future career.",
+    "one_sentence_summary": "The student wants to learn data science fundamentals and gain career experience through the team project.",
+    "keywords": [
+      "fundamentals",
+      "team project",
+      "career"
+    ],
+    "themes": [
+      "course motivation",
+      "major relevance",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q1_045",
+    "original_no": 45,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Finished military service at 2026.2.8 and returned to school. School culture, data science, AI, cyber security, machine learning had changed drastically in 2 years. Need to recover and exercise the main concepts and applications.",
+    "language": "en",
+    "cleaned_text": "I finished military service on 2026.2.8 and returned to school. School culture, data science, AI, cyber security, and machine learning had changed drastically in 2 years. I need to recover and exercise the main concepts and applications.",
+    "english_text": "I finished military service on 2026.2.8 and returned to school. School culture, data science, AI, cyber security, and machine learning had changed drastically in 2 years. I need to recover and exercise the main concepts and applications.",
+    "one_sentence_summary": "Returning from military service, the student wants to catch up on rapidly changed concepts in data science, AI, and ML.",
+    "keywords": [
+      "military service",
+      "catching up",
+      "data science"
+    ],
+    "themes": [
+      "course motivation",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_046",
+    "original_no": 46,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I want to know more about data science. Also desperately needed to fill the quota for major subject credits. Data science class was a good enough choice. (At 9am on a Friday was a good enough choice :p)",
+    "language": "en",
+    "cleaned_text": "I want to know more about data science. I also desperately needed to fill the quota for major subject credits. The data science class was a good enough choice. (At 9am on a Friday was a good enough choice :p)",
+    "english_text": "I want to know more about data science. I also desperately needed to fill the quota for major subject credits. The data science class was a good enough choice. (At 9am on a Friday was a good enough choice :p)",
+    "one_sentence_summary": "The student enrolled to learn more about data science and to fill required major credits.",
+    "keywords": [
+      "course credits",
+      "data science curiosity"
+    ],
+    "themes": [
+      "course motivation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_047",
+    "original_no": 47,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "I want to understand how data in general works. As a computer science student, I handle data everyday using computers, but not often manually. I decided to take this class to look further in depth.",
+    "language": "en",
+    "cleaned_text": "I want to understand how data in general works. As a computer science student, I handle data every day using computers, but not often manually. I decided to take this class to look further in depth.",
+    "english_text": "I want to understand how data in general works. As a computer science student, I handle data every day using computers, but not often manually. I decided to take this class to look further in depth.",
+    "one_sentence_summary": "The computer science student enrolled to understand data more deeply.",
+    "keywords": [
+      "data science curiosity",
+      "computer science"
+    ],
+    "themes": [
+      "course motivation",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_048",
+    "original_no": 48,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Biggest reason: class is on Friday 9AM - needed motivation to wake up after military service (discharged Dec 2025). Second reason: progress of AI - I should train myself in areas AI cannot take over.",
+    "language": "en",
+    "cleaned_text": "Biggest reason: the class is on Friday 9AM - I needed motivation to wake up after military service (discharged Dec 2025). Second reason: the progress of AI - I should train myself in areas AI cannot take over.",
+    "english_text": "Biggest reason: the class is on Friday 9AM - I needed motivation to wake up after military service (discharged Dec 2025). Second reason: the progress of AI - I should train myself in areas AI cannot take over.",
+    "one_sentence_summary": "The student enrolled for an early-class wake-up routine after military service and to build skills AI cannot replace.",
+    "keywords": [
+      "military service",
+      "AI",
+      "personal reflection"
+    ],
+    "themes": [
+      "course motivation",
+      "personal reflection",
+      "AI and machine learning"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_049",
+    "original_no": 49,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Data Science is the most important topic nowadays. As a software engineer, I chose to learn core concepts of this lecture to learn what the data says.",
+    "language": "en",
+    "cleaned_text": "Data Science is the most important topic nowadays. As a software engineer, I chose to learn the core concepts of this lecture to learn what the data says.",
+    "english_text": "Data Science is the most important topic nowadays. As a software engineer, I chose to learn the core concepts of this lecture to learn what the data says.",
+    "one_sentence_summary": "As a software engineer, the student enrolled to learn core data science concepts.",
+    "keywords": [
+      "data science",
+      "software engineering"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q1_050",
+    "original_no": 50,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Data로 세상의 다양한 문제를 해결할 수 있어서. 머신러닝 개론 수업에서 큰 흥미를 느끼고 더 공부하고 싶어서. 데이터를 다루는 역량을 기르고 싶었음.",
+    "language": "mixed",
+    "cleaned_text": "Data로 세상의 다양한 문제를 해결할 수 있어서. 머신러닝 개론 수업에서 큰 흥미를 느끼고 더 공부하고 싶어서. 데이터를 다루는 역량을 기르고 싶었음.",
+    "english_text": "Because data can solve various problems in the world. Because I felt great interest in an introductory machine learning course and wanted to study more. I wanted to build my ability to handle data.",
+    "one_sentence_summary": "The student enrolled because data can solve problems and after enjoying an introductory ML course.",
+    "keywords": [
+      "machine learning",
+      "problem solving",
+      "data skills"
+    ],
+    "themes": [
+      "course motivation",
+      "problem solving",
+      "AI and machine learning"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q1_051",
+    "original_no": 51,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "Reason: I believe when we go to work, wherever we end up will always work with data. Chose this class to improve my data managing skills in preparation for career life. Having extra soft skills is always good for job seeking.",
+    "language": "en",
+    "cleaned_text": "Reason: I believe that wherever we end up working, we will always work with data. I chose this class to improve my data managing skills in preparation for career life. Having extra soft skills is always good for job seeking.",
+    "english_text": "Reason: I believe that wherever we end up working, we will always work with data. I chose this class to improve my data managing skills in preparation for career life. Having extra soft skills is always good for job seeking.",
+    "one_sentence_summary": "Believing all jobs involve data, the student enrolled to improve data-managing skills for their career.",
+    "keywords": [
+      "data skills",
+      "career preparation"
+    ],
+    "themes": [
+      "course motivation",
+      "career preparation"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q1_052",
+    "original_no": 52,
+    "question": "Q1",
+    "stage": "pre",
+    "raw_text": "It has been one of my bucket list to study and learn about data mining, i.e. how to mine it correctly, the proper method, how to implement novel models. Motivation came from last semester's Deep Learning class.",
+    "language": "en",
+    "cleaned_text": "It has been one of my bucket list items to study and learn about data mining, i.e. how to mine it correctly, the proper method, and how to implement novel models. The motivation came from last semester's Deep Learning class.",
+    "english_text": "It has been one of my bucket list items to study and learn about data mining, i.e. how to mine it correctly, the proper method, and how to implement novel models. The motivation came from last semester's Deep Learning class.",
+    "one_sentence_summary": "Motivated by a deep learning class, the student enrolled to learn proper data mining methods.",
+    "keywords": [
+      "data mining",
+      "deep learning",
+      "personal reflection"
+    ],
+    "themes": [
+      "course motivation",
+      "data mining",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  }
+]

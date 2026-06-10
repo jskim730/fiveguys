@@ -1,0 +1,5 @@
+judge,R0,R1,R2
+full (fw+char+punct),0.991,0.926,0.776
+function words,0.89,0.86,0.769
+char 3-gram,0.992,0.908,0.764
+punctuation,0.955,0.76,0.358

@@ -1,0 +1,332 @@
+[
+  {
+    "original_no": 1,
+    "question": "Q3",
+    "raw_response": "The most interesting part I learned today was MCAR/MAR/MNAR. Its concept in broadly missing values chapter. Its base three concepts were a crucial part of my understanding. I had performed a public analysis at several layers of the platform and steps clearly from the start throughout the research process."
+  },
+  {
+    "original_no": 2,
+    "question": "Q3",
+    "raw_response": "The variance method to reduce the dimension of data was interesting. I'm not used to nonlinear reduction methods, but there are still some to try to minimize the difference with minimum variables. I had to study these mathematically."
+  },
+  {
+    "original_no": 3,
+    "question": "Q3",
+    "raw_response": "Dimensionality reduction. Because I took the course about regression and multidimensional data, so I'm familiar with dimensionality reduction using linear method but unfamiliar with using non-linear method. Through today's class I learned about dimensionality reduction. In reason it is the most interesting thing."
+  },
+  {
+    "original_no": 4,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about KL divergence, visualization, similarity measures. Found it interesting how different visualization methods can reveal patterns in data. Discussed AI agent capabilities for data analysis."
+  },
+  {
+    "original_no": 5,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about MCAR, MAR, MNAR concepts and how they affect data analysis. Found it interesting that different types of missing data require different handling approaches."
+  },
+  {
+    "original_no": 6,
+    "question": "Q3",
+    "raw_response": "The preprocessing step was the most interesting thing I learned. I love how it tells a story about how data was collected and uncovering patterns. That is more like detective work than data processing. This is why the preprocessing was the most interesting thing during the class."
+  },
+  {
+    "original_no": 7,
+    "question": "Q3",
+    "raw_response": "(Mixed Korean/English) Found visualization and independence analysis interesting. Learned about how to use different plots and charts to understand data distributions and relationships between variables."
+  },
+  {
+    "original_no": 8,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is PCA. I found PCA moves the dimensionality, and it can be done by general case and unprincipled capturing of the data. It also expands to visualize at a specific format. It was interesting."
+  },
+  {
+    "original_no": 9,
+    "question": "Q3",
+    "raw_response": "Sources of potential problems: Errors and noise, Incompleteness, segments, missing entity, duplicate, fictitious, conflicto. Lack of semantics, unlabeled, bad quality, data integration and attributes. When we look at data paths, our integration and environment is the data source."
+  },
+  {
+    "original_no": 10,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about different data types and preprocessing methods. Found it interesting how different visualization techniques can help understand data better."
+  },
+  {
+    "original_no": 11,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about LLM and how AI processes data. Found it interesting that AI can assist in data visualization and analysis, but it requires proper understanding of the underlying data."
+  },
+  {
+    "original_no": 12,
+    "question": "Q3",
+    "raw_response": "(Korean) Data preprocessing and visualization were the most interesting topics. Understanding how to clean and prepare data is fundamental for any analysis."
+  },
+  {
+    "original_no": 13,
+    "question": "Q3",
+    "raw_response": "Data cleaning is the most interesting part because it's the step that requires judgment, not just technique. You have to decide why the data is messy before you can fix it. Every dirty dataset tells a story about how it was collected and uncovering that is more like detective work than data processing."
+  },
+  {
+    "original_no": 14,
+    "question": "Q3",
+    "raw_response": "What I found interesting is that the importance of data can be measured by different aspects. For example, effects like missing values, duplicated types like noise, sampling approaches - all of these are different measures that represent different dimensions of the data quality."
+  },
+  {
+    "original_no": 15,
+    "question": "Q3",
+    "raw_response": "Today I learned that I learned today is that we can extract data in different subjects, but some data can be complex for a short description. The data is related with so many concepts. We need to check if the data meets requirements after preprocessing."
+  },
+  {
+    "original_no": 16,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data types and how different representations of data affect analysis. Found it interesting that preprocessing choices can significantly impact results."
+  },
+  {
+    "original_no": 17,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today? I think the most interesting thing is visualization. It was interesting and it helps us to understand data better. There are various types of visualization tools that we can use to analyze data."
+  },
+  {
+    "original_no": 18,
+    "question": "Q3",
+    "raw_response": "Before this, I only learned the importance behind it, and its preprocessing. But very I thought it was more like a routine I had to do. But I was surprised that there was a lot of method to it. I learn more about MCAR, and MNAR and if there was a pattern to it. I found it very interesting, I learnt today."
+  },
+  {
+    "original_no": 19,
+    "question": "Q3",
+    "raw_response": "(Korean/English) Learned about different methods of handling missing data. The concept of using statistical methods to handle missing values was the most interesting part of today's lecture."
+  },
+  {
+    "original_no": 20,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is about data preprocessing. It's important to understand why data cleaning and preprocessing matter before analysis. The concept of data quality dimensions was enlightening."
+  },
+  {
+    "original_no": 21,
+    "question": "Q3",
+    "raw_response": "What I found most interesting today was that the different concepts of data can be measured. The different dimensions like completeness, accuracy, for instance, like man and woman, king and queen, make the same distance with each other. I never thought of it that way because I never thought of it."
+  },
+  {
+    "original_no": 22,
+    "question": "Q3",
+    "raw_response": "I found it was a very kind helpful process and I've learned various topics in today's lecture. The most useful was data preprocessing. It helped me organize and I want to better understand the subject of AI and data science. It also made me understand more about data."
+  },
+  {
+    "original_no": 23,
+    "question": "Q3",
+    "raw_response": "I think the most interesting thing that I learned today is that easy type of data and for different approaches, reasons and the data before. I saw familiar concepts like before, with the update and transformation of data types in today's class and I think it is very useful for studying."
+  },
+  {
+    "original_no": 24,
+    "question": "Q3",
+    "raw_response": "I got to know about how to handle with data, there is so much. Categories and a lot of examples to understand. Even more, I would learn more from it. Knowledge is consuming. It in my area, it is good to know in short time. It will need to learn to have that ability."
+  },
+  {
+    "original_no": 25,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is about data preprocessing and why it is important step for the next data analyzing. It requires knowledge and techniques. I think it is well interesting because it seems like it takes a lot of practice to do well in this step. The concepts such as data cleaning dealing with missing data, visualizations are crucial knowledge."
+  },
+  {
+    "original_no": 26,
+    "question": "Q3",
+    "raw_response": "(Korean) About how the molecular and the reduction, the most interesting thing I learned was about independent analysis concepts. Found it interesting about how the overall concepts work."
+  },
+  {
+    "original_no": 27,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today and why? I think today's class was about the confusion and class related to data cleaning. Some data are not easy to find. I used to think the data is already clean but I found it was not the way. It is important to learn in this step."
+  },
+  {
+    "original_no": 28,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the most interesting thing. What I learned today is about visualization and data types. When I was looking at the types of data, their visualization. I also have different grades and graphs can capture different objects. I also enjoyed learning how different data objects can be related. How to point an equation with variables or logical thinking."
+  },
+  {
+    "original_no": 29,
+    "question": "Q3",
+    "raw_response": "I think what we most learned part of today's class is the situation where we analyze data carefully and quality data. In practice, I fell the best in the lecture. To analyze by data. It helps to become about which the subject of the data serves as an understanding to become knowledge. Since you understand this, it is really important. Because the more data the flow more interesting to learn concepts. How to better know when I am rapidly developing everyday."
+  },
+  {
+    "original_no": 30,
+    "question": "Q3",
+    "raw_response": "(Korean/mixed) Learned about data types and formats. Found it interesting how different representations affect the analysis approach."
+  },
+  {
+    "original_no": 31,
+    "question": "Q3",
+    "raw_response": "It was interesting that noisy data can be helpful for avoiding overfitting."
+  },
+  {
+    "original_no": 32,
+    "question": "Q3",
+    "raw_response": "(Korean) Data preprocessing and visualization were most interesting. Learning about different types of missing data and how to handle them was valuable."
+  },
+  {
+    "original_no": 33,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the different types of missing data (MCAR, MAR, MNAR) and how each requires a different approach for handling. This is important because it directly affects the reliability of the analysis."
+  },
+  {
+    "original_no": 34,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is that LLM model will preprocess data. We are able to understand that the data preprocessing step has its importance. But also I think that we have to see both supporting data without this step. The better data, the better result. The preprocessing step is important but it really only is the understanding. But it holds no value."
+  },
+  {
+    "original_no": 35,
+    "question": "Q3",
+    "raw_response": "For me the most interesting thing we learn today is visualization of data is interesting, as it make a long or complex or direct data easily understood by representing it using plot, graph or any visual. It is a phrase that 'one picture is worth a thousand words'. And it also the least complex they've learn today."
+  },
+  {
+    "original_no": 36,
+    "question": "Q3",
+    "raw_response": "What's interesting: I'm amazed at how data can be represented into discrete and continuous. Also data can be represented as regression or categorization. The possible different ways of learning is interesting."
+  },
+  {
+    "original_no": 37,
+    "question": "Q3",
+    "raw_response": "I enjoy by the data. I did not expect that the new idea will be in detail beyond the skill. I always that we can also avoid to doing level it, basically relating. But should be taken. The other data education as it is the way. I think."
+  },
+  {
+    "original_no": 38,
+    "question": "Q3",
+    "raw_response": "Data types differences. Understanding data types is visualizing my learning. Since data are at several involved has diagram new, think & use graph > understanding everything."
+  },
+  {
+    "original_no": 39,
+    "question": "Q3",
+    "raw_response": "The most important thing I found today and why? Importance of preprocessing in the data. When data is stored and it shows while it seems important, then it the data of AI, LLM, and only state models. If data was reformated the resulting model will change. If this sense more important than the model or computing methods."
+  },
+  {
+    "original_no": 40,
+    "question": "Q3",
+    "raw_response": "Preprocessing data with the relation was most interesting part. Because it can be treated data with more efficiently and interestly. Things I liked adopted the point of its being and in the middle, I like the one very interesting and also shared types, to feel this field more helpful."
+  },
+  {
+    "original_no": 41,
+    "question": "Q3",
+    "raw_response": "There is two very interesting things for today. The first one being there are various types of visualization. We can show all of them by using plots, charts and graphs. I want to use in my field. I see some having fun tables to turn to so we see visualization and data visualization about the question of AI generate plot to analyze chart in the real life."
+  },
+  {
+    "original_no": 42,
+    "question": "Q3",
+    "raw_response": "A data 100 visualization site was interesting."
+  },
+  {
+    "original_no": 43,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing? Data Analysis, and today I found weight analysis working. Without expert review. Weight case analysis is important. But today professor told us data analysis in movie weights. The movie derived in movie analysis weights case in real world. The picture describing in movie weights. LLM makes we look forward to assigning the feature at data science."
+  },
+  {
+    "original_no": 44,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data visualization and preprocessing. Found it interesting how visual representations can reveal hidden patterns in data."
+  },
+  {
+    "original_no": 45,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today has to do with data science. I realized that data science has a lot to do with attribute relationships. Two datasets with categories and attributes should be well covered in PCA. These are all closely related. I was able to see clearly my research including finding a very close relationship with my research."
+  },
+  {
+    "original_no": 46,
+    "question": "Q3",
+    "raw_response": "The most interesting thing is that it happened this year and how new AI does. I received a visual model that removes every related data. It is related about it being together. The reasoning is the most important idea. It is related."
+  },
+  {
+    "original_no": 47,
+    "question": "Q3",
+    "raw_response": "(Korean) About data types and visualization concepts. Learned about different ways to process and handle data. Found the various data handling techniques interesting."
+  },
+  {
+    "original_no": 48,
+    "question": "Q3",
+    "raw_response": "(Korean) Found the classification and dimensionality reduction concepts most interesting. Learning about how data can be transformed for better analysis."
+  },
+  {
+    "original_no": 49,
+    "question": "Q3",
+    "raw_response": "I just interesting thing is that today I learned that data cleaning and preprocessing are really important. What I really important in data analysis. I think data preprocessing is the key to getting good results from any analysis. Without clean data, the results will be unreliable."
+  },
+  {
+    "original_no": 50,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is about data understanding and preprocessing. I could see that understanding patterns and relationships in data is very important. Data visualization helps a lot in understanding complex datasets. I also found the concept of missing value handling very important."
+  },
+  {
+    "original_no": 51,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is knowing the inaccuracy of data when it comes to the data itself. There was a missing data that is left behind. It means we need to learn how to see left over. However, after learning the deep reasoning behind it, which are called missing data. I learn of traits that are surprising that at some point in reality it was clean if it actually surprising to be the first."
+  },
+  {
+    "original_no": 52,
+    "question": "Q3",
+    "raw_response": "Thought in is relatively important: deep representation learning. Set in very intrigued in how neural networks work. Also how bits work is providing the world today more complex algorithms larger transformation of preprocessing. Basically it is simple logic. But we need to understand the basis of AI. It is believed we need to understand everything before we use AI for data. Gather analysis / processing a system-level / properties we can that the proper matter a lot even when using an AI agent. Teachers instead of wasting for its better to prompt and try one."
+  },
+  {
+    "original_no": 53,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is about the similarity. The reason is because the similarity that need to be measure. When we are facing a data, there can be very alternate ideas. It's like the the meaning is important. Especially when facing data, contain very alternate types."
+  },
+  {
+    "original_no": 54,
+    "question": "Q3",
+    "raw_response": "Most interesting thing I learned is NO, meeting of data preprocessing in data science letter building any model, data will be cleaned and imputed. Raw world data can be going complicated to collected the data, and more going to understand about them. Then we can make it more. Could also visualize into graph to make it more passthrough and easier for all. Development."
+  },
+  {
+    "original_no": 55,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today was this year about problems in data such as missing or noisy/incomplete values. I found this especially interesting because it showed how data preprocessing affects the quality of analysis and how important it is to set a proper cleaning step."
+  },
+  {
+    "original_no": 56,
+    "question": "Q3",
+    "raw_response": "We can visualize data through many tools, not specifically through scatter plot method. I found it interesting to use it for finding pattern and relations between data mathematically."
+  },
+  {
+    "original_no": 57,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned today is the collecting and discovering data concepts and how our subject familiar or rather how to demonstrate the data and the concepts I think. It's important to know and also everything and will reasoning well and most part."
+  },
+  {
+    "original_no": 58,
+    "question": "Q3",
+    "raw_response": "I found interesting thing. I found that it varies not just the easy one. The real world and it may easily do the result. that is very easy and to AI the model. Once related analysis and optional mixed. It is possible to get some things that, and to be got the side of the AI. Those one were to be the types applying the something."
+  },
+  {
+    "original_no": 59,
+    "question": "Q3",
+    "raw_response": "I think interesting things. It was about visualization and data types. When I was looking at the types of data visualization, I also enjoyed to be how different data and graphs can capture insights and be presented in a meaningful way."
+  },
+  {
+    "original_no": 60,
+    "question": "Q3",
+    "raw_response": "In it, the most interesting thing per learned today I felt is the data care in the descriptive and values. Data completeness/discontinuity between data sets, relationship from the new data related to reporting. It results so it means the possibility of the sample in characteristics. Having the properties."
+  },
+  {
+    "original_no": 61,
+    "question": "Q3",
+    "raw_response": "The most interesting thing I learned. A lot of compelling processes when it comes to data, the most useful I found is the preprocessing data. The initial step at data analysis the pair. And I think the properly step with certain method to combine and together it all in many related to explore the scope that represents a different data."
+  },
+  {
+    "original_no": 62,
+    "question": "Q3",
+    "raw_response": "What is the most interesting thing you learned today and why? Patterns finding was initially a similarity of data and its preprocessing. I found it was fascinating that you can look at the patterns and compare it mathematically by looking at the same development, and it was interesting to see how it can be established, relationships between kinds of objects."
+  },
+  {
+    "original_no": 63,
+    "question": "Q3",
+    "raw_response": "(Korean) Found dimensionality reduction and PCA concepts most interesting. The mathematical basis behind these techniques was enlightening."
+  },
+  {
+    "original_no": 64,
+    "question": "Q3",
+    "raw_response": "The most interesting thing that I learned today is similarity. Altough I used to only Semantic/sim, but I know most similarity in the same method. However, things I find it also in measuring things. Similarity can help us to capture the whole meaning. It is interest computing by some codes. Helps it word."
+  },
+  {
+    "original_no": 65,
+    "question": "Q3",
+    "raw_response": "(Korean) Learned about data types, visualization methods, and preprocessing techniques. The practical applications of these concepts were the most interesting."
+  },
+  {
+    "original_no": 66,
+    "question": "Q3",
+    "raw_response": "(Korean) Understanding data visualization and classification concepts was most interesting. Found it valuable to learn about different approaches to data preprocessing."
+  }
+]

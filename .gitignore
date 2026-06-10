@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Secrets / API keys
+.env
+*.key
+config/secrets.yaml
+
+# Model weights / caches (download on demand)
+*.pt
+*.safetensors
+.cache/
+models/
+~$*.xlsx          # Excel lock files
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Note: data/ and results/ are kept tracked (small). Generated feature caches in
+# data/features/ can be regenerated; ignore the large ones if needed:
+# data/features/*.npy

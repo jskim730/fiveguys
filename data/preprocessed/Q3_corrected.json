@@ -1,0 +1,1422 @@
+[
+  {
+    "id": "Q3_001",
+    "original_no": 1,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting part I learned today was MCAR/MAR/MNAR. Its concept in broadly missing values chapter. Its base three concepts were a crucial part of my understanding. I had performed a public analysis at several layers of the platform and steps clearly from the start throughout the research process.",
+    "language": "en",
+    "cleaned_text": "The most interesting part I learned today was MCAR/MAR/MNAR, the concepts in the missing values chapter. These three base concepts were a crucial part of my understanding. I had performed an analysis at several layers and steps clearly from the start throughout the research process.",
+    "english_text": "The most interesting part I learned today was MCAR/MAR/MNAR, the concepts in the missing values chapter. These three base concepts were a crucial part of my understanding. I had performed an analysis at several layers and steps clearly from the start throughout the research process.",
+    "one_sentence_summary": "The student found the missing-data concepts MCAR/MAR/MNAR the most interesting part of the lecture.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.68
+  },
+  {
+    "id": "Q3_002",
+    "original_no": 2,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The variance method to reduce the dimension of data was interesting. I'm not used to nonlinear reduction methods, but there are still some to try to minimize the difference with minimum variables. I had to study these mathematically.",
+    "language": "en",
+    "cleaned_text": "The variance method to reduce the dimension of data was interesting. I'm not used to nonlinear reduction methods, but there are still some to try to minimize the difference with the minimum number of variables. I had to study these mathematically.",
+    "english_text": "The variance method to reduce the dimension of data was interesting. I'm not used to nonlinear reduction methods, but there are still some to try to minimize the difference with the minimum number of variables. I had to study these mathematically.",
+    "one_sentence_summary": "The student found dimensionality reduction (variance-based) interesting and noted unfamiliarity with nonlinear methods.",
+    "keywords": [
+      "dimensionality reduction",
+      "variance"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q3_003",
+    "original_no": 3,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Dimensionality reduction. Because I took the course about regression and multidimensional data, so I'm familiar with dimensionality reduction using linear method but unfamiliar with using non-linear method. Through today's class I learned about dimensionality reduction. In reason it is the most interesting thing.",
+    "language": "en",
+    "cleaned_text": "Dimensionality reduction. Because I took a course about regression and multidimensional data, I'm familiar with dimensionality reduction using linear methods but unfamiliar with using non-linear methods. Through today's class I learned about dimensionality reduction. For that reason it is the most interesting thing.",
+    "english_text": "Dimensionality reduction. Because I took a course about regression and multidimensional data, I'm familiar with dimensionality reduction using linear methods but unfamiliar with using non-linear methods. Through today's class I learned about dimensionality reduction. For that reason it is the most interesting thing.",
+    "one_sentence_summary": "The student found dimensionality reduction most interesting, being familiar with linear but not nonlinear methods.",
+    "keywords": [
+      "dimensionality reduction",
+      "nonlinear methods"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_004",
+    "original_no": 4,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about KL divergence, visualization, similarity measures. Found it interesting how different visualization methods can reveal patterns in data. Discussed AI agent capabilities for data analysis.",
+    "language": "en",
+    "cleaned_text": "Learned about KL divergence, visualization, and similarity measures. Found it interesting how different visualization methods can reveal patterns in data. Discussed AI agent capabilities for data analysis.",
+    "english_text": "Learned about KL divergence, visualization, and similarity measures. Found it interesting how different visualization methods can reveal patterns in data. Discussed AI agent capabilities for data analysis.",
+    "one_sentence_summary": "The student found it interesting how different visualization methods can reveal patterns, alongside KL divergence, similarity, and AI agents.",
+    "keywords": [
+      "visualization",
+      "similarity measures",
+      "KL divergence"
+    ],
+    "themes": [
+      "data visualization",
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_005",
+    "original_no": 5,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about MCAR, MAR, MNAR concepts and how they affect data analysis. Found it interesting that different types of missing data require different handling approaches.",
+    "language": "en",
+    "cleaned_text": "Learned about MCAR, MAR, and MNAR concepts and how they affect data analysis. Found it interesting that different types of missing data require different handling approaches.",
+    "english_text": "Learned about MCAR, MAR, and MNAR concepts and how they affect data analysis. Found it interesting that different types of missing data require different handling approaches.",
+    "one_sentence_summary": "The student found it interesting that different types of missing data (MCAR, MAR, MNAR) require different handling approaches.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_006",
+    "original_no": 6,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The preprocessing step was the most interesting thing I learned. I love how it tells a story about how data was collected and uncovering patterns. That is more like detective work than data processing. This is why the preprocessing was the most interesting thing during the class.",
+    "language": "en",
+    "cleaned_text": "The preprocessing step was the most interesting thing I learned. I love how it tells a story about how data was collected and how it uncovers patterns. That is more like detective work than data processing. This is why preprocessing was the most interesting thing during the class.",
+    "english_text": "The preprocessing step was the most interesting thing I learned. I love how it tells a story about how data was collected and how it uncovers patterns. That is more like detective work than data processing. This is why preprocessing was the most interesting thing during the class.",
+    "one_sentence_summary": "The student found preprocessing most interesting, comparing it to detective work that uncovers how data was collected.",
+    "keywords": [
+      "data preprocessing",
+      "pattern discovery"
+    ],
+    "themes": [
+      "data preprocessing",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q3_007",
+    "original_no": 7,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Mixed Korean/English) Found visualization and independence analysis interesting. Learned about how to use different plots and charts to understand data distributions and relationships between variables.",
+    "language": "en",
+    "cleaned_text": "Found visualization and independence analysis interesting. Learned about how to use different plots and charts to understand data distributions and relationships between variables.",
+    "english_text": "Found visualization and independence analysis interesting. Learned about how to use different plots and charts to understand data distributions and relationships between variables.",
+    "one_sentence_summary": "The student found visualization and independence analysis interesting, learning to use plots and charts to understand data distributions and relationships.",
+    "keywords": [
+      "visualization",
+      "independence analysis"
+    ],
+    "themes": [
+      "data visualization",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_008",
+    "original_no": 8,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing is PCA. I found PCA moves the dimensionality, and it can be done by general case and unprincipled capturing of the data. It also expands to visualize at a specific format. It was interesting.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing is PCA. I found that PCA moves the dimensionality, and it can be done as a general case and by capturing the data. It also expands to visualize in a specific format. It was interesting.",
+    "english_text": "The most interesting thing is PCA. I found that PCA moves the dimensionality, and it can be done as a general case and by capturing the data. It also expands to visualize in a specific format. It was interesting.",
+    "one_sentence_summary": "The student found PCA the most interesting topic, relating it to reducing dimensionality and visualization.",
+    "keywords": [
+      "PCA",
+      "dimensionality reduction"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.65
+  },
+  {
+    "id": "Q3_009",
+    "original_no": 9,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Sources of potential problems: Errors and noise, Incompleteness, segments, missing entity, duplicate, fictitious, conflicto. Lack of semantics, unlabeled, bad quality, data integration and attributes. When we look at data paths, our integration and environment is the data source.",
+    "language": "en",
+    "cleaned_text": "Sources of potential problems: errors and noise, incompleteness, segments, missing entities, duplicates, fictitious data, conflicts, lack of semantics, unlabeled data, bad quality, data integration, and attributes. When we look at data paths, our integration and environment is the data source.",
+    "english_text": "Sources of potential problems: errors and noise, incompleteness, segments, missing entities, duplicates, fictitious data, conflicts, lack of semantics, unlabeled data, bad quality, data integration, and attributes. When we look at data paths, our integration and environment is the data source.",
+    "one_sentence_summary": "The student listed sources of data problems such as noise, incompleteness, duplicates, and lack of semantics.",
+    "keywords": [
+      "data quality",
+      "noise",
+      "missing data"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q3_010",
+    "original_no": 10,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about different data types and preprocessing methods. Found it interesting how different visualization techniques can help understand data better.",
+    "language": "en",
+    "cleaned_text": "Learned about different data types and preprocessing methods. Found it interesting how different visualization techniques can help understand data better.",
+    "english_text": "Learned about different data types and preprocessing methods. Found it interesting how different visualization techniques can help understand data better.",
+    "one_sentence_summary": "The student found it interesting how visualization techniques help understand data, alongside learning data types and preprocessing.",
+    "keywords": [
+      "data types",
+      "preprocessing",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_011",
+    "original_no": 11,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about LLM and how AI processes data. Found it interesting that AI can assist in data visualization and analysis, but it requires proper understanding of the underlying data.",
+    "language": "en",
+    "cleaned_text": "Learned about LLMs and how AI processes data. Found it interesting that AI can assist in data visualization and analysis, but it requires proper understanding of the underlying data.",
+    "english_text": "Learned about LLMs and how AI processes data. Found it interesting that AI can assist in data visualization and analysis, but it requires proper understanding of the underlying data.",
+    "one_sentence_summary": "The student found it interesting that AI/LLMs can assist in data visualization and analysis but require understanding the underlying data.",
+    "keywords": [
+      "LLM",
+      "AI-assisted analysis"
+    ],
+    "themes": [
+      "AI and machine learning",
+      "data visualization"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_012",
+    "original_no": 12,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Data preprocessing and visualization were the most interesting topics. Understanding how to clean and prepare data is fundamental for any analysis.",
+    "language": "en",
+    "cleaned_text": "Data preprocessing and visualization were the most interesting topics. Understanding how to clean and prepare data is fundamental for any analysis.",
+    "english_text": "Data preprocessing and visualization were the most interesting topics. Understanding how to clean and prepare data is fundamental for any analysis.",
+    "one_sentence_summary": "The student found data preprocessing and visualization most interesting, seeing data cleaning as fundamental.",
+    "keywords": [
+      "data preprocessing",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_013",
+    "original_no": 13,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Data cleaning is the most interesting part because it's the step that requires judgment, not just technique. You have to decide why the data is messy before you can fix it. Every dirty dataset tells a story about how it was collected and uncovering that is more like detective work than data processing.",
+    "language": "en",
+    "cleaned_text": "Data cleaning is the most interesting part because it's the step that requires judgment, not just technique. You have to decide why the data is messy before you can fix it. Every dirty dataset tells a story about how it was collected, and uncovering that is more like detective work than data processing.",
+    "english_text": "Data cleaning is the most interesting part because it's the step that requires judgment, not just technique. You have to decide why the data is messy before you can fix it. Every dirty dataset tells a story about how it was collected, and uncovering that is more like detective work than data processing.",
+    "one_sentence_summary": "The student found data cleaning most interesting because it requires judgment and reveals the story of how data was collected.",
+    "keywords": [
+      "data cleaning",
+      "data quality"
+    ],
+    "themes": [
+      "data preprocessing",
+      "personal reflection"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q3_014",
+    "original_no": 14,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What I found interesting is that the importance of data can be measured by different aspects. For example, effects like missing values, duplicated types like noise, sampling approaches - all of these are different measures that represent different dimensions of the data quality.",
+    "language": "en",
+    "cleaned_text": "What I found interesting is that the importance of data can be measured by different aspects. For example, effects like missing values, duplicates, noise, and sampling approaches are all different measures that represent different dimensions of data quality.",
+    "english_text": "What I found interesting is that the importance of data can be measured by different aspects. For example, effects like missing values, duplicates, noise, and sampling approaches are all different measures that represent different dimensions of data quality.",
+    "one_sentence_summary": "The student found it interesting that data quality can be measured across different dimensions like missing values, noise, and sampling.",
+    "keywords": [
+      "data quality",
+      "data quality dimensions"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_015",
+    "original_no": 15,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Today I learned that I learned today is that we can extract data in different subjects, but some data can be complex for a short description. The data is related with so many concepts. We need to check if the data meets requirements after preprocessing.",
+    "language": "en",
+    "cleaned_text": "Today I learned that we can extract data on different subjects, but some data can be complex to describe briefly. Data is related to so many concepts. We need to check whether the data meets the requirements after preprocessing.",
+    "english_text": "Today I learned that we can extract data on different subjects, but some data can be complex to describe briefly. Data is related to so many concepts. We need to check whether the data meets the requirements after preprocessing.",
+    "one_sentence_summary": "The student reflected that data can be complex and that one must check whether it meets requirements after preprocessing.",
+    "keywords": [
+      "data preprocessing",
+      "data complexity"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q3_016",
+    "original_no": 16,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about data types and how different representations of data affect analysis. Found it interesting that preprocessing choices can significantly impact results.",
+    "language": "en",
+    "cleaned_text": "Learned about data types and how different representations of data affect analysis. Found it interesting that preprocessing choices can significantly impact results.",
+    "english_text": "Learned about data types and how different representations of data affect analysis. Found it interesting that preprocessing choices can significantly impact results.",
+    "one_sentence_summary": "The student found it interesting that preprocessing choices and data representations can significantly affect analysis results.",
+    "keywords": [
+      "data types",
+      "preprocessing",
+      "data representation"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_017",
+    "original_no": 17,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What is the most interesting thing you learned today? I think the most interesting thing is visualization. It was interesting and it helps us to understand data better. There are various types of visualization tools that we can use to analyze data.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing is visualization. It was interesting and it helps us understand data better. There are various types of visualization tools that we can use to analyze data.",
+    "english_text": "The most interesting thing is visualization. It was interesting and it helps us understand data better. There are various types of visualization tools that we can use to analyze data.",
+    "one_sentence_summary": "The student found visualization the most interesting topic because it helps understand data better.",
+    "keywords": [
+      "visualization",
+      "visualization tools"
+    ],
+    "themes": [
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_018",
+    "original_no": 18,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Before this, I only learned the importance behind it, and its preprocessing. But very I thought it was more like a routine I had to do. But I was surprised that there was a lot of method to it. I learn more about MCAR, and MNAR and if there was a pattern to it. I found it very interesting, I learnt today.",
+    "language": "en",
+    "cleaned_text": "Before this, I had only learned the importance behind it and its preprocessing, and I thought it was more like a routine I had to do. But I was surprised that there was a lot of method to it. I learned more about MCAR and MNAR and whether there was a pattern to it. I found it very interesting today.",
+    "english_text": "Before this, I had only learned the importance behind it and its preprocessing, and I thought it was more like a routine I had to do. But I was surprised that there was a lot of method to it. I learned more about MCAR and MNAR and whether there was a pattern to it. I found it very interesting today.",
+    "one_sentence_summary": "The student was surprised that preprocessing involves many methods (like MCAR and MNAR), having thought it was just routine.",
+    "keywords": [
+      "data preprocessing",
+      "missing data"
+    ],
+    "themes": [
+      "data preprocessing",
+      "personal reflection"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.68
+  },
+  {
+    "id": "Q3_019",
+    "original_no": 19,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean/English) Learned about different methods of handling missing data. The concept of using statistical methods to handle missing values was the most interesting part of today's lecture.",
+    "language": "en",
+    "cleaned_text": "Learned about different methods of handling missing data. The concept of using statistical methods to handle missing values was the most interesting part of today's lecture.",
+    "english_text": "Learned about different methods of handling missing data. The concept of using statistical methods to handle missing values was the most interesting part of today's lecture.",
+    "one_sentence_summary": "The student found using statistical methods to handle missing values the most interesting part of the lecture.",
+    "keywords": [
+      "missing data",
+      "statistical methods"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_020",
+    "original_no": 20,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing is about data preprocessing. It's important to understand why data cleaning and preprocessing matter before analysis. The concept of data quality dimensions was enlightening.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing is data preprocessing. It's important to understand why data cleaning and preprocessing matter before analysis. The concept of data quality dimensions was enlightening.",
+    "english_text": "The most interesting thing is data preprocessing. It's important to understand why data cleaning and preprocessing matter before analysis. The concept of data quality dimensions was enlightening.",
+    "one_sentence_summary": "The student found data preprocessing most interesting and the concept of data quality dimensions enlightening.",
+    "keywords": [
+      "data preprocessing",
+      "data quality"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.88
+  },
+  {
+    "id": "Q3_021",
+    "original_no": 21,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What I found most interesting today was that the different concepts of data can be measured. The different dimensions like completeness, accuracy, for instance, like man and woman, king and queen, make the same distance with each other. I never thought of it that way because I never thought of it.",
+    "language": "en",
+    "cleaned_text": "What I found most interesting today was that different concepts of data can be measured. Different dimensions like completeness and accuracy - for instance, like man and woman, king and queen, make the same distance with each other. I never thought of it that way.",
+    "english_text": "What I found most interesting today was that different concepts of data can be measured. Different dimensions like completeness and accuracy - for instance, like man and woman, king and queen, make the same distance with each other. I never thought of it that way.",
+    "one_sentence_summary": "The student found it interesting that data concepts can be measured, noting that pairs like man/woman and king/queen have the same distance.",
+    "keywords": [
+      "similarity measures",
+      "semantic distance",
+      "embeddings"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.62
+  },
+  {
+    "id": "Q3_022",
+    "original_no": 22,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I found it was a very kind helpful process and I've learned various topics in today's lecture. The most useful was data preprocessing. It helped me organize and I want to better understand the subject of AI and data science. It also made me understand more about data.",
+    "language": "en",
+    "cleaned_text": "I found it a very helpful process and I've learned various topics in today's lecture. The most useful was data preprocessing. It helped me organize, and I want to better understand the subject of AI and data science. It also made me understand more about data.",
+    "english_text": "I found it a very helpful process and I've learned various topics in today's lecture. The most useful was data preprocessing. It helped me organize, and I want to better understand the subject of AI and data science. It also made me understand more about data.",
+    "one_sentence_summary": "The student found data preprocessing the most useful topic and wants to understand AI and data science better.",
+    "keywords": [
+      "data preprocessing",
+      "data science"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data science curiosity"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q3_023",
+    "original_no": 23,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I think the most interesting thing that I learned today is that easy type of data and for different approaches, reasons and the data before. I saw familiar concepts like before, with the update and transformation of data types in today's class and I think it is very useful for studying.",
+    "language": "en",
+    "cleaned_text": "I think the most interesting thing I learned today is about easy types of data and different approaches. I saw familiar concepts as before, with the updating and transformation of data types in today's class, and I think it is very useful for studying.",
+    "english_text": "I think the most interesting thing I learned today is about easy types of data and different approaches. I saw familiar concepts as before, with the updating and transformation of data types in today's class, and I think it is very useful for studying.",
+    "one_sentence_summary": "The student found the transformation of data types interesting and useful, though the response is somewhat unclear.",
+    "keywords": [
+      "data types",
+      "data transformation"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q3_024",
+    "original_no": 24,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I got to know about how to handle with data, there is so much. Categories and a lot of examples to understand. Even more, I would learn more from it. Knowledge is consuming. It in my area, it is good to know in short time. It will need to learn to have that ability.",
+    "language": "en",
+    "cleaned_text": "I got to know about how to handle data, and there is so much - categories and a lot of examples to understand. I would learn more from it. It is good to know it in a short time, and it will take learning to gain that ability.",
+    "english_text": "I got to know about how to handle data, and there is so much - categories and a lot of examples to understand. I would learn more from it. It is good to know it in a short time, and it will take learning to gain that ability.",
+    "one_sentence_summary": "The student reflected that there is a lot to learn about handling data.",
+    "keywords": [
+      "data handling"
+    ],
+    "themes": [
+      "personal reflection"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.4
+  },
+  {
+    "id": "Q3_025",
+    "original_no": 25,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing that I learned today is about data preprocessing and why it is important step for the next data analyzing. It requires knowledge and techniques. I think it is well interesting because it seems like it takes a lot of practice to do well in this step. The concepts such as data cleaning dealing with missing data, visualizations are crucial knowledge.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is about data preprocessing and why it is an important step for the next data analysis. It requires knowledge and techniques. I think it is interesting because it seems like it takes a lot of practice to do well in this step. Concepts such as data cleaning, dealing with missing data, and visualizations are crucial knowledge.",
+    "english_text": "The most interesting thing I learned today is about data preprocessing and why it is an important step for the next data analysis. It requires knowledge and techniques. I think it is interesting because it seems like it takes a lot of practice to do well in this step. Concepts such as data cleaning, dealing with missing data, and visualizations are crucial knowledge.",
+    "one_sentence_summary": "The student found data preprocessing most interesting and important, noting it requires practice and covers cleaning, missing data, and visualization.",
+    "keywords": [
+      "data preprocessing",
+      "missing data",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_026",
+    "original_no": 26,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) About how the molecular and the reduction, the most interesting thing I learned was about independent analysis concepts. Found it interesting about how the overall concepts work.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned was about independent analysis concepts. Found it interesting how the overall concepts work.",
+    "english_text": "The most interesting thing I learned was about independent analysis concepts. Found it interesting how the overall concepts work.",
+    "one_sentence_summary": "The student found independent analysis concepts the most interesting, though parts of the response are unclear.",
+    "keywords": [
+      "independence analysis"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_027",
+    "original_no": 27,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What is the most interesting thing you learned today and why? I think today's class was about the confusion and class related to data cleaning. Some data are not easy to find. I used to think the data is already clean but I found it was not the way. It is important to learn in this step.",
+    "language": "en",
+    "cleaned_text": "I think today's class was about confusion related to data cleaning. Some data are not easy to find. I used to think the data is already clean, but I found that it was not. It is important to learn this step.",
+    "english_text": "I think today's class was about confusion related to data cleaning. Some data are not easy to find. I used to think the data is already clean, but I found that it was not. It is important to learn this step.",
+    "one_sentence_summary": "The student realized that data is not already clean, finding data cleaning an important step.",
+    "keywords": [
+      "data cleaning",
+      "data quality"
+    ],
+    "themes": [
+      "data preprocessing",
+      "personal reflection"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.68
+  },
+  {
+    "id": "Q3_028",
+    "original_no": 28,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is the most interesting thing. What I learned today is about visualization and data types. When I was looking at the types of data, their visualization. I also have different grades and graphs can capture different objects. I also enjoyed learning how different data objects can be related. How to point an equation with variables or logical thinking.",
+    "language": "en",
+    "cleaned_text": "What I learned today is about visualization and data types. When I was looking at the types of data and their visualization, I saw that different graphs can capture different objects. I also enjoyed learning how different data objects can be related, and how to point to an equation with variables or logical thinking.",
+    "english_text": "What I learned today is about visualization and data types. When I was looking at the types of data and their visualization, I saw that different graphs can capture different objects. I also enjoyed learning how different data objects can be related, and how to point to an equation with variables or logical thinking.",
+    "one_sentence_summary": "The student enjoyed learning about visualization, data types, and how different data objects can be related.",
+    "keywords": [
+      "visualization",
+      "data types"
+    ],
+    "themes": [
+      "data visualization",
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_029",
+    "original_no": 29,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I think what we most learned part of today's class is the situation where we analyze data carefully and quality data. In practice, I fell the best in the lecture. To analyze by data. It helps to become about which the subject of the data serves as an understanding to become knowledge. Since you understand this, it is really important. Because the more data the flow more interesting to learn concepts. How to better know when I am rapidly developing everyday.",
+    "language": "en",
+    "cleaned_text": "The most learned part of today's class is the situation where we analyze data carefully and consider data quality. It helps the subject of the data serve as understanding that becomes knowledge. The more data, the more interesting it is to learn concepts.",
+    "english_text": "The most learned part of today's class is the situation where we analyze data carefully and consider data quality. It helps the subject of the data serve as understanding that becomes knowledge. The more data, the more interesting it is to learn concepts.",
+    "one_sentence_summary": "The student reflected on analyzing data carefully and data quality, though the response is largely unclear.",
+    "keywords": [
+      "data analysis",
+      "data quality"
+    ],
+    "themes": [
+      "personal reflection"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.3
+  },
+  {
+    "id": "Q3_030",
+    "original_no": 30,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean/mixed) Learned about data types and formats. Found it interesting how different representations affect the analysis approach.",
+    "language": "en",
+    "cleaned_text": "Learned about data types and formats. Found it interesting how different representations affect the analysis approach.",
+    "english_text": "Learned about data types and formats. Found it interesting how different representations affect the analysis approach.",
+    "one_sentence_summary": "The student found it interesting how different data representations and formats affect the analysis approach.",
+    "keywords": [
+      "data types",
+      "data formats"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_031",
+    "original_no": 31,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "It was interesting that noisy data can be helpful for avoiding overfitting.",
+    "language": "en",
+    "cleaned_text": "It was interesting that noisy data can be helpful for avoiding overfitting.",
+    "english_text": "It was interesting that noisy data can be helpful for avoiding overfitting.",
+    "one_sentence_summary": "The student found it interesting that noisy data can help avoid overfitting.",
+    "keywords": [
+      "noise",
+      "overfitting"
+    ],
+    "themes": [
+      "data preprocessing",
+      "AI and machine learning"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_032",
+    "original_no": 32,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Data preprocessing and visualization were most interesting. Learning about different types of missing data and how to handle them was valuable.",
+    "language": "en",
+    "cleaned_text": "Data preprocessing and visualization were most interesting. Learning about different types of missing data and how to handle them was valuable.",
+    "english_text": "Data preprocessing and visualization were most interesting. Learning about different types of missing data and how to handle them was valuable.",
+    "one_sentence_summary": "The student found data preprocessing and visualization most interesting and valued learning about handling different types of missing data.",
+    "keywords": [
+      "data preprocessing",
+      "missing data",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_033",
+    "original_no": 33,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is the different types of missing data (MCAR, MAR, MNAR) and how each requires a different approach for handling. This is important because it directly affects the reliability of the analysis.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is the different types of missing data (MCAR, MAR, MNAR) and how each requires a different approach for handling. This is important because it directly affects the reliability of the analysis.",
+    "english_text": "The most interesting thing I learned today is the different types of missing data (MCAR, MAR, MNAR) and how each requires a different approach for handling. This is important because it directly affects the reliability of the analysis.",
+    "one_sentence_summary": "The student found the different types of missing data (MCAR, MAR, MNAR) most interesting because each needs a different handling approach affecting reliability.",
+    "keywords": [
+      "missing data",
+      "MCAR/MAR/MNAR"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.92
+  },
+  {
+    "id": "Q3_034",
+    "original_no": 34,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is that LLM model will preprocess data. We are able to understand that the data preprocessing step has its importance. But also I think that we have to see both supporting data without this step. The better data, the better result. The preprocessing step is important but it really only is the understanding. But it holds no value.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is that an LLM model will preprocess data. We can understand that the data preprocessing step has its importance. The better the data, the better the result. The preprocessing step is important, but the response is somewhat contradictory about its value.",
+    "english_text": "The most interesting thing I learned today is that an LLM model will preprocess data. We can understand that the data preprocessing step has its importance. The better the data, the better the result. The preprocessing step is important, but the response is somewhat contradictory about its value.",
+    "one_sentence_summary": "The student reflected on LLMs preprocessing data and the importance of preprocessing, though the response is somewhat contradictory.",
+    "keywords": [
+      "LLM",
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing",
+      "AI and machine learning"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q3_035",
+    "original_no": 35,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "For me the most interesting thing we learn today is visualization of data is interesting, as it make a long or complex or direct data easily understood by representing it using plot, graph or any visual. It is a phrase that 'one picture is worth a thousand words'. And it also the least complex they've learn today.",
+    "language": "en",
+    "cleaned_text": "For me the most interesting thing we learned today is the visualization of data, as it makes long, complex, or direct data easily understood by representing it using a plot, graph, or any visual. There is a phrase that 'one picture is worth a thousand words'. It was also the least complex thing they taught today.",
+    "english_text": "For me the most interesting thing we learned today is the visualization of data, as it makes long, complex, or direct data easily understood by representing it using a plot, graph, or any visual. There is a phrase that 'one picture is worth a thousand words'. It was also the least complex thing they taught today.",
+    "one_sentence_summary": "The student found data visualization most interesting because it makes complex data easily understood, like 'a picture is worth a thousand words.'",
+    "keywords": [
+      "visualization",
+      "data representation"
+    ],
+    "themes": [
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_036",
+    "original_no": 36,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What's interesting: I'm amazed at how data can be represented into discrete and continuous. Also data can be represented as regression or categorization. The possible different ways of learning is interesting.",
+    "language": "en",
+    "cleaned_text": "What's interesting: I'm amazed at how data can be represented as discrete and continuous. Also, data can be represented through regression or categorization. The possible different ways of learning are interesting.",
+    "english_text": "What's interesting: I'm amazed at how data can be represented as discrete and continuous. Also, data can be represented through regression or categorization. The possible different ways of learning are interesting.",
+    "one_sentence_summary": "The student was amazed that data can be represented as discrete/continuous and through regression or categorization.",
+    "keywords": [
+      "data types",
+      "regression",
+      "classification"
+    ],
+    "themes": [
+      "data preprocessing",
+      "classification"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_037",
+    "original_no": 37,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I enjoy by the data. I did not expect that the new idea will be in detail beyond the skill. I always that we can also avoid to doing level it, basically relating. But should be taken. The other data education as it is the way. I think.",
+    "language": "en",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q3_038",
+    "original_no": 38,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Data types differences. Understanding data types is visualizing my learning. Since data are at several involved has diagram new, think & use graph > understanding everything.",
+    "language": "en",
+    "cleaned_text": "Data type differences. Understanding data types helps visualize my learning, using diagrams and graphs to understand things.",
+    "english_text": "Data type differences. Understanding data types helps visualize my learning, using diagrams and graphs to understand things.",
+    "one_sentence_summary": "The student reflected on data type differences and using diagrams/graphs, though the response is largely unclear.",
+    "keywords": [
+      "data types",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.4
+  },
+  {
+    "id": "Q3_039",
+    "original_no": 39,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most important thing I found today and why? Importance of preprocessing in the data. When data is stored and it shows while it seems important, then it the data of AI, LLM, and only state models. If data was reformated the resulting model will change. If this sense more important than the model or computing methods.",
+    "language": "en",
+    "cleaned_text": "The most important thing I found today is the importance of preprocessing the data. If data is reformatted, the resulting model will change, so in this sense it is more important than the model or computing methods.",
+    "english_text": "The most important thing I found today is the importance of preprocessing the data. If data is reformatted, the resulting model will change, so in this sense it is more important than the model or computing methods.",
+    "one_sentence_summary": "The student found the importance of preprocessing notable, suggesting data preprocessing can matter more than the model, though parts are unclear.",
+    "keywords": [
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_040",
+    "original_no": 40,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Preprocessing data with the relation was most interesting part. Because it can be treated data with more efficiently and interestly. Things I liked adopted the point of its being and in the middle, I like the one very interesting and also shared types, to feel this field more helpful.",
+    "language": "en",
+    "cleaned_text": "Preprocessing data was the most interesting part, because data can be treated more efficiently and interestingly. I found this field more helpful.",
+    "english_text": "Preprocessing data was the most interesting part, because data can be treated more efficiently and interestingly. I found this field more helpful.",
+    "one_sentence_summary": "The student found data preprocessing the most interesting part, though the response is fragmented.",
+    "keywords": [
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q3_041",
+    "original_no": 41,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "There is two very interesting things for today. The first one being there are various types of visualization. We can show all of them by using plots, charts and graphs. I want to use in my field. I see some having fun tables to turn to so we see visualization and data visualization about the question of AI generate plot to analyze chart in the real life.",
+    "language": "en",
+    "cleaned_text": "There are two very interesting things today. The first is that there are various types of visualization; we can show them using plots, charts, and graphs, and I want to use them in my field. The second relates to AI generating plots to analyze charts in real life.",
+    "english_text": "There are two very interesting things today. The first is that there are various types of visualization; we can show them using plots, charts, and graphs, and I want to use them in my field. The second relates to AI generating plots to analyze charts in real life.",
+    "one_sentence_summary": "The student found the various types of visualization interesting and is interested in AI generating plots to analyze charts.",
+    "keywords": [
+      "visualization",
+      "AI-generated plots"
+    ],
+    "themes": [
+      "data visualization",
+      "AI and machine learning"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q3_042",
+    "original_no": 42,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "A data 100 visualization site was interesting.",
+    "language": "en",
+    "cleaned_text": "A Data 100 visualization site was interesting.",
+    "english_text": "A Data 100 visualization site was interesting.",
+    "one_sentence_summary": "The student found a Data 100 visualization site interesting.",
+    "keywords": [
+      "visualization"
+    ],
+    "themes": [
+      "data visualization"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Low-information response.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q3_043",
+    "original_no": 43,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What is the most interesting thing? Data Analysis, and today I found weight analysis working. Without expert review. Weight case analysis is important. But today professor told us data analysis in movie weights. The movie derived in movie analysis weights case in real world. The picture describing in movie weights. LLM makes we look forward to assigning the feature at data science.",
+    "language": "en",
+    "cleaned_text": "Data analysis was the most interesting thing. Today the professor told us about data analysis using movie weights as a real-world case. LLMs make me look forward to assigning features in data science.",
+    "english_text": "Data analysis was the most interesting thing. Today the professor told us about data analysis using movie weights as a real-world case. LLMs make me look forward to assigning features in data science.",
+    "one_sentence_summary": "The student found data analysis interesting, mentioning a movie-weights example and LLMs for feature assignment, though the response is largely unclear.",
+    "keywords": [
+      "data analysis",
+      "feature assignment"
+    ],
+    "themes": [
+      "personal reflection"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.35
+  },
+  {
+    "id": "Q3_044",
+    "original_no": 44,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about data visualization and preprocessing. Found it interesting how visual representations can reveal hidden patterns in data.",
+    "language": "en",
+    "cleaned_text": "Learned about data visualization and preprocessing. Found it interesting how visual representations can reveal hidden patterns in data.",
+    "english_text": "Learned about data visualization and preprocessing. Found it interesting how visual representations can reveal hidden patterns in data.",
+    "one_sentence_summary": "The student found it interesting how visual representations can reveal hidden patterns, alongside learning visualization and preprocessing.",
+    "keywords": [
+      "data visualization",
+      "pattern discovery"
+    ],
+    "themes": [
+      "data visualization",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_045",
+    "original_no": 45,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today has to do with data science. I realized that data science has a lot to do with attribute relationships. Two datasets with categories and attributes should be well covered in PCA. These are all closely related. I was able to see clearly my research including finding a very close relationship with my research.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today has to do with data science. I realized that data science has a lot to do with attribute relationships. Two datasets with categories and attributes should be well covered in PCA. These are all closely related, and I could see a close relationship with my own research.",
+    "english_text": "The most interesting thing I learned today has to do with data science. I realized that data science has a lot to do with attribute relationships. Two datasets with categories and attributes should be well covered in PCA. These are all closely related, and I could see a close relationship with my own research.",
+    "one_sentence_summary": "The student found it interesting that data science involves attribute relationships and PCA, relating it to their own research.",
+    "keywords": [
+      "attribute relationships",
+      "PCA"
+    ],
+    "themes": [
+      "data preprocessing",
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q3_046",
+    "original_no": 46,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing is that it happened this year and how new AI does. I received a visual model that removes every related data. It is related about it being together. The reasoning is the most important idea. It is related.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing relates to how new AI works, including a visual model that removes related data. I think the reasoning is the most important idea, though the response is largely unclear.",
+    "english_text": "The most interesting thing relates to how new AI works, including a visual model that removes related data. I think the reasoning is the most important idea, though the response is largely unclear.",
+    "one_sentence_summary": "The student reflected on new AI and that reasoning is important, though the response is largely unclear.",
+    "keywords": [
+      "AI",
+      "reasoning"
+    ],
+    "themes": [
+      "AI and machine learning"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.35
+  },
+  {
+    "id": "Q3_047",
+    "original_no": 47,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) About data types and visualization concepts. Learned about different ways to process and handle data. Found the various data handling techniques interesting.",
+    "language": "en",
+    "cleaned_text": "Learned about data types and visualization concepts, and about different ways to process and handle data. Found the various data handling techniques interesting.",
+    "english_text": "Learned about data types and visualization concepts, and about different ways to process and handle data. Found the various data handling techniques interesting.",
+    "one_sentence_summary": "The student found the various data handling techniques interesting, alongside data types and visualization concepts.",
+    "keywords": [
+      "data types",
+      "data handling",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_048",
+    "original_no": 48,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Found the classification and dimensionality reduction concepts most interesting. Learning about how data can be transformed for better analysis.",
+    "language": "en",
+    "cleaned_text": "Found the classification and dimensionality reduction concepts most interesting, learning about how data can be transformed for better analysis.",
+    "english_text": "Found the classification and dimensionality reduction concepts most interesting, learning about how data can be transformed for better analysis.",
+    "one_sentence_summary": "The student found classification and dimensionality reduction concepts most interesting, learning how data can be transformed for better analysis.",
+    "keywords": [
+      "classification",
+      "dimensionality reduction"
+    ],
+    "themes": [
+      "classification",
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_049",
+    "original_no": 49,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I just interesting thing is that today I learned that data cleaning and preprocessing are really important. What I really important in data analysis. I think data preprocessing is the key to getting good results from any analysis. Without clean data, the results will be unreliable.",
+    "language": "en",
+    "cleaned_text": "Today I learned that data cleaning and preprocessing are really important in data analysis. I think data preprocessing is the key to getting good results from any analysis. Without clean data, the results will be unreliable.",
+    "english_text": "Today I learned that data cleaning and preprocessing are really important in data analysis. I think data preprocessing is the key to getting good results from any analysis. Without clean data, the results will be unreliable.",
+    "one_sentence_summary": "The student found that data cleaning and preprocessing are key to reliable analysis results.",
+    "keywords": [
+      "data cleaning",
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q3_050",
+    "original_no": 50,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is about data understanding and preprocessing. I could see that understanding patterns and relationships in data is very important. Data visualization helps a lot in understanding complex datasets. I also found the concept of missing value handling very important.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is about data understanding and preprocessing. I could see that understanding patterns and relationships in data is very important. Data visualization helps a lot in understanding complex datasets. I also found the concept of missing-value handling very important.",
+    "english_text": "The most interesting thing I learned today is about data understanding and preprocessing. I could see that understanding patterns and relationships in data is very important. Data visualization helps a lot in understanding complex datasets. I also found the concept of missing-value handling very important.",
+    "one_sentence_summary": "The student found data understanding, preprocessing, visualization, and missing-value handling important for understanding data.",
+    "keywords": [
+      "data preprocessing",
+      "visualization",
+      "missing data"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q3_051",
+    "original_no": 51,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is knowing the inaccuracy of data when it comes to the data itself. There was a missing data that is left behind. It means we need to learn how to see left over. However, after learning the deep reasoning behind it, which are called missing data. I learn of traits that are surprising that at some point in reality it was clean if it actually surprising to be the first.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is the inaccuracy of data. There is missing data that is left behind, so we need to learn how to handle leftover data. After learning the deeper reasoning behind missing data, I learned surprising traits, such as that data which seemed clean was not.",
+    "english_text": "The most interesting thing I learned today is the inaccuracy of data. There is missing data that is left behind, so we need to learn how to handle leftover data. After learning the deeper reasoning behind missing data, I learned surprising traits, such as that data which seemed clean was not.",
+    "one_sentence_summary": "The student found the inaccuracy of data and the reasoning behind missing data surprising, though parts of the response are unclear.",
+    "keywords": [
+      "missing data",
+      "data inaccuracy"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_052",
+    "original_no": 52,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Thought in is relatively important: deep representation learning. Set in very intrigued in how neural networks work. Also how bits work is providing the world today more complex algorithms larger transformation of preprocessing. Basically it is simple logic. But we need to understand the basis of AI. It is believed we need to understand everything before we use AI for data. Gather analysis / processing a system-level / properties we can that the proper matter a lot even when using an AI agent. Teachers instead of wasting for its better to prompt and try one.",
+    "language": "en",
+    "cleaned_text": "I think deep representation learning is relatively important, and I'm intrigued by how neural networks work. We need to understand the basis of AI, and it is believed we need to understand everything before we use AI for data, including system-level processing and properties, even when using an AI agent.",
+    "english_text": "I think deep representation learning is relatively important, and I'm intrigued by how neural networks work. We need to understand the basis of AI, and it is believed we need to understand everything before we use AI for data, including system-level processing and properties, even when using an AI agent.",
+    "one_sentence_summary": "The student reflected on deep representation learning and the need to understand the basics of AI before using it for data, though parts are fragmented.",
+    "keywords": [
+      "deep representation learning",
+      "neural networks",
+      "AI"
+    ],
+    "themes": [
+      "AI and machine learning",
+      "personal reflection"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.4
+  },
+  {
+    "id": "Q3_053",
+    "original_no": 53,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing that I learned today is about the similarity. The reason is because the similarity that need to be measure. When we are facing a data, there can be very alternate ideas. It's like the the meaning is important. Especially when facing data, contain very alternate types.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is about similarity, because similarity needs to be measured. When we are facing data, there can be very alternative ideas, and the meaning is important, especially when the data contains very different types.",
+    "english_text": "The most interesting thing I learned today is about similarity, because similarity needs to be measured. When we are facing data, there can be very alternative ideas, and the meaning is important, especially when the data contains very different types.",
+    "one_sentence_summary": "The student found similarity (and the need to measure it) interesting, noting the importance of meaning, though parts are unclear.",
+    "keywords": [
+      "similarity measures"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_054",
+    "original_no": 54,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "Most interesting thing I learned is NO, meeting of data preprocessing in data science letter building any model, data will be cleaned and imputed. Raw world data can be going complicated to collected the data, and more going to understand about them. Then we can make it more. Could also visualize into graph to make it more passthrough and easier for all. Development.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned is about data preprocessing in data science: before building any model, data will be cleaned and imputed. Raw real-world data can be complicated to collect, and we then try to understand it. We could also visualize it into a graph to make it easier for everyone.",
+    "english_text": "The most interesting thing I learned is about data preprocessing in data science: before building any model, data will be cleaned and imputed. Raw real-world data can be complicated to collect, and we then try to understand it. We could also visualize it into a graph to make it easier for everyone.",
+    "one_sentence_summary": "The student found data preprocessing (cleaning and imputation before modeling) and visualization interesting, though parts are fragmented.",
+    "keywords": [
+      "data preprocessing",
+      "imputation",
+      "visualization"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q3_055",
+    "original_no": 55,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today was this year about problems in data such as missing or noisy/incomplete values. I found this especially interesting because it showed how data preprocessing affects the quality of analysis and how important it is to set a proper cleaning step.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today was about problems in data, such as missing or noisy/incomplete values. I found this especially interesting because it showed how data preprocessing affects the quality of analysis and how important it is to set a proper cleaning step.",
+    "english_text": "The most interesting thing I learned today was about problems in data, such as missing or noisy/incomplete values. I found this especially interesting because it showed how data preprocessing affects the quality of analysis and how important it is to set a proper cleaning step.",
+    "one_sentence_summary": "The student found data problems (missing, noisy, incomplete values) most interesting because preprocessing affects analysis quality.",
+    "keywords": [
+      "missing data",
+      "noisy data",
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q3_056",
+    "original_no": 56,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "We can visualize data through many tools, not specifically through scatter plot method. I found it interesting to use it for finding pattern and relations between data mathematically.",
+    "language": "en",
+    "cleaned_text": "We can visualize data through many tools, not specifically through the scatter plot method. I found it interesting to use them for finding patterns and relations between data mathematically.",
+    "english_text": "We can visualize data through many tools, not specifically through the scatter plot method. I found it interesting to use them for finding patterns and relations between data mathematically.",
+    "one_sentence_summary": "The student found it interesting to use various visualization tools to find patterns and relationships in data mathematically.",
+    "keywords": [
+      "visualization",
+      "pattern discovery"
+    ],
+    "themes": [
+      "data visualization",
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_057",
+    "original_no": 57,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned today is the collecting and discovering data concepts and how our subject familiar or rather how to demonstrate the data and the concepts I think. It's important to know and also everything and will reasoning well and most part.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is about collecting and discovering data concepts and how to demonstrate the data and concepts. It's important to know and to reason well.",
+    "english_text": "The most interesting thing I learned today is about collecting and discovering data concepts and how to demonstrate the data and concepts. It's important to know and to reason well.",
+    "one_sentence_summary": "The student reflected on collecting and discovering data concepts, though the response is largely unclear.",
+    "keywords": [
+      "data collection",
+      "data concepts"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.3
+  },
+  {
+    "id": "Q3_058",
+    "original_no": 58,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I found interesting thing. I found that it varies not just the easy one. The real world and it may easily do the result. that is very easy and to AI the model. Once related analysis and optional mixed. It is possible to get some things that, and to be got the side of the AI. Those one were to be the types applying the something.",
+    "language": "en",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q3_059",
+    "original_no": 59,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "I think interesting things. It was about visualization and data types. When I was looking at the types of data visualization, I also enjoyed to be how different data and graphs can capture insights and be presented in a meaningful way.",
+    "language": "en",
+    "cleaned_text": "It was about visualization and data types. When I was looking at the types of data visualization, I enjoyed how different data and graphs can capture insights and be presented in a meaningful way.",
+    "english_text": "It was about visualization and data types. When I was looking at the types of data visualization, I enjoyed how different data and graphs can capture insights and be presented in a meaningful way.",
+    "one_sentence_summary": "The student enjoyed learning about visualization and data types and how graphs can capture and present insights meaningfully.",
+    "keywords": [
+      "visualization",
+      "data types"
+    ],
+    "themes": [
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.65
+  },
+  {
+    "id": "Q3_060",
+    "original_no": 60,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "In it, the most interesting thing per learned today I felt is the data care in the descriptive and values. Data completeness/discontinuity between data sets, relationship from the new data related to reporting. It results so it means the possibility of the sample in characteristics. Having the properties.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is about data care in terms of descriptive values, data completeness/discontinuity between datasets, and relationships from new data, though the response is largely unclear.",
+    "english_text": "The most interesting thing I learned today is about data care in terms of descriptive values, data completeness/discontinuity between datasets, and relationships from new data, though the response is largely unclear.",
+    "one_sentence_summary": "The student reflected on data completeness and relationships between datasets, though the response is largely unclear.",
+    "keywords": [
+      "data completeness",
+      "data quality"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.35
+  },
+  {
+    "id": "Q3_061",
+    "original_no": 61,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing I learned. A lot of compelling processes when it comes to data, the most useful I found is the preprocessing data. The initial step at data analysis the pair. And I think the properly step with certain method to combine and together it all in many related to explore the scope that represents a different data.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned: among the many processes involved with data, the most useful I found is preprocessing data, the initial step of data analysis, combining methods to explore the scope that represents different data.",
+    "english_text": "The most interesting thing I learned: among the many processes involved with data, the most useful I found is preprocessing data, the initial step of data analysis, combining methods to explore the scope that represents different data.",
+    "one_sentence_summary": "The student found data preprocessing the most useful topic as the initial step of data analysis, though parts are unclear.",
+    "keywords": [
+      "data preprocessing"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q3_062",
+    "original_no": 62,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "What is the most interesting thing you learned today and why? Patterns finding was initially a similarity of data and its preprocessing. I found it was fascinating that you can look at the patterns and compare it mathematically by looking at the same development, and it was interesting to see how it can be established, relationships between kinds of objects.",
+    "language": "en",
+    "cleaned_text": "Pattern finding was initially about the similarity of data and its preprocessing. I found it fascinating that you can look at patterns and compare them mathematically, and it was interesting to see how relationships between kinds of objects can be established.",
+    "english_text": "Pattern finding was initially about the similarity of data and its preprocessing. I found it fascinating that you can look at patterns and compare them mathematically, and it was interesting to see how relationships between kinds of objects can be established.",
+    "one_sentence_summary": "The student found pattern finding and similarity interesting, fascinated by comparing patterns mathematically and seeing relationships between objects.",
+    "keywords": [
+      "pattern discovery",
+      "similarity measures"
+    ],
+    "themes": [
+      "pattern discovery",
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q3_063",
+    "original_no": 63,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Found dimensionality reduction and PCA concepts most interesting. The mathematical basis behind these techniques was enlightening.",
+    "language": "en",
+    "cleaned_text": "Found dimensionality reduction and PCA concepts most interesting. The mathematical basis behind these techniques was enlightening.",
+    "english_text": "Found dimensionality reduction and PCA concepts most interesting. The mathematical basis behind these techniques was enlightening.",
+    "one_sentence_summary": "The student found dimensionality reduction and PCA most interesting and the mathematical basis enlightening.",
+    "keywords": [
+      "dimensionality reduction",
+      "PCA"
+    ],
+    "themes": [
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q3_064",
+    "original_no": 64,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "The most interesting thing that I learned today is similarity. Altough I used to only Semantic/sim, but I know most similarity in the same method. However, things I find it also in measuring things. Similarity can help us to capture the whole meaning. It is interest computing by some codes. Helps it word.",
+    "language": "en",
+    "cleaned_text": "The most interesting thing I learned today is similarity. Although I used to think only of semantic similarity, I learned more about measuring similarity. Similarity can help us capture the whole meaning, computed by some code.",
+    "english_text": "The most interesting thing I learned today is similarity. Although I used to think only of semantic similarity, I learned more about measuring similarity. Similarity can help us capture the whole meaning, computed by some code.",
+    "one_sentence_summary": "The student found similarity most interesting because it can capture the whole meaning, though the response is partly unclear.",
+    "keywords": [
+      "similarity measures"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q3_065",
+    "original_no": 65,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Learned about data types, visualization methods, and preprocessing techniques. The practical applications of these concepts were the most interesting.",
+    "language": "en",
+    "cleaned_text": "Learned about data types, visualization methods, and preprocessing techniques. The practical applications of these concepts were the most interesting.",
+    "english_text": "Learned about data types, visualization methods, and preprocessing techniques. The practical applications of these concepts were the most interesting.",
+    "one_sentence_summary": "The student found the practical applications of data types, visualization, and preprocessing techniques the most interesting.",
+    "keywords": [
+      "data types",
+      "visualization",
+      "preprocessing"
+    ],
+    "themes": [
+      "data preprocessing",
+      "data visualization"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q3_066",
+    "original_no": 66,
+    "question": "Q3",
+    "stage": "discussion_1",
+    "raw_text": "(Korean) Understanding data visualization and classification concepts was most interesting. Found it valuable to learn about different approaches to data preprocessing.",
+    "language": "en",
+    "cleaned_text": "Understanding data visualization and classification concepts was most interesting. Found it valuable to learn about different approaches to data preprocessing.",
+    "english_text": "Understanding data visualization and classification concepts was most interesting. Found it valuable to learn about different approaches to data preprocessing.",
+    "one_sentence_summary": "The student found data visualization and classification concepts most interesting and valued learning different preprocessing approaches.",
+    "keywords": [
+      "data visualization",
+      "classification",
+      "preprocessing"
+    ],
+    "themes": [
+      "data visualization",
+      "classification",
+      "data preprocessing"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  }
+]

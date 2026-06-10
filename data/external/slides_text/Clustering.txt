@@ -1,0 +1,1693 @@
+COSE471: Data Science
+Clustering
+Department of Computer Science and Engineering
+Korea University
+Susik Yoon
+April 3, 2026
+COSE471: Data Science
+DAIS lab at Korea University
+Course Schedule
+2
+Week Day Content HW/Project Note
+1 Mar 06 Introduction
+2 Mar 13 Data
+3 Mar 20 Pattern mining
+4 Mar 27 Tutorial 1 Latex, Preprocessing/Pattern mining
+5 Apr 03 Clustering
+6 Apr 10 Outlier Detection & Invited Talk An invited talk from Meta
+7 Apr 17 Tutorial 2 Clustering, Outlier detection
+8 Apr 24 Classification
+9 May 01 Classification
+10 May 08 Tutorial 3 Classification, Feature engineering 
+11 May 15 Mid-term exam Offline, Closed-book, No electronic devices
+12 May 22 Review & Project Notice
+13 May 29 Project discussion
+14 Jun 05 Project discussion
+15 Jun 12 Final presentation
+16 Jun 19 Wrap-up and Final report
+HW1 
+HW2
+Project
+Merged to
+COSE471: Data Science
+DAIS lab at Korea University
+RECAP
+❑ Basic concepts of pattern mining
+▪ Pattern discovery
+▪ Frequent itemsets
+▪ Association rule
+▪ Closed and maximal patterns
+❑ Pattern mining methodologies
+▪ Association rule discovery
+▪ Apriori
+▪ FP-Growth
+▪ Rule generation
+❑ Pattern mining evaluation
+▪ Motivation
+▪ Lift
+3
+
+COSE471: Data Science
+DAIS lab at Korea University
+RECAP
+4
+
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+▪ Overview
+▪ Applications
+▪ Considerations
+▪ Multi-aspect categorization
+❑ Distance-based methods
+❑ Density-based methods
+❑ Probabilistic methods
+❑ Clustering evaluation
+5
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Overview
+❑ What is a cluster?  
+▪ A cluster is a collection of data objects
+• Objects are similar (or related) to one another within the same group 
+• Objects are dissimilar (or unrelated) to the objects in other groups
+▪ Examples
+6
+Goalkeepers
+Defensive
+midfielders
+Attacking 
+Midfielders
+Strikers
+Defenders
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Overview
+❑ Cluster analysis (or clustering, data segmentation, …)
+▪ Given a set of data points, partition them into a set of groups (i.e., clusters)
+▪ Learning philosophy
+• Unsupervised learning with unknown cluster labels
+• cf. classification is supervised learning with known class labels
+7
+2
+4
+1
+7
+5
+6
+8
+3
+1 2 3 4 5 6 7 8
+Poodle
+Maltese
+Poodle
+Maltese
+2
+4
+1
+8
+7
+5
+6
+3
+Group A
+Group B
+2
+4
+1
+8
+7
+5
+6
+3
+Group A
+Group B
+Group C
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Overview
+❑ Cluster analysis (or clustering, data segmentation, …)
+▪ Given a set of data points, partition them into a set of groups (i.e., clusters)
+▪ Learning philosophy
+• Unsupervised learning with unknown cluster labels
+• cf. classification is supervised learning with known class labels
+▪ Quality
+• A good clustering method will produce high-quality clusters
+‒ High intra-class similarity → cohesive within clusters
+‒ Low inter-class similarity → distinctive between clusters
+• There are usually separate quality measures for the “goodness” of a cluster for different applications
+‒ It is hard to define “similar enough” or “good enough” → The answer is typically highly subjective
+8
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Applications 
+❑ A stand-alone tool to get insight into data distribution
+▪ Visual insights - one picture is worth a thousand words
+▪ Example: types of students in an online course
+9Source: https://www.nature.com/articles/s41539-019-0054-0
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Applications 
+❑ A stand-alone tool to get insight into data distribution
+▪ Visual insights - one picture is worth a thousand words
+▪ Example: types of students in an online course
+10Source: https://www.nature.com/articles/s41539-019-0054-0
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Applications 
+❑ A stand-alone tool to get insight into data distribution
+▪ Visual insights - one picture is worth a thousand words
+❑ A key intermediate step for other data science tasks
+▪ A compact summary of data for downstream tasks
+• e.g., the basis for classification, pattern discovery, outlier detection
+▪ Data summarization, compression, and reduction
+• e.g. binning, discretization, sampling
+▪ Recommendation systems, customer segmentation
+• e.g. Finding like-minded users or similar products
+▪ Multimedia data, biological data, and social data analysis
+• e.g.. grouping images/video/audio, gene/protein sequences, trend detection and tracking
+11
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Considerations 
+❑ Partitioning criteria
+▪ Single level vs. hierarchical partitioning
+▪ e.g., flat concepts (gender) vs. multi-level concepts (county – city – country – continent) 
+❑ Cluster separation
+▪ Exclusive vs. non-exclusive
+▪ e.g., a customer belongs to only one region vs. a news article may belong to multiple topics
+❑ Similarity measure
+▪ Distance-based vs. connectivity-based
+▪ e.g., Euclidean, road network, vector vs. density or contiguity
+❑ Clustering space
+▪ Full space vs. subspaces
+▪ e.g., Low dimensional vs. high-dimensional
+12
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Multi-Aspect Categorization
+❑ Technique
+▪ Distance-based
+▪ Density-based
+▪ Probabilistic
+▪ High-dimensional
+▪ Scalable
+❑ Data type
+▪ Numerical data, categorical data, text data, multimedia data, time-series data, sequence data, 
+streaming data, network data
+❑ Additional insight
+▪ Visual insights, semi-supervised, ensemble-based, validation-based
+13
+
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+❑ Distance-based methods
+▪ Partitioning methods
+▪ Hierarchical methods
+❑ Density-based methods
+❑ Probabilistic methods
+❑ Clustering evaluation
+❑ Summary
+14xxx
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning
+❑ Partitioning method
+▪ Discovering the groupings in a dataset based on the distances of data objects
+15
+d(x,y)x y Partitioning objects 
+by examining d(x,y) 
+for every pairs
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning
+❑ Partitioning method
+▪ Discovering the groupings in a dataset based on the distances of data objects
+▪ Problem definition
+• Given k, find a partition of k clusters that optimizes the chosen distance-based objective function 
+• e.g., minimize the sum of squared errors between objects and centers in clusters, σ𝐶𝑘∈𝐶 σ𝑥𝑖 ∈𝐶𝑘 𝑑(𝑥𝑖, 𝑐𝑘)2
+16
+d(x,y)x y Partitioning objects 
+by examining d(x,y) 
+for every pairs
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning
+❑ Partitioning method
+▪ Discovering the groupings in a dataset based on the distances of data objects
+▪ Problem definition
+• Given k, find a partition of k clusters that optimizes the chosen distance-based objective function 
+• e.g., minimize the sum of squared errors between objects and centers in clusters, σ𝐶𝑘∈𝐶 σ𝑥𝑖 ∈𝐶𝑘 𝑑(𝑥𝑖, 𝑐𝑘)2
+▪ Approaches
+• Global optimal needs to exhaustively enumerate all possible partitions
+• Heuristic methods (i.e., greedy algorithms): k-Means, k-Medoids, k-Medians, etc.
+17
+d(x,y)x y Partitioning objects 
+by examining d(x,y) 
+for every pairs
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means
+❑ k-Means clustering
+▪ Each cluster is represented by the cluster center and the sum of d(object, center) 2 is minimized
+• i.e., minimize the sum of squared errors (SSE) in clusters
+18
+d(x1, c1)
+x1
+x2
+x3
+c1
+x4
+x5
+x6
+c2
+d(x1, c1)2
++ d(x2, c1)2
++ d(x3, c1)2
+d(x4, c2)2
++ d(x5, c2)2
++ d(x6, c2)2
+An average of x1, x2, x3
+(center or centroid)
+SSE in cluster 1 SSE in cluster 2+
+= =
+𝑐𝑘 = 1
+|𝐶𝑘| ෍
+𝑥𝑖∈𝐶𝑘
+𝑥𝑖
+෍
+𝐶𝑘∈𝐶
+෍
+𝑥𝑖 ∈𝐶𝑘
+𝑑(𝑥𝑖, 𝑐𝑘)2 = ෍
+𝐶𝑘∈𝐶
+෍
+𝑥𝑖 ∈𝐶𝑘
+𝑑(𝑥𝑖, 𝑐𝑘)2<<
+c2
+c1
+vs.
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means
+❑ k-Means clustering
+▪ Each cluster is represented by the cluster center and the sum of d(object, center)2 is minimized
+❑ Procedures with a given number of clusters k
+▪ Select k objects as initial centroids (centers)
+▪ Repeat
+• Form k clusters by assigning each object to its closest centroid
+• Re-compute the centroids of each cluster
+‒ i.e., the average value of objects in each cluster 
+▪ Until the convergence criterion is satisfied 
+• e.g., the centroids do not change
+❑ Interactive demo
+19
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means
+❑ Example
+20
+Cluster assignment New centers
+ New cluster assignment
+ New center update
+Do it yourself!
+Random initial centers
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means
+❑ Example
+21
+❑ Another example
+…
+Cluster assignment New centers Converged
+Random initial centers Cluster assignment New centers New center (converged)
+New cluster assignment
+Random initial centers
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means
+❑ Complexity: O(tkn)
+▪ n: # of objects, k: # of clusters, t: # of iterations (usually, k, t << n)
+❑ Limitations
+▪ Applicable only to objects in a continuous space 
+▪ Need to specify k, the number of clusters, in advance
+▪ Often terminates at a local optimal
+▪ Sensitive to noisy data and outliers
+▪ Not suitable to discover clusters with non-convex shapes or 
+clusters of very different sizes or density
+❑ Variants
+▪ Better initial centroid estimates (e.g., k-means++)
+▪ Different representative cluster prototypes (e.g., k-Medoids)
+▪ Feature transformation (e.g., Kernel method or embedding)
+22
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means++
+❑ k-Means++ clustering (better initial centroid estimation)
+▪ Pick the initial centroids sequentially with a weighted probability score and conduct k-Means
+• Probability of choosing xi as the next center = 
+𝑚𝑖𝑛𝑗 𝑑(𝑥𝑖,𝑐𝑗)2
+σ𝑖 𝑚𝑖𝑛𝑗 𝑑(𝑥𝑖,𝑐𝑗)2
+23
+e.g., x5 has the highest probability to be chosen
+while x2 has the lowest probability to be chosen
+x1
+x3
+x2 x4
+x5
+x6
+=c1 (first centroid)
+d(xi, c1) determines the second centroid c2
+e.g., x7 has the highest probability to be chosen
+while x2 has the lowest probability to be chosen
+x1
+x3
+x2 x4
+x5
+x6
+=c1
+d(xi, c1), d(xj, c2) determine the third centroid c3
+x7 x7
+=c2
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means++
+❑ k-Means++ clustering
+▪ Pick the initial centroids sequentially with a weighted probability score and conduct k-Means
+❑ Procedures with a given number clusters k
+▪ Select an initial object at random to be the first centroid
+▪ For k – 1 steps
+• For remaining objects, find the squared distance 𝑚𝑖𝑛𝑗 𝑑(𝑥𝑖, 𝑐𝑗)2 to the nearest centroid
+• Randomly select a new centroid by choosing an object with probability proportional to
+‒ i.e., further from existing centroids, higher probability to be picked
+▪ End For
+▪ Conduct standard k-Means clustering with the initial centroids
+24
+𝑚𝑖𝑛𝑗 𝑑(𝑥𝑖, 𝑐𝑗)2
+σ𝑖 𝑚𝑖𝑛𝑗 𝑑(𝑥𝑖, 𝑐𝑗)2
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means++
+❑ Example of centroids initialization
+25
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means++
+❑ Quiz: conduct k-Means++ with the number of clusters k = 3
+▪ The first initial centroid is given
+26
+c1
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Means++
+❑ Quiz: conduct k-Means++ with the number of clusters k = 3
+27
+c1
+c2
+c3
+c1
+c2
+c3
+c3
+c2
+c1
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Medoids
+❑ k-Medoids clustering (better cluster prototypes)
+▪ Each cluster is represented by the cluster medoid and the sum of d(object, medoid)2 is minimized
+• Medoids: the most centrally located object in a cluster
+▪ More robust to outliers than k-Means
+28
+Centroid Medoid
+𝑐𝑘 = 1
+|𝐶𝑘| ෍
+𝑥𝑖∈𝐶𝑘
+𝑥𝑖 𝑚𝑘 = argmin𝑥𝑖∈𝐶𝑘 ෍
+𝑥𝑗∈𝐶𝑘
+𝑑(𝑥𝑖, 𝑥𝑗)
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Partitioning > k-Medoids
+❑ k-Medoids clustering
+▪ Each cluster is represented by the cluster medoid and the sum of d(object, medoid)2 is minimized
+• Medoid: the most centrally located object in a cluster
+▪ Procedures of PAM (Partitioning Around Medoids)
+• Select k points as the initial medoids
+• Repeat
+‒ Assigning each point to the cluster with the closest medoid 
+‒ Get the total cost (e.g., SSE) of swapping the medoid with a non-medoid
+‒ If the total cost decreases, swap the medoid with the chosen object 
+• Until convergence criterion is satisfied
+▪ Issue
+• Not scalable with large data due to high computational complexity
+• i.e., O(tk(n-k)2) > O(tkn) where t is the number of iterations
+29
+
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+❑ Distance-based methods
+▪ Partitioning methods
+▪ Hierarchical methods
+❑ Density-based methods
+❑ Probabilistic methods
+❑ Clustering evaluation
+30xxx
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Hierarchical clustering  
+▪ Generate a clustering hierarchy, visualized as a dendrogram
+▪ Not required to specify the number of clusters (k)
+• The desired number of clusters can be obtained by cutting the dendrogram at the proper level
+▪ More deterministic than partitioning approaches
+• No iterative refinement required
+31
+Image: https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8
+Dendrogram Hierarchical clusters
+Cutting level
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Quiz: How many clusters will be returned with each of three cutting levels?
+▪ Note: a single object can be also considered as a cluster 
+32
+Image: https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8
+Data objects
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Quiz: How many clusters will be returned with each of three cutting levels? 
+▪ Note: a single object can be also considered as a cluster 
+33
+Image: https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8
+Data objects
+10
+7
+4
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Two approaches
+▪ Agglomerative (i.e., bottom-up)
+• Start with the points as individual clusters
+• Merge the closest pair of clusters continuously
+▪ Divisive (i.e., top-down)
+• Start with one, all-inclusive cluster
+• Split it continuously into two clusters
+34
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance measures for split/merge
+▪ Single link (min)
+• Smallest distance between an object in one cluster and an object in the other
+• i.e., d(Ci, Cj) = min(d(xip, xjq))
+▪ Complete link (max)
+• Largest distance between an object in one cluster and an object in the other 
+• i.e., d(Ci, Cj) = max(d(xip, xjq))
+▪ Average link
+• Average distance between an object in one cluster and an object in the other 
+• i.e., d(Ci, Cj) = avg(d(xip, xjq))
+▪ Centroid link
+• Distance between the centroids of two clusters
+• i.e., d(Ci, Cj) = d(ci, cj)
+▪ Ward link
+• The change in the SSE of the clusters (i.e., similar to the partitioning approach)
+• i.e., ∆d(Ci, Cj) =σ𝑥𝑘∈𝐶𝑖∪𝐶𝑗 d(𝑥𝑘,𝑐𝑛𝑒𝑤)2 − (σ𝑥𝑘∈𝐶𝑖 d(𝑥𝑘,𝑐𝑖)2 + σ𝑥𝑘∈𝐶𝑗 d(𝑥𝑘,𝑐𝑗)2) =
+𝑁𝑖𝑁𝑗
+𝑁𝑖+𝑁𝑗
+d(𝑐𝑖,𝑐𝑗)2
+35
+...
+p1 p2 p3 p4 p9 p10 p11 p12
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+▪ Single link (min)
+36
+Agglomerative hierarchical clusters
+1
+2
+3
+4
+5
+6
+3 6 2 5 4 10
+0.05
+0.1
+0.15
+0.2
+1 2 3 4 5 6
+1 0 .24 .22 .37 .34 .23
+2 .24 0 .15 .20 .14 .25
+3 .22 .15 0 .16 .28 .11
+4 .37 .20 .16 0 .29 .22
+5 .34 .14 .28 .29 0 .39
+6 .23 .25 .11 .22 .39 0
+Dendrogram
+Distance matrix
+min
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+▪ Single link (min)
+37
+1
+2
+3
+4
+5
+6
+C1
+C2
+C3
+C4
+C5
+3 6 2 5 4 10
+0.05
+0.1
+0.15
+0.2
+1 2 3 4 5 6
+1 0 .24 .22 .37 .34 .23
+2 .24 0 .15 .20 .14 .25
+3 .22 .15 0 .16 .28 .11
+4 .37 .20 .16 0 .29 .22
+5 .34 .14 .28 .29 0 .39
+6 .23 .25 .11 .22 .39 0
+Dendrogram
+Distance matrix
+min
+Agglomerative hierarchical clusters
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+▪ Quiz: try hierarchical clustering with complete link (max)!
+38
+3 6 4 1 2 50
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+1
+2
+3
+4
+5
+6
+1 2 3 4 5 6
+1 0 .24 .22 .37 .34 .23
+2 .24 0 .15 .20 .14 .25
+3 .22 .15 0 .15 .28 .11
+4 .37 .20 .15 0 .29 .22
+5 .34 .14 .28 .29 0 .39
+6 .23 .25 .11 .22 .39 0
+Distance matrix
+Dendrogram
+max
+Agglomerative hierarchical clusters
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+▪ Complete link (max)
+39
+3 6 4 1 2 50
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+1
+2
+3
+4
+5
+6
+C1
+C2 C5
+C3
+C4
+1 2 3 4 5 6
+1 0 .24 .22 .37 .34 .23
+2 .24 0 .15 .20 .14 .25
+3 .22 .15 0 .15 .28 .11
+4 .37 .20 .15 0 .29 .22
+5 .34 .14 .28 .29 0 .39
+6 .23 .25 .11 .22 .39 0
+Distance matrix
+Dendrogram
+max
+Agglomerative hierarchical clusters
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+▪ Average link
+40
+1
+2
+3
+4
+5
+6
+C1
+C2
+C5
+C3
+C4
+1 2 3 4 5 6
+1 0 .24 .22 .37 .34 .23
+2 .24 0 .15 .20 .14 .25
+3 .22 .15 0 .15 .28 .11
+4 .37 .20 .15 0 .29 .22
+5 .34 .14 .28 .29 0 .39
+6 .23 .25 .11 .22 .39 0
+Distance matrix
+Dendrogram
+Average
+Agglomerative hierarchical clusters
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical
+❑ Cluster distance example
+41
+Image: https://scikit-learn.org/stable/auto_examples/cluster/plot_linkage_comparison.html
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical > BIRCH
+❑ Limitation of Hierarchical Approach
+▪ Not reversible merge and split at each level
+▪ Not scalable with the time complexity O(n3) (i.e., pairwise distances O(n2) for up to n-1 levels)
+❑ Efficient multi-phase hierarchical clustering
+▪ Challenge: calculating various distance statistics repeatedly?
+• Basis distance measures
+‒ Centroid (average of objects) 
+‒ Radius (average distance to centroid) 
+‒ Diameter (average pair-wise distance) 
+• Additional distance measures
+‒ D0 = Euclidean distance of two clusters
+‒ D1 = Manhattan distance of two clusters
+‒ D2 = Average inter-cluster distance
+‒ D3 = Average intra-cluster distance
+‒ D4 = Variance increase distance
+42
+𝐷0 = ( Ԧ𝑋𝑜1 − Ԧ𝑋𝑜2)2 𝐷1 = Ԧ𝑋𝑜1 − Ԧ𝑋𝑜2 = ෍
+𝑖=1
+𝑑
+Ԧ𝑋𝑜1[𝑖] − Ԧ𝑋𝑜2[𝑖]
+𝐷2 =
+σ𝑖=1
+𝑁1 σ𝑗=𝑁1+1
+𝑁1+𝑁2 ( Ԧ𝑋𝑖 − Ԧ𝑋𝑗)2
+𝑁1𝑁2
+𝐷3 =
+σ𝑖=1
+𝑁1+𝑁2 σ𝑗=1
+𝑁1+𝑁2( Ԧ𝑋𝑖 − Ԧ𝑋𝑗)2
+𝑁1 + 𝑁2 𝑁1 + 𝑁2 − 1
+𝐷4 = ෍
+𝑘=1
+𝑁1+𝑁2
+Ԧ𝑋𝑘 − σ𝑙=1
+𝑁1+𝑁2 Ԧ𝑋𝑙
+𝑁1 + 𝑁2
+2
+− ෍
+𝑖=1
+𝑁1
+Ԧ𝑋𝑖 − σ𝑙=1
+𝑁1 Ԧ𝑋𝑙
+𝑁1
+2
+− ෍
+𝑗=𝑁1+1
+𝑁1+𝑁2
+Ԧ𝑋𝑗 −
+σ𝑙=𝑁1+1
+𝑁1+𝑁2 Ԧ𝑋𝑙
+𝑁2
+2
+𝐶 =
+σ𝑖=1
+𝑁 𝑋𝑖
+𝑁      𝑅 =
+σ𝑖=1
+𝑁 (𝑋𝑖−𝑋𝑜)2
+𝑁   𝐷 =
+σ𝑖=1
+𝑁 σ𝑗=1
+𝑁 (𝑋𝑖−𝑋𝑗)2
+𝑁(𝑁−1)   
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical > BIRCH
+❑ BIRCH (Balanced Iterative Reducing and Clustering Using Hierarchies)
+▪ Clustering feature (CF) to summarize a cluster and CF-tree to represent a cluster hierarchy
+• Clustering feature CF = (N, LS, SS)
+‒ N: Number of data points 
+‒ LS: linear sum of N points: σ𝑖=1
+𝑁 𝑋𝑖
+‒ SS: square sum of N points:σ𝑖=1
+𝑁 𝑋𝑖
+2
+• CF-tree
+‒ A height-balanced tree that stores the CFs of clusters (nodes)
+‒ The non-leaf nodes store the sum of CFs of their child nodes
+43
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0 1 2 3 4 5 6 7 8 9 10
+C1 = {(3,4), (2,6), (4,5), (4,7), (3,8)}
+CF1 = (5, (16,30), 244) CF2 = (5, (36,17), 327)
+C2 = {(6,2), (7,2), (7,4), (8,4), (8,5)}
+CF = (N, LS= σ𝑖=1
+𝑁 𝑋𝑖, SS= σ𝑖=1
+𝑁 𝑋𝑖
+2)
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical > BIRCH
+❑ BIRCH (Balanced Iterative Reducing and Clustering Using Hierarchies)
+▪ Benefits of CF
+• Compact than storing all the data objects in a cluster
+• Sufficient to calculate various distance statistics
+‒ e.g., Radius 𝑅 =
+σ𝑖=1
+𝑁 (𝑋𝑖−𝑋𝑜)2
+𝑁 =
+𝑆𝑆
+𝑁 − (
+𝐿𝑆
+𝑁)2
+(try deriving other measures if you would like)
+• Additive to allow merging clusters incrementally and consistently
+‒ i.e., CF1 + CF2 = (N1+N2, LS1+LS2, SS1+SS2)
+44
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0 1 2 3 4 5 6 7 8 9 10
+C1 = {(3,4), (2,6), (4,5), (4,7), (3,8)}
+CF1 = (5, (16,30), 244) CF2 = (5, (36,17), 327)
+C2 = {(6,2), (7,2), (7,4), (8,4), (8,5)}
+C3 = C1∪C2
+CF3 = (5+5, (16+36, 30+17), 244+327) = (10, (52, 47), 571)
+CF = (N, LS= σ𝑖=1
+𝑁 𝑋𝑖, SS= σ𝑖=1
+𝑁 𝑋𝑖
+2)
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical > BIRCH
+45
+CF1
+child1
+CF3
+child3
+CF2
+child2
+CF6
+child6
+CF1
+child1
+CF3
+child3
+CF2
+child2
+CF5
+child5
+CF1 CF2 CF6prev next CF1 CF2 CF4prev next
+Branching factor
+(Max number of children) = 7
+Non-leaf node
+Leaf node (subclusters) Leaf node
+Max diameter threshold
+❑ CF-tree example
+Cluster
+Any clustering algorithm
+can be applied to the leaf nodes →
+sum(CF1, CF2, …, CF6)
+of the CFs in its children
+Non-leaf node
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Distance-based > Hierarchical > BIRCH
+❑ BIRCH (Balanced Iterative Reducing and Clustering Using Hierarchies)
+▪ Procedure
+• Two parameters
+‒ Branching factor: maximum number of children
+‒ Threshold: maximum diameter of sub-clusters stored at the leaf nodes
+1. CF-Tree building (i.e., low-level micro-clustering)
+‒ For each object in the dataset, find the closest leaf entry, add the object to the leaf entry, and update the CF 
+‒ If the leaf node is full, split it into two leaf nodes and add one more entry in the parent
+2. Global clustering (i.e., high-level macro-clustering)
+‒ Applying a standard clustering method (e.g., k-means) on the leaf nodes of the CF tree 
+▪ Issue
+• Sensitive to insertion order of data points
+• Since we fix the size of leaf nodes, clusters may not be so natural
+• Clusters tend to be spherical given the diameter measures
+46
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+❑ Distance-based methods
+❑ Density-based methods
+▪ DBSCAN
+❑ Probabilistic methods
+❑ Clustering evaluation
+47xxx
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based
+❑ Motivation
+▪ Most partitioning and hierarchical methods are designed to find spherical-shaped clusters
+▪ What if we want to find arbitrarily-shaped clusters
+• e.g. “S” shape or oval clusters?
+48
+d(xi, ci)
+x1
+x2
+x3
+c1
+x4
+x5
+x6
+c2
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based
+❑ Density-based clustering
+▪ Clusters are formed as dense regions in the data space, separated by sparse regions
+▪ Major features
+• Discover clusters of arbitrary shape
+• Robust to noise
+• Single-scan of datasets (only examine the local region to estimate density)
+• No need for the predefined number of clusters
+• Need density parameters for density estimation and termination condition
+▪ Methods
+• DBSCAN (connected region-based density)
+• DENCLUE (density estimation function)
+• CLIQUE (grid-based density approximation)
+49
+Image: wikipedia
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+▪ How can we find dense (and sparse) regions? 
+→ The density of an object can be measured by the number of other objects close to it
+50Image: https://news.sktelecom.com/172316
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+▪ How can we find dense (and sparse) regions? 
+→ The density of an object can be measured by the number of other objects close to it
+→ Connect all the objects in the dense regions and group them as clusters
+51Image: https://news.sktelecom.com/172316
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+▪ How can we find dense (and sparse) regions? 
+→ The density of an object can be measured by the number of other objects close to it
+→ Connect all the objects in the dense regions and group them as clusters
+▪ A density-based notion of cluster as a maximal set of density-connected points
+52Image: https://reference.wolfram.com/language/ref/method/DBSCAN.html
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+▪ A density-based notion of cluster as a maximal set of density-connected points
+▪ Main parameters
+• Eps(ε): maximum radius of the neighborhood
+‒ Eps-neighborhood of a point x: NEps(x) = {p | d(p, x) ≤ Eps, p!=x}
+• MinPts: minimum number of points in the Eps-neighborhood of a point
+53
+ε |Neps| = 2
+ε
+ε
+|Neps| = 0
+|Neps| = 4
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+▪ A density-based notion of cluster as a maximal set of density-connected points
+▪ Main parameters
+• Eps(ε): maximum radius of the neighborhood
+‒ Eps-neighborhood of a point x: NEps(x) = {p | d(p, x) ≤ Eps, p!=x}
+• MinPts: minimum number of points in the Eps-neighborhood of a point
+▪ Types of points
+• Core point: in a dense neighborhood (i.e., cluster)
+‒ i.e., |NEps(x)| ≥ MinPts
+• Border point: not a core point, but the neighbor of a core point
+‒ i.e., |NEps(x)| < MinPts, but x ∈ NEps(x’) for a core point x’
+• Outlier/noise: neither a core point nor the neighbor of a core point
+54
+ε
+Core point
+Border point
+Outlier/noise
+MinPts = 3 ε
+ε
+|Neps| = 2
+|Neps| = 0
+|Neps| = 4
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Quiz
+▪ Given Eps = 1 and MinPts = 3, find core points, border points, and noises 
+55
+1
+1
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Quiz
+▪ Given Eps = 1 and MinPts = 3, find core points, border points, and noises 
+56
+1
+1
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Example of point types
+57
+Eps = 10, MinPts = 4
+Original points
+Can you find density-based clusters?
+Core, border, and noise points
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ DBSCAN
+▪ A density-based notion of cluster as a maximal set of density-connected points
+▪ Reachability and Connectivity
+• Directly density-reachable
+‒ A point p is directly density-reachable from a point q, if p is in the neighborhood of a core point q
+‒ i.e., p ∈ NEps(q) and |NEps(q)| ≥ MinPts
+• Density-reachable 
+‒ A point p is density-reachable from a point q, if there is a chain of points where consecutive 
+points are directly density-reachable
+‒ i.e., For p1(=q),…, pi-1, pi, pi+1,…, pn(=p), pi+1 is directly density-reachable from pi
+• Density-connected
+‒ A point p is density-connected to a point q, if there is a point o such that both p and q are 
+density-reachable from o
+▪ [Recap] a density-based cluster = a maximal set of density-connected points
+• i.e., every point is density-reachable from any point within the set
+58
+p
+q
+pi
+p q
+o
+Eps = the radius of the circles
+MinPts = 5 
+p
+q
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Pseudo-code
+59
+Image: DBSCAN Revisited, Revisited: Why and How You Should (Still) Use DBSCAN. 
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+60
+❑ Example
+▪ Eps = the radius
+▪ MinPts = 2
+Image: https://livebook.manning.com/book/machine-learning-for-mortals-mere-and-otherwise/chapter-18/v-7/
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Pseudo-code (simplified)
+61
+❑ Example
+▪ Eps = the radius of the circles
+▪ MinPts = 3
+▪ Clusters?
+▪ Noises (outliers)?
+Image: DBSCAN Revisited, Revisited: Why and How You Should (Still) Use DBSCAN. 
+a
+b
+c d e f
+g
+h
+i j
+k
+l
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Pseudo-code (simplified)
+62
+❑ Example
+▪ Eps = the radius of the circles
+▪ MinPts = 3
+▪ 2 Clusters
+• {a, b, c, d, e}, {i, j, k, l}
+▪ 3 noises (outliers)
+• f, g, h
+Image: DBSCAN Revisited, Revisited: Why and How You Should (Still) Use DBSCAN. 
+a
+b
+c d e f
+g
+h
+i j
+k
+Core
+Border
+Noise
+l
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+63
+❑ Quiz
+▪ Given Eps = the radius of the circle and MinPts = 3, conduct DBSCAN to find clusters
+▪ Number of clusters = ?
+▪ Number of noises (outliers) = ?
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+64
+❑ Quiz – Answer 
+▪ Given Eps = the radius of the circle and MinPts = 3, conduct DBSCAN to find clusters
+▪ Number of clusters = 2
+▪ Number of noises (outliers) = 9 Core
+Border
+Noise
+Cluster
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Example of point types and clusters by DBSCAN
+65
+Eps = 10, MinPts = 4
+Original points
+ Clusters with noisesCore, border, and noise points
+(a minimum cluster size applied)
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Comparison of distance-based and density-based clustering
+66
+k-Means
+ DBSCAN (Demo)
+Image: https://medium.com/@jdseo/understanding-dbscan-a-practical-guide-for-beginners-with-business-applications-9458792d1df8
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Discussion
+▪ Complexity: O(n2) or O(nlogn) if spatial index is used
+▪ Advantages
+• Does not need to know the number of clusters
+• Can find arbitrarily shaped clusters
+• Has a notion of noise – robust to outliers
+▪ Disadvantages
+• Hard to determine the proper parameter values (Eps and MinPts)
+• Ineffective to data sets with large density difference
+‒ Example
+67
+(MinPts=4, Eps=9.92) (MinPts=4, Eps=9.75)Original data and clusters
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Density-based > DBSCAN
+❑ Heuristics for determining Eps and MinPts
+▪ Main idea
+• For points in a cluster, their k-th nearest neighbors are at closer distance
+• For noise points, their k-th nearest neighbor at farther distance
+▪ MinPts: a rule of thumb
+• E.g., 2*dim = 4 for two-dimensional data or ln(n) for n points
+▪ Eps: the first valley of the sorted k(=MinPts)-dist graph 
+• The slope of the curve becomes noticeably more horizontal (i.e., the elbow method)
+• k-dist(p): return the distance from a point p to its k-th nearest neighbor
+• Sorted k-dist graph: sorting the points by their k-dist values
+68
+p1
+p2
+k-dist(p1)
+k-dist(p2)
+(sorted) Points
+k-dist
+Eps
+k = 4
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+❑ Distance-based methods
+❑ Density-based methods
+❑ Probabilistic methods
+▪ Expectation Maximization
+❑ Clustering evaluation
+69xxx
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic
+❑ Motivation
+▪ Traditional clustering
+• Assign each data point exclusively to one cluster with clear boundaries between clusters
+• i.e., hard clustering
+▪ Probabilistic clustering 
+• Assign each data object over multiple clusters with the probability of it belonging to each cluster
+• i.e., soft clustering
+70
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic
+❑ Motivation
+▪ Traditional clustering
+• Assign each data point exclusively to one cluster with clear boundaries between clusters
+• i.e., hard clustering
+▪ Probabilistic clustering 
+• Assign each data object over multiple clusters with the probability of it belonging to each cluster
+• i.e., soft clustering
+71
+High Low Moderate High
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic
+❑ Idea
+▪ A probabilistic cluster is a distribution over the data space 
+• Can be represented as a probability density function
+▪ A set of observed objects is a mixture of instances from 
+multiple probabilistic clusters
+• Assume that each observed object is generated independently
+▪ Infer a set of k probabilistic clusters that are mostly likely 
+to generate the data set
+72Image: https://towardsdatascience.com/gaussian-mixture-model-clearly-explained-115010f7d4cf
+ 
+❑ Motivation
+▪ Assign each data object over multiple clusters with the 
+probability of it belonging to each cluster
+High Low Moderate High
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic
+❑ Probabilistic model-based clustering
+▪ A set C of k probabilistic clusters c1, …,ck with probability density functions (PDF) f1, …, fk, 
+respectively, and their weights w1, …, wk
+▪ Probability of an object o generated by cluster cj is
+𝑃 𝑜 𝑐𝑗 = 𝑤𝑗𝑓𝑗 𝑜   
+▪ Probability of an object o generated by the set of clusters C = {c1, …, ck} is
+𝑃 𝑜 𝐶 = σ𝑗=1
+𝑘 𝑤𝑗𝑓𝑗(𝑜) 
+▪ Since objects are assumed to be generated independently, for a data set D = {o1, …, on},
+𝑃 𝐷 𝐶 = ς𝑖=1
+𝑛 𝑃 𝑜𝑖 𝐶 = ς𝑖=1
+𝑛 σ𝑗=1
+𝑘 𝑤𝑗𝑓𝑗 𝑜𝑖  
+❑ How to find a set C of k probabilistic clusters such that P(D|C) is maximized?
+▪ Maximizing P(D|C) is often intractable since the PDF of a cluster can take an arbitrary form
+▪ To make it computationally feasible, assume the PDFs are some parameterized distributions
+73
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic
+❑ Probabilistic mixture model
+▪ For D = {o1, …, on} (n observed objects) and 𝛩 = 𝜃1, … , 𝜃𝑘  (parameters of the k distributions), 𝑃𝑗(𝑜𝑖|𝜃𝑗) is the 
+probability that oi is generated from the j-th distribution using parameter 𝜃𝑗
+𝑃 𝑜𝑖 𝛩 = σ𝑗=1
+𝑘 𝑤𝑗𝑃𝑗(𝑜𝑖|𝜃𝑗) → 𝑃 𝐷 𝛩 = ς𝑖=1
+𝑛 σ𝑗=1
+𝑘 𝑤𝑗𝑃𝑗(𝑜𝑖|𝜃𝑗)
+❑ Example: univariate Gaussian mixture model
+▪ Assume the probability density functions of k clusters follow a 1-d Gaussian distribution 
+▪ The probability density function of a cluster j is centered at 𝜇𝑗 with standard deviation σ𝑗
+• i.e., 𝜃𝑗  =  (𝜇𝑗, σ𝑗)
+▪ Each cluster has the same weights wk =1/k 
+74
+Image: https://en.wikipedia.org/wiki/Mixture_distribution
+𝑃 𝑜𝑖 θ𝑗 =
+1
+2𝜋𝜎𝑗
+𝑒−
+𝑜𝑖−𝜇𝑗
+2
+2𝜎2  
+𝑃 𝑜𝑖 𝛩 = σ𝑗=1
+𝑘 1
+𝑘
+1
+2𝜋𝜎𝑗
+𝑒−
+𝑜𝑖−𝜇𝑗
+2
+2𝜎2  
+𝑃 𝐷 𝛩 = ς𝑖=1
+𝑛 σ𝑗=1
+𝑘 1
+𝑘
+1
+2𝜋𝜎𝑗
+𝑒−
+𝑜𝑖−𝜇𝑗
+2
+2𝜎2  
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic > EM
+❑ Expectation-Maximization 
+▪ An iterative method to find the maximum likelihood of parameters in statistical models, where the 
+model depends on unobserved latent variables
+▪ Two repeated main steps
+• Expectation step: computes the expected likelihood using the current estimate for the parameters
+• Maximization step: computes parameters maximizing the expected likelihood found on the E step
+→ Repeat the E-M steps until the parameters converge
+▪ Example
+• In the context of clustering
+‒ Expectation: assign each object to the cluster with a center that is closest to the object
+‒ Maximization: adjust the centers so that the similarity of objects in a cluster to its center is maximized
+→ Repeat the E-M steps until the clustering results converge
+• Anything come to mind?
+75
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic > EM
+❑ Computing probabilistic mixture models with EM
+▪ Given n objects 𝐷 =  {𝑥1, … , 𝑥𝑛}, find a set of parameters 𝛩 = 𝜃1, … , 𝜃𝑘  to maximize 𝑃(𝐷|𝛩)
+• e.g., 𝜃𝑗  =  (𝜇𝑗, σ𝑗) are the mean and standard deviation of the j-th univariate Gaussian distribution 
+▪ Initially assign random values to 𝜃𝑗, then iteratively conduct the E/M steps until convergence
+76
+
+COSE471: Data Science
+DAIS lab at Korea University
+❑ Example with Gaussian mixture model
+▪ Expectation-step
+• For each object 𝑥𝑖, calculate the probability 𝑤𝑖𝑗
+𝑡+1 that 𝑥𝑖 belongs to each distribution j with 𝜃𝑗 
+▪ Maximization-step
+• Adjust the parameters 𝜃𝑗  =  (𝜇𝑗, σ𝑗) so that the expected log likelihood of 𝑃 𝐷 𝛩  = ς𝑖=1
+𝑛 σ𝑗=1
+𝑘 𝑤𝑗𝑃𝑗(𝑥𝑖|𝜃𝑗) is maximized 
+Clustering > Probabilistic > EM
+❑ Computing probabilistic mixture models with EM
+▪ Given n objects 𝐷 =  {𝑥1, … , 𝑥𝑛}, find a set of parameters 𝛩 = 𝜃1, … , 𝜃𝑘  to maximize 𝑃(𝐷|𝛩)
+• e.g., 𝜃𝑗  =  (𝜇𝑗, σ𝑗) are the mean and standard deviation of the j-th univariate Gaussian distribution 
+▪ Initially assign random values to 𝜃𝑗, then iteratively conduct the E/M steps until convergence
+77
+𝑃 𝑥𝑖 𝜇𝑗
+𝑡, 𝜎𝑗
+𝑡 = 1
+2𝜋𝜎𝑗
+𝑡 𝑒
+−
+𝑥𝑖−𝜇𝑗
+𝑡 2
+2(𝜎𝑗
+𝑡)2
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic > EM
+❑ Example (2D)
+78
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Probabilistic > EM
+❑ Comparison with k-Means
+▪ k-Means as a special case of the EM algorithm with hard assignment
+79
+k-Means EM with GMM
+Cluster 
+representation
+Mean 
+(Centroid point)
+Distribution parameters
+(e.g., Mean, Variance, Weight)
+Cluster initialization Initial k centers Initial k distributions (e.g., Gaussian)
+Expectation Hard-assign each point to 
+closest center
+Soft-assign each point to each 
+distribution
+Maximization Compute new centers of 
+current clusters
+Compute new parameters of 
+each distribution
+Membership Exclusive Non-exclusive
+COSE471: Data Science
+DAIS lab at Korea University
+Outline
+❑ Basic concepts of clustering
+❑ Distance-based methods
+❑ Density-based methods
+❑ Probabilistic methods
+❑ Clustering evaluation
+▪ Clustering tendency
+▪ Number of clusters
+▪ Clustering quality
+80xxx
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation
+❑ “Clusters are in the eye of the beholder”
+▪ For (supervised) classification, we have a variety of measures to evaluate how good our model is
+• e.g., accuracy, precision, recall, F1
+▪ For (unsupervised) clustering analysis, how can we evaluate the “goodness” of the clusters?
+❑ Major issues in clustering analysis
+▪ Clustering tendency
+• Assess the suitability of clustering - any inherent grouping structure?
+▪ The number of clusters
+• Determine the right number of clusters for a given data set and algorithm
+▪ Clustering quality
+• Evaluate the quality of the clustering results in extrinsic or intrinsic ways
+81
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Tendency  
+❑ Clustering tendency (i.e., clusterability)
+▪ Evaluate whether the dataset has any “inherent grouping structure”
+• Non-random structure that may lead to meaningful clusters
+▪ Measures
+• Spatial histogram (qualitative)
+‒ Contrast the histogram of the data with that generated from random samples  
+• Distribution distance (quantitative)
+‒ Compare the empirical probability mass function from the data with those 
+from the randomly generated samples
+‒ e.g., Kullback-Leibler (KL) divergence
+• Hopkins statistic
+‒ A statistic for the spatial randomness of a variable as distributed in a space. 
+‒ Given a d-dimensional space S and a data set D in S, 
+𝑥𝑖 = distance from a randomly sampled data in S to its nearest neighbor in D
+𝑦𝑖 = distance from a randomly sampled data in D to its nearest neighbor in D
+82
+Image: https://complex-systems-ai.com/en/data-partitioning/hopkins-statistic/
+𝐻 = σ𝑖=1
+𝑛 𝑥𝑖
+𝑑
+σ𝑖=1
+𝑛 𝑥𝑖
+𝑑 + σ𝑖=1
+𝑛 𝑦𝑖
+𝑑
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Number of Clusters
+❑ The number of clusters controls the proper granularity of cluster analysis
+▪ Finding a good balance between compressibility and accuracy in cluster analysis
+• Depending on the distribution's shape and scale in the data set
+• Depending on the clustering resolution required by the user
+▪ Two undesirable extremes
+• The whole data set is one cluster: no value of clustering → Each point as a cluster: no data summarization
+❑ Methods for determining the number of clusters k
+▪ Empirical approach
+• Rule of thumb: 𝑘 ≈ 𝑛/2 for a dataset of n points (e.g., n = 200 → k = 10)
+‒ Each cluster is expected to have about 2𝑛 points
+• Elbow method: the turning point in the curve of the cluster variance with k
+‒ The cluster variance: the sum of squared distances of data to its centroid, a.k.a. inertia
+▪ Statistical approach
+• Find the optimal number of clusters that results the best statistics
+• e.g., Dunn index, Silhouette coefficient, etc.
+83Image: https://ankitajhumu.medium.com/selecting-number-of-clusters-in-k-mean-clustering-d60a1f85d65b/
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality 
+❑ Unsupervised measure (i.e., intrinsic index)
+▪ Examine how compact clusters are and how well clusters are separated with distance metrics
+▪ Measures
+• Dunn index
+• Silhouette coefficient
+❑ Supervised measure (i.e., extrinsic index)
+▪ Examine the extent to which cluster labels match externally given ground truth cluster labels
+▪ Measures
+• Information-based: Normalized mutual information (NMI)
+• Pairwise comparison-based: Jaccard index, Rand index
+84
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Dunn Index
+❑ Unsupervised measure (i.e., intrinsic index)
+▪ Criteria
+• Cluster cohesion: how closely related are objects in a cluster?
+• Cluster separation: how distinct a cluster is from other clusters?
+▪ Dunn index (extreme situations)
+• The intra-cluster compactness Δ = max𝐶 𝑜𝑖 =𝐶(𝑜𝑗) 𝑑 𝑜𝑖, 𝑜𝑗
+‒ The maximum distance between two points that belong to the same cluster 
+• The inter-cluster separation 𝛿 = min𝐶 𝑜𝑖 ≠𝐶(𝑜𝑗) 𝑑 𝑜𝑖, 𝑜𝑗
+‒ The minimum distance between two points that belong to different clusters
+• The Dunn index 𝐷𝐼 =
+𝛿
+Δ
+‒ The larger the ratio, the farther away the clusters are separated comparing 
+to their compactness
+• Using the extreme distances can be affected by outliers
+85Image: https://livebook.manning.com/concept/r/dunn-index
+Intra-cluster distance
+Inter-cluster distance
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Silhouette Coefficient 
+❑ Unsupervised measure (i.e., intrinsic index)
+▪ Silhouette coefficient (average situations)
+• The average intra-cluster distance of an object
+‒ 𝑎 𝑜 = σ𝑜′∈𝐶𝑖,𝑜≠𝑜′d(𝑜, 𝑜′) /( 𝐶𝑖 − 1)
+• The minimum average inter-cluster distance of an object
+‒ 𝑏 𝑜 = min
+𝐶𝑗:1≤𝑗≤𝑘,𝑗≠𝑖
+σ𝑜′∈𝐶𝑗 𝑑𝑖𝑠𝑡 𝑜, 𝑜′ / 𝐶𝑗
+• Silhouette coefficient of an object 𝑠 𝑜 =
+𝑏 𝑜 −𝑎(𝑜)
+max 𝑎 𝑜 ,𝑏 𝑜 ~[−1,1]
+‒ 𝑠 𝑜 ~1: the cluster containing o is compact and o is far away from other 
+clusters (good)
+‒ 𝑠 𝑜 < 0 (i.e., 𝑏 𝑜 < a 𝑜 ): o is closer to the objects in another cluster 
+than to the objects in the same cluster (bad)
+• Final silhouette coefficient of the clustering results = σ𝑜∈𝐷
+1
+n 𝑠 𝑜
+86Image: https://livebook.manning.com/concept/r/dunn-index
+Intra-cluster distance
+Inter-cluster distance
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Information-based 
+❑ Supervised measure (i.e., extrinsic index)
+▪ Dataset D = {o1, …, on}, Ground truth G = {G1, …, Gl}, Clustering result C = {C1, …, Cm}, 
+▪ Information-based
+• Entropy = a measure of “information”, “surprise”, or “uncertainty” in the variable’s possible outcomes
+‒ Information: I 𝑥𝑖 = 𝑙𝑜𝑔2
+1
+𝑃 𝑋=𝑥𝑖
+=  −𝑙𝑜𝑔2 𝑃 𝑋 = 𝑥𝑖  
+‒ Entropy: 𝐻 X = {𝑥1, 𝑥2, … 𝑥𝑚} = 𝐸 𝐼 𝑋 = σ𝑖=1
+𝑚 𝑝𝑖I 𝑥𝑖 = − σ𝑖=1
+𝑚 𝑝𝑖𝑙𝑜𝑔2 𝑝𝑖 , where 𝑝𝑖 = 𝑃(𝑋 = 𝑥𝑖)
+87Image: wikipedia
+I 𝑠𝑡𝑟𝑎𝑤𝑏𝑒𝑟𝑟𝑦 = −𝑙𝑜𝑔2 1 = 0
+𝑃 𝑋 = 𝑠𝑡𝑟𝑎𝑤𝑏𝑒𝑟𝑟𝑦 = 1 𝑃 𝑋 = 𝑐𝑢𝑝𝑖 = 1/3
+𝑋:  𝑎 𝑑𝑜𝑔 𝑠𝑛𝑎𝑐𝑘
+I 𝑐𝑢𝑝1 = −𝑙𝑜𝑔2 1/3 = 1.58
+I 𝑐𝑢𝑝2 = −𝑙𝑜𝑔2 1/3 = 1.58
+I 𝑐𝑢𝑝3 = −𝑙𝑜𝑔2 1/3 = 1.58
+𝑋:  𝑎 𝑑𝑜𝑔 𝑠𝑛𝑎𝑐𝑘
+𝐸 𝑋 =  −𝑙𝑜𝑔2 1 = 0 
+𝐸 𝑋 =  σ𝑖=1
+3 1/3𝑙𝑜𝑔2 1/3 = 1.58 
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Information-based 
+❑ Supervised measure (i.e., extrinsic index)
+▪ Dataset D = {o1, …, on}, Ground truth G = {G1, …, Gl}, Clustering result C = {C1, …, Cm}, 
+▪ Information-based
+• Entropy of clustering results
+‒ 𝐻 𝐶 = − σ𝑖=1
+𝑚 𝐶𝑖
+𝑛 log
+𝐶𝑖
+𝑛 , 𝐻 𝐺 = − σ𝑖=1
+𝑙 𝐺𝑖
+𝑛 log
+𝐺𝑖
+𝑛
+‒ 𝐻 𝐺 𝐶 = − σ𝑖=1
+𝑚 σ𝑗=1
+𝑙 𝐶𝑖∩𝐺𝑗
+𝑛 log
+𝐶𝑖∩𝐺𝑗
+𝐶𝑖
+ (= σ𝑖=1
+𝑚 𝐶𝑖
+𝑛 𝐻 𝐺 𝐶𝑖 = − σ𝑖=1
+𝑚 𝐶𝑖
+𝑛 σ𝑗=1
+𝑙 𝐶𝑖∩𝐺𝑗
+𝐶𝑖
+log
+𝐶𝑖∩𝐺𝑗
+𝐶𝑖
+)
+• Mutual information
+‒ 𝐼 𝐶; 𝐺 = 𝐻 𝐺 − 𝐻 𝐺 𝐶  (= 𝐻 𝐶 − 𝐻 𝐶 𝐺 )
+‒ Quantify the amount of shared info between the clustering C and the ground-truth partitioning G 
+• Normalized mutual information (NMI)
+‒ 𝑁𝑀𝐼 𝐶, 𝐺 =
+𝐼 𝐶;𝐺
+(𝐻 𝐶 +𝐻 𝐺 )/2 ~ 0,1
+‒ Close to 1 indicates a good clustering
+• Cf. advanced metrics: adjusted mutual information (AMI)
+88Image: wikipedia
+𝐼 𝐶, 𝐺 𝐼 𝐶, 𝐺
+𝐻 𝐶 𝐻 𝐺 𝐻 𝐶 𝐻 𝐺
+𝐼 𝐶; 𝐺
+𝐻 𝐶 𝐻 𝐺
+𝐻 𝐶|𝐺 𝐻 𝐺|𝐶
+𝐻 𝐶, 𝐺
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Comparison-based 
+❑ Supervised measure (i.e., extrinsic index)
+▪ Dataset D = {o1, …, on}, Ground truth G = {G1, …, Gl}, Clustering result C = {C1, …, Cm}, 
+▪ Pairwise comparison-based
+• Treat each cluster in the ground truth as a class
+‒ For each pair of objects (oi, oj) in D, 
+ if they are assigned to the same cluster, the assignment is regarded as positive; otherwise, negative 
+‒ Depending on assignments, we have four possible cases for the total number of pairs (i.e., 𝑛
+2 ) 
+• Basic metrics
+‒ Jaccard index = TP/(TP + FP + FN) 
+‒ Rand index = (TP + TN)/(TP + TN + FP + FN)
+• Cf. advanced metrics: adjusted rand index (ARI), B-cubed score
+89Image: wikipedia
+
+COSE471: Data Science
+DAIS lab at Korea University
+Clustering > Evaluation > Clustering Quality > Comparison-based 
+❑ Example
+▪ Dataset D = {a, b, c, d, e}
+▪ Ground truth G = [G1={a,b,c}, G2={d,e}]
+▪ Clustering result C = [C1= {a,b}, C2 = {c,d,e}] 
+▪ All possible pairs  = 5
+2 = 10 
+• (a,b),(a,c),(a,d),(a,e),(b,c),(b,d),(b,e),(c,d),(c,e),(d,e)
+▪ Counting each case
+• TP = 2: (a,b), (d,e)
+• FP = 2: (c,d), (c,e)
+• FN = 2: (a,c), (b,c)
+• TN = 4: (a,d), (a,e), (b,d), (b,e)
+▪ Rand index = (TP + TN)/(TP + TN + FP + FN) = 2 + 4 / (2 + 2 + 2 + 4) = 0.6
+90
+
+COSE471: Data Science
+DAIS lab at Korea University
+Tutorial References
+❑ Library and tutorial
+▪ Scikit-learn clustering and evaluation
+• k-Means/k-Means++
+• DBSCAN
+• Evaluation
+▪ B-cubed
+❑ Examples
+▪ K-means
+▪ Hierarchical clustering 
+▪ DBSCAN / HDBSCAN
+▪ Expectation Maximization
+▪ Elbow method
+❑ Case study
+▪ Comprehensive study 
+▪ Customer segmentation
+91
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Density-based Clustering in Practice
+❑ Example – cell type clustering by RNA-Seq features
+▪ Used for new biological hypotheses about cell type identities and relationships
+92Image: https://www.biorxiv.org/content/10.1101/770388v3.full
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Density-based Clustering in Practice
+❑ Example – topic modeling of documents
+93
+Image: https://github.com/ddangelov/Top2Vec?tab=readme-ov-file
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Density-based Clustering in Practice
+❑ Example – topic modeling of documents
+94
+Image: https://github.com/ddangelov/Top2Vec?tab=readme-ov-file
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] HDBSCAN (Hierarchical DBSCAN)
+❑ Illustration of HDBSCAN
+▪ Example usage: BERTopic
+95Image: https://nbviewer.org/github/scikit-learn-contrib/hdbscan/blob/master/notebooks/How%20HDBSCAN%20Works.ipynb#How-HDBSCAN-Works
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Self-supervised Continual Clustering
+96
+WWW 2023 Web Mining
+https://dl.acm.org/doi/pdf/10.1145/3543507.3583507
+
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Self-supervised Continual Clustering
+97
+WWW 2023 Web Mining
+COSE471: Data Science
+DAIS lab at Korea University
+[Cookie Slides] Self-supervised Continual Clustering
+98
+WWW 2023 Web Mining
+Data type Data structure Data state Target knowledge Application
+Sequence/
+Temporal Unstructured Streaming Story (cluster) News outlet
+https://dl.acm.org/doi/pdf/10.1145/3543507.3583507

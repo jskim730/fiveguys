@@ -1,0 +1,8 @@
+feature,single_AUC,power|AUC-0.5|
+n_words,1.0,0.5
+avg_sent_len,0.969,0.469
+lexical_diversity,0.11,0.39
+avg_word_len,0.877,0.377
+comma_density,0.766,0.266
+first_person_ratio,0.34,0.16
+hedging_ratio,0.437,0.063

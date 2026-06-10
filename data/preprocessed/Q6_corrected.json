@@ -1,0 +1,1339 @@
+[
+  {
+    "id": "Q6_001",
+    "original_no": 1,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q6_002",
+    "original_no": 2,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "We can use LIFT criteria.\nLIFT solves by mitigating the correlation between being random and being an actual pattern by include both the union of the two variables S(A U B) and probability of the two variables S(A) x S(B).",
+    "language": "en",
+    "cleaned_text": "We can use the lift criterion. Lift mitigates the issue of distinguishing a random co-occurrence from an actual pattern by comparing the joint support S(A∪B) with the product of the individual supports S(A) x S(B).",
+    "english_text": "We can use the lift criterion. Lift mitigates the issue of distinguishing a random co-occurrence from an actual pattern by comparing the joint support S(A∪B) with the product of the individual supports S(A) x S(B).",
+    "one_sentence_summary": "The student proposes the lift criterion, which compares joint support S(A∪B) against S(A)xS(B) to distinguish real patterns from chance.",
+    "keywords": [
+      "lift",
+      "association rule",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_003",
+    "original_no": 3,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "other criteria to find \"interesting pattern\"\n- seasonal events\n- location's proximity\n- target audience\n- quantity",
+    "language": "en",
+    "cleaned_text": "Other criteria to find an interesting pattern: seasonal events, location's proximity, target audience, and quantity.",
+    "english_text": "Other criteria to find an interesting pattern: seasonal events, location's proximity, target audience, and quantity.",
+    "one_sentence_summary": "The student suggests other criteria such as seasonal events, location proximity, target audience, and quantity.",
+    "keywords": [
+      "seasonality",
+      "location",
+      "target audience"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.7
+  },
+  {
+    "id": "Q6_004",
+    "original_no": 4,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "According to my personal experience, 'Independence' was a valuable criteria. For example, in the web novel market, there are genres like 'Modern Fantasy' or 'Romantic Fantasy'. They are hybrid genres. So the question arises that \"Is Modern Fantasy the same with 'Modern' and 'Fantasy'?\"",
+    "language": "en",
+    "cleaned_text": "According to my personal experience, 'independence' was a valuable criterion. For example, in the web novel market there are hybrid genres like 'Modern Fantasy' or 'Romantic Fantasy', so the question arises: is 'Modern Fantasy' the same as 'Modern' and 'Fantasy' combined?",
+    "english_text": "According to my personal experience, 'independence' was a valuable criterion. For example, in the web novel market there are hybrid genres like 'Modern Fantasy' or 'Romantic Fantasy', so the question arises: is 'Modern Fantasy' the same as 'Modern' and 'Fantasy' combined?",
+    "one_sentence_summary": "The student values the 'independence' criterion, illustrated by whether a hybrid web-novel genre like 'Modern Fantasy' equals 'Modern' plus 'Fantasy'.",
+    "keywords": [
+      "independence",
+      "web novels",
+      "hybrid genres"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_005",
+    "original_no": 5,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "- One criteria is to investigate the start and end. If there is a sequence. By including those condition, we can know more information than just knowing the support by counting everything. By applying this method, we can change the scope of the investigation and can get more interesting patterns.",
+    "language": "en",
+    "cleaned_text": "One criterion is to investigate the start and end - whether there is a sequence. By including that condition, we can know more information than just the support from counting everything, change the scope of investigation, and find more interesting patterns.",
+    "english_text": "One criterion is to investigate the start and end - whether there is a sequence. By including that condition, we can know more information than just the support from counting everything, change the scope of investigation, and find more interesting patterns.",
+    "one_sentence_summary": "The student suggests investigating sequences (start and end) as a criterion, giving more information than support alone.",
+    "keywords": [
+      "sequence",
+      "support",
+      "pattern discovery"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.62
+  },
+  {
+    "id": "Q6_006",
+    "original_no": 6,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "itemset이나 frequent에서 가능한 단어가 (꽃삼각형)을 (들겠다). 음악의 듀엣가수의 노래등이 항상 같이 시청되는 경우가 많다. 또한 어떤 한 가수의 음악이 보통 시청자에 의해 (꽃)신 (등) 되는 (등) 가수의 노래시는 (군집) 영광이 형성된다. 이런 패턴은 음악들의 일반적인 분류와는 별개로 들갔이는 패턴을 형성하기 때문에 새로운 종류의 패턴을 발견하기에 유용한 정보로 사용될 것이다.",
+    "language": "ko",
+    "cleaned_text": "itemset이나 frequent itemset에서, 음악의 듀엣 가수의 노래 등이 항상 같이 시청되는 경우가 많다. 또한 한 가수의 음악이 보통 시청자에 의해 함께 소비되어 그 가수 노래들의 군집이 형성된다. 이런 패턴은 음악의 일반적인 분류와는 별개의 패턴을 형성하므로 새로운 종류의 패턴을 발견하는 데 유용한 정보로 쓰일 수 있다.",
+    "english_text": "In itemsets or frequent itemsets, songs by duet singers are often watched together. Also, one singer's songs are usually consumed together by listeners, forming a cluster of that singer's songs. Such patterns form patterns separate from the general classification of music, so they can be useful for discovering new kinds of patterns.",
+    "one_sentence_summary": "The student suggests that co-viewed songs (e.g., duet singers, an artist's songs) form clusters revealing new pattern types beyond normal music classification.",
+    "keywords": [
+      "music",
+      "co-occurrence",
+      "clustering"
+    ],
+    "themes": [
+      "pattern discovery",
+      "recommendation systems"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.4
+  },
+  {
+    "id": "Q6_007",
+    "original_no": 7,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "we can use an outlier. I think when specific patterns appears it would show us unusual data. So, if we discover some outlier it can tell us some rules or patterns",
+    "language": "en",
+    "cleaned_text": "We can use outliers. When specific patterns appear, they would show us unusual data, so if we discover some outliers they can tell us some rules or patterns.",
+    "english_text": "We can use outliers. When specific patterns appear, they would show us unusual data, so if we discover some outliers they can tell us some rules or patterns.",
+    "one_sentence_summary": "The student suggests using outliers, since unusual data points can reveal rules or patterns.",
+    "keywords": [
+      "outliers",
+      "anomaly",
+      "pattern discovery"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q6_008",
+    "original_no": 8,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "또한, app contents에 (대해) 페이지 사용 가능여부의 (스카) 같은 기능도 패턴화하여 행동하지 않고 도와줄 수 있을 것이다.",
+    "language": "ko",
+    "cleaned_text": "또한 app contents에 대해 페이지 사용 가능 여부 같은 기능도 패턴화하여, 직접 행동하지 않고도 도와줄 수 있을 것이다.",
+    "english_text": "Also, for app contents, features such as whether a page is available to use could be patternized to help without acting directly.",
+    "one_sentence_summary": "The student vaguely suggests patternizing app-content features like page availability, though the response is largely unclear.",
+    "keywords": [
+      "app content",
+      "pattern"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.4
+  },
+  {
+    "id": "Q6_009",
+    "original_no": 9,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "화가만든도 인비레인 (활용할 수 있다고 생각합니다). 새 패턴은 잘 알려진 새 패턴이 됩니다. 어느들기... 슈팅이여 신 영 매미들 Beer 을 (먹과)는 거 좋아하고... 새 패턴은 Soy로 마비역 미꾸어대인 미꾸들로 만들기 있고 milk도 Soy milk로 바뀔 수 있다는... 새 (먹과)인 위스키도 가능 크게는 (등감거 비싸지면 만들고 위치 거품 아침에 3시간이마에)의 (등) 시스템 A.I 가 만들수 있다고 한다면 추측입니다.",
+    "language": "ko",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_010",
+    "original_no": 10,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria to find interesting pattern? we can group the items and observe the relationships between groups of within group.",
+    "language": "en",
+    "cleaned_text": "We can group the items and observe the relationships between groups or within a group.",
+    "english_text": "We can group the items and observe the relationships between groups or within a group.",
+    "one_sentence_summary": "The student suggests grouping items and observing relationships between and within groups.",
+    "keywords": [
+      "item grouping",
+      "relationships"
+    ],
+    "themes": [
+      "pattern discovery",
+      "clustering"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.65
+  },
+  {
+    "id": "Q6_011",
+    "original_no": 11,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern?\nWe don't have to focus on common/main patterns. Sometimes we have to find rare patterns (which can be critical)\nUnexpected patterns can be the chance of business",
+    "language": "en",
+    "cleaned_text": "We don't have to focus on common/main patterns. Sometimes we have to find rare patterns, which can be critical, and unexpected patterns can be a business opportunity.",
+    "english_text": "We don't have to focus on common/main patterns. Sometimes we have to find rare patterns, which can be critical, and unexpected patterns can be a business opportunity.",
+    "one_sentence_summary": "The student suggests focusing on rare and unexpected patterns, which can be critical or business opportunities.",
+    "keywords": [
+      "rare patterns",
+      "unexpected patterns"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_012",
+    "original_no": 12,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Another useful criterion in \"confidence improvement\" which measures how much the confidence of a rule increase compared to related simpler rules. It helps identify whether adding more items to a rule actually provides new and meaningful information rather than redundant patterns.",
+    "language": "en",
+    "cleaned_text": "Another useful criterion is 'confidence improvement', which measures how much the confidence of a rule increases compared to related simpler rules. It helps identify whether adding more items to a rule actually provides new and meaningful information rather than redundant patterns.",
+    "english_text": "Another useful criterion is 'confidence improvement', which measures how much the confidence of a rule increases compared to related simpler rules. It helps identify whether adding more items to a rule actually provides new and meaningful information rather than redundant patterns.",
+    "one_sentence_summary": "The student proposes a 'confidence improvement' criterion measuring whether adding items to a rule provides new information rather than redundancy.",
+    "keywords": [
+      "confidence improvement",
+      "rule redundancy"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q6_013",
+    "original_no": 13,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria\nLift to see if two courses are independent or are entirely correlated.",
+    "language": "en",
+    "cleaned_text": "Other criteria: lift, to see if two courses are independent or entirely correlated.",
+    "english_text": "Other criteria: lift, to see if two courses are independent or entirely correlated.",
+    "one_sentence_summary": "The student suggests lift to see whether two courses are independent or correlated.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_014",
+    "original_no": 14,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Conviction: measures the degree of implication of the rule (how dependent the occurrence of Y is on X.\n\nNovelty: indicates how new or unexpected the pattern is.",
+    "language": "en",
+    "cleaned_text": "Conviction: measures the degree of implication of the rule (how dependent the occurrence of Y is on X). Novelty: indicates how new or unexpected the pattern is.",
+    "english_text": "Conviction: measures the degree of implication of the rule (how dependent the occurrence of Y is on X). Novelty: indicates how new or unexpected the pattern is.",
+    "one_sentence_summary": "The student proposes conviction (degree of implication) and novelty (how new/unexpected the pattern is) as criteria.",
+    "keywords": [
+      "conviction",
+      "novelty"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_015",
+    "original_no": 15,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria (In addition to support & confidence) to find \"interesting pattern\"?\n\nSupport & confidence는 뭐? 같은 (등)을 (등었다) 도, (말이는 곳 (꽃을 추가한다), 신호 패키지들이 어떻게 인식해 사람들의 의지에 의해 (의지)나 거의 (관건). 길 길로 진의 가용을 좋게 하는 (할 수 있는 것) 같을 것이다.",
+    "language": "mixed",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_016",
+    "original_no": 16,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria (in addition to support or confidence) to find \"interesting pattern\"?\n↳ Shifting our perspective, How about considering the probability of Y not occurring given that X has occurred.\n\nIf we prune these edges, we can only have high-relative edges.",
+    "language": "en",
+    "cleaned_text": "Shifting our perspective: how about considering the probability of Y not occurring given that X has occurred. If we prune these edges, we can keep only the high-relation edges.",
+    "english_text": "Shifting our perspective: how about considering the probability of Y not occurring given that X has occurred. If we prune these edges, we can keep only the high-relation edges.",
+    "one_sentence_summary": "The student suggests considering the probability of Y not occurring given X, and pruning to keep only high-relation edges.",
+    "keywords": [
+      "conditional probability",
+      "pruning"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.7
+  },
+  {
+    "id": "Q6_017",
+    "original_no": 17,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria to find interesting pattern.\nA. Maybe comparing the similarity between items can help with deciding meaningful, meaningless patterns. For example, with a high support and confidence between item also with a high similarity can justify the results, or reversely, if their similarity is low, that might be the more interesting pattern.",
+    "language": "en",
+    "cleaned_text": "Maybe comparing the similarity between items can help decide meaningful vs meaningless patterns. For example, a high support and confidence between items with high similarity can justify the result; conversely, if their similarity is low, that might be the more interesting pattern.",
+    "english_text": "Maybe comparing the similarity between items can help decide meaningful vs meaningless patterns. For example, a high support and confidence between items with high similarity can justify the result; conversely, if their similarity is low, that might be the more interesting pattern.",
+    "one_sentence_summary": "The student suggests using item similarity, where low similarity despite high support/confidence may indicate a more interesting pattern.",
+    "keywords": [
+      "similarity",
+      "support",
+      "confidence"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q6_018",
+    "original_no": 18,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria to find \"interesting pattern\"?\n- We can use top-k or top-p to reduce computation complexity.\n- Or we can analyze the attributes of items.\n- Or we can stalk the history of users what they are interested in.",
+    "language": "en",
+    "cleaned_text": "Other criteria: we can use top-k or top-p to reduce computation complexity, analyze the attributes of items, or track the history of what users are interested in.",
+    "english_text": "Other criteria: we can use top-k or top-p to reduce computation complexity, analyze the attributes of items, or track the history of what users are interested in.",
+    "one_sentence_summary": "The student suggests top-k/top-p to reduce complexity, analyzing item attributes, and tracking user history.",
+    "keywords": [
+      "top-k",
+      "item attributes",
+      "user history"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_019",
+    "original_no": 19,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "- Lift: measures if A and B are truly correlated, or just co-occurring by chance.\n- Conviction: measures how often the rule is wrong, how much it depends on B.",
+    "language": "en",
+    "cleaned_text": "Lift: measures if A and B are truly correlated or just co-occurring by chance. Conviction: measures how often the rule is wrong and how much it depends on B.",
+    "english_text": "Lift: measures if A and B are truly correlated or just co-occurring by chance. Conviction: measures how often the rule is wrong and how much it depends on B.",
+    "one_sentence_summary": "The student proposes lift (real correlation vs chance) and conviction (how often the rule is wrong) as criteria.",
+    "keywords": [
+      "lift",
+      "conviction",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_020",
+    "original_no": 20,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q6_021",
+    "original_no": 21,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "??? ? ?",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.9
+  },
+  {
+    "id": "Q6_022",
+    "original_no": 22,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Criteria of pattern\n[Korean handwriting; portions unclear]",
+    "language": "unknown",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_023",
+    "original_no": 23,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Lift score",
+    "language": "en",
+    "cleaned_text": "Lift score.",
+    "english_text": "Lift score.",
+    "one_sentence_summary": "The student suggests using the lift score.",
+    "keywords": [
+      "lift"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Low-information response.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q6_024",
+    "original_no": 24,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "in addition, novelty can be an interesting pattern (is pattern new or already known?)",
+    "language": "en",
+    "cleaned_text": "In addition, novelty can be a criterion for an interesting pattern (is the pattern new or already known?).",
+    "english_text": "In addition, novelty can be a criterion for an interesting pattern (is the pattern new or already known?).",
+    "one_sentence_summary": "The student suggests novelty (whether the pattern is new or already known) as a criterion.",
+    "keywords": [
+      "novelty"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_025",
+    "original_no": 25,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Engagement\nUsually, when you watch video on YT \"in most viewed parts\" you can't see, based on that, predict future trends.\n→ most reviewed is part about new movie → rise in movie engagement → recommendation",
+    "language": "en",
+    "cleaned_text": "Engagement: usually, when you watch a video on YouTube, the 'most viewed parts' you can't see can be used to predict future trends. For example, the most reviewed part being about a new movie leads to a rise in movie engagement and then recommendation.",
+    "english_text": "Engagement: usually, when you watch a video on YouTube, the 'most viewed parts' you can't see can be used to predict future trends. For example, the most reviewed part being about a new movie leads to a rise in movie engagement and then recommendation.",
+    "one_sentence_summary": "The student suggests 'engagement' as a criterion, e.g., YouTube's most-viewed parts predicting trends and driving recommendations.",
+    "keywords": [
+      "engagement",
+      "trends",
+      "recommendation"
+    ],
+    "themes": [
+      "pattern discovery",
+      "recommendation systems"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q6_026",
+    "original_no": 26,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Criteria in addition to support / confidence.\n4 Probability to find anomaly patterns, somehow will discover interesting patterns, but more like to facts, and real.",
+    "language": "en",
+    "cleaned_text": "In addition to support/confidence, using probability to find anomaly patterns will somehow discover interesting patterns, more aligned with facts and reality.",
+    "english_text": "In addition to support/confidence, using probability to find anomaly patterns will somehow discover interesting patterns, more aligned with facts and reality.",
+    "one_sentence_summary": "The student suggests using probability to find anomaly patterns, though the response is partially unclear.",
+    "keywords": [
+      "anomaly",
+      "probability"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q6_027",
+    "original_no": 27,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "• In addition of support or confidence, we can check the correlation whether the itemset has relation or not. So it can help to differentiate real relation rather than just a coincidence.",
+    "language": "en",
+    "cleaned_text": "In addition to support or confidence, we can check the correlation to see whether the itemset has a relation or not. This helps differentiate a real relation rather than just a coincidence.",
+    "english_text": "In addition to support or confidence, we can check the correlation to see whether the itemset has a relation or not. This helps differentiate a real relation rather than just a coincidence.",
+    "one_sentence_summary": "The student suggests checking correlation to differentiate real itemset relationships from coincidence.",
+    "keywords": [
+      "correlation",
+      "coincidence"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q6_028",
+    "original_no": 28,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "In addition to sup or conf, I think there are many \"interesting pattern\" but I am really not sure they are useful. For example, Noise → collect data cannot be always perfect, by looking at noise pattern, we can pinpoint origin of noise and eliminate them. Or we can use noise to determine whether the data is reliable, accurate and ready to use or not.\nOther interesting pattern could be determining a threshold point. For example, movie A 'box office' money is $10000. We can split the hair B = $7000 and C = $1000. We can say a lot of money by saying A is the most popular and make a lot of money than other two. But by determining a threshold of $5000, we can",
+    "language": "en",
+    "cleaned_text": "I think there are many 'interesting patterns' though I am not sure they are useful. For example, noise: since collected data cannot always be perfect, by looking at the noise pattern we can pinpoint its origin and eliminate it, or use noise to determine whether the data is reliable. Another could be determining a threshold point; for example, with box-office amounts, setting a threshold (e.g., $5000) helps interpret the data.",
+    "english_text": "I think there are many 'interesting patterns' though I am not sure they are useful. For example, noise: since collected data cannot always be perfect, by looking at the noise pattern we can pinpoint its origin and eliminate it, or use noise to determine whether the data is reliable. Another could be determining a threshold point; for example, with box-office amounts, setting a threshold (e.g., $5000) helps interpret the data.",
+    "one_sentence_summary": "The student suggests using noise (to find its origin or assess data reliability) and threshold points (e.g., a box-office threshold) as criteria.",
+    "keywords": [
+      "noise",
+      "threshold",
+      "data reliability"
+    ],
+    "themes": [
+      "pattern discovery",
+      "data preprocessing"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q6_029",
+    "original_no": 29,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q6_030",
+    "original_no": 30,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern:\nAside from support and confidence, maybe there can be a frequent pattern of items never being together.\nOr something the weight of context of whatever scenario, aside from blunt statistics, of some sense that came up together?",
+    "language": "en",
+    "cleaned_text": "Aside from support and confidence, maybe there can be a frequent pattern of items never being together, or the weight of context of a scenario, aside from blunt statistics.",
+    "english_text": "Aside from support and confidence, maybe there can be a frequent pattern of items never being together, or the weight of context of a scenario, aside from blunt statistics.",
+    "one_sentence_summary": "The student suggests looking for items that are frequently never together, and weighing contextual sense beyond blunt statistics.",
+    "keywords": [
+      "negative patterns",
+      "context"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.7
+  },
+  {
+    "id": "Q6_031",
+    "original_no": 31,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "i think maybe leverage like the coverage for large scale to find an interesting pattern, this so that the pattern will be useful for large scale use like business.",
+    "language": "en",
+    "cleaned_text": "I think maybe leverage, like coverage for large scale, can find an interesting pattern, so that the pattern will be useful for large-scale use like business.",
+    "english_text": "I think maybe leverage, like coverage for large scale, can find an interesting pattern, so that the pattern will be useful for large-scale use like business.",
+    "one_sentence_summary": "The student suggests leverage/coverage for large-scale patterns useful in business.",
+    "keywords": [
+      "leverage",
+      "coverage",
+      "scalability"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q6_032",
+    "original_no": 32,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Besides support and confidence, other criteria to find \"interesting pattern\" is correlation. correlation can be useful to determine whether items are truly related positively or negatively. This can avoid misleading patterns than occur simply because items are common.",
+    "language": "en",
+    "cleaned_text": "Besides support and confidence, another criterion is correlation. Correlation can be useful to determine whether items are truly related positively or negatively, which can avoid misleading patterns that occur simply because items are common.",
+    "english_text": "Besides support and confidence, another criterion is correlation. Correlation can be useful to determine whether items are truly related positively or negatively, which can avoid misleading patterns that occur simply because items are common.",
+    "one_sentence_summary": "The student suggests correlation to determine whether items are truly positively/negatively related, avoiding misleading patterns from common items.",
+    "keywords": [
+      "correlation",
+      "misleading patterns"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q6_033",
+    "original_no": 33,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "In addition to support and confidence, other criteria can also be used to find interesting patterns. One important criterion is lift, because it shows whether two contents are related more strongly than expected by chance. Another useful criterion is unexpectedness, since a surprising pattern can be more interesting than an obvious one. Actuality is also important, because a portion is more valuable if it can actually help improve recommendations or user experience.",
+    "language": "en",
+    "cleaned_text": "In addition to support and confidence, one important criterion is lift, because it shows whether two contents are related more strongly than expected by chance. Another is unexpectedness, since a surprising pattern can be more interesting than an obvious one. Actuality is also important, because a pattern is more valuable if it can actually help improve recommendations or user experience.",
+    "english_text": "In addition to support and confidence, one important criterion is lift, because it shows whether two contents are related more strongly than expected by chance. Another is unexpectedness, since a surprising pattern can be more interesting than an obvious one. Actuality is also important, because a pattern is more valuable if it can actually help improve recommendations or user experience.",
+    "one_sentence_summary": "The student proposes lift, unexpectedness, and actuality (real usefulness for recommendations) as criteria.",
+    "keywords": [
+      "lift",
+      "unexpectedness",
+      "actuality"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_034",
+    "original_no": 34,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "→ I think one other criteria that would be helpful in finding interesting pattern is consistency. If looking the example music above, does certain songs played over the same no. of times throughout the whole year or not. The answer can determine some pattern in listener's consistency.",
+    "language": "en",
+    "cleaned_text": "I think another helpful criterion is consistency. Using the music example, do certain songs get played the same number of times throughout the whole year or not? The answer can reveal a pattern in the listener's consistency.",
+    "english_text": "I think another helpful criterion is consistency. Using the music example, do certain songs get played the same number of times throughout the whole year or not? The answer can reveal a pattern in the listener's consistency.",
+    "one_sentence_summary": "The student suggests 'consistency' as a criterion, e.g., whether songs are played a consistent number of times across the year.",
+    "keywords": [
+      "consistency",
+      "music"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.75
+  },
+  {
+    "id": "Q6_035",
+    "original_no": 35,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria.\n→ Some researchers uses \"leverage\" such that\n\"leverage\" = leverage(A,B) = s(A∪B) – s(A) x s(B)\n↳ measure how often A and B co-occur than expected if they were independent.\n→ different with lift as it implement absolute ratio\n>0 → independent (positively correlated)\n<0 → negatively correlated\n→ some also use \"conviction\"\n\"conviction\" = conviction (A→B) = (1 – s(B))/(1 – c(A→B))\n↳ measure how often the rule makes an incorrect prediction. High conviction = rule is rarely wrong.\n→ sensitive to direction of rule",
+    "language": "en",
+    "cleaned_text": "Some researchers use 'leverage' = leverage(A,B) = s(A∪B) – s(A) x s(B), which measures how often A and B co-occur compared to if they were independent, differing from lift in that it uses an absolute ratio. Some also use 'conviction' = (1 – s(B))/(1 – c(A→B)), which measures how often the rule makes an incorrect prediction (high conviction means the rule is rarely wrong) and is sensitive to the direction of the rule.",
+    "english_text": "Some researchers use 'leverage' = leverage(A,B) = s(A∪B) – s(A) x s(B), which measures how often A and B co-occur compared to if they were independent, differing from lift in that it uses an absolute ratio. Some also use 'conviction' = (1 – s(B))/(1 – c(A→B)), which measures how often the rule makes an incorrect prediction (high conviction means the rule is rarely wrong) and is sensitive to the direction of the rule.",
+    "one_sentence_summary": "The student explains leverage (s(A∪B) – s(A)xs(B)) and conviction as criteria, with formulas and interpretations.",
+    "keywords": [
+      "leverage",
+      "conviction",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.85
+  },
+  {
+    "id": "Q6_036",
+    "original_no": 36,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "유의/되는 활동에 (조)를 (관)을 (찾)게 (될) 것이다.\n이 가용 (등) 기준에 따른 또 다른 기준이 (등)할 때 (둘)이 (단순한) 패턴을 (활)와 (될) 모순의 패턴인지 (잘)이다.",
+    "language": "ko",
+    "cleaned_text": "유의미한 활동에서 기준을 찾게 될 것이다. 이 기준에 따라 또 다른 기준이 필요할 때, 둘이 단순한 패턴인지 아니면 모순되는 패턴인지를 판단하는 것이다.",
+    "english_text": "We will find a criterion in meaningful activity. When another criterion is needed in addition to this one, it is about judging whether the two form a simple pattern or a contradictory pattern.",
+    "one_sentence_summary": "The student vaguely suggests an additional criterion to judge whether patterns are simple or contradictory, though the response is largely unclear.",
+    "keywords": [
+      "criteria",
+      "pattern"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.25
+  },
+  {
+    "id": "Q6_037",
+    "original_no": 37,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "(정보들을 (있)는데 (조)하는 것은 의미가 있는 가설이 (대중에) 있다.",
+    "language": "ko",
+    "cleaned_text": "정보들이 있는데, 이를 정리하는 것은 의미 있는 가설이 (대중에게) 있다는 것이다.",
+    "english_text": "There is information, and organizing it relates to meaningful hypotheses being present (among the public).",
+    "one_sentence_summary": "The student vaguely refers to forming meaningful hypotheses from information, though the response is largely unclear.",
+    "keywords": [
+      "hypothesis"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.22
+  },
+  {
+    "id": "Q6_038",
+    "original_no": 38,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "★ \"이성논\"의 새로운 기념이 큰 (것)을 (것)에 의해 새기간고 (등)을 (활)하기 어디 (활)들 다 (활)는 (가) 새로운 (등)도 (활)에 (영)을\n[Korean handwriting; largely unclear due to handwriting]",
+    "language": "ko",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_039",
+    "original_no": 39,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "예외 아이디어\n(사회)들이 유튜브의 도 많은 기능이 더 다 (있)을 것이다.\n기능이 많고 영상 (등)이라 새로운 (성)으로 (등)을 (조)이 (등)으로 (이)다.",
+    "language": "ko",
+    "cleaned_text": "예외 아이디어. 유튜브에는 더 많은 기능이 있을 것이다. 기능이 많고 영상이 많아 새로운 방향으로 활용될 수 있다.",
+    "english_text": "An 'exception' idea. YouTube would have many more features. Since it has many features and videos, it could be used in new ways.",
+    "one_sentence_summary": "The student vaguely suggests an 'exception' idea related to YouTube's many features, though the response is largely unclear.",
+    "keywords": [
+      "exceptions",
+      "YouTube"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.25
+  },
+  {
+    "id": "Q6_040",
+    "original_no": 40,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "another criterion to find interesting pattern is to check whether the pattern is consistent and trustworthy. Some pattern might look related but it might be appear by chance. Some pattern might look stark but actually random noise.\nFor example during promotion it might show that burger may not be purchase together more with another dessert. This is not reliable as if only happen during promotion not all time.",
+    "language": "en",
+    "cleaned_text": "Another criterion is to check whether the pattern is consistent and trustworthy. Some patterns might look related but appear by chance, and some might look striking but actually be random noise. For example, during a promotion it might show that a burger is purchased together with a dessert, but this is not reliable if it only happens during the promotion.",
+    "english_text": "Another criterion is to check whether the pattern is consistent and trustworthy. Some patterns might look related but appear by chance, and some might look striking but actually be random noise. For example, during a promotion it might show that a burger is purchased together with a dessert, but this is not reliable if it only happens during the promotion.",
+    "one_sentence_summary": "The student suggests checking whether a pattern is consistent and trustworthy, using the example that a promotion-only burger-dessert pattern is unreliable.",
+    "keywords": [
+      "consistency",
+      "reliability",
+      "noise"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q6_041",
+    "original_no": 41,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "other criteria could be lift by measuring how much stronger the rule is than random chance.\nlift = (A→B)/(s(B))\nlift(A→B) = c(A→B)/s(B)\nlift = 1 → no relationship\nlift > 1 → positive correlation ✓\nlift < 1 → negative correlation\n\n→ measuring lift can help us make more appropriate decisions",
+    "language": "en",
+    "cleaned_text": "Another criterion could be lift, measuring how much stronger the rule is than random chance. lift(A→B) = c(A→B)/s(B); lift = 1 means no relationship, lift > 1 positive correlation, lift < 1 negative correlation. Measuring lift can help us make more appropriate decisions.",
+    "english_text": "Another criterion could be lift, measuring how much stronger the rule is than random chance. lift(A→B) = c(A→B)/s(B); lift = 1 means no relationship, lift > 1 positive correlation, lift < 1 negative correlation. Measuring lift can help us make more appropriate decisions.",
+    "one_sentence_summary": "The student explains lift (c(A→B)/s(B)) as a criterion, with interpretations for lift =1, >1, <1.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_042",
+    "original_no": 42,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern.\n- I think another criteria that can also help to find an interesting pattern is history. We can learn about someone's behaviour through their history. same goes to finding \"interesting pattern\" in pattern mining. We can analyze the past history of transactions made to find the \"more likely\" pattern, as it can show a certain behaviour. If an item has a history of being purchased many times, it is most likely will be purchased again in the future.",
+    "language": "en",
+    "cleaned_text": "Another criterion is history. We can learn about someone's behaviour through their history; the same goes for finding interesting patterns in pattern mining. We can analyze the past history of transactions to find the more likely pattern, since an item with a history of being purchased many times will most likely be purchased again.",
+    "english_text": "Another criterion is history. We can learn about someone's behaviour through their history; the same goes for finding interesting patterns in pattern mining. We can analyze the past history of transactions to find the more likely pattern, since an item with a history of being purchased many times will most likely be purchased again.",
+    "one_sentence_summary": "The student suggests using transaction history, since past purchase behavior indicates likely future patterns.",
+    "keywords": [
+      "history",
+      "behavior",
+      "pattern discovery"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q6_043",
+    "original_no": 43,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "The other criteria to find \"interesting pattern\" is looking based on correlation. A part from that, frequent (costly value of information CVoI)",
+    "language": "en",
+    "cleaned_text": "Another criterion is looking based on correlation. Apart from that, the student mentions a frequent 'cost value of information (CVoI)', though this part is unclear.",
+    "english_text": "Another criterion is looking based on correlation. Apart from that, the student mentions a frequent 'cost value of information (CVoI)', though this part is unclear.",
+    "one_sentence_summary": "The student suggests correlation and mentions a 'cost value of information' (CVoI) criterion, though partly unclear.",
+    "keywords": [
+      "correlation",
+      "value of information"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q6_044",
+    "original_no": 44,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Relatability, a pattern need to be relatable for it to be functional, it could be inherently pattern but if it's not relatable to tools (in things) we are studying it could be coincidence",
+    "language": "en",
+    "cleaned_text": "Relatability: a pattern needs to be relatable to be functional. It could be inherently a pattern, but if it's not relatable to the tools/things we are studying, it could be a coincidence.",
+    "english_text": "Relatability: a pattern needs to be relatable to be functional. It could be inherently a pattern, but if it's not relatable to the tools/things we are studying, it could be a coincidence.",
+    "one_sentence_summary": "The student suggests 'relatability' as a criterion, since a pattern must relate to what is being studied or it may be coincidence.",
+    "keywords": [
+      "relatability",
+      "coincidence"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but partially vague.",
+    "confidence": 0.6
+  },
+  {
+    "id": "Q6_045",
+    "original_no": 45,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria (in addition to support or confidence) to find \"interesting pattern\"?\n인구의 데이터에서 (구조가) 어디서 (이용)되는지를 (등)으로 (등) 또 (수)를 (사용해서) 사용하는 (좋)은 (등)을 (등)들이 (등) (등) (꽃) (등) (등) (등) (구조)에 (등)이 (사용)에 (등)에 (등)을 (가) (등)을 (가) (등) 또 한 거 (등)에 (등)이 (등)이 (모)이 (등)을 (등)을 (등) 다 (등)할 수 (있)을 듯도?",
+    "language": "ko",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_046",
+    "original_no": 46,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "In addition to support and consistency, ∅∅ we should consider \"how much MORE often X and Y occur together than expected\" to strengthen the relationship together. If the leverage more to (positive) it might be interesting,\n(independent) and ∅ (negative) is maybe happen less than expected?.\n[circle annotation: in coincidence only.]\n[circle annotation: might NOT real relationship/anytype]",
+    "language": "en",
+    "cleaned_text": "In addition to support and consistency, we should consider 'how much MORE often X and Y occur together than expected' to strengthen the relationship. If the leverage is more positive it might be interesting; independent or negative may mean it happens less than expected (possibly only coincidence, not a real relationship).",
+    "english_text": "In addition to support and consistency, we should consider 'how much MORE often X and Y occur together than expected' to strengthen the relationship. If the leverage is more positive it might be interesting; independent or negative may mean it happens less than expected (possibly only coincidence, not a real relationship).",
+    "one_sentence_summary": "The student suggests leverage - how much more often X and Y occur together than expected - as a criterion, with positive leverage being interesting.",
+    "keywords": [
+      "leverage",
+      "co-occurrence"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q6_047",
+    "original_no": 47,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern:\nAside from support and confidence, maybe there can be a frequent pattern of items never being together.\nOr something the weight of context of whatever scenario, aside from blunt statistics, of some sense that came up together?",
+    "language": "en",
+    "cleaned_text": "Aside from support and confidence, maybe there can be a frequent pattern of items never being together, or the weight of context of a scenario, aside from blunt statistics.",
+    "english_text": "Aside from support and confidence, maybe there can be a frequent pattern of items never being together, or the weight of context of a scenario, aside from blunt statistics.",
+    "one_sentence_summary": "The student suggests looking for items that are frequently never together, and weighing context beyond blunt statistics.",
+    "keywords": [
+      "negative patterns",
+      "context"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Clear but somewhat general.",
+    "confidence": 0.7
+  },
+  {
+    "id": "Q6_048",
+    "original_no": 48,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "In addition to support and confidence, novelty (uniqueness) can be other criteria, I think.\nIf a pattern has support and Confidence (also lift), it's hard to consider it as an interesting pattern without novelty.\nIn other words, the pattern fees is interesting only when it provides non-obvious insight rather than something already expected. It is briefly mentioned in class, but I think it's most important - anything to find interesting pattern. It can't be insight that's interesting, meaningful, and new. For example, a product is included in all transactions.",
+    "language": "en",
+    "cleaned_text": "In addition to support and confidence, I think novelty (uniqueness) can be another criterion. Even if a pattern has support, confidence, and lift, it's hard to consider it interesting without novelty. The pattern is interesting only when it provides non-obvious insight rather than something already expected. For example, a product included in all transactions is not interesting.",
+    "english_text": "In addition to support and confidence, I think novelty (uniqueness) can be another criterion. Even if a pattern has support, confidence, and lift, it's hard to consider it interesting without novelty. The pattern is interesting only when it provides non-obvious insight rather than something already expected. For example, a product included in all transactions is not interesting.",
+    "one_sentence_summary": "The student argues novelty/uniqueness is the most important criterion, since a pattern is interesting only if it gives non-obvious insight.",
+    "keywords": [
+      "novelty",
+      "uniqueness",
+      "insight"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q6_049",
+    "original_no": 49,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern\nDistances between transactions may be helpful to find interesting patterns. Even if confident association rules are not found in the whole table, if clustered by distances (cosine, ucld, etc.) there may be strong association rules inside those clusters.\nFor detecting unexpected threats, finding outliers is important. Finding transactions that contains lots of unique itemsets may be helpful.",
+    "language": "en",
+    "cleaned_text": "Distances between transactions may help find interesting patterns. Even if confident association rules are not found in the whole table, clustering by distances (cosine, Euclidean, etc.) may reveal strong association rules inside those clusters. For detecting unexpected threats, finding outliers is important, and finding transactions that contain many unique itemsets may be helpful.",
+    "english_text": "Distances between transactions may help find interesting patterns. Even if confident association rules are not found in the whole table, clustering by distances (cosine, Euclidean, etc.) may reveal strong association rules inside those clusters. For detecting unexpected threats, finding outliers is important, and finding transactions that contain many unique itemsets may be helpful.",
+    "one_sentence_summary": "The student suggests clustering transactions by distance (cosine, Euclidean) to find strong association rules within clusters, and using outliers to detect threats.",
+    "keywords": [
+      "distance",
+      "clustering",
+      "outliers"
+    ],
+    "themes": [
+      "pattern discovery",
+      "clustering"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_050",
+    "original_no": 50,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "cosine similarity ...?? 같은 (활용) 또 두 (단)의 (조)이는 (조)는 (조)이는 (다)\n이 (조)는 (정)을 (조)이는 (등) 또 또 다 (조)는 (조)이는 (조)에 (사용) 된 (조)이는 (조)이 (조)이 (조)는 (조)이 (조)는\n[Korean handwriting; portions unclear]",
+    "language": "ko",
+    "cleaned_text": "cosine similarity 같은 것을 활용하거나, 두 항목의 관계를 보는 방식이 사용될 수 있다는 내용으로 보이나 대부분 불명확하다.",
+    "english_text": "Something like cosine similarity could be used, or a way of looking at the relationship between two items, though most of the response is unclear.",
+    "one_sentence_summary": "The student mentions cosine similarity but the rest is largely unclear.",
+    "keywords": [
+      "cosine similarity"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.25
+  },
+  {
+    "id": "Q6_051",
+    "original_no": 51,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "support와 confidence 외에 있나? 패턴이 (조)이는 (조)는 (조)도 데이터의 (조)이 (조)이는 (조)도 (조)이는 (조)이 (있)도, (조)이 (조)이 (조)이는 (조)이는 (조)이 (조)이는\nlift(A→B) = confidence(A→B)/support(B)\n• lift > 1: 양의 상관관계\n• lift = 1: 독립\n• lift < 1: 음의 상관관계가 있는 거 같다.\n이 (외)에도 이 (정)을 (사용)에서 (조사)할 (수) 있다는 거 같다.\nlift(A,B)는 두 (가)에서 (조)을 (사회)할 (수) 있다는 (것)이 (사회)이는 (이)다.",
+    "language": "mixed",
+    "cleaned_text": "support와 confidence 외에도 패턴이나 데이터의 관계를 볼 수 있다. lift(A→B) = confidence(A→B)/support(B). lift > 1: 양의 상관관계, lift = 1: 독립, lift < 1: 음의 상관관계. lift(A,B)는 두 항목 사이의 관계를 살펴보는 데 쓸 수 있다.",
+    "english_text": "Besides support and confidence, we can look at the relationship of patterns or data. lift(A→B) = confidence(A→B)/support(B); lift > 1: positive correlation, lift = 1: independent, lift < 1: negative correlation. lift(A,B) can be used to examine the relationship between two items.",
+    "one_sentence_summary": "The student suggests lift (with formula and interpretations) as a criterion beyond support and confidence.",
+    "keywords": [
+      "lift",
+      "correlation"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.55
+  },
+  {
+    "id": "Q6_052",
+    "original_no": 52,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "another criterion to find interesting pattern is need to check whether the pattern is consistent and trustworthy. Some pattern might look consistent but it might be appear by chance. Some pattern might look stark but actually random noise. For example during promotion it might show that burger be purchase together more with another dessert. This is not reliable as if only happen during promotion not all time.",
+    "language": "en",
+    "cleaned_text": "Another criterion is to check whether the pattern is consistent and trustworthy. Some patterns might look consistent but appear by chance, and some might look striking but be random noise. For example, during a promotion it might show that a burger is purchased together with a dessert, but this is not reliable if it only happens during the promotion.",
+    "english_text": "Another criterion is to check whether the pattern is consistent and trustworthy. Some patterns might look consistent but appear by chance, and some might look striking but be random noise. For example, during a promotion it might show that a burger is purchased together with a dessert, but this is not reliable if it only happens during the promotion.",
+    "one_sentence_summary": "The student suggests checking whether a pattern is consistent and trustworthy, using the promotion-only burger-dessert example as unreliable.",
+    "keywords": [
+      "consistency",
+      "reliability",
+      "noise"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.78
+  },
+  {
+    "id": "Q6_053",
+    "original_no": 53,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "In my opinion other criteria that helps to find pattern is like special season or festival. In my case, in Malaysia during festive person the buying transaction of food products increase, especially food ingredient to make traditional food. In korea, maybe like buy buy people the buying of tteok increase during their public holiday. Sorry IM mistaken, other examples: pepero day, valentine, white day.",
+    "language": "en",
+    "cleaned_text": "I think another criterion is a special season or festival. In Malaysia, during festive periods the purchase of food products increases, especially ingredients for traditional food. In Korea, the buying of tteok increases during public holidays. Other examples: Pepero Day, Valentine's, White Day.",
+    "english_text": "I think another criterion is a special season or festival. In Malaysia, during festive periods the purchase of food products increases, especially ingredients for traditional food. In Korea, the buying of tteok increases during public holidays. Other examples: Pepero Day, Valentine's, White Day.",
+    "one_sentence_summary": "The student suggests seasonal/festival events as a criterion, e.g., increased festive food purchases in Malaysia and Korea (tteok, Pepero Day).",
+    "keywords": [
+      "seasonality",
+      "festivals",
+      "purchasing patterns"
+    ],
+    "themes": [
+      "pattern discovery",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q6_054",
+    "original_no": 54,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "When we use both the words and respect the goal as their using, we can find all groups in Notion. Then if we can consider their distance and cluster them to dad standard groups, we can provide more concrete analysis.",
+    "language": "en",
+    "cleaned_text": "When we use the words and respect the goal of their use, we can find all groups (e.g., in Notion). Then, if we consider their distance and cluster them into standard groups, we can provide more concrete analysis.",
+    "english_text": "When we use the words and respect the goal of their use, we can find all groups (e.g., in Notion). Then, if we consider their distance and cluster them into standard groups, we can provide more concrete analysis.",
+    "one_sentence_summary": "The student suggests grouping/clustering items by distance into standard groups for more concrete analysis, though partly unclear.",
+    "keywords": [
+      "clustering",
+      "grouping"
+    ],
+    "themes": [
+      "pattern discovery",
+      "clustering"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q6_055",
+    "original_no": 55,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Maybe trying to find unexpected situations could be another criteria to find unexpected things. Like big disused in class, disuse and less luxury bag personally unexpected, and this lead to an \"interesting pattern\" so it could also be a criteria to find unexpected of in the data and relationship can also be a criteria to find \"interesting pattern\" from data.",
+    "language": "en",
+    "cleaned_text": "Maybe trying to find unexpected situations could be another criterion. For example, something discussed in class was personally unexpected, and this led to an 'interesting pattern', so finding the unexpected in the data and the relationships can be a criterion for finding interesting patterns.",
+    "english_text": "Maybe trying to find unexpected situations could be another criterion. For example, something discussed in class was personally unexpected, and this led to an 'interesting pattern', so finding the unexpected in the data and the relationships can be a criterion for finding interesting patterns.",
+    "one_sentence_summary": "The student suggests finding unexpected situations/relationships as a criterion for interesting patterns, though the response is fragmented.",
+    "keywords": [
+      "unexpected patterns"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Partially unclear due to fragmented wording.",
+    "confidence": 0.45
+  },
+  {
+    "id": "Q6_056",
+    "original_no": 56,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  },
+  {
+    "id": "Q6_057",
+    "original_no": 57,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "(Confidence)에 한 곳 같이 (조)들이 (등)이 (등) (조)을 (등)이 (활)들이 (활)을 (등)인 (등)이 (사용)에 (등)이 (등) (활)들이 (활)에 (활)들이 (활)들이 (활)에 (활)에 (활)을 (활)을\n[Korean handwriting; portions unclear]",
+    "language": "ko",
+    "cleaned_text": "unclear",
+    "english_text": "unclear",
+    "one_sentence_summary": "The response is unclear.",
+    "keywords": [
+      "unclear"
+    ],
+    "themes": [
+      "unclear"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Meaning is unclear.",
+    "confidence": 0.2
+  },
+  {
+    "id": "Q6_058",
+    "original_no": 58,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Things users' gender and age group can also be other for finding interesting patterns.",
+    "language": "en",
+    "cleaned_text": "Users' gender and age group can also be criteria for finding interesting patterns.",
+    "english_text": "Users' gender and age group can also be criteria for finding interesting patterns.",
+    "one_sentence_summary": "The student suggests using users' gender and age group as criteria for finding interesting patterns.",
+    "keywords": [
+      "demographics",
+      "gender",
+      "age"
+    ],
+    "themes": [
+      "pattern discovery",
+      "social analysis"
+    ],
+    "quality": "medium",
+    "reason_for_quality": "Understandable but short.",
+    "confidence": 0.72
+  },
+  {
+    "id": "Q6_059",
+    "original_no": 59,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "What can be other criteria to find \"interesting pattern\"\nWe may conduct a Medball ratio test on each events, where Hi: each events are independent. Because I think the \"Interestingly\" means something unexpected. By Conducting this test about the Jim Hi above and Ho being rejected. We can find unexpected relation that can more some profit\n→ If the sample is large enough, We can also conduct a Pearson's Chi-squared test too.\n\n*1-1.\nTransaction: a sequence set of sequences that each of them contains public transportations which a person took for a one-way trip.\nItemset: {bus1, bus114, bus 9114}, {bus 6, bus 1407}, {bus 6, bus 24}\nFrequent Set: {bus 6, bus 114, bus 9114}, {bus 6, bus 23}\nAssociation Rule: P-value (journal y test) <0.01",
+    "language": "en",
+    "cleaned_text": "We may conduct a likelihood-ratio test on each event, where H0 is that the events are independent, because 'interesting' means something unexpected; if H0 is rejected, we can find an unexpected relation that could yield profit. If the sample is large enough, we can also conduct a Pearson's chi-squared test. Example - Transaction: a sequence of public transports a person took for a one-way trip; Itemset: {bus1, bus114, bus9114}, {bus6, bus1407}, {bus6, bus24}; Frequent set: {bus6, bus114, bus9114}, {bus6, bus23}; Association rule with p-value < 0.01.",
+    "english_text": "We may conduct a likelihood-ratio test on each event, where H0 is that the events are independent, because 'interesting' means something unexpected; if H0 is rejected, we can find an unexpected relation that could yield profit. If the sample is large enough, we can also conduct a Pearson's chi-squared test. Example - Transaction: a sequence of public transports a person took for a one-way trip; Itemset: {bus1, bus114, bus9114}, {bus6, bus1407}, {bus6, bus24}; Frequent set: {bus6, bus114, bus9114}, {bus6, bus23}; Association rule with p-value < 0.01.",
+    "one_sentence_summary": "The student suggests statistical independence tests (likelihood ratio, Pearson chi-squared) as criteria, with a public-transit example using p-values.",
+    "keywords": [
+      "statistical test",
+      "independence",
+      "chi-squared"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.75
+  },
+  {
+    "id": "Q6_060",
+    "original_no": 60,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find \"interesting patterns\"",
+    "language": "en",
+    "cleaned_text": "Other criteria to find interesting patterns.",
+    "english_text": "Other criteria to find interesting patterns.",
+    "one_sentence_summary": "The student only restated the question without providing specific criteria.",
+    "keywords": [
+      "pattern discovery"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Low-information response.",
+    "confidence": 0.5
+  },
+  {
+    "id": "Q6_061",
+    "original_no": 61,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Type of data → when buying products, customers tend to buy products that they need for a specific goal. Let's say a customer's goal is to bake a cake, it they are purchasing flour, they might also purchase baking soda, brown sugar, vanilla essence etc.",
+    "language": "en",
+    "cleaned_text": "Type of data: when buying products, customers tend to buy products they need for a specific goal. For example, if a customer's goal is to bake a cake and they are purchasing flour, they might also purchase baking soda, brown sugar, vanilla essence, etc.",
+    "english_text": "Type of data: when buying products, customers tend to buy products they need for a specific goal. For example, if a customer's goal is to bake a cake and they are purchasing flour, they might also purchase baking soda, brown sugar, vanilla essence, etc.",
+    "one_sentence_summary": "The student suggests considering goal-based buying (data type), e.g., a customer baking a cake buys flour, baking soda, sugar, and vanilla together.",
+    "keywords": [
+      "goal-based buying",
+      "market basket analysis"
+    ],
+    "themes": [
+      "pattern discovery",
+      "real-world application"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.8
+  },
+  {
+    "id": "Q6_062",
+    "original_no": 62,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "Other criteria to find interesting pattern is leverage. This measures the difference between observed and expected co-occurrences, which focuses on actual impact and not just rotter. Two rules can have the same lift, but one affects way more transactions which causes it to be more useful.",
+    "language": "en",
+    "cleaned_text": "Another criterion is leverage. This measures the difference between observed and expected co-occurrences, focusing on actual impact and not just the ratio. Two rules can have the same lift, but one affects far more transactions, making it more useful.",
+    "english_text": "Another criterion is leverage. This measures the difference between observed and expected co-occurrences, focusing on actual impact and not just the ratio. Two rules can have the same lift, but one affects far more transactions, making it more useful.",
+    "one_sentence_summary": "The student proposes leverage, which measures observed vs expected co-occurrence and captures actual impact (e.g., two rules with the same lift but different coverage).",
+    "keywords": [
+      "leverage",
+      "co-occurrence",
+      "impact"
+    ],
+    "themes": [
+      "pattern discovery"
+    ],
+    "quality": "high",
+    "reason_for_quality": "Clear and specific response.",
+    "confidence": 0.82
+  },
+  {
+    "id": "Q6_063",
+    "original_no": 63,
+    "question": "Q6",
+    "stage": "discussion_2",
+    "raw_text": "",
+    "language": "unknown",
+    "cleaned_text": "missing",
+    "english_text": "missing",
+    "one_sentence_summary": "The response is missing.",
+    "keywords": [
+      "missing"
+    ],
+    "themes": [
+      "missing"
+    ],
+    "quality": "low",
+    "reason_for_quality": "Missing response.",
+    "confidence": 0.95
+  }
+]
